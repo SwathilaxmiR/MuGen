@@ -1,0 +1,56 @@
+name: tense
+tempo:
+  min: 80
+  max: 100
+  centre: 88
+keywords:
+- tense
+- suspense
+- thriller
+- horror
+- scary
+- dark
+- mystery
+- danger
+- ominous
+- creepy
+- investigation
+- stealth
+- anxious
+- eerie
+modes:
+- minor
+default_mode: minor
+swing: 0
+base_intensity: 3
+valence: -0.7
+energy: 0.55
+progressions:
+  minor:
+  - - i
+    - bII
+    - i
+    - VI
+  - - i
+    - i
+    - VI
+    - V
+  - - i
+    - iv
+    - i
+    - bII
+programs:
+  drums: 48
+  bass: 43
+  harmony: 44
+  melody: 45
+drum_style: pulse
+bass_style: ostinato
+harmony_style: pad
+melody_style: ostinato
+melody_register: 72
+gains:
+  drums: 0.85
+  bass: 0.9
+  harmony: 0.9
+  melody: 0.7

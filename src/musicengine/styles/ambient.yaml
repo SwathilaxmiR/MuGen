@@ -1,0 +1,58 @@
+name: ambient
+tempo:
+  min: 80
+  max: 90
+  centre: 84
+keywords:
+- ambient
+- atmospheric
+- meditation
+- calm
+- peaceful
+- dreamy
+- ethereal
+- spa
+- floating
+- space
+- drone
+- serene
+- relaxing
+- sleep
+modes:
+- major
+- minor
+default_mode: major
+swing: 0
+base_intensity: 1
+valence: 0.2
+energy: 0.15
+progressions:
+  major:
+  - - Imaj7
+    - IVmaj7
+    - vi7
+    - IVmaj7
+  - - I
+    - iii
+    - IV
+    - I
+  minor:
+  - - i7
+    - VImaj7
+    - IIImaj7
+    - VII
+programs:
+  drums: 0
+  bass: 89
+  harmony: 88
+  melody: 10
+drum_style: ambient
+bass_style: drone
+harmony_style: pad
+melody_style: sparse
+melody_register: 79
+gains:
+  drums: 0.6
+  bass: 0.8
+  harmony: 1.0
+  melody: 0.6

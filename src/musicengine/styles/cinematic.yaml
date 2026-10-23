@@ -1,0 +1,66 @@
+name: cinematic
+tempo:
+  min: 80
+  max: 100
+  centre: 90
+keywords:
+- cinematic
+- film
+- movie
+- score
+- orchestral
+- sweeping
+- dramatic
+- emotional
+- majestic
+- heroic
+- adventure
+- grand
+- strings
+- soundtrack
+modes:
+- minor
+- major
+default_mode: minor
+swing: 0
+base_intensity: 2
+valence: 0.0
+energy: 0.5
+progressions:
+  minor:
+  - - i
+    - VI
+    - III
+    - VII
+  - - i
+    - iv
+    - VI
+    - V
+  - - i
+    - VI
+    - iv
+    - V
+  major:
+  - - I
+    - V
+    - vi
+    - IV
+  - - I
+    - IV
+    - vi
+    - V
+programs:
+  drums: 48
+  bass: 43
+  harmony: 48
+  melody: 60
+drum_style: cinematic
+bass_style: sustained
+harmony_style: pad
+melody_style: lyrical
+melody_register: 67
+gains:
+  drums: 0.9
+  bass: 0.8
+  harmony: 0.9
+  melody: 0.9

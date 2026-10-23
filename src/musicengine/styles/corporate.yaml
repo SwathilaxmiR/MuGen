@@ -1,0 +1,60 @@
+name: corporate
+tempo:
+  min: 100
+  max: 118
+  centre: 108
+keywords:
+- corporate
+- business
+- presentation
+- tech
+- startup
+- inspiring
+- motivational
+- explainer
+- product
+- positive
+- professional
+- commercial
+- advert
+modes:
+- major
+default_mode: major
+swing: 0
+base_intensity: 2
+valence: 0.6
+energy: 0.55
+progressions:
+  major:
+  - - I
+    - V
+    - vi
+    - IV
+  - - vi
+    - IV
+    - I
+    - V
+  - - I
+    - iii
+    - IV
+    - V
+  minor:
+  - - vi
+    - IV
+    - I
+    - V
+programs:
+  drums: 0
+  bass: 33
+  harmony: 0
+  melody: 27
+drum_style: pop_light
+bass_style: eighths
+harmony_style: arp
+melody_style: pluck
+melody_register: 72
+gains:
+  drums: 0.8
+  bass: 0.9
+  harmony: 0.9
+  melody: 0.75

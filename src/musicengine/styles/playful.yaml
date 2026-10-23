@@ -1,0 +1,60 @@
+name: playful
+tempo:
+  min: 110
+  max: 128
+  centre: 118
+keywords:
+- playful
+- quirky
+- fun
+- cartoon
+- kids
+- children
+- whimsical
+- silly
+- cute
+- bouncy
+- comedy
+- funny
+- toy
+modes:
+- major
+default_mode: major
+swing: 0.15
+base_intensity: 2
+valence: 0.8
+energy: 0.6
+progressions:
+  major:
+  - - I
+    - IV
+    - V
+    - I
+  - - I
+    - vi
+    - IV
+    - V
+  - - I
+    - V
+    - IV
+    - V
+  minor:
+  - - i
+    - iv
+    - V
+    - i
+programs:
+  drums: 0
+  bass: 70
+  harmony: 45
+  melody: 13
+drum_style: playful
+bass_style: bouncy
+harmony_style: staccato
+melody_style: bouncy
+melody_register: 79
+gains:
+  drums: 0.75
+  bass: 0.9
+  harmony: 0.85
+  melody: 0.75

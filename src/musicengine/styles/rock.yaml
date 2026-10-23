@@ -1,0 +1,61 @@
+name: rock
+tempo:
+  min: 118
+  max: 138
+  centre: 126
+keywords:
+- rock
+- driving
+- guitar riff
+- energetic
+- sports
+- rebellious
+- punk
+- garage
+- grunge
+- anthem
+- stadium
+- workout
+- motor
+modes:
+- minor
+- major
+default_mode: minor
+swing: 0
+base_intensity: 3
+valence: 0.1
+energy: 0.85
+progressions:
+  minor:
+  - - i
+    - VI
+    - VII
+    - i
+  - - i
+    - VII
+    - VI
+    - VII
+  major:
+  - - I
+    - IV
+    - V
+    - IV
+  - - I
+    - bVII
+    - IV
+    - I
+programs:
+  drums: 16
+  bass: 34
+  harmony: 29
+  melody: 30
+drum_style: rock
+bass_style: eighths
+harmony_style: power
+melody_style: riff
+melody_register: 64
+gains:
+  drums: 1.0
+  bass: 0.9
+  harmony: 0.85
+  melody: 0.7

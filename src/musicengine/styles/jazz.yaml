@@ -1,0 +1,61 @@
+name: jazz
+tempo:
+  min: 88
+  max: 112
+  centre: 100
+keywords:
+- jazz
+- jazzy
+- swing
+- lounge
+- smooth
+- bar
+- cocktail
+- bossa
+- sophisticated
+- noir
+- saxophone
+- chill jazz
+- cafe
+modes:
+- major
+- minor
+default_mode: major
+swing: 0.65
+base_intensity: 2
+valence: 0.3
+energy: 0.4
+progressions:
+  major:
+  - - ii7
+    - V7
+    - Imaj7
+    - Imaj7
+  - - Imaj7
+    - vi7
+    - ii7
+    - V7
+  - - iii7
+    - vi7
+    - ii7
+    - V7
+  minor:
+  - - i7
+    - iv7
+    - ii7
+    - V7
+programs:
+  drums: 32
+  bass: 32
+  harmony: 4
+  melody: 65
+drum_style: jazz
+bass_style: walking
+harmony_style: comp
+melody_style: lyrical
+melody_register: 67
+gains:
+  drums: 0.75
+  bass: 0.95
+  harmony: 0.85
+  melody: 0.8

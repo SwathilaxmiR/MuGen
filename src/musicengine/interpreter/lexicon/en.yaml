@@ -1,0 +1,84 @@
+# English axis words. valence -1..1 (sad/dark .. happy/bright), energy 0..1 contribution sign.
+valence:
+  happy: 0.8
+  joyful: 0.9
+  joy: 0.8
+  uplifting: 0.8
+  bright: 0.6
+  cheerful: 0.9
+  hopeful: 0.6
+  inspiring: 0.6
+  positive: 0.6
+  warm: 0.4
+  fun: 0.7
+  playful: 0.7
+  triumphant: 0.6
+  sunny: 0.7
+  optimistic: 0.7
+  romantic: 0.4
+  love: 0.4
+  celebration: 0.8
+  sad: -0.8
+  melancholic: -0.7
+  melancholy: -0.7
+  dark: -0.6
+  tense: -0.6
+  scary: -0.8
+  ominous: -0.8
+  gloomy: -0.7
+  sinister: -0.8
+  eerie: -0.7
+  anxious: -0.6
+  horror: -0.9
+  mystery: -0.4
+  mysterious: -0.4
+  lonely: -0.6
+  somber: -0.7
+  sombre: -0.7
+  angry: -0.6
+  nostalgic: -0.1
+  happier: 0.7
+  brighter: 0.5
+  darker: -0.6
+  sadder: -0.7
+  scarier: -0.8
+energy:
+  energetic: 0.35
+  fast: 0.3
+  aggressive: 0.4
+  intense: 0.35
+  powerful: 0.3
+  driving: 0.3
+  action: 0.3
+  upbeat: 0.3
+  pumping: 0.35
+  hard: 0.25
+  loud: 0.3
+  explosive: 0.4
+  workout: 0.35
+  frantic: 0.4
+  chaotic: 0.4
+  exciting: 0.3
+  faster: 0.3
+  calmer: -0.3
+  slower: -0.3
+  softer: -0.3
+  calm: -0.35
+  slow: -0.3
+  gentle: -0.3
+  soft: -0.3
+  relaxing: -0.35
+  relaxed: -0.3
+  peaceful: -0.35
+  quiet: -0.3
+  mellow: -0.3
+  sleepy: -0.4
+  tranquil: -0.35
+  chill: -0.25
+  serene: -0.35
+  meditative: -0.4
+  lazy: -0.3
+# words that make a prompt contradictory when one of each list is present
+contradiction:
+  high: [aggressive, intense, frantic, chaotic, explosive, loud, hard, fast, energetic, powerful, pumping]
+  low: [calm, peaceful, relaxing, gentle, soft, slow, tranquil, serene, sleepy, quiet, meditative]

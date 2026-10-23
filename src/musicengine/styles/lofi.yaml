@@ -1,0 +1,60 @@
+name: lofi
+tempo:
+  min: 80
+  max: 88
+  centre: 84
+keywords:
+- lo-fi
+- lofi
+- lo fi
+- chillhop
+- study
+- relaxed
+- cozy
+- dusty
+- vinyl
+- mellow
+- late night
+- coffee
+- homework
+modes:
+- major
+default_mode: major
+swing: 0.6
+base_intensity: 2
+valence: 0.2
+energy: 0.3
+progressions:
+  major:
+  - - ii7
+    - V7
+    - Imaj7
+    - vi7
+  - - Imaj7
+    - vi7
+    - ii7
+    - V7
+  - - IVmaj7
+    - iii7
+    - ii7
+    - Imaj7
+  minor:
+  - - i7
+    - iv7
+    - VII7
+    - IIImaj7
+programs:
+  drums: 8
+  bass: 33
+  harmony: 4
+  melody: 11
+drum_style: lofi
+bass_style: lofi
+harmony_style: block_soft
+melody_style: sparse
+melody_register: 72
+gains:
+  drums: 0.9
+  bass: 0.9
+  harmony: 0.9
+  melody: 0.7

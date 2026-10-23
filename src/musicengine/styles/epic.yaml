@@ -1,0 +1,55 @@
+name: epic
+tempo:
+  min: 86
+  max: 100
+  centre: 92
+keywords:
+- epic
+- trailer
+- battle
+- war
+- powerful
+- massive
+- intense
+- action
+- victory
+- legendary
+- fantasy
+- warrior
+- blockbuster
+modes:
+- minor
+default_mode: minor
+swing: 0
+base_intensity: 3
+valence: -0.1
+energy: 0.9
+progressions:
+  minor:
+  - - i
+    - VI
+    - III
+    - VII
+  - - i
+    - VII
+    - VI
+    - V
+  - - VI
+    - VII
+    - i
+    - i
+programs:
+  drums: 48
+  bass: 43
+  harmony: 61
+  melody: 48
+drum_style: taiko
+bass_style: ostinato
+harmony_style: stabs
+melody_style: anthem
+melody_register: 67
+gains:
+  drums: 1.0
+  bass: 0.85
+  harmony: 0.85
+  melody: 0.85

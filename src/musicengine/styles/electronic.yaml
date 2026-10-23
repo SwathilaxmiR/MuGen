@@ -1,0 +1,61 @@
+name: electronic
+tempo:
+  min: 120
+  max: 128
+  centre: 124
+keywords:
+- electronic
+- edm
+- dance
+- club
+- synth
+- techno
+- house
+- festival
+- rave
+- electro
+- futuristic
+- cyberpunk
+- drop
+modes:
+- minor
+- major
+default_mode: minor
+swing: 0
+base_intensity: 3
+valence: 0.2
+energy: 0.85
+progressions:
+  minor:
+  - - i
+    - VI
+    - III
+    - VII
+  - - i
+    - VII
+    - VI
+    - VII
+  - - vi
+    - IV
+    - I
+    - V
+  major:
+  - - vi
+    - IV
+    - I
+    - V
+programs:
+  drums: 25
+  bass: 38
+  harmony: 89
+  melody: 81
+drum_style: four_on_floor
+bass_style: offbeat
+harmony_style: pad_pulse
+melody_style: riff
+melody_register: 72
+gains:
+  drums: 1.0
+  bass: 0.9
+  harmony: 0.75
+  melody: 0.7

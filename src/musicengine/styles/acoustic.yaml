@@ -1,0 +1,59 @@
+name: acoustic
+tempo:
+  min: 92
+  max: 112
+  centre: 100
+keywords:
+- acoustic
+- folk
+- guitar
+- indie
+- warm
+- organic
+- campfire
+- singer-songwriter
+- heartfelt
+- pop
+- sunny
+- road trip
+modes:
+- major
+default_mode: major
+swing: 0
+base_intensity: 2
+valence: 0.5
+energy: 0.45
+progressions:
+  major:
+  - - I
+    - V
+    - vi
+    - IV
+  - - I
+    - IV
+    - I
+    - V
+  - - vi
+    - IV
+    - I
+    - V
+  minor:
+  - - i
+    - VII
+    - VI
+    - VII
+programs:
+  drums: 0
+  bass: 32
+  harmony: 25
+  melody: 73
+drum_style: acoustic
+bass_style: roots
+harmony_style: strum
+melody_style: lyrical
+melody_register: 72
+gains:
+  drums: 0.8
+  bass: 0.85
+  harmony: 0.95
+  melody: 0.7

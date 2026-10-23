@@ -1,0 +1,55 @@
+name: upbeat
+tempo:
+  min: 112
+  max: 128
+  centre: 120
+keywords:
+- upbeat
+- happy
+- cheerful
+- joyful
+- bright
+- summer
+- celebration
+- feel good
+- optimistic
+- party
+- sunshine
+- vlog
+- energetic pop
+modes:
+- major
+default_mode: major
+swing: 0
+base_intensity: 3
+valence: 0.9
+energy: 0.75
+progressions:
+  major:
+  - - I
+    - V
+    - vi
+    - IV
+  - - IV
+    - V
+    - iii
+    - vi
+  - - I
+    - IV
+    - vi
+    - V
+programs:
+  drums: 0
+  bass: 33
+  harmony: 0
+  melody: 56
+drum_style: four_on_floor_pop
+bass_style: octaves
+harmony_style: block
+melody_style: anthem
+melody_register: 72
+gains:
+  drums: 0.95
+  bass: 0.9
+  harmony: 0.85
+  melody: 0.75
