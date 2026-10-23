@@ -1,0 +1,10 @@
+{$DOMAIN} {
+	encode gzip
+	reverse_proxy api:8000
+}
+
+files.{$DOMAIN} {
+	reverse_proxy minio:9000 {
+		header_up Host {host}
+	}
+}

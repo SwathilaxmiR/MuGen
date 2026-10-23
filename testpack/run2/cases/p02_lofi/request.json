@@ -1,0 +1,11 @@
+{
+  "prompt": "chill lo-fi beats for studying late at night",
+  "duration_s": 60,
+  "seed": 101,
+  "output": {
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  }
+}

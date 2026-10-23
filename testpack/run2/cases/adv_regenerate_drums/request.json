@@ -1,0 +1,11 @@
+{
+  "prompt": "driving rock",
+  "duration_s": 20,
+  "seed": 42,
+  "output": {
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  }
+}

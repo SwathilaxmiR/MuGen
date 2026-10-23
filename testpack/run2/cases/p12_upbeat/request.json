@@ -1,0 +1,11 @@
+{
+  "prompt": "happy cheerful summer celebration",
+  "duration_s": 30,
+  "seed": 111,
+  "output": {
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  }
+}

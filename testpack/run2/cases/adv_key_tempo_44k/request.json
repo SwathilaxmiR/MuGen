@@ -1,0 +1,15 @@
+{
+  "prompt": "jazz lounge",
+  "duration_s": 20,
+  "key": "Eb major",
+  "tempo_bpm": 96,
+  "seed": 43,
+  "output": {
+    "sample_rate": 44100,
+    "target_lufs": -14,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  }
+}

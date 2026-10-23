@@ -1,0 +1,11 @@
+{
+  "prompt": "playful quirky cartoon music for kids",
+  "duration_s": 20,
+  "seed": 106,
+  "output": {
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  }
+}

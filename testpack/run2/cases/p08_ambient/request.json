@@ -1,0 +1,11 @@
+{
+  "prompt": "calm ambient meditation pad, peaceful and serene",
+  "duration_s": 60,
+  "seed": 107,
+  "output": {
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  }
+}

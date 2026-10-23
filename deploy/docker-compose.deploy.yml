@@ -1,0 +1,24 @@
+# Deploy-only override (one VPS, >= 4 vCPU):  docker compose -f docker-compose.yml -f deploy/docker-compose.deploy.yml up -d
+# Requires in .env: DOMAIN, API_TOKEN, CALLBACK_SECRET, S3_ACCESS_KEY, S3_SECRET_KEY (non-default),
+#                   S3_PUBLIC_ENDPOINT=https://files.${DOMAIN}
+# Untested from the build machine (no Docker there); run `make batch` against the public URL after deploying.
+services:
+  caddy:
+    image: caddy:2.8.4
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    environment:
+      DOMAIN: ${DOMAIN}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    depends_on: [api, minio]
+  api:
+    ports: !reset []
+    environment:
+      DATABASE_URL: postgresql://music:music@postgres:5432/music
+      S3_ENDPOINT: http://minio:9000
+  minio:
+    ports: !reset []
+volumes:
+  caddy_data:

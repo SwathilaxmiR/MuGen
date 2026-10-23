@@ -1,0 +1,11 @@
+{
+  "prompt": "energetic EDM festival track with a big drop",
+  "duration_s": 60,
+  "seed": 103,
+  "output": {
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "prompt": "upbeat corporate background for a tech product explainer",
+  "duration_s": 30,
+  "seed": 102,
+  "output": {
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  }
+}

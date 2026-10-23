@@ -1,0 +1,11 @@
+{
+  "prompt": "driving rock with guitar riffs for a sports montage",
+  "duration_s": 30,
+  "seed": 109,
+  "output": {
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  }
+}

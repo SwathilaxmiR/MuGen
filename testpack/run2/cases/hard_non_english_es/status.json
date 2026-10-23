@@ -1,0 +1,38 @@
+{
+  "job_id": "d5db414c-e6b6-430c-9528-dc95b72460cd",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-23T20:21:10.469387+05:30",
+  "started_at": "2026-10-23T20:21:10.472233+05:30",
+  "finished_at": "2026-10-23T20:21:12.729347+05:30",
+  "warnings": [
+    {
+      "code": "PROMPT_TRANSLATED",
+      "details": {
+        "method": "lexicon",
+        "english": "m\u00fasica calm y relaxing para meditar",
+        "matched": [
+          "tranquila",
+          "relajante"
+        ],
+        "language": "es"
+      },
+      "message": "Prompt read as 'es' and mapped with the built-in lexicon."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/d5db414c-e6b6-430c-9528-dc95b72460cd/mix.wav",
+    "mix_mp3": null,
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/d5db414c-e6b6-430c-9528-dc95b72460cd/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/d5db414c-e6b6-430c-9528-dc95b72460cd/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/d5db414c-e6b6-430c-9528-dc95b72460cd/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/d5db414c-e6b6-430c-9528-dc95b72460cd/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/d5db414c-e6b6-430c-9528-dc95b72460cd/music_manifest.json"
+  },
+  "error": null
+}

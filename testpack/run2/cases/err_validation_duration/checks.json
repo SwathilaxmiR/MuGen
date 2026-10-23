@@ -1,0 +1,27 @@
+{
+  "checks": [
+    {
+      "name": "expected_http",
+      "ok": true
+    }
+  ],
+  "response": {
+    "error": {
+      "code": "VALIDATION_ERROR",
+      "message": "Request body or parameters are invalid.",
+      "retryable": false,
+      "details": {
+        "errors": [
+          {
+            "loc": [
+              "body",
+              "duration_s"
+            ],
+            "msg": "Value error, duration_s must be between 5 and 300",
+            "type": "value_error"
+          }
+        ]
+      }
+    }
+  }
+}

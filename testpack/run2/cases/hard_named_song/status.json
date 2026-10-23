@@ -1,0 +1,34 @@
+{
+  "job_id": "bf4f9ae9-ad40-44f9-97ca-5facf86b8052",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-23T20:20:54.420213+05:30",
+  "started_at": "2026-10-23T20:20:54.631876+05:30",
+  "finished_at": "2026-10-23T20:20:57.457882+05:30",
+  "warnings": [
+    {
+      "code": "NAMED_WORK_IGNORED",
+      "details": {
+        "removed": [
+          "sound like Interstellar by Hans Zimmer"
+        ]
+      },
+      "message": "References to specific songs, artists or works were removed; only generic mood and genre words were used."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/bf4f9ae9-ad40-44f9-97ca-5facf86b8052/mix.wav",
+    "mix_mp3": null,
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/bf4f9ae9-ad40-44f9-97ca-5facf86b8052/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/bf4f9ae9-ad40-44f9-97ca-5facf86b8052/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/bf4f9ae9-ad40-44f9-97ca-5facf86b8052/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/bf4f9ae9-ad40-44f9-97ca-5facf86b8052/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/bf4f9ae9-ad40-44f9-97ca-5facf86b8052/music_manifest.json"
+  },
+  "error": null
+}

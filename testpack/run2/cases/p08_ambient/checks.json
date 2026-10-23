@@ -1,0 +1,12 @@
+{
+  "checks": [
+    {
+      "name": "expected_status",
+      "ok": true
+    },
+    {
+      "name": "qa_passed",
+      "ok": true
+    }
+  ]
+}

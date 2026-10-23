@@ -1,0 +1,45 @@
+{
+  "job_id": "8f35c335-0d1a-434a-9405-22e611db961f",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-23T20:20:20.025716+05:30",
+  "started_at": "2026-10-23T20:20:20.426435+05:30",
+  "finished_at": "2026-10-23T20:20:22.545645+05:30",
+  "warnings": [
+    {
+      "code": "CONTRADICTORY_PROMPT",
+      "details": {
+        "low": [
+          "calm",
+          "sleepy"
+        ],
+        "high": [
+          "aggressive",
+          "fast"
+        ],
+        "resolution": {
+          "mode": "minor",
+          "style": "tense",
+          "tempo": "slow-to-mid",
+          "energy": 0.5
+        }
+      },
+      "message": "Prompt asks for both 'aggressive' and 'calm'. Resolved to mid energy, minor mode, a slow-to-mid tempo and hard percussive timbre ('tense')."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/8f35c335-0d1a-434a-9405-22e611db961f/mix.wav",
+    "mix_mp3": null,
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/8f35c335-0d1a-434a-9405-22e611db961f/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/8f35c335-0d1a-434a-9405-22e611db961f/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/8f35c335-0d1a-434a-9405-22e611db961f/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/8f35c335-0d1a-434a-9405-22e611db961f/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/8f35c335-0d1a-434a-9405-22e611db961f/music_manifest.json"
+  },
+  "error": null
+}

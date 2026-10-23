@@ -1,0 +1,11 @@
+{
+  "prompt": "massive trailer battle music, epic and powerful",
+  "duration_s": 30,
+  "seed": 108,
+  "output": {
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  }
+}

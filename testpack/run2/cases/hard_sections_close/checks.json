@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "name": "expected_status",
+      "ok": true
+    },
+    {
+      "name": "warning:SECTIONS_MERGED_MIN_GAP",
+      "ok": true
+    },
+    {
+      "name": "qa_passed",
+      "ok": true
+    }
+  ]
+}

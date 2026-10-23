@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "name": "expected_status",
+      "ok": true
+    },
+    {
+      "name": "warning:NARRATION_NO_SPEECH",
+      "ok": true
+    },
+    {
+      "name": "qa_passed",
+      "ok": true
+    }
+  ]
+}

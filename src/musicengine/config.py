@@ -36,7 +36,7 @@ class Settings(BaseSettings):
 
     interpreter: str = "rules"  # rules | llm | mock
     llm_provider: str = "anthropic"
-    llm_model: str = "claude-haiku-5-5"
+    llm_model: str = "claude-opus-5-5"
     llm_api_key: str = ""
     llm_timeout_s: float = 15.0
 

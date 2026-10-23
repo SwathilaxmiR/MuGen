@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "name": "same_job_on_resubmit",
+      "ok": true
+    },
+    {
+      "name": "expected_status",
+      "ok": true
+    },
+    {
+      "name": "qa_passed",
+      "ok": true
+    }
+  ]
+}

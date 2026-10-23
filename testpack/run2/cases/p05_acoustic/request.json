@@ -1,0 +1,11 @@
+{
+  "prompt": "warm acoustic guitar folk for a travel vlog",
+  "duration_s": 30,
+  "seed": 104,
+  "output": {
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  }
+}

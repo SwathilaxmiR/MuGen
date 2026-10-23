@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "name": "expected_status",
+      "ok": true
+    },
+    {
+      "name": "warning:VOCALS_NOT_SUPPORTED",
+      "ok": true
+    },
+    {
+      "name": "qa_passed",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "failures": [],
+  "metrics": {
+    "length_error_s": 0.0,
+    "length_error_samples": 0,
+    "sum_diff_db": -116.41,
+    "integrated_lufs": -16.0,
+    "true_peak_dbtp": -3.413,
+    "ffmpeg": {
+      "integrated_lufs": -16.0,
+      "lra": 0.6,
+      "true_peak_dbtp": -3.4
+    },
+    "ffmpeg_lufs_delta": -0.0,
+    "mp3_true_peak_dbtp": null,
+    "full_scale_samples": 0,
+    "clicks": 0,
+    "click_detail": {
+      "reference_jump": 0.04101030826568601,
+      "boundaries": [],
+      "clicks": 0
+    },
+    "gaps": 0,
+    "gap_detail": {
+      "gaps": 0,
+      "gap_times": [],
+      "min_rms_db": -21.71
+    },
+    "ending": {
+      "last_50ms_db": -109.91,
+      "silent_end": true,
+      "hit_onset_ratio": 5.35,
+      "hit_onset": true
+    },
+    "section_alignment": {
+      "sections": [],
+      "misaligned": 0
+    },
+    "loop_seam": null
+  },
+  "bleed": {
+    "per_stem": {
+      "bass": {
+        "explained_db": -5.16,
+        "fit_coefficients": {
+          "drums": 0.577,
+          "melody": 0.0058,
+          "harmony": 0.1863
+        }
+      },
+      "drums": {
+        "explained_db": -5.22,
+        "fit_coefficients": {
+          "bass": 0.4834,
+          "melody": 0.0502,
+          "harmony": 0.0986
+        }
+      },
+      "melody": {
+        "explained_db": -9.85,
+        "fit_coefficients": {
+          "bass": 0.0028,
+          "drums": 0.0286,
+          "harmony": 0.3604
+        }
+      },
+      "harmony": {
+        "explained_db": -8.85,
+        "fit_coefficients": {
+          "bass": 0.064,
+          "drums": 0.0404,
+          "melody": 0.2595
+        }
+      }
+    },
+    "pairwise_xcorr": {
+      "bass~drums": 0.0697,
+      "bass~melody": 0.002,
+      "bass~harmony": -0.0145,
+      "drums~melody": -0.002,
+      "drums~harmony": 0.0015,
+      "melody~harmony": -0.054
+    },
+    "max_explained_db": -5.16
+  },
+  "spectral_overlap": {
+    "per_stem": {
+      "bass": 0.681,
+      "drums": 0.7102,
+      "melody": 0.8834,
+      "harmony": 0.8846
+    },
+    "mean_overlap": 0.7898
+  }
+}

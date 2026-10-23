@@ -1,0 +1,49 @@
+case,status,checks_passed,failed_checks,http_status,error,warnings,job_id,style,duration_s,prompt
+adv_key_tempo_44k,succeeded,True,,202,,,dd2f3e51-276d-4fdc-a89d-d04aaf33664e,jazz,20,jazz lounge
+adv_loop_16s,succeeded,True,,202,,LOOP_IGNORES_ENDING,0c43902c-a6d9-4ccb-8e26-2623343e981d,lofi,16,chill lo-fi beats
+adv_loop_fixed_tempo,succeeded,True,,202,,LOOP_IGNORES_ENDING TEMPO_ADJUSTED_FOR_LOOP,49b028dc-a09f-453c-a37d-7dbe9327bbec,electronic,15,electronic groove
+adv_lufs_minus23,succeeded,True,,202,,,0baf5226-da91-4424-b81c-2eb44a50cdc7,ambient,20,calm documentary piano
+adv_regenerate_drums,succeeded,True,,202,,,c81a31c3-4dfa-496a-a771-2243db611ffa,rock,20,driving rock
+d010_cinematic_sections,succeeded,True,,202,,SECTION_SNAPPED,ff860a51-72fa-47a1-929a-3f698e4bdb11,cinematic,10,calm cinematic piano that builds to an uplifting peak
+d030_cinematic_sections,succeeded,True,,202,,SECTION_SNAPPED,6d9bc900-dc5a-43f3-b1ec-bf171c4bfeda,cinematic,30,calm cinematic piano that builds to an uplifting peak
+d060_cinematic_sections,succeeded,True,,202,,SECTION_SNAPPED,06b1b297-b4eb-45d5-ab57-ba6e6fcb4543,cinematic,60,calm cinematic piano that builds to an uplifting peak
+d180_cinematic_sections,succeeded,True,,202,,SECTION_SNAPPED,1a99c1d0-41a7-4470-9cd8-d8dd37ad3f4f,cinematic,180,calm cinematic piano that builds to an uplifting peak
+err_validation_duration,rejected,True,,422,VALIDATION_ERROR,,,,400,x
+hard_concurrent_1,succeeded,True,,202,,,8b284596-67b2-4496-bfa6-b7611ace9271,lofi,20,lofi beats
+hard_concurrent_2,succeeded,True,,202,,,87fd9d72-fa8b-4adf-bef5-9e7ff40d2ea5,epic,20,epic trailer
+hard_concurrent_3,succeeded,True,,202,,,c9b07455-9f7b-4836-ae5f-0a74dbce8026,jazz,20,jazz lounge
+hard_contradictory,succeeded,True,,202,,CONTRADICTORY_PROMPT,8f35c335-0d1a-434a-9405-22e611db961f,tense,15,calm but aggressive and fast but sleepy
+hard_ending_on_beat,succeeded,True,,202,,ENDING_ON_BEAT_NOT_BAR TEMPO_OUTSIDE_SNAP_RANGE,2ba61fbf-3a63-43c2-9508-5da1ac6f2ab4,ambient,5,ambient
+hard_long_300s,succeeded,True,,202,,,7bca4f6c-f2eb-4129-8383-3a134159468b,ambient,300,calm ambient meditation that slowly builds
+hard_named_song,succeeded,True,,202,,NAMED_WORK_IGNORED,bf4f9ae9-ad40-44f9-97ca-5facf86b8052,epic,20,"make it sound like Interstellar by Hans Zimmer, epic organ swell"
+hard_narration_long_silences,succeeded,True,,202,,,3fe8b942-97f3-43de-8666-3183e1dbe6c6,acoustic,30,warm acoustic guitar for a documentary
+hard_narration_longer_than_music,succeeded,True,,202,,NARRATION_TRUNCATED,12077bfe-44dc-443d-ba01-f71d835fa386,ambient,10,calm ambient
+hard_narration_no_speech,succeeded,True,,202,,NARRATION_NO_SPEECH,383069bd-d8f1-46b3-a106-c0346c5cb970,corporate,12,corporate background
+hard_narration_ssrf_blocked,succeeded,True,,202,,NARRATION_FETCH_FAILED,8144b9bb-632a-4291-b4d7-c6ffc4e4add3,ambient,8,calm ambient
+hard_non_english_es,succeeded,True,,202,,PROMPT_TRANSLATED,d5db414c-e6b6-430c-9528-dc95b72460cd,ambient,15,música tranquila y relajante para meditar
+hard_non_english_hi,succeeded,True,,202,,PROMPT_TRANSLATED,72b1d86c-73f9-4b4c-ab00-4fd4c0964069,cinematic,15,शांत और रहस्यमय फिल्म संगीत
+hard_non_english_ta,succeeded,True,,202,,PROMPT_TRANSLATED,591f4a97-64c9-486e-8415-c0f3018851f6,ambient,15,அமைதியான இசை
+hard_same_key_twice,succeeded,True,,202,,,50aa1a43-c279-4233-b961-f6ea1d969748,upbeat,10,upbeat happy vlog
+hard_section_after_end,succeeded,True,,202,,SECTION_AFTER_END_DROPPED SECTION_SNAPPED,7977cb31-e85b-453b-9a22-0344efea41de,corporate,20,corporate inspiring
+hard_sections_close,succeeded,True,,202,,SECTIONS_MERGED_MIN_GAP SECTION_SNAPPED,aab80a13-fd5e-43da-8bd9-97344fb1c8fd,electronic,30,energetic electronic track
+hard_short_5_5s,succeeded,True,,202,,,f09c5285-5fac-483c-9962-e3e2b839a2fc,corporate,5.5,corporate logo sting
+hard_short_5s,succeeded,True,,202,,,7311d2a3-d69b-45c1-835a-6bbe0287872c,playful,5,playful quirky cartoon sting
+hard_short_6s,succeeded,True,,202,,,e6142241-705c-4f90-8fb9-b60ceb342395,tense,6,tense dark hit
+hard_slow_fixed_tempo,succeeded,True,,202,,SECTION_SNAPPED TEMPO_OUTSIDE_SNAP_RANGE,098c5eda-e08b-4b98-850a-f3ec5d46d238,ambient,20,ambient pad
+hard_unknown_language,succeeded,True,,202,,PROMPT_LANGUAGE_FALLBACK,d9377bc5-6310-4222-a569-c7800705432f,corporate,10,Спокойная музыка для видео
+hard_vague,succeeded,True,,202,,VAGUE_PROMPT_DEFAULTS,64f322c5-40d4-479a-a289-ca3221bbb020,corporate,15,music
+hard_vocals,succeeded,True,,202,,VOCALS_NOT_SUPPORTED,aeb2a753-19ae-4cba-b38e-ed384cff3c4b,upbeat,15,upbeat pop song with a female singer and catchy lyrics
+p01_cinematic,succeeded,True,,202,,,45966cf7-31ef-4490-933d-ea19041acf70,cinematic,45,Epic cinematic orchestral score that builds to a heroic climax
+p02_lofi,succeeded,True,,202,,,c41e262d-9096-4bc4-840c-a5e4ff9d440d,lofi,60,chill lo-fi beats for studying late at night
+p03_corporate,succeeded,True,,202,,,58573d9f-09ea-4552-83c5-47c3bd4ea5fd,corporate,30,upbeat corporate background for a tech product explainer
+p04_electronic,succeeded,True,,202,,,7034b96f-db3e-4f01-9564-3add840fea5c,electronic,60,energetic EDM festival track with a big drop
+p05_acoustic,succeeded,True,,202,,,3c352601-06a5-48f4-8442-2a6f200d87a7,acoustic,30,warm acoustic guitar folk for a travel vlog
+p06_tense,succeeded,True,,202,,,12340ee1-18fc-4dd0-86ac-12bb3a0ac25e,tense,45,"tense suspense thriller underscore, dark and ominous"
+p07_playful,succeeded,True,,202,,,10d00bae-ecb4-4ae4-a865-74e9494f177a,playful,20,playful quirky cartoon music for kids
+p08_ambient,succeeded,True,,202,,,f4b5656f-39d2-4261-8463-4cc8b7f997a5,ambient,60,"calm ambient meditation pad, peaceful and serene"
+p09_epic,succeeded,True,,202,,,b81b3db8-af80-4340-8a39-020209c08516,epic,30,"massive trailer battle music, epic and powerful"
+p10_rock,succeeded,True,,202,,,b3c9aa19-e4b9-4ebd-aca7-f96bfff6e96d,rock,30,driving rock with guitar riffs for a sports montage
+p11_jazz,succeeded,True,,202,,,41fbc9a0-7b61-4ee4-9e4c-d4183ebc519c,jazz,45,smooth jazz lounge with saxophone
+p12_upbeat,succeeded,True,,202,,,87eee54e-de56-4b70-9891-57cbd71ba938,upbeat,30,happy cheerful summer celebration
+speed_60s_a_first,succeeded,True,,202,,,cd3e03d6-42d8-46f4-81c9-6bd4fce25092,corporate,60,upbeat corporate background
+speed_60s_b_second,succeeded,True,,202,,,b5b98792-219c-472a-bbcd-4ac19a9b7599,corporate,60,upbeat corporate background

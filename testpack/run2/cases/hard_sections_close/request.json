@@ -1,0 +1,19 @@
+{
+  "prompt": "energetic electronic track",
+  "duration_s": 30,
+  "seed": 8,
+  "sections": [
+    {
+      "start_s": 0,
+      "mood": "calm intro"
+    },
+    {
+      "start_s": 10,
+      "mood": "build"
+    },
+    {
+      "start_s": 11,
+      "mood": "peak drop"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "prompt": "ambient pad",
+  "duration_s": 20,
+  "tempo_bpm": 50,
+  "seed": 31,
+  "sections": [
+    {
+      "start_s": 0,
+      "mood": "calm"
+    },
+    {
+      "start_s": 10.3,
+      "mood": "build"
+    }
+  ]
+}

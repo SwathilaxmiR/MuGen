@@ -1,0 +1,518 @@
+{
+  "schema_version": "1.0",
+  "ai_generated": true,
+  "ai_label": "AI-generated instrumental music (rule-based symbolic composition rendered with sampled instruments)",
+  "job_id": "8f35c335-0d1a-434a-9405-22e611db961f",
+  "parent_job_id": null,
+  "regenerated_stem": null,
+  "request": {
+    "prompt": "calm but aggressive and fast but sleepy",
+    "duration_s": 15.0,
+    "sections": null,
+    "tempo_bpm": null,
+    "key": null,
+    "loopable": false,
+    "narration_url": null,
+    "seed": 5,
+    "output": {
+      "sample_rate": 48000,
+      "target_lufs": -16.0,
+      "formats": [
+        "wav"
+      ]
+    },
+    "callback_url": null
+  },
+  "seed": 5,
+  "stem_seeds": {
+    "drums": 624322144,
+    "bass": 1964476551,
+    "harmony": 986143943,
+    "melody": 2079833024
+  },
+  "style": "tense",
+  "tempo_bpm": 86.0,
+  "key": {
+    "tonic": "E",
+    "mode": "minor",
+    "name": "E minor"
+  },
+  "time_signature": "4/4",
+  "duration_s": 15.0,
+  "sample_rate": 48000,
+  "bit_depth": 24,
+  "length_samples": 720000,
+  "sections": [
+    {
+      "requested_start_s": null,
+      "applied_start_s": 0.0,
+      "bar": 0,
+      "beat": 0,
+      "beat_index": 0,
+      "mood": "intro",
+      "intensity": 2,
+      "build": false,
+      "derived": true
+    },
+    {
+      "requested_start_s": null,
+      "applied_start_s": 5.581395,
+      "bar": 2,
+      "beat": 0,
+      "beat_index": 8,
+      "mood": "main",
+      "intensity": 3,
+      "build": false,
+      "derived": true
+    }
+  ],
+  "bars": [
+    {
+      "index": 0,
+      "t": 0.0
+    },
+    {
+      "index": 1,
+      "t": 2.790698
+    },
+    {
+      "index": 2,
+      "t": 5.581395
+    },
+    {
+      "index": 3,
+      "t": 8.372093
+    },
+    {
+      "index": 4,
+      "t": 11.162791
+    },
+    {
+      "index": 5,
+      "t": 13.953488
+    }
+  ],
+  "beats": [
+    {
+      "t": 0.0,
+      "bar": 0,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 0.697674,
+      "bar": 0,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 1.395349,
+      "bar": 0,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 2.093023,
+      "bar": 0,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 2.790698,
+      "bar": 1,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 3.488372,
+      "bar": 1,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 4.186047,
+      "bar": 1,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 4.883721,
+      "bar": 1,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 5.581395,
+      "bar": 2,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 6.27907,
+      "bar": 2,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 6.976744,
+      "bar": 2,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 7.674419,
+      "bar": 2,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 8.372093,
+      "bar": 3,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 9.069767,
+      "bar": 3,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 9.767442,
+      "bar": 3,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 10.465116,
+      "bar": 3,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 11.162791,
+      "bar": 4,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 11.860465,
+      "bar": 4,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 12.55814,
+      "bar": 4,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 13.255814,
+      "bar": 4,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 13.953488,
+      "bar": 5,
+      "beat": 0,
+      "downbeat": true
+    }
+  ],
+  "hit_time_s": 13.953488,
+  "loop": {
+    "enabled": false,
+    "bars": null,
+    "seamless_method": null
+  },
+  "stems": [
+    {
+      "name": "drums",
+      "file": "stems/drums.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 48,
+      "program_name": "Orchestra Kit",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 624322144,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "bass",
+      "file": "stems/bass.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 43,
+      "program_name": "Contrabass",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 1964476551,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "harmony",
+      "file": "stems/harmony.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 44,
+      "program_name": "Tremolo Strings",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 986143943,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "melody",
+      "file": "stems/melody.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 45,
+      "program_name": "Pizzicato Strings",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 2079833024,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    }
+  ],
+  "mix_formula": "mix = sum(stems[i].gain * stems[i]) (stems stored post master gain and limiter)",
+  "master_gain_db": 2.6225,
+  "limiter": {
+    "ceiling_dbtp": -1.5,
+    "lookahead_ms": 5.0,
+    "release_ms": 80.0,
+    "max_gain_reduction_db": 1.213,
+    "passes": 1
+  },
+  "loudness": {
+    "integrated_lufs": -16.009,
+    "true_peak_dbtp": -1.6,
+    "lra": 2.81,
+    "target_lufs": -16.0
+  },
+  "qa": {
+    "passed": true,
+    "failures": [],
+    "attempt": 1,
+    "length_error_s": 0.0,
+    "sum_diff_db": -116.23,
+    "integrated_lufs": -16.009,
+    "true_peak_dbtp": -1.6,
+    "ffmpeg_ebur128": {
+      "integrated_lufs": -16.0,
+      "lra": 2.8,
+      "true_peak_dbtp": -1.6
+    },
+    "mp3_true_peak_dbtp": null,
+    "full_scale_samples": 0,
+    "clicks": 0,
+    "gaps": 0,
+    "min_rms_db": -24.67,
+    "ending": {
+      "last_50ms_db": -121.47,
+      "silent_end": true,
+      "hit_onset_ratio": 4.69,
+      "hit_onset": true
+    },
+    "section_alignment": [
+      {
+        "applied_start_s": 5.5814,
+        "onset_offset_s": -0.0,
+        "onset_ratio": 5.69,
+        "onset": true,
+        "level_step_db": 5.31,
+        "section_level_step_db": 2.75,
+        "intensity_change": 1,
+        "aligned": true
+      }
+    ],
+    "loop_seam": null
+  },
+  "ducking": {
+    "applied": false,
+    "depth_db": null,
+    "segments": [],
+    "curve": [],
+    "requested": false
+  },
+  "providers": [
+    {
+      "role": "interpreter",
+      "name": "rules",
+      "version": "1",
+      "mode": "local"
+    },
+    {
+      "role": "renderer",
+      "name": "fluidsynth",
+      "version": "2.6.1",
+      "mode": "local subprocess"
+    }
+  ],
+  "components": [
+    {
+      "name": "FluidR3_GM SoundFont",
+      "version": "3.1 (Debian fluid-soundfont-gm 3.1-5.3)",
+      "licence": "MIT",
+      "licence_url": "https://metadata.ftp-master.debian.org/changelogs/main/f/fluid-soundfont/unstable_copyright",
+      "commercial_use": "Yes. MIT: 'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'. Rendered audio is our output, not a copy of the SoundFont.",
+      "role": "instrument samples (default renderer)"
+    },
+    {
+      "name": "FluidSynth",
+      "version": "2.3.x (Debian bookworm package)",
+      "licence": "LGPL-2.1-or-later",
+      "licence_url": "https://metadata.ftp-master.debian.org/changelogs/main/f/fluidsynth/stable_copyright",
+      "commercial_use": "Yes. Invoked as an unmodified separate program (subprocess); no linking. Output audio carries no licence obligation.",
+      "role": "MIDI to audio renderer"
+    },
+    {
+      "name": "FFmpeg (Debian build incl. libmp3lame)",
+      "version": "5.1.x (Debian bookworm package)",
+      "licence": "GPL-2.0-or-later (Debian builds with --enable-gpl, no --enable-nonfree)",
+      "licence_url": "https://salsa.debian.org/multimedia-team/ffmpeg/-/raw/debian/7%255.1.6-0+deb12u1/debian/rules",
+      "commercial_use": "Yes. Invoked as an unmodified separate program (subprocess); GPL obligations apply to redistribution of the binary (source offer from Debian), not to the audio it produces.",
+      "role": "mp3 encode, narration decode, independent loudness check"
+    },
+    {
+      "name": "musicengine (this repository)",
+      "version": "0.1.0",
+      "licence": "Proprietary (owned code)",
+      "licence_url": "./README.md",
+      "commercial_use": "Yes. Composition rules, presets and DSP written for this project; no trained music model, no copied songs.",
+      "role": "prompt interpretation, composition, numpy synth/FX, mixing, QA"
+    },
+    {
+      "name": "NumPy",
+      "version": "2.x",
+      "licence": "BSD-3-Clause",
+      "licence_url": "https://github.com/numpy/numpy/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "DSP"
+    },
+    {
+      "name": "SciPy",
+      "version": "1.x",
+      "licence": "BSD-3-Clause",
+      "licence_url": "https://github.com/scipy/scipy/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "filters, resampling for true-peak"
+    },
+    {
+      "name": "soundfile (+ bundled libsndfile)",
+      "version": "0.12+",
+      "licence": "BSD-3-Clause (libsndfile LGPL-2.1, dynamically loaded)",
+      "licence_url": "https://github.com/bastibe/python-soundfile/blob/master/LICENSE",
+      "commercial_use": "Yes.",
+      "role": "WAV read/write"
+    },
+    {
+      "name": "pyloudnorm",
+      "version": "0.1+",
+      "licence": "MIT",
+      "licence_url": "https://github.com/csteinmetz1/pyloudnorm/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "BS.1770 loudness"
+    },
+    {
+      "name": "pretty_midi (+ mido)",
+      "version": "0.2.x",
+      "licence": "MIT",
+      "licence_url": "https://github.com/craffel/pretty-midi/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "MIDI writing"
+    },
+    {
+      "name": "langdetect",
+      "version": "1.0.9",
+      "licence": "Apache-2.0 (LICENSE file; PyPI metadata field says MIT, classifier says Apache)",
+      "licence_url": "https://github.com/Mimino666/langdetect/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "prompt language detection"
+    },
+    {
+      "name": "FastAPI / Starlette / Uvicorn / Pydantic / pydantic-settings",
+      "version": "current",
+      "licence": "MIT / BSD-3-Clause / BSD-3-Clause / MIT / MIT",
+      "licence_url": "https://github.com/fastapi/fastapi/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "HTTP API"
+    },
+    {
+      "name": "psycopg / psycopg-pool",
+      "version": "3.x",
+      "licence": "LGPL-3.0-only",
+      "licence_url": "https://github.com/psycopg/psycopg/blob/master/LICENSE.txt",
+      "commercial_use": "Yes. Used unmodified as an installed library.",
+      "role": "PostgreSQL driver"
+    },
+    {
+      "name": "boto3 / httpx / structlog / PyYAML / python-multipart",
+      "version": "current",
+      "licence": "Apache-2.0 / BSD-3-Clause / MIT OR Apache-2.0 / MIT / Apache-2.0",
+      "licence_url": "https://github.com/boto/boto3/blob/develop/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "storage client, HTTP client, logging, config, uploads"
+    },
+    {
+      "name": "PostgreSQL",
+      "version": "16",
+      "licence": "PostgreSQL License",
+      "licence_url": "https://www.postgresql.org/about/licence/",
+      "commercial_use": "Yes (permissive).",
+      "role": "jobs, idempotency, queue"
+    },
+    {
+      "name": "MinIO server",
+      "version": "RELEASE.2025-04-22T22-12-26Z",
+      "licence": "AGPL-3.0",
+      "licence_url": "https://github.com/minio/minio/blob/master/LICENSE",
+      "commercial_use": "Used unmodified as a separate network service for the demo. For production, point S3_* at a non-AGPL S3 backend (AWS S3, R2, etc.); no code change needed.",
+      "role": "object storage (demo / compose only)"
+    }
+  ],
+  "timings_s": {
+    "interpret": 0.0168,
+    "plan": 0.0002,
+    "compose": 0.0017,
+    "render": 0.8289,
+    "mix": 0.31,
+    "encode": 0.0342,
+    "qa": 0.2398,
+    "total": 1.5426,
+    "upload": 0.0996
+  },
+  "cost": {
+    "compute_seconds": 1.345,
+    "usd_estimate": 1.8e-05,
+    "cost_per_cpu_second_usd": 1.34e-05,
+    "api_fees_usd": 0.0
+  },
+  "warnings": [
+    {
+      "code": "CONTRADICTORY_PROMPT",
+      "message": "Prompt asks for both 'aggressive' and 'calm'. Resolved to mid energy, minor mode, a slow-to-mid tempo and hard percussive timbre ('tense').",
+      "details": {
+        "high": [
+          "aggressive",
+          "fast"
+        ],
+        "low": [
+          "calm",
+          "sleepy"
+        ],
+        "resolution": {
+          "style": "tense",
+          "energy": 0.5,
+          "mode": "minor",
+          "tempo": "slow-to-mid"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "name": "expected_status",
+      "ok": true
+    },
+    {
+      "name": "warning:TEMPO_OUTSIDE_SNAP_RANGE",
+      "ok": true
+    },
+    {
+      "name": "qa_passed",
+      "ok": true
+    }
+  ]
+}
