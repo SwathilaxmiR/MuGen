@@ -1,0 +1,6 @@
+# evaluation-only environment (not the service image)
+torch==2.5.1
+transformers==4.46.3
+numpy<2.3
+scipy
+soundfile
