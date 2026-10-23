@@ -8,6 +8,7 @@ down:
 
 # whole suite (unit + integration + e2e) inside compose, no API keys
 test:
+	mkdir -p out
 	docker compose --profile tests run --rm --build tests
 
 # unit tests only on the host (needs .venv); integration/e2e skip without services
@@ -15,6 +16,7 @@ test-local:
 	.venv/bin/pytest -q -rs
 
 batch:
+	mkdir -p out
 	docker compose --profile tests run --rm tests \
 	  python -m musicengine.cli batch --api http://api:8000 --token "$${API_TOKEN}" --input tests/inputs --out out/
 

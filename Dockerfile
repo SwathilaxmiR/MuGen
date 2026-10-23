@@ -23,6 +23,7 @@ COPY pyproject.toml ./
 COPY src ./src
 RUN pip install --no-cache-dir -e ".[test]"
 COPY . .
+RUN mkdir -p /app/out && chown -R app /app/out
 USER app
 
 ENV PYTHONUNBUFFERED=1 SOUNDFONT_PATH=/opt/soundfonts/FluidR3_GM.sf2

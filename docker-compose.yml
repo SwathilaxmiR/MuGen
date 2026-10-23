@@ -67,7 +67,8 @@ services:
     depends_on:
       api: {condition: service_healthy}
       worker: {condition: service_started}
-    command: ["pytest", "-q", "-rs"]
+    volumes: ["./out:/app/out"]
+    command: ["pytest", "-q", "-rs", "-p", "no:cacheprovider"]
 
 volumes:
   pgdata:

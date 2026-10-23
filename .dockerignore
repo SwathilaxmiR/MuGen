@@ -1,0 +1,9 @@
+.git
+.venv
+.local
+out
+**/__pycache__
+.pytest_cache
+*.sf2
+.env
+eval/.cache

@@ -4,29 +4,7 @@ import shutil
 import pytest
 
 from musicengine.config import get_settings
-
-
-def _services_up() -> bool:
-    try:
-        from musicengine import db
-        from musicengine.storage import Storage
-
-        with db.conn_ctx() as c:
-            db.ping(c)
-        Storage().client.list_buckets()
-        return True
-    except Exception:
-        return False
-
-
-_SERVICES = None
-
-
-def services_up() -> bool:
-    global _SERVICES
-    if _SERVICES is None:
-        _SERVICES = _services_up()
-    return _SERVICES
+from tests_conftest_helpers import services_up
 
 
 def fluidsynth_available() -> bool:

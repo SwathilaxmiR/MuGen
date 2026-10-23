@@ -160,6 +160,7 @@ def _submit_case(client, name: str, data: dict, out: str) -> dict:
 
     meta = data.get("meta", {})
     body = dict(data.get("request", data))
+    os.makedirs(out, exist_ok=True)
     if nar := meta.get("narration"):
         path = synth_narration(os.path.join(out, "narration.wav"), nar.get("phrases", []), nar["duration_s"])
         body["narration_url"] = client.upload(path)
