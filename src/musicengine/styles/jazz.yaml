@@ -42,7 +42,11 @@ progressions:
   minor:
   - - i7
     - iv7
-    - ii7
+    - VImaj7
+    - V7
+  - - i7
+    - VImaj7
+    - iv7
     - V7
 programs:
   drums: 32

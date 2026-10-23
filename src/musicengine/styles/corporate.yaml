@@ -39,10 +39,10 @@ progressions:
     - IV
     - V
   minor:
-  - - vi
-    - IV
-    - I
-    - V
+  - - i
+    - VI
+    - III
+    - VII
 programs:
   drums: 0
   bass: 33

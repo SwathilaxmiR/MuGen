@@ -35,15 +35,19 @@ progressions:
     - VII
     - VI
     - VII
-  - - vi
-    - IV
-    - I
-    - V
+  - - i
+    - iv
+    - VI
+    - VII
   major:
   - - vi
     - IV
     - I
     - V
+  - - I
+    - V
+    - vi
+    - IV
 programs:
   drums: 25
   bass: 38
