@@ -7,3 +7,4 @@ out
 *.sf2
 .env
 eval/.cache
+web/node_modules

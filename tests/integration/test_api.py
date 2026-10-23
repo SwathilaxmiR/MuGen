@@ -161,3 +161,9 @@ def test_ready_ok(client):
 def test_openapi_file_matches_app():
     committed = (Path(__file__).resolve().parents[2] / "openapi.yaml").read_text()
     assert committed == openapi_yaml(), "run `make openapi` and commit openapi.yaml"
+
+
+def test_manifest_not_ready_and_unknown(client):
+    job = client.post("/api/v1/music/jobs", json=BODY).json()["job_id"]
+    err(client.get(f"/api/v1/jobs/{job}/manifest"), "PARENT_JOB_NOT_READY", 409)
+    err(client.get(f"/api/v1/jobs/{uuid.uuid4()}/manifest"), "JOB_NOT_FOUND", 404)

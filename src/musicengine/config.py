@@ -60,6 +60,7 @@ class Settings(BaseSettings):
     cost_per_cpu_second: float = 0.0000134  # override with your server's $/vCPU-second
     fault_inject: str = ""  # test only: render_primary_fail | render_timeout | llm_fail
     log_level: str = "INFO"
+    web_dist_dir: str = ""  # built web UI to serve at /; default <repo>/web/dist when it exists
 
 
 @lru_cache

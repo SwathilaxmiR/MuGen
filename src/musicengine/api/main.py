@@ -81,6 +81,11 @@ def create_app() -> FastAPI:
         app.add_api_route(f"{prefix}/ready", ready, methods=["GET"], tags=["ops"], include_in_schema=not prefix,
                           summary="Readiness: database, bucket, SoundFont, fluidsynth, ffmpeg")
     app.include_router(routes.router)
+    web = s.web_dist_dir or os.path.join(os.path.dirname(__file__), "..", "..", "..", "web", "dist")
+    if os.path.isfile(os.path.join(web, "index.html")):  # serve the built web UI (npm run build) at /
+        from fastapi.staticfiles import StaticFiles
+
+        app.mount("/", StaticFiles(directory=web, html=True), name="web")
     return app
 
 

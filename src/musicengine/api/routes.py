@@ -1,4 +1,5 @@
 """HTTP routes under /api/v1."""
+import json
 import uuid
 from contextlib import contextmanager
 
@@ -125,6 +126,20 @@ def get_job(job_id: str):
     if not row:
         raise ApiError("JOB_NOT_FOUND", f"No job {job_id!r}.")
     return job_status_payload(row, get_storage().presign)
+
+
+@router.get("/jobs/{job_id}/manifest", responses=ERRORS, tags=["jobs"],
+            summary="music_manifest.json of a succeeded job (same-origin copy of the presigned file)")
+def get_manifest(job_id: str):
+    jid = _uuid(job_id)
+    with conn() as c:
+        row = db.get_job(c, jid)
+    if not row:
+        raise ApiError("JOB_NOT_FOUND", f"No job {job_id!r}.")
+    if row["status"] != "succeeded" or not row.get("result"):
+        raise ApiError("PARENT_JOB_NOT_READY", f"Job is {row['status']}; the manifest exists once it succeeds.",
+                       {"status": row["status"]})
+    return JSONResponse(json.loads(get_storage().get_bytes(row["result"]["manifest"])))
 
 
 @router.post("/uploads", status_code=201, response_model=UploadResponse, responses=ERRORS, tags=["uploads"],

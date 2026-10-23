@@ -93,7 +93,7 @@ def install(app: FastAPI) -> None:
 async def _guarded(request: Request, call_next):
     s = get_settings()
     path = request.url.path
-    if path not in OPEN_PATHS:
+    if path.startswith("/api/") and path not in OPEN_PATHS:  # the web UI's static files stay public
         if s.api_token:
             auth = request.headers.get("authorization", "")
             token = auth[7:] if auth.lower().startswith("bearer ") else ""

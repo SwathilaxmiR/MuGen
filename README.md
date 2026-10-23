@@ -39,6 +39,10 @@ make batch                                 # every tests/inputs/*.json -> out/su
 
 > **Verification status:** the machine that built this repo had no Docker. The whole suite (`pytest tests`: 352 passed, 0 skipped) and the batch runner (48/48 cases) were run on the host instead, against native PostgreSQL 16, MinIO, FluidSynth 2.6.1 and FFmpeg 9 (see `scripts/dev_services.sh`). `Dockerfile`, `docker-compose.yml` and `make test` have **not** been run yet. Run `make up && make test` once on a Docker host before relying on them.
 
+## Web UI
+
+`web/` holds a React + TypeScript front end. In development, run `cd web && npm install && npm run dev` (http://localhost:5173, proxied to the API). Alternatively, `npm run build` and the API serves it at http://localhost:8000/. See [web/README.md](web/README.md). The Docker image does not build it yet.
+
 ## API
 
 All routes are under `/api/v1`. `/health` and `/ready` sit at the root and are also aliased under `/api/v1`. The full contract is in [openapi.yaml](openapi.yaml), and a test fails if that file drifts from the running app.
@@ -48,6 +52,7 @@ All routes are under `/api/v1`. `/health` and `/ready` sit at the root and are a
 | `POST /api/v1/music/jobs` | Body: `prompt`, `duration_s` (5-300), optional `sections[] {start_s, mood}`, `tempo_bpm` (40-200), `key` ("C major", "F# minor", "Am"), `loopable`, `narration_url` (`https://`, `http://` or `upload://<id>`), `seed`, `output {sample_rate: 44100/48000, target_lufs: -30..-8, formats: ["wav","mp3"]}`, `callback_url`. Headers: `Idempotency-Key`, `X-Correlation-Id`, `Authorization: Bearer`. Returns **202** `{job_id, status, status_url}`. |
 | `POST /api/v1/music/jobs/{id}/regenerate` | Body `{stem, seed?}`. The parent must have `succeeded`. Returns a new job (`parent_job_id` set). The other stems are copied byte for byte. |
 | `GET /api/v1/jobs/{id}` | `{status: queued, running, succeeded or failed, progress 0-100, timestamps, warnings[], result {mix_wav, mix_mp3?, stems{}, mix_ducked?, manifest}, error?}` with presigned links. |
+| `GET /api/v1/jobs/{id}/manifest` | The job's `music_manifest.json`, same-origin (used by the web UI). Returns 409 `PARENT_JOB_NOT_READY` until the job succeeds. |
 | `POST /api/v1/uploads` | Multipart narration upload (up to `MAX_NARRATION_MB`). Returns `{url: "upload://<id>"}`. |
 | `GET /health`, `GET /ready` | Liveness. Readiness checks the database, bucket, SoundFont, fluidsynth and ffmpeg. |
 
@@ -160,6 +165,7 @@ Every setting comes from the environment (see [.env.example](.env.example)).
 | `MAX_NARRATION_MB`, `NARRATION_FETCH_TIMEOUT_S` | `50`, `20` | Narration limits |
 | `COST_PER_CPU_SECOND` | `0.0000134` | Cost model input ($/vCPU-second of your server) |
 | `FAULT_INJECT` | empty | Test only: `render_primary_fail`, `render_timeout`, `llm_fail` |
+| `WEB_DIST_DIR` | `<repo>/web/dist` if built | Built web UI served at `/` |
 | `LOG_LEVEL` | `INFO` | structlog JSON logs (`timestamp, level, event, job_id, correlation_id`) |
 
 ## Tests

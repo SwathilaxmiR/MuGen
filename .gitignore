@@ -9,3 +9,5 @@ out/
 *.sf2
 eval/.cache/
 eval/.venv/
+web/node_modules/
+web/dist/
