@@ -133,3 +133,22 @@ class JobStatus(BaseModel):
 class UploadResponse(BaseModel):
     url: str
     size_bytes: int
+
+
+def job_status_payload(row: dict, presign) -> dict:
+    """DB row -> JobStatus JSON (presigned links). Used by GET /jobs/{id} and by callbacks."""
+    result = None
+    if row.get("result"):
+        r = row["result"]
+        result = {"mix_wav": presign(r["mix_wav"]), "mix_mp3": presign(r["mix_mp3"]) if r.get("mix_mp3") else None,
+                  "stems": {k: presign(v) for k, v in r["stems"].items()},
+                  "mix_ducked": presign(r["mix_ducked"]) if r.get("mix_ducked") else None,
+                  "manifest": presign(r["manifest"])}
+    payload = {
+        "job_id": str(row["id"]), "status": row["status"], "progress": row["progress"], "kind": row["kind"],
+        "parent_job_id": str(row["parent_job_id"]) if row.get("parent_job_id") else None,
+        "created_at": row["created_at"], "started_at": row.get("started_at"), "finished_at": row.get("finished_at"),
+        "warnings": row.get("warnings") or [], "result": result,
+        "error": row.get("error") if row["status"] == "failed" else None,
+    }
+    return JobStatus.model_validate(payload).model_dump(mode="json")
