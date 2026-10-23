@@ -1,0 +1,29 @@
+{
+  "job_id": "6926ed03-82b0-4663-91df-5c0ec349cbda",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-23T20:46:03.709902+05:30",
+  "started_at": "2026-10-23T20:46:04.131168+05:30",
+  "finished_at": "2026-10-23T20:46:05.651279+05:30",
+  "warnings": [
+    {
+      "code": "NARRATION_FETCH_FAILED",
+      "message": "Could not fetch/decode narration (FetchError: address 169.254.169.254 is not public); returned music without mix_ducked.wav."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/6926ed03-82b0-4663-91df-5c0ec349cbda/mix.wav",
+    "mix_mp3": null,
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/6926ed03-82b0-4663-91df-5c0ec349cbda/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/6926ed03-82b0-4663-91df-5c0ec349cbda/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/6926ed03-82b0-4663-91df-5c0ec349cbda/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/6926ed03-82b0-4663-91df-5c0ec349cbda/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/6926ed03-82b0-4663-91df-5c0ec349cbda/music_manifest.json"
+  },
+  "error": null
+}

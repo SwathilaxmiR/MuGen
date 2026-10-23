@@ -58,13 +58,16 @@ class Renderer(Protocol):
     def version(self) -> str: ...
 
 
+AUDIO_DTYPE = np.float32  # 24-bit output fits a float32 mantissa exactly; halves memory on 300 s jobs
+
+
 def fit_length(audio: np.ndarray, n: int) -> np.ndarray:
-    """Trim or zero-pad (n, 2)."""
+    """Trim or zero-pad to (n, 2) float32."""
     if audio.ndim == 1:
         audio = np.stack([audio, audio], axis=1)
     if audio.shape[1] == 1:
         audio = np.repeat(audio, 2, axis=1)
-    if len(audio) >= n:
-        return np.ascontiguousarray(audio[:n], dtype=np.float64)
-    pad = np.zeros((n - len(audio), 2))
-    return np.concatenate([audio.astype(np.float64), pad])
+    out = np.zeros((n, 2), dtype=AUDIO_DTYPE)
+    m = min(n, len(audio))
+    out[:m] = audio[:m]
+    return out

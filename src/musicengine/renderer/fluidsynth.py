@@ -47,7 +47,7 @@ class FluidSynthRenderer:
             proc = subprocess.run(cmd, capture_output=True, timeout=timeout)
             if proc.returncode != 0 or not os.path.exists(wav):
                 raise RuntimeError(f"fluidsynth exit {proc.returncode}: {proc.stderr.decode()[-300:]}")
-            audio, sr = sf.read(wav, dtype="float64", always_2d=True)
+            audio, sr = sf.read(wav, dtype="float32", always_2d=True)
         if sr != rs.sr:
             raise RuntimeError(f"fluidsynth wrote {sr} Hz, expected {rs.sr}")
         return fit_length(audio, n)

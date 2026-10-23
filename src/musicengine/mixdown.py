@@ -58,10 +58,12 @@ def limiter_curve(x: np.ndarray, sr: int, ceiling_dbtp: float) -> np.ndarray:
     m[n] = min(required[n .. n+la]); a = trailing mean of m over la (smooth attack, never above the
     requirement at a peak); release = one-pole on a, taken as min so peaks stay limited."""
     ceil = 10 ** (ceiling_dbtp / 20)
-    peak = np.concatenate([qa.oversampled_peak_env(x[s:s + (1 << 20)]) for s in range(0, len(x), 1 << 20)])
-    req = np.minimum(1.0, ceil / np.maximum(peak, 1e-12))
+    peak = np.concatenate([qa.oversampled_peak_env(x[s:s + (1 << 20)]).astype(np.float32)
+                           for s in range(0, len(x), 1 << 20)])
+    req = np.minimum(np.float32(1.0), np.float32(ceil) / np.maximum(peak, np.float32(1e-12)))
+    del peak
     if req.min() >= 1.0:
-        return np.ones(len(x))
+        return np.ones(len(x), dtype=np.float32)
     la = max(1, int(LOOKAHEAD_MS * sr / 1000))
     m = minimum_filter1d(req, size=la + 1, origin=-(la // 2), mode="nearest")
     a = uniform_filter1d(m, size=la + 1, origin=la // 2, mode="nearest")
@@ -82,32 +84,48 @@ def _balance(stems: dict[str, np.ndarray], plan: Plan, sr: int) -> dict[str, flo
 
 def master(stems_in: dict[str, np.ndarray], plan: Plan, s: Settings | None = None,
            ceiling_dbtp: float | None = None, max_passes: int = 4) -> MixResult:
+    """Note: works in place on `stems_in` (float32) to bound memory; pass copies if you need the originals."""
     s = s or get_settings()
     sr = plan.sample_rate
     target = plan.target_lufs
     ceiling = s.tp_ceiling_dbtp if ceiling_dbtp is None else ceiling_dbtp
-    env = ending_envelope(plan)[:, None]
+    env = ending_envelope(plan).astype(np.float32)[:, None]
     balance = _balance(stems_in, plan, sr)
-    pre = {k: v * env * 10 ** (balance[k] / 20) for k, v in stems_in.items()}
-    pre_sum = np.sum(list(pre.values()), axis=0)
+    # in place from here on: the caller's arrays become the stored stems (bounded memory on 300 s jobs)
+    stems = {}
+    for k, v in stems_in.items():
+        v = v.astype(np.float32, copy=False)
+        v *= env
+        v *= np.float32(10 ** (balance[k] / 20))
+        stems[k] = v
+    pre_sum = np.zeros_like(next(iter(stems.values())))
+    for v in stems.values():
+        pre_sum += v
     gain_db = target - qa.integrated_lufs(pre_sum, sr)
-    curve = np.ones(len(pre_sum))
+    curve = np.ones(len(pre_sum), dtype=np.float32)
     lufs = tp = None
     passes = 0
+    y = np.empty_like(pre_sum)
     for passes in range(1, max_passes + 1):
-        x = pre_sum * 10 ** (gain_db / 20)
-        curve = limiter_curve(x, sr, ceiling - 0.1)
-        y = x * curve[:, None]
+        np.multiply(pre_sum, np.float32(10 ** (gain_db / 20)), out=y)
+        curve = limiter_curve(y, sr, ceiling - 0.1).astype(np.float32)
+        y *= curve[:, None]
         lufs, tp = qa.integrated_lufs(y, sr), qa.true_peak_dbtp(y)
         if abs(lufs - target) <= s.lufs_tol * 0.6 and tp <= ceiling:
             break
         gain_db += target - lufs
-    stems = {k: v * 10 ** (gain_db / 20) * curve[:, None] for k, v in pre.items()}
-    mix = np.sum(list(stems.values()), axis=0)
+    del y, pre_sum
+    g = np.float32(10 ** (gain_db / 20))
+    for v in stems.values():
+        v *= g
+        v *= curve[:, None]
+    mix = np.zeros_like(next(iter(stems.values())))
+    for v in stems.values():
+        mix += v
     lim = {"ceiling_dbtp": ceiling, "lookahead_ms": LOOKAHEAD_MS, "release_ms": RELEASE_MS,
            "max_gain_reduction_db": round(-qa.db(curve.min()), 3), "passes": passes}
     loud = {"integrated_lufs": round(lufs, 3), "true_peak_dbtp": round(tp, 3),
-            "lra": round(qa.loudness_range(mix, sr), 2), "target_lufs": target}
+            "lra": None, "target_lufs": target}  # LRA is filled from the ffmpeg ebur128 pass in the QA gate
     return MixResult(stems=stems, mix=mix, gains={k: 1.0 for k in stems}, balance_db=balance,
                      master_gain_db=round(gain_db, 4), limiter=lim, loudness=loud, curve=curve, passes=passes)
 
@@ -117,8 +135,8 @@ def write_wav(path: str, x: np.ndarray, sr: int) -> None:
     sf.write(path, np.clip(x, -1.0, 1.0), sr, subtype="PCM_24")
 
 
-def read_wav(path: str) -> tuple[np.ndarray, int]:
-    x, sr = sf.read(path, dtype="float64", always_2d=True)
+def read_wav(path: str, dtype: str = "float32") -> tuple[np.ndarray, int]:
+    x, sr = sf.read(path, dtype=dtype, always_2d=True)
     return x, sr
 
 
@@ -138,7 +156,7 @@ def decode_audio(path: str, sr: int, s: Settings | None = None, mono16k: bool = 
                            "-f", "f32le", "-"], capture_output=True, timeout=300)
     if proc.returncode != 0:
         raise RuntimeError(proc.stderr.decode()[-300:])
-    a = np.frombuffer(proc.stdout, dtype=np.float32).astype(np.float64)
+    a = np.frombuffer(proc.stdout, dtype=np.float32).copy()
     return a if mono16k else a.reshape(-1, 2)
 
 

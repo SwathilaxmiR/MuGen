@@ -1,0 +1,1255 @@
+{
+  "schema_version": "1.0",
+  "ai_generated": true,
+  "ai_label": "AI-generated instrumental music (rule-based symbolic composition rendered with sampled instruments)",
+  "job_id": "4165fce4-980b-4995-9816-483e0b03920d",
+  "parent_job_id": null,
+  "regenerated_stem": null,
+  "request": {
+    "prompt": "warm acoustic guitar for a documentary",
+    "duration_s": 30.0,
+    "sections": null,
+    "tempo_bpm": null,
+    "key": null,
+    "loopable": false,
+    "narration_url": "upload://d2d91b89-20ab-42b5-b408-16af859ce905",
+    "seed": 9,
+    "output": {
+      "sample_rate": 48000,
+      "target_lufs": -16.0,
+      "formats": [
+        "wav"
+      ]
+    },
+    "callback_url": null
+  },
+  "seed": 9,
+  "stem_seeds": {
+    "drums": 533935514,
+    "bass": 759414045,
+    "harmony": 118032222,
+    "melody": 195614734
+  },
+  "style": "acoustic",
+  "tempo_bpm": 102.0,
+  "key": {
+    "tonic": "Eb",
+    "mode": "major",
+    "name": "Eb major"
+  },
+  "time_signature": "4/4",
+  "duration_s": 30.0,
+  "sample_rate": 48000,
+  "bit_depth": 24,
+  "length_samples": 1440000,
+  "sections": [
+    {
+      "requested_start_s": null,
+      "applied_start_s": 0.0,
+      "bar": 0,
+      "beat": 0,
+      "beat_index": 0,
+      "mood": "intro",
+      "intensity": 1,
+      "build": false,
+      "derived": true
+    },
+    {
+      "requested_start_s": null,
+      "applied_start_s": 8.235294,
+      "bar": 3,
+      "beat": 2,
+      "beat_index": 14,
+      "mood": "build",
+      "intensity": 2,
+      "build": true,
+      "derived": true
+    },
+    {
+      "requested_start_s": null,
+      "applied_start_s": 18.823529,
+      "bar": 8,
+      "beat": 0,
+      "beat_index": 32,
+      "mood": "peak",
+      "intensity": 4,
+      "build": false,
+      "derived": true
+    }
+  ],
+  "bars": [
+    {
+      "index": 0,
+      "t": 0.0
+    },
+    {
+      "index": 1,
+      "t": 2.352941
+    },
+    {
+      "index": 2,
+      "t": 4.705882
+    },
+    {
+      "index": 3,
+      "t": 7.058824
+    },
+    {
+      "index": 4,
+      "t": 9.411765
+    },
+    {
+      "index": 5,
+      "t": 11.764706
+    },
+    {
+      "index": 6,
+      "t": 14.117647
+    },
+    {
+      "index": 7,
+      "t": 16.470588
+    },
+    {
+      "index": 8,
+      "t": 18.823529
+    },
+    {
+      "index": 9,
+      "t": 21.176471
+    },
+    {
+      "index": 10,
+      "t": 23.529412
+    },
+    {
+      "index": 11,
+      "t": 25.882353
+    },
+    {
+      "index": 12,
+      "t": 28.235294
+    }
+  ],
+  "beats": [
+    {
+      "t": 0.0,
+      "bar": 0,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 0.588235,
+      "bar": 0,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 1.176471,
+      "bar": 0,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 1.764706,
+      "bar": 0,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 2.352941,
+      "bar": 1,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 2.941176,
+      "bar": 1,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 3.529412,
+      "bar": 1,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 4.117647,
+      "bar": 1,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 4.705882,
+      "bar": 2,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 5.294118,
+      "bar": 2,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 5.882353,
+      "bar": 2,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 6.470588,
+      "bar": 2,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 7.058824,
+      "bar": 3,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 7.647059,
+      "bar": 3,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 8.235294,
+      "bar": 3,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 8.823529,
+      "bar": 3,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 9.411765,
+      "bar": 4,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 10.0,
+      "bar": 4,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 10.588235,
+      "bar": 4,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 11.176471,
+      "bar": 4,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 11.764706,
+      "bar": 5,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 12.352941,
+      "bar": 5,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 12.941176,
+      "bar": 5,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 13.529412,
+      "bar": 5,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 14.117647,
+      "bar": 6,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 14.705882,
+      "bar": 6,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 15.294118,
+      "bar": 6,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 15.882353,
+      "bar": 6,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 16.470588,
+      "bar": 7,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 17.058824,
+      "bar": 7,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 17.647059,
+      "bar": 7,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 18.235294,
+      "bar": 7,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 18.823529,
+      "bar": 8,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 19.411765,
+      "bar": 8,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 20.0,
+      "bar": 8,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 20.588235,
+      "bar": 8,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 21.176471,
+      "bar": 9,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 21.764706,
+      "bar": 9,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 22.352941,
+      "bar": 9,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 22.941176,
+      "bar": 9,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 23.529412,
+      "bar": 10,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 24.117647,
+      "bar": 10,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 24.705882,
+      "bar": 10,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 25.294118,
+      "bar": 10,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 25.882353,
+      "bar": 11,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 26.470588,
+      "bar": 11,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 27.058824,
+      "bar": 11,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 27.647059,
+      "bar": 11,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 28.235294,
+      "bar": 12,
+      "beat": 0,
+      "downbeat": true
+    }
+  ],
+  "hit_time_s": 28.235294,
+  "loop": {
+    "enabled": false,
+    "bars": null,
+    "seamless_method": null
+  },
+  "stems": [
+    {
+      "name": "drums",
+      "file": "stems/drums.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 0,
+      "program_name": "Standard Kit",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 533935514,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "bass",
+      "file": "stems/bass.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 32,
+      "program_name": "Acoustic Bass",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 759414045,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "harmony",
+      "file": "stems/harmony.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 25,
+      "program_name": "Acoustic Guitar (steel)",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 118032222,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "melody",
+      "file": "stems/melody.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 73,
+      "program_name": "Flute",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 195614734,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    }
+  ],
+  "mix_formula": "mix = sum(stems[i].gain * stems[i]) (stems stored post master gain and limiter)",
+  "master_gain_db": 2.8081,
+  "limiter": {
+    "ceiling_dbtp": -1.5,
+    "lookahead_ms": 5.0,
+    "release_ms": 80.0,
+    "max_gain_reduction_db": 1.469,
+    "passes": 1
+  },
+  "loudness": {
+    "integrated_lufs": -16.029,
+    "true_peak_dbtp": -1.6,
+    "lra": 12.1,
+    "target_lufs": -16.0
+  },
+  "qa": {
+    "passed": true,
+    "failures": [],
+    "attempt": 1,
+    "length_error_s": 0.0,
+    "sum_diff_db": -115.98,
+    "integrated_lufs": -16.029,
+    "true_peak_dbtp": -1.6,
+    "ffmpeg_ebur128": {
+      "integrated_lufs": -16.0,
+      "lra": 12.1,
+      "true_peak_dbtp": -1.6
+    },
+    "mp3_true_peak_dbtp": null,
+    "full_scale_samples": 0,
+    "clicks": 0,
+    "gaps": 0,
+    "min_rms_db": -43.42,
+    "ending": {
+      "last_50ms_db": -139.7,
+      "silent_end": true,
+      "hit_onset_ratio": 12.53,
+      "hit_onset": true
+    },
+    "section_alignment": [
+      {
+        "applied_start_s": 8.2353,
+        "onset_offset_s": 0.006,
+        "onset_ratio": 16.02,
+        "onset": true,
+        "level_step_db": 12.55,
+        "section_level_step_db": 8.76,
+        "intensity_change": 1,
+        "aligned": true
+      },
+      {
+        "applied_start_s": 18.8235,
+        "onset_offset_s": 0.008,
+        "onset_ratio": 8.73,
+        "onset": true,
+        "level_step_db": 3.53,
+        "section_level_step_db": 4.33,
+        "intensity_change": 2,
+        "aligned": true
+      }
+    ],
+    "loop_seam": null
+  },
+  "ducking": {
+    "applied": true,
+    "depth_db": 12.0,
+    "attack_ms": 120.0,
+    "release_ms": 500.0,
+    "bridge_gap_s": 0.6,
+    "vad": {
+      "threshold_db": -45.0,
+      "noise_floor_db": -66.38
+    },
+    "segments": [
+      {
+        "start_s": 1.02,
+        "end_s": 7.0
+      },
+      {
+        "start_s": 18.0,
+        "end_s": 21.92
+      }
+    ],
+    "curve": [
+      {
+        "t": 0.0,
+        "db": 0.0
+      },
+      {
+        "t": 0.9,
+        "db": -0.0
+      },
+      {
+        "t": 0.91,
+        "db": -0.204
+      },
+      {
+        "t": 0.92,
+        "db": -0.804
+      },
+      {
+        "t": 0.93,
+        "db": -1.757
+      },
+      {
+        "t": 0.94,
+        "db": -3.0
+      },
+      {
+        "t": 0.95,
+        "db": -4.447
+      },
+      {
+        "t": 0.96,
+        "db": -6.0
+      },
+      {
+        "t": 0.97,
+        "db": -7.553
+      },
+      {
+        "t": 0.98,
+        "db": -9.0
+      },
+      {
+        "t": 0.99,
+        "db": -10.243
+      },
+      {
+        "t": 1.0,
+        "db": -11.196
+      },
+      {
+        "t": 1.01,
+        "db": -11.796
+      },
+      {
+        "t": 1.02,
+        "db": -12.0
+      },
+      {
+        "t": 7.0,
+        "db": -12.0
+      },
+      {
+        "t": 7.01,
+        "db": -11.988
+      },
+      {
+        "t": 7.02,
+        "db": -11.953
+      },
+      {
+        "t": 7.03,
+        "db": -11.894
+      },
+      {
+        "t": 7.04,
+        "db": -11.811
+      },
+      {
+        "t": 7.05,
+        "db": -11.706
+      },
+      {
+        "t": 7.06,
+        "db": -11.579
+      },
+      {
+        "t": 7.07,
+        "db": -11.429
+      },
+      {
+        "t": 7.08,
+        "db": -11.258
+      },
+      {
+        "t": 7.09,
+        "db": -11.066
+      },
+      {
+        "t": 7.1,
+        "db": -10.854
+      },
+      {
+        "t": 7.11,
+        "db": -10.623
+      },
+      {
+        "t": 7.12,
+        "db": -10.374
+      },
+      {
+        "t": 7.13,
+        "db": -10.107
+      },
+      {
+        "t": 7.14,
+        "db": -9.825
+      },
+      {
+        "t": 7.15,
+        "db": -9.527
+      },
+      {
+        "t": 7.16,
+        "db": -9.215
+      },
+      {
+        "t": 7.17,
+        "db": -8.891
+      },
+      {
+        "t": 7.18,
+        "db": -8.555
+      },
+      {
+        "t": 7.19,
+        "db": -8.209
+      },
+      {
+        "t": 7.2,
+        "db": -7.854
+      },
+      {
+        "t": 7.21,
+        "db": -7.492
+      },
+      {
+        "t": 7.22,
+        "db": -7.124
+      },
+      {
+        "t": 7.23,
+        "db": -6.752
+      },
+      {
+        "t": 7.24,
+        "db": -6.377
+      },
+      {
+        "t": 7.25,
+        "db": -6.0
+      },
+      {
+        "t": 7.26,
+        "db": -5.623
+      },
+      {
+        "t": 7.27,
+        "db": -5.248
+      },
+      {
+        "t": 7.28,
+        "db": -4.876
+      },
+      {
+        "t": 7.29,
+        "db": -4.508
+      },
+      {
+        "t": 7.3,
+        "db": -4.146
+      },
+      {
+        "t": 7.31,
+        "db": -3.791
+      },
+      {
+        "t": 7.32,
+        "db": -3.445
+      },
+      {
+        "t": 7.33,
+        "db": -3.109
+      },
+      {
+        "t": 7.34,
+        "db": -2.785
+      },
+      {
+        "t": 7.35,
+        "db": -2.473
+      },
+      {
+        "t": 7.36,
+        "db": -2.175
+      },
+      {
+        "t": 7.37,
+        "db": -1.893
+      },
+      {
+        "t": 7.38,
+        "db": -1.626
+      },
+      {
+        "t": 7.39,
+        "db": -1.377
+      },
+      {
+        "t": 7.4,
+        "db": -1.146
+      },
+      {
+        "t": 7.41,
+        "db": -0.934
+      },
+      {
+        "t": 7.42,
+        "db": -0.742
+      },
+      {
+        "t": 7.43,
+        "db": -0.571
+      },
+      {
+        "t": 7.44,
+        "db": -0.421
+      },
+      {
+        "t": 7.45,
+        "db": -0.294
+      },
+      {
+        "t": 7.46,
+        "db": -0.189
+      },
+      {
+        "t": 7.47,
+        "db": -0.106
+      },
+      {
+        "t": 7.48,
+        "db": -0.047
+      },
+      {
+        "t": 7.49,
+        "db": -0.012
+      },
+      {
+        "t": 7.5,
+        "db": -0.0
+      },
+      {
+        "t": 17.88,
+        "db": -0.0
+      },
+      {
+        "t": 17.89,
+        "db": -0.204
+      },
+      {
+        "t": 17.9,
+        "db": -0.804
+      },
+      {
+        "t": 17.91,
+        "db": -1.757
+      },
+      {
+        "t": 17.92,
+        "db": -3.0
+      },
+      {
+        "t": 17.93,
+        "db": -4.447
+      },
+      {
+        "t": 17.94,
+        "db": -6.0
+      },
+      {
+        "t": 17.95,
+        "db": -7.553
+      },
+      {
+        "t": 17.96,
+        "db": -9.0
+      },
+      {
+        "t": 17.97,
+        "db": -10.243
+      },
+      {
+        "t": 17.98,
+        "db": -11.196
+      },
+      {
+        "t": 17.99,
+        "db": -11.796
+      },
+      {
+        "t": 18.0,
+        "db": -12.0
+      },
+      {
+        "t": 21.92,
+        "db": -12.0
+      },
+      {
+        "t": 21.93,
+        "db": -11.988
+      },
+      {
+        "t": 21.94,
+        "db": -11.953
+      },
+      {
+        "t": 21.95,
+        "db": -11.894
+      },
+      {
+        "t": 21.96,
+        "db": -11.811
+      },
+      {
+        "t": 21.97,
+        "db": -11.706
+      },
+      {
+        "t": 21.98,
+        "db": -11.579
+      },
+      {
+        "t": 21.99,
+        "db": -11.429
+      },
+      {
+        "t": 22.0,
+        "db": -11.258
+      },
+      {
+        "t": 22.01,
+        "db": -11.066
+      },
+      {
+        "t": 22.02,
+        "db": -10.854
+      },
+      {
+        "t": 22.03,
+        "db": -10.623
+      },
+      {
+        "t": 22.04,
+        "db": -10.374
+      },
+      {
+        "t": 22.05,
+        "db": -10.107
+      },
+      {
+        "t": 22.06,
+        "db": -9.825
+      },
+      {
+        "t": 22.07,
+        "db": -9.527
+      },
+      {
+        "t": 22.08,
+        "db": -9.215
+      },
+      {
+        "t": 22.09,
+        "db": -8.891
+      },
+      {
+        "t": 22.1,
+        "db": -8.555
+      },
+      {
+        "t": 22.11,
+        "db": -8.209
+      },
+      {
+        "t": 22.12,
+        "db": -7.854
+      },
+      {
+        "t": 22.13,
+        "db": -7.492
+      },
+      {
+        "t": 22.14,
+        "db": -7.124
+      },
+      {
+        "t": 22.15,
+        "db": -6.752
+      },
+      {
+        "t": 22.16,
+        "db": -6.377
+      },
+      {
+        "t": 22.17,
+        "db": -6.0
+      },
+      {
+        "t": 22.18,
+        "db": -5.623
+      },
+      {
+        "t": 22.19,
+        "db": -5.248
+      },
+      {
+        "t": 22.2,
+        "db": -4.876
+      },
+      {
+        "t": 22.21,
+        "db": -4.508
+      },
+      {
+        "t": 22.22,
+        "db": -4.146
+      },
+      {
+        "t": 22.23,
+        "db": -3.791
+      },
+      {
+        "t": 22.24,
+        "db": -3.445
+      },
+      {
+        "t": 22.25,
+        "db": -3.109
+      },
+      {
+        "t": 22.26,
+        "db": -2.785
+      },
+      {
+        "t": 22.27,
+        "db": -2.473
+      },
+      {
+        "t": 22.28,
+        "db": -2.175
+      },
+      {
+        "t": 22.29,
+        "db": -1.893
+      },
+      {
+        "t": 22.3,
+        "db": -1.626
+      },
+      {
+        "t": 22.31,
+        "db": -1.377
+      },
+      {
+        "t": 22.32,
+        "db": -1.146
+      },
+      {
+        "t": 22.33,
+        "db": -0.934
+      },
+      {
+        "t": 22.34,
+        "db": -0.742
+      },
+      {
+        "t": 22.35,
+        "db": -0.571
+      },
+      {
+        "t": 22.36,
+        "db": -0.421
+      },
+      {
+        "t": 22.37,
+        "db": -0.294
+      },
+      {
+        "t": 22.38,
+        "db": -0.189
+      },
+      {
+        "t": 22.39,
+        "db": -0.106
+      },
+      {
+        "t": 22.4,
+        "db": -0.047
+      },
+      {
+        "t": 22.41,
+        "db": -0.012
+      },
+      {
+        "t": 22.42,
+        "db": -0.0
+      },
+      {
+        "t": 30.0,
+        "db": 0.0
+      }
+    ],
+    "narration_s": 30.0,
+    "assumption": "narration starts at t=0",
+    "true_peak_dbtp": -1.6,
+    "requested": true
+  },
+  "providers": [
+    {
+      "role": "interpreter",
+      "name": "rules",
+      "version": "1",
+      "mode": "local"
+    },
+    {
+      "role": "renderer",
+      "name": "fluidsynth",
+      "version": "2.6.1",
+      "mode": "local subprocess"
+    }
+  ],
+  "components": [
+    {
+      "name": "FluidR3_GM SoundFont",
+      "version": "3.1 (Debian fluid-soundfont-gm 3.1-5.3)",
+      "licence": "MIT",
+      "licence_url": "https://metadata.ftp-master.debian.org/changelogs/main/f/fluid-soundfont/unstable_copyright",
+      "commercial_use": "Yes. MIT: 'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'. Rendered audio is our output, not a copy of the SoundFont.",
+      "role": "instrument samples (default renderer)"
+    },
+    {
+      "name": "FluidSynth",
+      "version": "2.3.x (Debian bookworm package)",
+      "licence": "LGPL-2.1-or-later",
+      "licence_url": "https://metadata.ftp-master.debian.org/changelogs/main/f/fluidsynth/stable_copyright",
+      "commercial_use": "Yes. Invoked as an unmodified separate program (subprocess); no linking. Output audio carries no licence obligation.",
+      "role": "MIDI to audio renderer"
+    },
+    {
+      "name": "FFmpeg (Debian build incl. libmp3lame)",
+      "version": "5.1.x (Debian bookworm package)",
+      "licence": "GPL-2.0-or-later (Debian builds with --enable-gpl, no --enable-nonfree)",
+      "licence_url": "https://salsa.debian.org/multimedia-team/ffmpeg/-/raw/debian/7%255.1.6-0+deb12u1/debian/rules",
+      "commercial_use": "Yes. Invoked as an unmodified separate program (subprocess); GPL obligations apply to redistribution of the binary (source offer from Debian), not to the audio it produces.",
+      "role": "mp3 encode, narration decode, independent loudness check"
+    },
+    {
+      "name": "musicengine (this repository)",
+      "version": "0.1.0",
+      "licence": "Proprietary (owned code)",
+      "licence_url": "./README.md",
+      "commercial_use": "Yes. Composition rules, presets and DSP written for this project; no trained music model, no copied songs.",
+      "role": "prompt interpretation, composition, numpy synth/FX, mixing, QA"
+    },
+    {
+      "name": "NumPy",
+      "version": "2.x",
+      "licence": "BSD-3-Clause",
+      "licence_url": "https://github.com/numpy/numpy/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "DSP"
+    },
+    {
+      "name": "SciPy",
+      "version": "1.x",
+      "licence": "BSD-3-Clause",
+      "licence_url": "https://github.com/scipy/scipy/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "filters, resampling for true-peak"
+    },
+    {
+      "name": "soundfile (+ bundled libsndfile)",
+      "version": "0.12+",
+      "licence": "BSD-3-Clause (libsndfile LGPL-2.1, dynamically loaded)",
+      "licence_url": "https://github.com/bastibe/python-soundfile/blob/master/LICENSE",
+      "commercial_use": "Yes.",
+      "role": "WAV read/write"
+    },
+    {
+      "name": "pyloudnorm",
+      "version": "0.1+",
+      "licence": "MIT",
+      "licence_url": "https://github.com/csteinmetz1/pyloudnorm/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "BS.1770 loudness"
+    },
+    {
+      "name": "pretty_midi (+ mido)",
+      "version": "0.2.x",
+      "licence": "MIT",
+      "licence_url": "https://github.com/craffel/pretty-midi/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "MIDI writing"
+    },
+    {
+      "name": "langdetect",
+      "version": "1.0.9",
+      "licence": "Apache-2.0 (LICENSE file; PyPI metadata field says MIT, classifier says Apache)",
+      "licence_url": "https://github.com/Mimino666/langdetect/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "prompt language detection"
+    },
+    {
+      "name": "FastAPI / Starlette / Uvicorn / Pydantic / pydantic-settings",
+      "version": "current",
+      "licence": "MIT / BSD-3-Clause / BSD-3-Clause / MIT / MIT",
+      "licence_url": "https://github.com/fastapi/fastapi/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "HTTP API"
+    },
+    {
+      "name": "psycopg / psycopg-pool",
+      "version": "3.x",
+      "licence": "LGPL-3.0-only",
+      "licence_url": "https://github.com/psycopg/psycopg/blob/master/LICENSE.txt",
+      "commercial_use": "Yes. Used unmodified as an installed library.",
+      "role": "PostgreSQL driver"
+    },
+    {
+      "name": "boto3 / httpx / structlog / PyYAML / python-multipart",
+      "version": "current",
+      "licence": "Apache-2.0 / BSD-3-Clause / MIT OR Apache-2.0 / MIT / Apache-2.0",
+      "licence_url": "https://github.com/boto/boto3/blob/develop/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "storage client, HTTP client, logging, config, uploads"
+    },
+    {
+      "name": "PostgreSQL",
+      "version": "16",
+      "licence": "PostgreSQL License",
+      "licence_url": "https://www.postgresql.org/about/licence/",
+      "commercial_use": "Yes (permissive).",
+      "role": "jobs, idempotency, queue"
+    },
+    {
+      "name": "MinIO server",
+      "version": "RELEASE.2025-04-22T22-12-26Z",
+      "licence": "AGPL-3.0",
+      "licence_url": "https://github.com/minio/minio/blob/master/LICENSE",
+      "commercial_use": "Used unmodified as a separate network service for the demo. For production, point S3_* at a non-AGPL S3 backend (AWS S3, R2, etc.); no code change needed.",
+      "role": "object storage (demo / compose only)"
+    }
+  ],
+  "timings_s": {
+    "interpret": 0.0163,
+    "plan": 0.0002,
+    "compose": 0.003,
+    "render": 1.2104,
+    "mix": 0.5684,
+    "encode": 0.0698,
+    "qa": 0.474,
+    "ducking": 0.2546,
+    "total": 2.8901,
+    "upload": 0.2509
+  },
+  "cost": {
+    "compute_seconds": 2.541,
+    "usd_estimate": 3.4e-05,
+    "cost_per_cpu_second_usd": 1.34e-05,
+    "api_fees_usd": 0.0
+  },
+  "warnings": []
+}

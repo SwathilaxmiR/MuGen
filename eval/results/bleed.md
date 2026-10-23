@@ -1,0 +1,51 @@
+| case | style | stems: max explained dB | stems: max abs xcorr | stems: spectral overlap | sum diff dB | band-split control: max explained dB | control: spectral overlap |
+|---|---|---|---|---|---|---|---|
+| adv_key_tempo_44k | jazz | -13.4 | 0.037 | 0.51 | -118.6 | -15.2 | 0.11 |
+| adv_loop_16s | lofi | -8.5 | 0.038 | 0.79 | -115.9 | -9.1 | 0.20 |
+| adv_loop_fixed_tempo | electronic | -10.2 | 0.015 | 0.96 | -116.8 | -13.3 | 0.17 |
+| adv_lufs_minus23 | ambient | -15.5 | 0.015 | 0.46 | -110.8 | -11.4 | 0.19 |
+| adv_regenerate_drums | rock | -5.7 | 0.035 | 0.71 | -115.3 | -8.2 | 0.36 |
+| d010_cinematic_sections | cinematic | -9.9 | 0.035 | 0.88 | -118.1 | -10.3 | 0.27 |
+| d030_cinematic_sections | cinematic | -8.1 | 0.033 | 0.93 | -117.7 | -10.6 | 0.29 |
+| d060_cinematic_sections | cinematic | -8.6 | 0.023 | 0.94 | -117.7 | -9.8 | 0.33 |
+| d180_cinematic_sections | cinematic | -14.8 | 0.015 | 0.33 | -117.5 | -8.9 | 0.34 |
+| hard_concurrent_1 | lofi | -8.5 | 0.063 | 0.72 | -115.5 | -8.2 | 0.25 |
+| hard_concurrent_2 | epic | -7.6 | 0.011 | 0.80 | -116.2 | -9.0 | 0.31 |
+| hard_concurrent_3 | jazz | -15.6 | 0.011 | 0.54 | -116.9 | -14.6 | 0.12 |
+| hard_contradictory | tense | -5.5 | 0.018 | 0.87 | -116.2 | -8.6 | 0.44 |
+| hard_ending_on_beat | ambient | -8.8 | 0.193 | 0.46 | -115.6 | -14.1 | 0.15 |
+| hard_long_300s | ambient | -15.0 | 0.003 | 0.40 | -116.3 | -12.7 | 0.15 |
+| hard_named_song | epic | -7.2 | 0.018 | 0.75 | -116.2 | -10.3 | 0.25 |
+| hard_narration_long_silences | acoustic | -7.7 | 0.040 | 0.87 | -115.9 | -14.0 | 0.12 |
+| hard_narration_longer_than_music | ambient | -13.8 | 0.006 | 0.42 | -115.6 | -13.2 | 0.19 |
+| hard_narration_no_speech | corporate | -10.0 | 0.016 | 0.64 | -116.4 | -8.7 | 0.26 |
+| hard_narration_ssrf_blocked | ambient | -14.2 | 0.020 | 0.40 | -115.7 | -13.4 | 0.18 |
+| hard_non_english_es | ambient | -9.8 | 0.017 | 0.59 | -118.0 | -12.7 | 0.17 |
+| hard_non_english_hi | cinematic | -11.1 | 0.034 | 0.70 | -120.5 | -11.0 | 0.29 |
+| hard_non_english_ta | ambient | -9.8 | 0.017 | 0.59 | -118.0 | -12.7 | 0.17 |
+| hard_same_key_twice | upbeat | -5.0 | 0.060 | 0.75 | -114.8 | -8.2 | 0.34 |
+| hard_section_after_end | corporate | -9.4 | 0.021 | 0.75 | -116.4 | -7.6 | 0.32 |
+| hard_sections_close | electronic | -11.0 | 0.007 | 0.81 | -116.9 | -10.9 | 0.18 |
+| hard_short_5_5s | corporate | -8.5 | 0.045 | 0.54 | -115.2 | -7.3 | 0.40 |
+| hard_short_5s | playful | -7.4 | 0.027 | 0.69 | -115.2 | -10.4 | 0.18 |
+| hard_short_6s | tense | -5.2 | 0.070 | 0.79 | -116.4 | -11.5 | 0.29 |
+| hard_slow_fixed_tempo | ambient | -12.9 | 0.050 | 0.45 | -118.0 | -14.1 | 0.14 |
+| hard_unknown_language | corporate | -8.8 | 0.013 | 0.61 | -116.6 | -7.5 | 0.35 |
+| hard_vague | corporate | -6.8 | 0.016 | 0.78 | -116.4 | -7.6 | 0.29 |
+| hard_vocals | upbeat | -5.7 | 0.033 | 0.79 | -115.2 | -8.9 | 0.30 |
+| p01_cinematic | cinematic | -7.7 | 0.011 | 0.95 | -117.2 | -11.5 | 0.26 |
+| p02_lofi | lofi | -9.5 | 0.078 | 0.81 | -115.6 | -9.3 | 0.23 |
+| p03_corporate | corporate | -9.5 | 0.024 | 0.79 | -116.0 | -7.7 | 0.35 |
+| p04_electronic | electronic | -10.8 | 0.015 | 0.93 | -116.5 | -13.5 | 0.15 |
+| p05_acoustic | acoustic | -8.6 | 0.014 | 0.93 | -115.9 | -13.0 | 0.14 |
+| p06_tense | tense | -5.9 | 0.007 | 0.94 | -116.2 | -10.2 | 0.30 |
+| p07_playful | playful | -9.5 | 0.048 | 0.67 | -116.2 | -11.3 | 0.15 |
+| p08_ambient | ambient | -14.5 | 0.020 | 0.53 | -117.0 | -13.3 | 0.17 |
+| p09_epic | epic | -5.7 | 0.035 | 0.88 | -115.9 | -8.7 | 0.32 |
+| p10_rock | rock | -6.8 | 0.041 | 0.75 | -115.0 | -8.2 | 0.29 |
+| p11_jazz | jazz | -13.4 | 0.007 | 0.46 | -116.6 | -15.9 | 0.09 |
+| p12_upbeat | upbeat | -6.2 | 0.032 | 0.81 | -115.1 | -9.1 | 0.28 |
+| speed_60s_a_first | corporate | -9.6 | 0.026 | 0.78 | -116.1 | -7.8 | 0.35 |
+| speed_60s_b_second | corporate | -8.4 | 0.030 | 0.74 | -116.2 | -7.5 | 0.36 |
+
+**n = 47.** Mean over cases: explained -9.5 dB, max |xcorr| 0.031, spectral overlap 0.71 (band-split control 0.25; overlap higher than control in 46/47 cases), sum diff -116.3 dB (worst -110.8).

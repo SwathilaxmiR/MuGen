@@ -1,0 +1,39 @@
+{
+  "job_id": "2cd2269e-5e0c-4536-8250-f74b6bbccc19",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-23T20:46:08.917789+05:30",
+  "started_at": "2026-10-23T20:46:09.011384+05:30",
+  "finished_at": "2026-10-23T20:46:11.066840+05:30",
+  "warnings": [
+    {
+      "code": "PROMPT_TRANSLATED",
+      "details": {
+        "method": "lexicon",
+        "english": "calm \u0914\u0930 mysterious film \u0938\u0902\u0917\u0940\u0924",
+        "matched": [
+          "\u0930\u0939\u0938\u094d\u092f\u092e\u092f",
+          "\u092b\u093f\u0932\u094d\u092e",
+          "\u0936\u093e\u0902\u0924"
+        ],
+        "language": "hi"
+      },
+      "message": "Prompt read as 'hi' and mapped with the built-in lexicon."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/2cd2269e-5e0c-4536-8250-f74b6bbccc19/mix.wav",
+    "mix_mp3": null,
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/2cd2269e-5e0c-4536-8250-f74b6bbccc19/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/2cd2269e-5e0c-4536-8250-f74b6bbccc19/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/2cd2269e-5e0c-4536-8250-f74b6bbccc19/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/2cd2269e-5e0c-4536-8250-f74b6bbccc19/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/2cd2269e-5e0c-4536-8250-f74b6bbccc19/music_manifest.json"
+  },
+  "error": null
+}

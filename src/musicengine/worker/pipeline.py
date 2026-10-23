@@ -47,13 +47,12 @@ def render_all(plan: Plan, warnings: list[dict], timer: Timer, s: Settings, prog
 def gate_files(paths: dict, plan: Plan, s: Settings, extra: dict | None = None) -> dict:
     sr = plan.sample_rate
     mix, _ = mixdown.read_wav(paths["mix_wav"])
-    stems = {k: mixdown.read_wav(p)[0] for k, p in paths["stems"].items()}
     mp3_tp = mixdown.mp3_true_peak(paths["mix_mp3"], sr, len(mix), s) if paths.get("mix_mp3") else None
     g = plan.g
-    return qa.run_gate(mix, stems, sr, expected_len=g.length_samples, target_lufs=plan.target_lufs,
+    return qa.run_gate(mix, {}, sr, expected_len=g.length_samples, target_lufs=plan.target_lufs,
                        lufs_tol=s.lufs_tol, tp_max=-1.0, sections=plan.sections, hit_time_s=g.hit_time_s,
                        loop=g.loop, mix_path=paths["mix_wav"], mp3_tp=mp3_tp, ffmpeg=s.ffmpeg_bin,
-                       extra_files=extra)
+                       extra_files=extra, stem_paths=paths["stems"])
 
 
 def produce_audio(plan: Plan, out_dir: str, want_mp3: bool, warnings: list[dict], timer: Timer,
@@ -65,21 +64,28 @@ def produce_audio(plan: Plan, out_dir: str, want_mp3: bool, warnings: list[dict]
     if pre_rendered is None:
         audio, infos, _ = render_all(plan, warnings, timer, s, progress)
     else:
-        audio = pre_rendered
+        audio = {k: v.copy() for k, v in pre_rendered.items()}
     ceiling = s.tp_ceiling_dbtp
     report = None
     for attempt in (1, 2):
+        if attempt == 2:  # master() works in place, so the retry re-renders (deterministic, rare)
+            if pre_rendered is None:
+                audio, infos, _ = render_all(plan, [], timer, s, progress)
+            else:
+                audio = {k: v.copy() for k, v in pre_rendered.items()}
         t0 = time.perf_counter()
         res = mixdown.master(audio, plan, s, ceiling_dbtp=ceiling)
         timer.add("mix", time.perf_counter() - t0)
         t0 = time.perf_counter()
         paths = mixdown.write_outputs(res, out_dir, plan.sample_rate, want_mp3, s)
         timer.add("encode", time.perf_counter() - t0)
+        res.stems, audio = {}, None  # written to disk; keep only the mix (needed for ducking)
         progress(80, "mixed")
         t0 = time.perf_counter()
         report = gate_files(paths, plan, s)
         timer.add("qa", time.perf_counter() - t0)
         report["attempt"] = attempt
+        res.loudness["lra"] = report["metrics"]["ffmpeg"].get("lra")
         if report["passed"]:
             return res, paths, infos, report
         log.warning("qa_failed", attempt=attempt, failures=report["failures"])
@@ -218,8 +224,11 @@ def run_regenerate(job_id: str, parent_manifest: dict, parent_dir: str, stem: st
               for n in parent_manifest_stems(parent_manifest) if n != stem}
     new = new_pre * 10 ** (k_db / 20)
     trims = 0
+    others_sum = np.zeros_like(new)
+    for v in others.values():
+        others_sum += v
     while True:
-        mix = new + np.sum(list(others.values()), axis=0)
+        mix = new + others_sum
         tp = qa.true_peak_dbtp(mix)
         if tp <= -1.0 - 0.05 or trims >= 12:
             break
@@ -233,8 +242,9 @@ def run_regenerate(job_id: str, parent_manifest: dict, parent_dir: str, stem: st
     mix_path = os.path.join(work, "mix.wav")
     # mix from the exact samples that will be stored (24-bit stems)
     stored_new, _ = mixdown.read_wav(new_path)
-    mix = stored_new + np.sum(list(others.values()), axis=0)
+    mix = stored_new + others_sum
     mixdown.write_wav(mix_path, mix, sr)
+    del mix, others_sum
     paths = {"mix_wav": mix_path, "stems": {**{n: os.path.join(parent_dir, "stems", f"{n}.wav") for n in others},
                                             stem: new_path}}
     want_mp3 = "mp3" in parent_manifest["request"]["output"]["formats"]
@@ -248,10 +258,9 @@ def run_regenerate(job_id: str, parent_manifest: dict, parent_dir: str, stem: st
     if not report["passed"]:
         raise JobError("MIX_QA_FAILED", f"Regenerated mix failed QA: {', '.join(report['failures'])}",
                        details={"failures": report["failures"]})
-    mixed, _ = mixdown.read_wav(mix_path)
     loud = {"integrated_lufs": report["metrics"]["integrated_lufs"],
             "true_peak_dbtp": report["metrics"]["true_peak_dbtp"],
-            "lra": round(qa.loudness_range(mixed, sr), 2), "target_lufs": plan.target_lufs}
+            "lra": report["metrics"]["ffmpeg"].get("lra"), "target_lufs": plan.target_lufs}
     files = {"mix.wav": mix_path, f"stems/{stem}.wav": new_path, "plan.json": os.path.join(work, "plan.json")}
     if want_mp3:
         files["mix.mp3"] = paths["mix_mp3"]

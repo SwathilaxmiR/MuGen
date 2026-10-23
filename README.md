@@ -120,13 +120,13 @@ Warnings appear in both the job status and the manifest, in the shape `{code, me
 
 ## How the hard requirements are met
 
-| Requirement | Mechanism | Measured (batch run 2, 48 cases, `testpack/run2/metrics.csv`) |
+| Requirement | Mechanism | Measured (batch run 3, 48 cases, `testpack/run3/metrics.csv`) |
 |---|---|---|
 | Length ±0.05 s, ends on purpose | Tempo and bar count are planned so the final hit lands on a bar line, with a 0.75-2.5 s decaying tail. Every file is trimmed or padded to `round(D·sr)` samples. A squared raised-cosine fade runs after the hit | Length error **0 samples** in every file. QA requires the last 50 ms < −60 dBFS and an onset at the hit |
 | ≥3 real stems that sum to the mix | Four stems, each rendered from its own MIDI part. Stems are stored after the master gain and the shared limiter curve, so `mix = Σ 1.0·stem` | Sum difference **−110.8 to −120.5 dB** |
 | Instrumental only | No GM voice or choir programs (52-54, 85, 91 are rejected at preset load). Vocal words are stripped | `test_no_vocal_programs_anywhere` |
 | Commercially safe | Owned code + MIT SoundFont + permissive libraries; fluidsynth and ffmpeg run as separate programs. Named works are stripped. See [SOURCES.md](SOURCES.md) | `components[]` in every manifest |
-| 48 kHz WAV, −16 LUFS ±1, TP ≤ −1 dBTP | Iterative master gain plus a 4×-oversampled look-ahead limiter (ceiling −1.5 dBTP). The gate is ±0.5 LU, cross-checked with `ffmpeg ebur128` | LUFS within 0.3 LU of target; ffmpeg agrees within 0.1 LU. TP −1.60 dBTP worst (mp3 −1.41) |
+| 48 kHz WAV, −16 LUFS ±1, TP ≤ −1 dBTP | Iterative master gain plus a 4×-oversampled look-ahead limiter (ceiling −1.5 dBTP). The gate is ±0.5 LU, cross-checked with `ffmpeg ebur128` | LUFS within 0.3 LU of target; ffmpeg agrees within 0.1 LU. TP −1.60 dBTP worst (mp3 −1.40) |
 | No clicks, clipping or gaps | The harmony is continuous across section changes; decaying instruments re-strike. QA runs click, gap and full-scale detectors | 0 clicks, 0 gaps, 0 full-scale samples |
 | Sections on a beat within 0.5 s | Snap to the bar line if within 0.5 s, else to the nearest beat. Free tempo is ≥ 80 bpm. The composers change intensity exactly at the snapped beat | QA checks the onset or level step at every section |
 | Ducking −8 to −15 dB, smooth | Energy VAD with hysteresis; gaps < 0.6 s bridged; −12 dB with a 120 ms raised-cosine attack before speech and a 500 ms release. The curve is in the manifest | Depth 12 ± 1 dB in tests; monotonic transitions |

@@ -64,7 +64,10 @@ def ffmpeg_ebur128(path: str, ffmpeg: str = "ffmpeg") -> dict:
 
 # ---------------------------------------------------------------- structure checks
 def sum_diff_db(stems: list[np.ndarray], mix: np.ndarray) -> float:
-    diff = np.sum(stems, axis=0) - mix
+    diff = np.zeros(mix.shape, dtype=np.float64)
+    for st in stems:
+        diff += st
+    diff -= mix
     r = rms(mix)
     return db(rms(diff) / r) if r > 0 else 0.0
 
@@ -131,16 +134,29 @@ def _flux(mono: np.ndarray, sr: int, frame_s: float = 0.01) -> tuple[np.ndarray,
 ONSET_RATIO = 2.0  # spectral-flux peak / median flux; final hits measured 2.6x-64x in the batch run
 
 
-def spectral_flux(x: np.ndarray, sr: int, hop_s: float = 0.01) -> tuple[np.ndarray, np.ndarray]:
-    """Onset detection function: summed positive log-magnitude differences per 10 ms hop."""
+def spectral_flux(x: np.ndarray, sr: int, hop_s: float = 0.01, chunk_s: float = 20.0) -> tuple[np.ndarray, np.ndarray]:
+    """Onset detection function: summed positive log-magnitude differences per 10 ms hop.
+    Computed in overlapping chunks (float32) so a 300 s file needs ~100 MB, not GBs."""
     from scipy.signal import stft
 
-    mono = x.mean(axis=1) if x.ndim == 2 else x
-    hop = int(hop_s * sr)
-    _, t, Z = stft(mono, fs=sr, nperseg=2048, noverlap=2048 - hop, boundary=None, padded=False)
-    L = np.log1p(1000 * np.abs(Z))
-    d = np.concatenate([[0.0], np.maximum(0, np.diff(L, axis=1)).sum(axis=0)])
-    return t, d
+    mono = (x.mean(axis=1) if x.ndim == 2 else x).astype(np.float32)
+    hop, nper = int(hop_s * sr), 2048
+    step = int(chunk_s * sr) // hop * hop
+    times, flux, prev = [], [], None
+    for start in range(0, max(1, len(mono) - nper + 1), step):
+        seg = mono[start:start + step + nper]
+        if len(seg) < nper:
+            break
+        _, t, Z = stft(seg, fs=sr, nperseg=nper, noverlap=nper - hop, boundary=None, padded=False)
+        L = np.log1p(1000 * np.abs(Z)).astype(np.float32)
+        n_keep = min(L.shape[1], step // hop) if start + step + nper < len(mono) else L.shape[1]
+        L, t = L[:, :n_keep], t[:n_keep] + start / sr
+        first = L[:, :1] if prev is None else prev
+        d = np.maximum(0, np.diff(np.concatenate([first, L], axis=1), axis=1)).sum(axis=0)
+        prev = L[:, -1:]
+        times.append(t)
+        flux.append(d)
+    return np.concatenate(times), np.concatenate(flux)
 
 
 def onset_strength(times: np.ndarray, flux: np.ndarray, t0: float, before: float, after: float) -> tuple[float, float]:
@@ -215,10 +231,28 @@ def loop_seam_report(x: np.ndarray, sr: int) -> dict:
 def run_gate(mix: np.ndarray, stems: dict[str, np.ndarray], sr: int, *, expected_len: int, target_lufs: float,
              lufs_tol: float, tp_max: float, sections: list[dict], hit_time_s: float, loop: bool,
              mix_path: str | None = None, mp3_tp: float | None = None, ffmpeg: str = "ffmpeg",
-             extra_files: dict[str, np.ndarray] | None = None) -> dict:
-    """Return {"passed": bool, "failures": [...], "metrics": {...}}. Thresholds are the brief's."""
-    files = {"mix": mix, **{f"stems/{k}": v for k, v in stems.items()}, **(extra_files or {})}
-    lengths = length_errors(files, expected_len, sr)
+             extra_files: dict[str, np.ndarray] | None = None, stem_paths: dict[str, str] | None = None) -> dict:
+    """Return {"passed": bool, "failures": [...], "metrics": {...}}. Thresholds are the brief's.
+    Pass `stem_paths` instead of `stems` to stream stems from disk one at a time (bounded memory)."""
+    if stem_paths:
+        import soundfile as sf
+
+        stem_lens = {}
+        stems_sum = np.zeros(mix.shape, dtype=np.float64)
+        for k, p in stem_paths.items():
+            a, _ = sf.read(p, dtype="float32", always_2d=True)
+            stem_lens[f"stems/{k}"] = len(a)
+            if a.shape == mix.shape:
+                stems_sum += a
+            del a
+        r = rms(mix)
+        sdiff = db(rms(stems_sum - mix) / r) if r > 0 else 0.0
+        del stems_sum
+    else:
+        stem_lens = {f"stems/{k}": len(v) for k, v in stems.items()}
+        sdiff = sum_diff_db(list(stems.values()), mix)
+    lengths = {k: abs(n - expected_len) / sr for k, n in
+               {"mix": len(mix), **stem_lens, **{k: len(v) for k, v in (extra_files or {}).items()}}.items()}
     lufs = integrated_lufs(mix, sr)
     tp = true_peak_dbtp(mix)
     ext = ffmpeg_ebur128(mix_path, ffmpeg) if mix_path else {}
@@ -229,7 +263,6 @@ def run_gate(mix: np.ndarray, stems: dict[str, np.ndarray], sr: int, *, expected
     ending = ending_report(mix, sr, None if loop else hit_time_s)
     align = section_alignment_report(mix, sr, sections)
     seam = loop_seam_report(mix, sr) if loop else None
-    sdiff = sum_diff_db(list(stems.values()), mix)
     m = {
         "length_error_s": max(lengths.values()),
         "length_error_samples": int(round(max(lengths.values()) * sr)),

@@ -1,0 +1,2202 @@
+{
+  "schema_version": "1.0",
+  "ai_generated": true,
+  "ai_label": "AI-generated instrumental music (rule-based symbolic composition rendered with sampled instruments)",
+  "job_id": "6da35cb0-1f39-4b7d-a7d6-116094d332a8",
+  "parent_job_id": null,
+  "regenerated_stem": null,
+  "request": {
+    "prompt": "calm cinematic piano that builds to an uplifting peak",
+    "duration_s": 180.0,
+    "sections": [
+      {
+        "start_s": 0.0,
+        "mood": "calm intro"
+      },
+      {
+        "start_s": 81.0,
+        "mood": "build"
+      },
+      {
+        "start_s": 129.6,
+        "mood": "uplifting peak"
+      }
+    ],
+    "tempo_bpm": null,
+    "key": null,
+    "loopable": false,
+    "narration_url": null,
+    "seed": 7,
+    "output": {
+      "sample_rate": 48000,
+      "target_lufs": -16.0,
+      "formats": [
+        "wav"
+      ]
+    },
+    "callback_url": null
+  },
+  "seed": 7,
+  "stem_seeds": {
+    "drums": 743556868,
+    "bass": 999787734,
+    "harmony": 829544427,
+    "melody": 24627747
+  },
+  "style": "cinematic",
+  "tempo_bpm": 86.0,
+  "key": {
+    "tonic": "Bb",
+    "mode": "major",
+    "name": "Bb major"
+  },
+  "time_signature": "4/4",
+  "duration_s": 180.0,
+  "sample_rate": 48000,
+  "bit_depth": 24,
+  "length_samples": 8640000,
+  "sections": [
+    {
+      "requested_start_s": 0.0,
+      "applied_start_s": 0.0,
+      "bar": 0,
+      "beat": 0,
+      "beat_index": 0,
+      "mood": "calm intro",
+      "intensity": 1,
+      "build": false,
+      "derived": false
+    },
+    {
+      "requested_start_s": 81.0,
+      "applied_start_s": 80.930233,
+      "bar": 29,
+      "beat": 0,
+      "beat_index": 116,
+      "mood": "build",
+      "intensity": 2,
+      "build": true,
+      "derived": false
+    },
+    {
+      "requested_start_s": 129.6,
+      "applied_start_s": 129.767442,
+      "bar": 46,
+      "beat": 2,
+      "beat_index": 186,
+      "mood": "uplifting peak",
+      "intensity": 4,
+      "build": false,
+      "derived": false
+    }
+  ],
+  "bars": [
+    {
+      "index": 0,
+      "t": 0.0
+    },
+    {
+      "index": 1,
+      "t": 2.790698
+    },
+    {
+      "index": 2,
+      "t": 5.581395
+    },
+    {
+      "index": 3,
+      "t": 8.372093
+    },
+    {
+      "index": 4,
+      "t": 11.162791
+    },
+    {
+      "index": 5,
+      "t": 13.953488
+    },
+    {
+      "index": 6,
+      "t": 16.744186
+    },
+    {
+      "index": 7,
+      "t": 19.534884
+    },
+    {
+      "index": 8,
+      "t": 22.325581
+    },
+    {
+      "index": 9,
+      "t": 25.116279
+    },
+    {
+      "index": 10,
+      "t": 27.906977
+    },
+    {
+      "index": 11,
+      "t": 30.697674
+    },
+    {
+      "index": 12,
+      "t": 33.488372
+    },
+    {
+      "index": 13,
+      "t": 36.27907
+    },
+    {
+      "index": 14,
+      "t": 39.069767
+    },
+    {
+      "index": 15,
+      "t": 41.860465
+    },
+    {
+      "index": 16,
+      "t": 44.651163
+    },
+    {
+      "index": 17,
+      "t": 47.44186
+    },
+    {
+      "index": 18,
+      "t": 50.232558
+    },
+    {
+      "index": 19,
+      "t": 53.023256
+    },
+    {
+      "index": 20,
+      "t": 55.813953
+    },
+    {
+      "index": 21,
+      "t": 58.604651
+    },
+    {
+      "index": 22,
+      "t": 61.395349
+    },
+    {
+      "index": 23,
+      "t": 64.186047
+    },
+    {
+      "index": 24,
+      "t": 66.976744
+    },
+    {
+      "index": 25,
+      "t": 69.767442
+    },
+    {
+      "index": 26,
+      "t": 72.55814
+    },
+    {
+      "index": 27,
+      "t": 75.348837
+    },
+    {
+      "index": 28,
+      "t": 78.139535
+    },
+    {
+      "index": 29,
+      "t": 80.930233
+    },
+    {
+      "index": 30,
+      "t": 83.72093
+    },
+    {
+      "index": 31,
+      "t": 86.511628
+    },
+    {
+      "index": 32,
+      "t": 89.302326
+    },
+    {
+      "index": 33,
+      "t": 92.093023
+    },
+    {
+      "index": 34,
+      "t": 94.883721
+    },
+    {
+      "index": 35,
+      "t": 97.674419
+    },
+    {
+      "index": 36,
+      "t": 100.465116
+    },
+    {
+      "index": 37,
+      "t": 103.255814
+    },
+    {
+      "index": 38,
+      "t": 106.046512
+    },
+    {
+      "index": 39,
+      "t": 108.837209
+    },
+    {
+      "index": 40,
+      "t": 111.627907
+    },
+    {
+      "index": 41,
+      "t": 114.418605
+    },
+    {
+      "index": 42,
+      "t": 117.209302
+    },
+    {
+      "index": 43,
+      "t": 120.0
+    },
+    {
+      "index": 44,
+      "t": 122.790698
+    },
+    {
+      "index": 45,
+      "t": 125.581395
+    },
+    {
+      "index": 46,
+      "t": 128.372093
+    },
+    {
+      "index": 47,
+      "t": 131.162791
+    },
+    {
+      "index": 48,
+      "t": 133.953488
+    },
+    {
+      "index": 49,
+      "t": 136.744186
+    },
+    {
+      "index": 50,
+      "t": 139.534884
+    },
+    {
+      "index": 51,
+      "t": 142.325581
+    },
+    {
+      "index": 52,
+      "t": 145.116279
+    },
+    {
+      "index": 53,
+      "t": 147.906977
+    },
+    {
+      "index": 54,
+      "t": 150.697674
+    },
+    {
+      "index": 55,
+      "t": 153.488372
+    },
+    {
+      "index": 56,
+      "t": 156.27907
+    },
+    {
+      "index": 57,
+      "t": 159.069767
+    },
+    {
+      "index": 58,
+      "t": 161.860465
+    },
+    {
+      "index": 59,
+      "t": 164.651163
+    },
+    {
+      "index": 60,
+      "t": 167.44186
+    },
+    {
+      "index": 61,
+      "t": 170.232558
+    },
+    {
+      "index": 62,
+      "t": 173.023256
+    },
+    {
+      "index": 63,
+      "t": 175.813953
+    },
+    {
+      "index": 64,
+      "t": 178.604651
+    }
+  ],
+  "beats": [
+    {
+      "t": 0.0,
+      "bar": 0,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 0.697674,
+      "bar": 0,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 1.395349,
+      "bar": 0,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 2.093023,
+      "bar": 0,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 2.790698,
+      "bar": 1,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 3.488372,
+      "bar": 1,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 4.186047,
+      "bar": 1,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 4.883721,
+      "bar": 1,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 5.581395,
+      "bar": 2,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 6.27907,
+      "bar": 2,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 6.976744,
+      "bar": 2,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 7.674419,
+      "bar": 2,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 8.372093,
+      "bar": 3,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 9.069767,
+      "bar": 3,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 9.767442,
+      "bar": 3,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 10.465116,
+      "bar": 3,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 11.162791,
+      "bar": 4,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 11.860465,
+      "bar": 4,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 12.55814,
+      "bar": 4,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 13.255814,
+      "bar": 4,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 13.953488,
+      "bar": 5,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 14.651163,
+      "bar": 5,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 15.348837,
+      "bar": 5,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 16.046512,
+      "bar": 5,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 16.744186,
+      "bar": 6,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 17.44186,
+      "bar": 6,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 18.139535,
+      "bar": 6,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 18.837209,
+      "bar": 6,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 19.534884,
+      "bar": 7,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 20.232558,
+      "bar": 7,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 20.930233,
+      "bar": 7,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 21.627907,
+      "bar": 7,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 22.325581,
+      "bar": 8,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 23.023256,
+      "bar": 8,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 23.72093,
+      "bar": 8,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 24.418605,
+      "bar": 8,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 25.116279,
+      "bar": 9,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 25.813953,
+      "bar": 9,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 26.511628,
+      "bar": 9,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 27.209302,
+      "bar": 9,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 27.906977,
+      "bar": 10,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 28.604651,
+      "bar": 10,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 29.302326,
+      "bar": 10,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 30.0,
+      "bar": 10,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 30.697674,
+      "bar": 11,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 31.395349,
+      "bar": 11,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 32.093023,
+      "bar": 11,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 32.790698,
+      "bar": 11,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 33.488372,
+      "bar": 12,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 34.186047,
+      "bar": 12,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 34.883721,
+      "bar": 12,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 35.581395,
+      "bar": 12,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 36.27907,
+      "bar": 13,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 36.976744,
+      "bar": 13,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 37.674419,
+      "bar": 13,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 38.372093,
+      "bar": 13,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 39.069767,
+      "bar": 14,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 39.767442,
+      "bar": 14,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 40.465116,
+      "bar": 14,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 41.162791,
+      "bar": 14,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 41.860465,
+      "bar": 15,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 42.55814,
+      "bar": 15,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 43.255814,
+      "bar": 15,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 43.953488,
+      "bar": 15,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 44.651163,
+      "bar": 16,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 45.348837,
+      "bar": 16,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 46.046512,
+      "bar": 16,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 46.744186,
+      "bar": 16,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 47.44186,
+      "bar": 17,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 48.139535,
+      "bar": 17,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 48.837209,
+      "bar": 17,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 49.534884,
+      "bar": 17,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 50.232558,
+      "bar": 18,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 50.930233,
+      "bar": 18,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 51.627907,
+      "bar": 18,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 52.325581,
+      "bar": 18,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 53.023256,
+      "bar": 19,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 53.72093,
+      "bar": 19,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 54.418605,
+      "bar": 19,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 55.116279,
+      "bar": 19,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 55.813953,
+      "bar": 20,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 56.511628,
+      "bar": 20,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 57.209302,
+      "bar": 20,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 57.906977,
+      "bar": 20,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 58.604651,
+      "bar": 21,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 59.302326,
+      "bar": 21,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 60.0,
+      "bar": 21,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 60.697674,
+      "bar": 21,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 61.395349,
+      "bar": 22,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 62.093023,
+      "bar": 22,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 62.790698,
+      "bar": 22,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 63.488372,
+      "bar": 22,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 64.186047,
+      "bar": 23,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 64.883721,
+      "bar": 23,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 65.581395,
+      "bar": 23,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 66.27907,
+      "bar": 23,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 66.976744,
+      "bar": 24,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 67.674419,
+      "bar": 24,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 68.372093,
+      "bar": 24,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 69.069767,
+      "bar": 24,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 69.767442,
+      "bar": 25,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 70.465116,
+      "bar": 25,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 71.162791,
+      "bar": 25,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 71.860465,
+      "bar": 25,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 72.55814,
+      "bar": 26,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 73.255814,
+      "bar": 26,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 73.953488,
+      "bar": 26,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 74.651163,
+      "bar": 26,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 75.348837,
+      "bar": 27,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 76.046512,
+      "bar": 27,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 76.744186,
+      "bar": 27,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 77.44186,
+      "bar": 27,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 78.139535,
+      "bar": 28,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 78.837209,
+      "bar": 28,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 79.534884,
+      "bar": 28,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 80.232558,
+      "bar": 28,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 80.930233,
+      "bar": 29,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 81.627907,
+      "bar": 29,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 82.325581,
+      "bar": 29,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 83.023256,
+      "bar": 29,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 83.72093,
+      "bar": 30,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 84.418605,
+      "bar": 30,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 85.116279,
+      "bar": 30,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 85.813953,
+      "bar": 30,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 86.511628,
+      "bar": 31,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 87.209302,
+      "bar": 31,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 87.906977,
+      "bar": 31,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 88.604651,
+      "bar": 31,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 89.302326,
+      "bar": 32,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 90.0,
+      "bar": 32,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 90.697674,
+      "bar": 32,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 91.395349,
+      "bar": 32,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 92.093023,
+      "bar": 33,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 92.790698,
+      "bar": 33,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 93.488372,
+      "bar": 33,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 94.186047,
+      "bar": 33,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 94.883721,
+      "bar": 34,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 95.581395,
+      "bar": 34,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 96.27907,
+      "bar": 34,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 96.976744,
+      "bar": 34,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 97.674419,
+      "bar": 35,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 98.372093,
+      "bar": 35,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 99.069767,
+      "bar": 35,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 99.767442,
+      "bar": 35,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 100.465116,
+      "bar": 36,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 101.162791,
+      "bar": 36,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 101.860465,
+      "bar": 36,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 102.55814,
+      "bar": 36,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 103.255814,
+      "bar": 37,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 103.953488,
+      "bar": 37,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 104.651163,
+      "bar": 37,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 105.348837,
+      "bar": 37,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 106.046512,
+      "bar": 38,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 106.744186,
+      "bar": 38,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 107.44186,
+      "bar": 38,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 108.139535,
+      "bar": 38,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 108.837209,
+      "bar": 39,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 109.534884,
+      "bar": 39,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 110.232558,
+      "bar": 39,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 110.930233,
+      "bar": 39,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 111.627907,
+      "bar": 40,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 112.325581,
+      "bar": 40,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 113.023256,
+      "bar": 40,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 113.72093,
+      "bar": 40,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 114.418605,
+      "bar": 41,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 115.116279,
+      "bar": 41,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 115.813953,
+      "bar": 41,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 116.511628,
+      "bar": 41,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 117.209302,
+      "bar": 42,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 117.906977,
+      "bar": 42,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 118.604651,
+      "bar": 42,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 119.302326,
+      "bar": 42,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 120.0,
+      "bar": 43,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 120.697674,
+      "bar": 43,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 121.395349,
+      "bar": 43,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 122.093023,
+      "bar": 43,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 122.790698,
+      "bar": 44,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 123.488372,
+      "bar": 44,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 124.186047,
+      "bar": 44,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 124.883721,
+      "bar": 44,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 125.581395,
+      "bar": 45,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 126.27907,
+      "bar": 45,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 126.976744,
+      "bar": 45,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 127.674419,
+      "bar": 45,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 128.372093,
+      "bar": 46,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 129.069767,
+      "bar": 46,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 129.767442,
+      "bar": 46,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 130.465116,
+      "bar": 46,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 131.162791,
+      "bar": 47,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 131.860465,
+      "bar": 47,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 132.55814,
+      "bar": 47,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 133.255814,
+      "bar": 47,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 133.953488,
+      "bar": 48,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 134.651163,
+      "bar": 48,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 135.348837,
+      "bar": 48,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 136.046512,
+      "bar": 48,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 136.744186,
+      "bar": 49,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 137.44186,
+      "bar": 49,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 138.139535,
+      "bar": 49,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 138.837209,
+      "bar": 49,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 139.534884,
+      "bar": 50,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 140.232558,
+      "bar": 50,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 140.930233,
+      "bar": 50,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 141.627907,
+      "bar": 50,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 142.325581,
+      "bar": 51,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 143.023256,
+      "bar": 51,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 143.72093,
+      "bar": 51,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 144.418605,
+      "bar": 51,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 145.116279,
+      "bar": 52,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 145.813953,
+      "bar": 52,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 146.511628,
+      "bar": 52,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 147.209302,
+      "bar": 52,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 147.906977,
+      "bar": 53,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 148.604651,
+      "bar": 53,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 149.302326,
+      "bar": 53,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 150.0,
+      "bar": 53,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 150.697674,
+      "bar": 54,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 151.395349,
+      "bar": 54,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 152.093023,
+      "bar": 54,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 152.790698,
+      "bar": 54,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 153.488372,
+      "bar": 55,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 154.186047,
+      "bar": 55,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 154.883721,
+      "bar": 55,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 155.581395,
+      "bar": 55,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 156.27907,
+      "bar": 56,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 156.976744,
+      "bar": 56,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 157.674419,
+      "bar": 56,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 158.372093,
+      "bar": 56,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 159.069767,
+      "bar": 57,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 159.767442,
+      "bar": 57,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 160.465116,
+      "bar": 57,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 161.162791,
+      "bar": 57,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 161.860465,
+      "bar": 58,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 162.55814,
+      "bar": 58,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 163.255814,
+      "bar": 58,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 163.953488,
+      "bar": 58,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 164.651163,
+      "bar": 59,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 165.348837,
+      "bar": 59,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 166.046512,
+      "bar": 59,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 166.744186,
+      "bar": 59,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 167.44186,
+      "bar": 60,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 168.139535,
+      "bar": 60,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 168.837209,
+      "bar": 60,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 169.534884,
+      "bar": 60,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 170.232558,
+      "bar": 61,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 170.930233,
+      "bar": 61,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 171.627907,
+      "bar": 61,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 172.325581,
+      "bar": 61,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 173.023256,
+      "bar": 62,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 173.72093,
+      "bar": 62,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 174.418605,
+      "bar": 62,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 175.116279,
+      "bar": 62,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 175.813953,
+      "bar": 63,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 176.511628,
+      "bar": 63,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 177.209302,
+      "bar": 63,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 177.906977,
+      "bar": 63,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 178.604651,
+      "bar": 64,
+      "beat": 0,
+      "downbeat": true
+    }
+  ],
+  "hit_time_s": 178.604651,
+  "loop": {
+    "enabled": false,
+    "bars": null,
+    "seamless_method": null
+  },
+  "stems": [
+    {
+      "name": "drums",
+      "file": "stems/drums.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 48,
+      "program_name": "Orchestra Kit",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 743556868,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "bass",
+      "file": "stems/bass.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 43,
+      "program_name": "Contrabass",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 999787734,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "harmony",
+      "file": "stems/harmony.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 48,
+      "program_name": "String Ensemble 1",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 829544427,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "melody",
+      "file": "stems/melody.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 60,
+      "program_name": "French Horn",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 24627747,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    }
+  ],
+  "mix_formula": "mix = sum(stems[i].gain * stems[i]) (stems stored post master gain and limiter)",
+  "master_gain_db": 3.6751,
+  "limiter": {
+    "ceiling_dbtp": -1.5,
+    "lookahead_ms": 5.0,
+    "release_ms": 80.0,
+    "max_gain_reduction_db": 2.553,
+    "passes": 1
+  },
+  "loudness": {
+    "integrated_lufs": -16.006,
+    "true_peak_dbtp": -1.6,
+    "lra": 8.4,
+    "target_lufs": -16.0
+  },
+  "qa": {
+    "passed": true,
+    "failures": [],
+    "attempt": 1,
+    "length_error_s": 0.0,
+    "sum_diff_db": -117.6,
+    "integrated_lufs": -16.006,
+    "true_peak_dbtp": -1.6,
+    "ffmpeg_ebur128": {
+      "integrated_lufs": -16.0,
+      "lra": 8.4,
+      "true_peak_dbtp": -1.6
+    },
+    "mp3_true_peak_dbtp": null,
+    "full_scale_samples": 0,
+    "clicks": 0,
+    "gaps": 0,
+    "min_rms_db": -26.15,
+    "ending": {
+      "last_50ms_db": -139.15,
+      "silent_end": true,
+      "hit_onset_ratio": 6.46,
+      "hit_onset": true
+    },
+    "section_alignment": [
+      {
+        "applied_start_s": 80.9302,
+        "onset_offset_s": 0.001,
+        "onset_ratio": 7.02,
+        "onset": true,
+        "level_step_db": 7.04,
+        "section_level_step_db": 4.21,
+        "intensity_change": 1,
+        "aligned": true
+      },
+      {
+        "applied_start_s": 129.7674,
+        "onset_offset_s": 0.364,
+        "onset_ratio": 6.65,
+        "onset": true,
+        "level_step_db": 3.94,
+        "section_level_step_db": 6.44,
+        "intensity_change": 2,
+        "aligned": true
+      }
+    ],
+    "loop_seam": null
+  },
+  "ducking": {
+    "applied": false,
+    "depth_db": null,
+    "segments": [],
+    "curve": [],
+    "requested": false
+  },
+  "providers": [
+    {
+      "role": "interpreter",
+      "name": "rules",
+      "version": "1",
+      "mode": "local"
+    },
+    {
+      "role": "renderer",
+      "name": "fluidsynth",
+      "version": "2.6.1",
+      "mode": "local subprocess"
+    }
+  ],
+  "components": [
+    {
+      "name": "FluidR3_GM SoundFont",
+      "version": "3.1 (Debian fluid-soundfont-gm 3.1-5.3)",
+      "licence": "MIT",
+      "licence_url": "https://metadata.ftp-master.debian.org/changelogs/main/f/fluid-soundfont/unstable_copyright",
+      "commercial_use": "Yes. MIT: 'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'. Rendered audio is our output, not a copy of the SoundFont.",
+      "role": "instrument samples (default renderer)"
+    },
+    {
+      "name": "FluidSynth",
+      "version": "2.3.x (Debian bookworm package)",
+      "licence": "LGPL-2.1-or-later",
+      "licence_url": "https://metadata.ftp-master.debian.org/changelogs/main/f/fluidsynth/stable_copyright",
+      "commercial_use": "Yes. Invoked as an unmodified separate program (subprocess); no linking. Output audio carries no licence obligation.",
+      "role": "MIDI to audio renderer"
+    },
+    {
+      "name": "FFmpeg (Debian build incl. libmp3lame)",
+      "version": "5.1.x (Debian bookworm package)",
+      "licence": "GPL-2.0-or-later (Debian builds with --enable-gpl, no --enable-nonfree)",
+      "licence_url": "https://salsa.debian.org/multimedia-team/ffmpeg/-/raw/debian/7%255.1.6-0+deb12u1/debian/rules",
+      "commercial_use": "Yes. Invoked as an unmodified separate program (subprocess); GPL obligations apply to redistribution of the binary (source offer from Debian), not to the audio it produces.",
+      "role": "mp3 encode, narration decode, independent loudness check"
+    },
+    {
+      "name": "musicengine (this repository)",
+      "version": "0.1.0",
+      "licence": "Proprietary (owned code)",
+      "licence_url": "./README.md",
+      "commercial_use": "Yes. Composition rules, presets and DSP written for this project; no trained music model, no copied songs.",
+      "role": "prompt interpretation, composition, numpy synth/FX, mixing, QA"
+    },
+    {
+      "name": "NumPy",
+      "version": "2.x",
+      "licence": "BSD-3-Clause",
+      "licence_url": "https://github.com/numpy/numpy/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "DSP"
+    },
+    {
+      "name": "SciPy",
+      "version": "1.x",
+      "licence": "BSD-3-Clause",
+      "licence_url": "https://github.com/scipy/scipy/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "filters, resampling for true-peak"
+    },
+    {
+      "name": "soundfile (+ bundled libsndfile)",
+      "version": "0.12+",
+      "licence": "BSD-3-Clause (libsndfile LGPL-2.1, dynamically loaded)",
+      "licence_url": "https://github.com/bastibe/python-soundfile/blob/master/LICENSE",
+      "commercial_use": "Yes.",
+      "role": "WAV read/write"
+    },
+    {
+      "name": "pyloudnorm",
+      "version": "0.1+",
+      "licence": "MIT",
+      "licence_url": "https://github.com/csteinmetz1/pyloudnorm/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "BS.1770 loudness"
+    },
+    {
+      "name": "pretty_midi (+ mido)",
+      "version": "0.2.x",
+      "licence": "MIT",
+      "licence_url": "https://github.com/craffel/pretty-midi/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "MIDI writing"
+    },
+    {
+      "name": "langdetect",
+      "version": "1.0.9",
+      "licence": "Apache-2.0 (LICENSE file; PyPI metadata field says MIT, classifier says Apache)",
+      "licence_url": "https://github.com/Mimino666/langdetect/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "prompt language detection"
+    },
+    {
+      "name": "FastAPI / Starlette / Uvicorn / Pydantic / pydantic-settings",
+      "version": "current",
+      "licence": "MIT / BSD-3-Clause / BSD-3-Clause / MIT / MIT",
+      "licence_url": "https://github.com/fastapi/fastapi/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "HTTP API"
+    },
+    {
+      "name": "psycopg / psycopg-pool",
+      "version": "3.x",
+      "licence": "LGPL-3.0-only",
+      "licence_url": "https://github.com/psycopg/psycopg/blob/master/LICENSE.txt",
+      "commercial_use": "Yes. Used unmodified as an installed library.",
+      "role": "PostgreSQL driver"
+    },
+    {
+      "name": "boto3 / httpx / structlog / PyYAML / python-multipart",
+      "version": "current",
+      "licence": "Apache-2.0 / BSD-3-Clause / MIT OR Apache-2.0 / MIT / Apache-2.0",
+      "licence_url": "https://github.com/boto/boto3/blob/develop/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "storage client, HTTP client, logging, config, uploads"
+    },
+    {
+      "name": "PostgreSQL",
+      "version": "16",
+      "licence": "PostgreSQL License",
+      "licence_url": "https://www.postgresql.org/about/licence/",
+      "commercial_use": "Yes (permissive).",
+      "role": "jobs, idempotency, queue"
+    },
+    {
+      "name": "MinIO server",
+      "version": "RELEASE.2025-04-22T22-12-26Z",
+      "licence": "AGPL-3.0",
+      "licence_url": "https://github.com/minio/minio/blob/master/LICENSE",
+      "commercial_use": "Used unmodified as a separate network service for the demo. For production, point S3_* at a non-AGPL S3 backend (AWS S3, R2, etc.); no code change needed.",
+      "role": "object storage (demo / compose only)"
+    }
+  ],
+  "timings_s": {
+    "interpret": 0.017,
+    "plan": 0.0003,
+    "compose": 0.0058,
+    "render": 4.4349,
+    "mix": 3.3679,
+    "encode": 0.4102,
+    "qa": 2.7311,
+    "total": 11.3909,
+    "upload": 0.282
+  },
+  "cost": {
+    "compute_seconds": 10.957,
+    "usd_estimate": 0.000147,
+    "cost_per_cpu_second_usd": 1.34e-05,
+    "api_fees_usd": 0.0
+  },
+  "warnings": [
+    {
+      "code": "SECTION_SNAPPED",
+      "message": "Section 'build' moved -0.070s to the bar line at 80.930s.",
+      "details": {
+        "requested_s": 81.0,
+        "applied_s": 80.930233,
+        "delta_s": -0.069767
+      }
+    },
+    {
+      "code": "SECTION_SNAPPED",
+      "message": "Section 'uplifting peak' moved +0.167s to the beat at 129.767s.",
+      "details": {
+        "requested_s": 129.6,
+        "applied_s": 129.767442,
+        "delta_s": 0.167442
+      }
+    }
+  ]
+}

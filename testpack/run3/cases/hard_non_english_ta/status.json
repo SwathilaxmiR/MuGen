@@ -1,0 +1,37 @@
+{
+  "job_id": "cc50684f-8f6d-416d-8419-01c680e09285",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-23T20:46:11.851249+05:30",
+  "started_at": "2026-10-23T20:46:12.157444+05:30",
+  "finished_at": "2026-10-23T20:46:14.105219+05:30",
+  "warnings": [
+    {
+      "code": "PROMPT_TRANSLATED",
+      "details": {
+        "method": "lexicon",
+        "english": "calm \u0b87\u0b9a\u0bc8",
+        "matched": [
+          "\u0b85\u0bae\u0bc8\u0ba4\u0bbf\u0baf\u0bbe\u0ba9"
+        ],
+        "language": "ta"
+      },
+      "message": "Prompt read as 'ta' and mapped with the built-in lexicon."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/cc50684f-8f6d-416d-8419-01c680e09285/mix.wav",
+    "mix_mp3": null,
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/cc50684f-8f6d-416d-8419-01c680e09285/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/cc50684f-8f6d-416d-8419-01c680e09285/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/cc50684f-8f6d-416d-8419-01c680e09285/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/cc50684f-8f6d-416d-8419-01c680e09285/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/cc50684f-8f6d-416d-8419-01c680e09285/music_manifest.json"
+  },
+  "error": null
+}

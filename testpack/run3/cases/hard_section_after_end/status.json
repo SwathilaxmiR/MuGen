@@ -1,0 +1,41 @@
+{
+  "job_id": "7140056e-488b-4845-a493-15976d3a0c94",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-23T20:46:17.134424+05:30",
+  "started_at": "2026-10-23T20:46:17.211398+05:30",
+  "finished_at": "2026-10-23T20:46:19.616522+05:30",
+  "warnings": [
+    {
+      "code": "SECTION_AFTER_END_DROPPED",
+      "details": {
+        "start_s": 25.0
+      },
+      "message": "Section 'peak' at 25s starts at or after the music ends (final hit 17.61s); dropped."
+    },
+    {
+      "code": "SECTION_SNAPPED",
+      "details": {
+        "delta_s": 0.256881,
+        "applied_s": 8.256881,
+        "requested_s": 8.0
+      },
+      "message": "Section 'uplifting' moved +0.257s to the beat at 8.257s."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/7140056e-488b-4845-a493-15976d3a0c94/mix.wav",
+    "mix_mp3": null,
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/7140056e-488b-4845-a493-15976d3a0c94/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/7140056e-488b-4845-a493-15976d3a0c94/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/7140056e-488b-4845-a493-15976d3a0c94/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/7140056e-488b-4845-a493-15976d3a0c94/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/7140056e-488b-4845-a493-15976d3a0c94/music_manifest.json"
+  },
+  "error": null
+}

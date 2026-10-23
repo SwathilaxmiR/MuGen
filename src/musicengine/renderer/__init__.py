@@ -50,14 +50,15 @@ def _raw(part: StemPart, rs: RenderSpec, s: Settings, warnings: list[dict]) -> t
 
 def render_stem(part: StemPart, plan: Plan, warnings: list[dict], settings: Settings | None = None
                 ) -> tuple[np.ndarray, dict]:
-    """Return ((L, 2) float64 audio after FX, info)."""
+    """Return ((L, 2) float32 audio after FX, info)."""
     s = settings or get_settings()
     rs = render_spec(plan)
     audio, info = _raw(part, rs, s, warnings)
+    audio = audio.astype(np.float32, copy=False)
     n = len(audio)
     for k, f in enumerate(_fx_seconds(part, rs)):
         if f["type"] == "riser":
-            audio = audio + riser(n, rs.sr, f["start"], f["end"], seed=plan.stem_seeds[part.name] + k)
+            audio += riser(n, rs.sr, f["start"], f["end"], seed=plan.stem_seeds[part.name] + k).astype(np.float32)
     t0 = time.perf_counter()
     audio = apply_stem_fx(audio, part.name, rs.sr, plan.style)
     info["fx_seconds"] = round(time.perf_counter() - t0, 4)
