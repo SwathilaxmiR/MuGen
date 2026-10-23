@@ -55,6 +55,7 @@ class Settings(BaseSettings):
     duck_bridge_gap_s: float = 0.6
     max_narration_mb: int = 50
     narration_fetch_timeout_s: float = 20.0
+    allow_private_urls: bool = False  # SSRF guard for narration_url / callback_url; tests only
 
     cost_per_cpu_second: float = 0.0000134  # override with your server's $/vCPU-second
     fault_inject: str = ""  # test only: render_primary_fail | render_timeout | llm_fail
