@@ -51,11 +51,12 @@ def _segment(ctx: Ctx, style: str, v: list[int], bar_start: float, bar_len: floa
     vel = 55 + 9 * inten
     # sustained layer: covers the whole segment, ends exactly where the next one starts -> no gaps
     rhythmic = style in RHYTHMS and TIER[inten] > 1
-    if not rhythmic:
-        sus_vel = int(vel * 0.6) if style == "arp" else vel
-        out += [Note(seg_start, seg_end - seg_start, pitch, humanize_vel(ctx.rng, sus_vel, 3)) for pitch in v]
+    # (beds sit an octave below the hits: a MIDI note-off for a shared pitch would cut the bed short)
+    if not rhythmic and style != "arp":
+        out += [Note(seg_start, seg_end - seg_start, pitch, humanize_vel(ctx.rng, vel, 3)) for pitch in v]
     else:  # quiet bed under rhythmic styles so there is never silence between hits
-        out += [Note(seg_start, seg_end - seg_start, pitch, humanize_vel(ctx.rng, int(vel * 0.4), 2))
+        bed_vel = int(vel * (0.6 if style == "arp" else 0.4))
+        out += [Note(seg_start, seg_end - seg_start, pitch - 12, humanize_vel(ctx.rng, bed_vel, 2))
                 for pitch in v[:2 if style == "power" else 3]]
     hits: list[Note] = []
     if style == "arp":

@@ -39,6 +39,7 @@ musicengine = ["styles/*.yaml", "interpreter/lexicon/*.yaml", "migrations.sql"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["tests"]
 markers = [
     "integration: needs postgres + S3 (compose services)",
     "e2e: full stack incl. api + worker + real renderer",
