@@ -12,6 +12,8 @@ API_ERRORS: dict[str, tuple[int, bool]] = {
     "PARENT_JOB_NOT_READY": (409, True),
     "STEM_NOT_FOUND": (422, False),
     "PAYLOAD_TOO_LARGE": (413, False),
+    "NOT_FOUND": (404, False),
+    "METHOD_NOT_ALLOWED": (405, False),
     "INTERNAL_ERROR": (500, True),
 }
 

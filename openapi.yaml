@@ -1,0 +1,644 @@
+openapi: 3.1.0
+info:
+  title: IncuBrix Music Engine
+  description: 'AI background music with real stems, exact length and loudness QA.
+
+
+    Create a job with `POST /api/v1/music/jobs` (202 + `status_url`), poll `GET /api/v1/jobs/{job_id}` or pass
+
+    `callback_url` (signed with `X-IncuBrix-Signature: sha256=<HMAC-SHA256(body, CALLBACK_SECRET)>`).
+
+    All errors are JSON: `{"error": {"code", "message", "retryable", "details"}}`.'
+  version: 1.0.0
+paths:
+  /health:
+    get:
+      tags:
+      - ops
+      summary: Liveness
+      operationId: health_health_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /ready:
+    get:
+      tags:
+      - ops
+      summary: 'Readiness: database, bucket, SoundFont, fluidsynth, ffmpeg'
+      operationId: ready_ready_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /api/v1/music/jobs:
+    post:
+      tags:
+      - jobs
+      summary: Create a music generation job
+      operationId: create_job_api_v1_music_jobs_post
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: Idempotency-Key
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Idempotency-Key
+      - name: X-Correlation-Id
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: X-Correlation-Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MusicRequest'
+      responses:
+        '202':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobAccepted'
+        '401':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Unauthorized
+        '404':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Not Found
+        '409':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Conflict
+        '413':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Request Entity Too Large
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Unprocessable Entity
+        '429':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Too Many Requests
+        '503':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Service Unavailable
+  /api/v1/music/jobs/{job_id}/regenerate:
+    post:
+      tags:
+      - jobs
+      summary: Regenerate one stem of a finished job (other stems stay byte-identical)
+      operationId: regenerate_api_v1_music_jobs__job_id__regenerate_post
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Job Id
+      - name: Idempotency-Key
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Idempotency-Key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegenerateRequest'
+      responses:
+        '202':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobAccepted'
+        '401':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Unauthorized
+        '404':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Not Found
+        '409':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Conflict
+        '413':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Request Entity Too Large
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Unprocessable Entity
+        '429':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Too Many Requests
+        '503':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Service Unavailable
+  /api/v1/jobs/{job_id}:
+    get:
+      tags:
+      - jobs
+      summary: Job status
+      operationId: get_job_api_v1_jobs__job_id__get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Job Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobStatus'
+        '401':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Unauthorized
+        '404':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Not Found
+        '409':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Conflict
+        '413':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Request Entity Too Large
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Unprocessable Entity
+        '429':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Too Many Requests
+        '503':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Service Unavailable
+  /api/v1/uploads:
+    post:
+      tags:
+      - uploads
+      summary: Upload narration audio; use the returned upload:// URL as narration_url
+      operationId: upload_api_v1_uploads_post
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Body_upload_api_v1_uploads_post'
+        required: true
+      responses:
+        '201':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Conflict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '413':
+          description: Request Entity Too Large
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '422':
+          description: Unprocessable Entity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Too Many Requests
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Service Unavailable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      security:
+      - HTTPBearer: []
+components:
+  schemas:
+    Body_upload_api_v1_uploads_post:
+      properties:
+        file:
+          type: string
+          contentMediaType: application/octet-stream
+          title: File
+      type: object
+      required:
+      - file
+      title: Body_upload_api_v1_uploads_post
+    ErrorInfo:
+      properties:
+        code:
+          type: string
+          title: Code
+        message:
+          type: string
+          title: Message
+        retryable:
+          type: boolean
+          title: Retryable
+        details:
+          additionalProperties: true
+          type: object
+          title: Details
+      type: object
+      required:
+      - code
+      - message
+      - retryable
+      title: ErrorInfo
+    ErrorResponse:
+      properties:
+        error:
+          $ref: '#/components/schemas/ErrorInfo'
+      type: object
+      required:
+      - error
+      title: ErrorResponse
+    JobAccepted:
+      properties:
+        job_id:
+          type: string
+          title: Job Id
+        status:
+          type: string
+          enum:
+          - queued
+          - running
+          - succeeded
+          - failed
+          title: Status
+        status_url:
+          type: string
+          title: Status Url
+      type: object
+      required:
+      - job_id
+      - status
+      - status_url
+      title: JobAccepted
+    JobResult:
+      properties:
+        mix_wav:
+          type: string
+          title: Mix Wav
+        mix_mp3:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Mix Mp3
+        stems:
+          additionalProperties:
+            type: string
+          type: object
+          title: Stems
+        mix_ducked:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Mix Ducked
+        manifest:
+          type: string
+          title: Manifest
+      type: object
+      required:
+      - mix_wav
+      - stems
+      - manifest
+      title: JobResult
+    JobStatus:
+      properties:
+        job_id:
+          type: string
+          title: Job Id
+        status:
+          type: string
+          enum:
+          - queued
+          - running
+          - succeeded
+          - failed
+          title: Status
+        progress:
+          type: integer
+          maximum: 100.0
+          minimum: 0.0
+          title: Progress
+        kind:
+          type: string
+          enum:
+          - generate
+          - regenerate
+          title: Kind
+          default: generate
+        parent_job_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Parent Job Id
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+        started_at:
+          anyOf:
+          - type: string
+            format: date-time
+          - type: 'null'
+          title: Started At
+        finished_at:
+          anyOf:
+          - type: string
+            format: date-time
+          - type: 'null'
+          title: Finished At
+        warnings:
+          items:
+            additionalProperties: true
+            type: object
+          type: array
+          title: Warnings
+        result:
+          anyOf:
+          - $ref: '#/components/schemas/JobResult'
+          - type: 'null'
+        error:
+          anyOf:
+          - $ref: '#/components/schemas/ErrorInfo'
+          - type: 'null'
+      type: object
+      required:
+      - job_id
+      - status
+      - progress
+      - created_at
+      title: JobStatus
+    MusicRequest:
+      properties:
+        prompt:
+          type: string
+          maxLength: 2000
+          minLength: 1
+          title: Prompt
+        duration_s:
+          type: number
+          title: Duration S
+          description: Exact length of every output file, 5-300 s
+        sections:
+          anyOf:
+          - items:
+              $ref: '#/components/schemas/Section'
+            type: array
+            maxItems: 32
+          - type: 'null'
+          title: Sections
+        tempo_bpm:
+          anyOf:
+          - type: number
+            maximum: 200.0
+            minimum: 40.0
+          - type: 'null'
+          title: Tempo Bpm
+        key:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Key
+        loopable:
+          type: boolean
+          title: Loopable
+          default: false
+        narration_url:
+          anyOf:
+          - type: string
+            maxLength: 2048
+          - type: 'null'
+          title: Narration Url
+          description: https://, http:// or upload://<id> from POST /api/v1/uploads
+        seed:
+          anyOf:
+          - type: integer
+            maximum: 2147483647.0
+            minimum: 0.0
+          - type: 'null'
+          title: Seed
+        output:
+          $ref: '#/components/schemas/OutputOptions'
+        callback_url:
+          anyOf:
+          - type: string
+            maxLength: 2048
+          - type: 'null'
+          title: Callback Url
+      additionalProperties: false
+      type: object
+      required:
+      - prompt
+      - duration_s
+      title: MusicRequest
+      examples:
+      - duration_s: 45
+        output:
+          formats:
+          - wav
+          - mp3
+          sample_rate: 48000
+          target_lufs: -16
+        prompt: calm cinematic piano that builds to an uplifting peak
+        sections:
+        - mood: calm intro
+          start_s: 0
+        - mood: build
+          start_s: 20
+        - mood: uplifting peak
+          start_s: 32
+    OutputOptions:
+      properties:
+        sample_rate:
+          type: integer
+          enum:
+          - 44100
+          - 48000
+          title: Sample Rate
+          default: 48000
+        target_lufs:
+          type: number
+          maximum: -8.0
+          minimum: -30.0
+          title: Target Lufs
+          default: -16.0
+        formats:
+          items:
+            type: string
+            enum:
+            - wav
+            - mp3
+          type: array
+          title: Formats
+      additionalProperties: false
+      type: object
+      title: OutputOptions
+    RegenerateRequest:
+      properties:
+        stem:
+          type: string
+          title: Stem
+        seed:
+          anyOf:
+          - type: integer
+            maximum: 2147483647.0
+            minimum: 0.0
+          - type: 'null'
+          title: Seed
+        callback_url:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Callback Url
+      additionalProperties: false
+      type: object
+      required:
+      - stem
+      title: RegenerateRequest
+    Section:
+      properties:
+        start_s:
+          type: number
+          minimum: 0.0
+          title: Start S
+          description: Requested start time in seconds
+        mood:
+          type: string
+          maxLength: 200
+          minLength: 1
+          title: Mood
+      additionalProperties: false
+      type: object
+      required:
+      - start_s
+      - mood
+      title: Section
+    UploadResponse:
+      properties:
+        url:
+          type: string
+          title: Url
+        size_bytes:
+          type: integer
+          title: Size Bytes
+      type: object
+      required:
+      - url
+      - size_bytes
+      title: UploadResponse
+  securitySchemes:
+    HTTPBearer:
+      type: http
+      description: API_TOKEN (auth is off when API_TOKEN is empty)
+      scheme: bearer
