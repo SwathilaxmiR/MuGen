@@ -1,0 +1,245 @@
+{
+  "A": {
+    "p01_cinematic": {
+      "prompt": "Epic cinematic orchestral score that builds to a heroic climax",
+      "generate_s": 2.46,
+      "compute_s": 2.058,
+      "length_s": 30.0,
+      "length_error_s": 0.0,
+      "lufs": -16.01,
+      "true_peak_dbtp": -1.6,
+      "sum_diff_db": -117.4,
+      "bleed_max_explained_db": -7.68,
+      "max_abs_xcorr": 0.026,
+      "spectral_overlap": 0.9255,
+      "stems": [
+        "bass",
+        "drums",
+        "harmony",
+        "melody"
+      ]
+    },
+    "p02_lofi": {
+      "prompt": "chill lo-fi beats for studying late at night",
+      "generate_s": 2.38,
+      "compute_s": 2.282,
+      "length_s": 30.0,
+      "length_error_s": 0.0,
+      "lufs": -16.08,
+      "true_peak_dbtp": -1.6,
+      "sum_diff_db": -115.8,
+      "bleed_max_explained_db": -6.92,
+      "max_abs_xcorr": 0.038,
+      "spectral_overlap": 0.9175,
+      "stems": [
+        "bass",
+        "drums",
+        "harmony",
+        "melody"
+      ]
+    },
+    "p04_electronic": {
+      "prompt": "energetic EDM festival track with a big drop",
+      "generate_s": 2.65,
+      "compute_s": 2.564,
+      "length_s": 30.0,
+      "length_error_s": 0.0,
+      "lufs": -16.0,
+      "true_peak_dbtp": -1.6,
+      "sum_diff_db": -116.5,
+      "bleed_max_explained_db": -11.8,
+      "max_abs_xcorr": 0.013,
+      "spectral_overlap": 0.9438,
+      "stems": [
+        "bass",
+        "drums",
+        "harmony",
+        "melody"
+      ]
+    },
+    "p06_tense": {
+      "prompt": "tense suspense thriller underscore, dark and ominous",
+      "generate_s": 2.44,
+      "compute_s": 2.345,
+      "length_s": 30.0,
+      "length_error_s": 0.0,
+      "lufs": -16.01,
+      "true_peak_dbtp": -1.6,
+      "sum_diff_db": -116.5,
+      "bleed_max_explained_db": -6.02,
+      "max_abs_xcorr": 0.008,
+      "spectral_overlap": 0.7954,
+      "stems": [
+        "bass",
+        "drums",
+        "harmony",
+        "melody"
+      ]
+    },
+    "p11_jazz": {
+      "prompt": "smooth jazz lounge with saxophone",
+      "generate_s": 2.23,
+      "compute_s": 2.147,
+      "length_s": 30.0,
+      "length_error_s": 0.0,
+      "lufs": -16.07,
+      "true_peak_dbtp": -1.6,
+      "sum_diff_db": -116.3,
+      "bleed_max_explained_db": -12.99,
+      "max_abs_xcorr": 0.017,
+      "spectral_overlap": 0.5802,
+      "stems": [
+        "bass",
+        "drums",
+        "harmony",
+        "melody"
+      ]
+    }
+  },
+  "B": {
+    "p01_cinematic": {
+      "prompt": "Epic cinematic orchestral score that builds to a heroic climax",
+      "generate_s": 121.33,
+      "separate_s": 11.49,
+      "actual_s": 29.94,
+      "length_error_s": 0.06,
+      "clap": 0.4934,
+      "sources": [
+        "drums",
+        "bass",
+        "other",
+        "vocals"
+      ],
+      "length_s": 29.94,
+      "lufs": -22.89,
+      "true_peak_dbtp": -4.66,
+      "sum_diff_db": -33.3,
+      "bleed_max_explained_db": -4.1,
+      "max_abs_xcorr": 0.361,
+      "spectral_overlap": 0.5587,
+      "stems": [
+        "bass",
+        "drums",
+        "other",
+        "vocals"
+      ]
+    },
+    "p02_lofi": {
+      "prompt": "chill lo-fi beats for studying late at night",
+      "generate_s": 146.47,
+      "separate_s": 15.08,
+      "actual_s": 29.94,
+      "length_error_s": 0.06,
+      "clap": 0.4626,
+      "sources": [
+        "drums",
+        "bass",
+        "other",
+        "vocals"
+      ],
+      "length_s": 29.94,
+      "lufs": -19.42,
+      "true_peak_dbtp": -3.01,
+      "sum_diff_db": -36.5,
+      "bleed_max_explained_db": -5.52,
+      "max_abs_xcorr": 0.208,
+      "spectral_overlap": 0.6807,
+      "stems": [
+        "bass",
+        "drums",
+        "other",
+        "vocals"
+      ]
+    },
+    "p04_electronic": {
+      "prompt": "energetic EDM festival track with a big drop",
+      "generate_s": 169.75,
+      "separate_s": 15.77,
+      "actual_s": 29.94,
+      "length_error_s": 0.06,
+      "clap": 0.5223,
+      "sources": [
+        "drums",
+        "bass",
+        "other",
+        "vocals"
+      ],
+      "length_s": 29.94,
+      "lufs": -8.69,
+      "true_peak_dbtp": 1.06,
+      "sum_diff_db": -33.3,
+      "bleed_max_explained_db": -10.29,
+      "max_abs_xcorr": 0.079,
+      "spectral_overlap": 0.9282,
+      "stems": [
+        "bass",
+        "drums",
+        "other",
+        "vocals"
+      ]
+    },
+    "p06_tense": {
+      "prompt": "tense suspense thriller underscore, dark and ominous",
+      "generate_s": 169.82,
+      "separate_s": 15.57,
+      "actual_s": 29.94,
+      "length_error_s": 0.06,
+      "clap": 0.2835,
+      "sources": [
+        "drums",
+        "bass",
+        "other",
+        "vocals"
+      ],
+      "length_s": 29.94,
+      "lufs": -14.98,
+      "true_peak_dbtp": -2.94,
+      "sum_diff_db": -40.3,
+      "bleed_max_explained_db": -2.54,
+      "max_abs_xcorr": 0.314,
+      "spectral_overlap": 0.6883,
+      "stems": [
+        "bass",
+        "drums",
+        "other",
+        "vocals"
+      ]
+    },
+    "p11_jazz": {
+      "prompt": "smooth jazz lounge with saxophone",
+      "generate_s": 171.63,
+      "separate_s": 15.13,
+      "actual_s": 29.94,
+      "length_error_s": 0.06,
+      "clap": 0.5061,
+      "sources": [
+        "drums",
+        "bass",
+        "other",
+        "vocals"
+      ],
+      "length_s": 29.94,
+      "lufs": -27.56,
+      "true_peak_dbtp": -5.81,
+      "sum_diff_db": -26.7,
+      "bleed_max_explained_db": -3.34,
+      "max_abs_xcorr": 0.175,
+      "spectral_overlap": 0.8422,
+      "stems": [
+        "bass",
+        "drums",
+        "other",
+        "vocals"
+      ]
+    }
+  },
+  "B_meta": {
+    "model": "facebook/musicgen-small",
+    "separator": "htdemucs",
+    "device": "cpu",
+    "torch": "2.5.1",
+    "model_load_s": 180.8,
+    "separator_load_s": 12.91,
+    "requested_s": 30
+  }
+}
