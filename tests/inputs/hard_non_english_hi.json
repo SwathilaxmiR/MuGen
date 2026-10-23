@@ -1,0 +1,12 @@
+{
+  "request": {
+    "prompt": "शांत और रहस्यमय फिल्म संगीत",
+    "duration_s": 15,
+    "seed": 10
+  },
+  "meta": {
+    "expect_warnings": [
+      "PROMPT_TRANSLATED"
+    ]
+  }
+}

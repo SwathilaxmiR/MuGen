@@ -1,0 +1,12 @@
+{
+  "request": {
+    "prompt": "music",
+    "duration_s": 15,
+    "seed": 5
+  },
+  "meta": {
+    "expect_warnings": [
+      "VAGUE_PROMPT_DEFAULTS"
+    ]
+  }
+}

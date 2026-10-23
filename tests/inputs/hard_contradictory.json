@@ -1,0 +1,12 @@
+{
+  "request": {
+    "prompt": "calm but aggressive and fast but sleepy",
+    "duration_s": 15,
+    "seed": 5
+  },
+  "meta": {
+    "expect_warnings": [
+      "CONTRADICTORY_PROMPT"
+    ]
+  }
+}

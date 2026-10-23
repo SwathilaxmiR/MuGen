@@ -1,0 +1,13 @@
+{
+  "request": {
+    "prompt": "tense suspense thriller underscore, dark and ominous",
+    "duration_s": 45,
+    "seed": 105,
+    "output": {
+      "formats": [
+        "wav",
+        "mp3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "request": {
+    "prompt": "lofi beats",
+    "duration_s": 20,
+    "seed": 20
+  },
+  "meta": {
+    "concurrent_group": "concurrent"
+  }
+}

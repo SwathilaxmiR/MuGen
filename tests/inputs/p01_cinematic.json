@@ -1,0 +1,13 @@
+{
+  "request": {
+    "prompt": "Epic cinematic orchestral score that builds to a heroic climax",
+    "duration_s": 45,
+    "seed": 100,
+    "output": {
+      "formats": [
+        "wav",
+        "mp3"
+      ]
+    }
+  }
+}

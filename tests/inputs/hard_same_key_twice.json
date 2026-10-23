@@ -1,0 +1,10 @@
+{
+  "request": {
+    "prompt": "upbeat happy vlog",
+    "duration_s": 10,
+    "seed": 30
+  },
+  "meta": {
+    "submit_twice": true
+  }
+}

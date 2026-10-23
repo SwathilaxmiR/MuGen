@@ -1,0 +1,26 @@
+{
+  "request": {
+    "prompt": "warm acoustic guitar for a documentary",
+    "duration_s": 30,
+    "seed": 9
+  },
+  "meta": {
+    "narration": {
+      "duration_s": 30,
+      "phrases": [
+        [
+          1,
+          4
+        ],
+        [
+          4.4,
+          7
+        ],
+        [
+          18,
+          22
+        ]
+      ]
+    }
+  }
+}

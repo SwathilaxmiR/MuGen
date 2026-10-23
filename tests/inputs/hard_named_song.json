@@ -1,0 +1,12 @@
+{
+  "request": {
+    "prompt": "make it sound like Interstellar by Hans Zimmer, epic organ swell",
+    "duration_s": 20,
+    "seed": 6
+  },
+  "meta": {
+    "expect_warnings": [
+      "NAMED_WORK_IGNORED"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "prompt": "smooth jazz lounge with saxophone",
+    "duration_s": 45,
+    "seed": 110,
+    "output": {
+      "formats": [
+        "wav",
+        "mp3"
+      ]
+    }
+  }
+}

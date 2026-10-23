@@ -1,0 +1,99 @@
+{
+  "job_id": "367ecc86-8061-4ce0-a61e-b904e87a53be",
+  "status": "failed",
+  "progress": 80,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-23T20:07:32.044831+05:30",
+  "started_at": "2026-10-23T20:07:32.460135+05:30",
+  "finished_at": "2026-10-23T20:07:35.900409+05:30",
+  "warnings": [],
+  "result": null,
+  "error": {
+    "code": "MIX_QA_FAILED",
+    "message": "Mix failed QA after retry: gaps",
+    "retryable": true,
+    "details": {
+      "metrics": {
+        "gaps": 70,
+        "clicks": 0,
+        "ending": {
+          "hit_onset": true,
+          "silent_end": true,
+          "last_50ms_db": -141.93,
+          "median_flux_db": 1.29,
+          "hit_onset_flux_db": 29.56
+        },
+        "ffmpeg": {
+          "lra": 12.7,
+          "true_peak_dbtp": -2.1,
+          "integrated_lufs": -16.0
+        },
+        "loop_seam": null,
+        "gap_detail": {
+          "gaps": 70,
+          "gap_times": [
+            0.8,
+            0.85,
+            0.9,
+            0.95,
+            1.0,
+            1.05,
+            1.1,
+            1.15,
+            1.2,
+            1.25,
+            1.3,
+            1.35,
+            1.4,
+            1.45,
+            1.5,
+            1.55,
+            1.6,
+            1.65,
+            1.7,
+            1.75
+          ],
+          "min_rms_db": -90.14
+        },
+        "sum_diff_db": -115.16,
+        "click_detail": {
+          "clicks": 0,
+          "boundaries": [
+            {
+              "t": 7.0588,
+              "click": false,
+              "ratio": 0.7111150147245887,
+              "max_jump": 0.21249991655349731
+            }
+          ],
+          "reference_jump": 0.29882636725902556
+        },
+        "length_error_s": 0.0,
+        "true_peak_dbtp": -2.1,
+        "integrated_lufs": -16.049,
+        "ffmpeg_lufs_delta": 0.049,
+        "section_alignment": {
+          "sections": [
+            {
+              "onset": true,
+              "aligned": true,
+              "level_step_db": 32.67,
+              "onset_offset_s": 0.001,
+              "applied_start_s": 7.0588,
+              "intensity_change": 1,
+              "section_level_step_db": 36.24
+            }
+          ],
+          "misaligned": 0
+        },
+        "full_scale_samples": 0,
+        "mp3_true_peak_dbtp": -2.042,
+        "length_error_samples": 0
+      },
+      "failures": [
+        "gaps"
+      ]
+    }
+  }
+}

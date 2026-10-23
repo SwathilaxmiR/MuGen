@@ -1,0 +1,21 @@
+{
+  "request": {
+    "prompt": "calm ambient",
+    "duration_s": 10,
+    "seed": 9
+  },
+  "meta": {
+    "narration": {
+      "duration_s": 15,
+      "phrases": [
+        [
+          1,
+          13
+        ]
+      ]
+    },
+    "expect_warnings": [
+      "NARRATION_TRUNCATED"
+    ]
+  }
+}

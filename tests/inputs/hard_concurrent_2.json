@@ -1,0 +1,10 @@
+{
+  "request": {
+    "prompt": "epic trailer",
+    "duration_s": 20,
+    "seed": 21
+  },
+  "meta": {
+    "concurrent_group": "concurrent"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "request": {
+    "prompt": "jazz lounge",
+    "duration_s": 20,
+    "seed": 22
+  },
+  "meta": {
+    "concurrent_group": "concurrent"
+  }
+}

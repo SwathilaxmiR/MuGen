@@ -1,0 +1,10 @@
+{
+  "request": {
+    "prompt": "calm documentary piano",
+    "duration_s": 20,
+    "seed": 44,
+    "output": {
+      "target_lufs": -23
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "request": {
+    "prompt": "corporate background",
+    "duration_s": 12,
+    "seed": 9
+  },
+  "meta": {
+    "narration": {
+      "duration_s": 12,
+      "phrases": []
+    },
+    "expect_warnings": [
+      "NARRATION_NO_SPEECH"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "request": {
+    "prompt": "Спокойная музыка для видео",
+    "duration_s": 10,
+    "seed": 10
+  },
+  "meta": {
+    "expect_warnings": [
+      "PROMPT_LANGUAGE_FALLBACK"
+    ]
+  }
+}

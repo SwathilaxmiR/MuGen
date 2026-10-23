@@ -1,0 +1,14 @@
+{
+  "request": {
+    "prompt": "electronic groove",
+    "duration_s": 15,
+    "loopable": true,
+    "tempo_bpm": 125,
+    "seed": 41
+  },
+  "meta": {
+    "expect_warnings": [
+      "TEMPO_ADJUSTED_FOR_LOOP"
+    ]
+  }
+}

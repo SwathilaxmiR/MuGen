@@ -1,0 +1,12 @@
+{
+  "request": {
+    "prompt": "அமைதியான இசை",
+    "duration_s": 15,
+    "seed": 10
+  },
+  "meta": {
+    "expect_warnings": [
+      "PROMPT_TRANSLATED"
+    ]
+  }
+}

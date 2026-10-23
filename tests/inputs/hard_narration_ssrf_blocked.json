@@ -1,0 +1,13 @@
+{
+  "request": {
+    "prompt": "calm ambient",
+    "duration_s": 8,
+    "seed": 9,
+    "narration_url": "http://169.254.169.254/latest/meta-data/"
+  },
+  "meta": {
+    "expect_warnings": [
+      "NARRATION_FETCH_FAILED"
+    ]
+  }
+}

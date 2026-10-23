@@ -1,0 +1,21 @@
+{
+  "request": {
+    "prompt": "calm cinematic piano that builds to an uplifting peak",
+    "duration_s": 180,
+    "seed": 7,
+    "sections": [
+      {
+        "start_s": 0,
+        "mood": "calm intro"
+      },
+      {
+        "start_s": 81.0,
+        "mood": "build"
+      },
+      {
+        "start_s": 129.6,
+        "mood": "uplifting peak"
+      }
+    ]
+  }
+}

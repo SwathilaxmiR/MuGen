@@ -1,0 +1,9 @@
+{
+  "request": {
+    "prompt": "x",
+    "duration_s": 400
+  },
+  "meta": {
+    "expect_http": 422
+  }
+}

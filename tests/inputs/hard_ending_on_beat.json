@@ -1,0 +1,13 @@
+{
+  "request": {
+    "prompt": "ambient",
+    "duration_s": 5,
+    "tempo_bpm": 42,
+    "seed": 32
+  },
+  "meta": {
+    "expect_warnings": [
+      "ENDING_ON_BEAT_NOT_BAR"
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "job_id": "efc4b171-0531-4c28-80dc-da46d39e50ac",
+  "status": "failed",
+  "progress": 80,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-23T20:04:57.109012+05:30",
+  "started_at": "2026-10-23T20:04:57.171090+05:30",
+  "finished_at": "2026-10-23T20:04:59.112047+05:30",
+  "warnings": [],
+  "result": null,
+  "error": {
+    "code": "MIX_QA_FAILED",
+    "message": "Mix failed QA after retry: ending, section_alignment",
+    "retryable": true,
+    "details": {
+      "metrics": {
+        "gaps": 0,
+        "clicks": 0,
+        "ending": {
+          "hit_onset": false,
+          "silent_end": true,
+          "last_50ms_db": -142.57,
+          "median_flux_db": 1.05,
+          "hit_onset_flux_db": 2.58
+        },
+        "ffmpeg": {
+          "lra": 8.4,
+          "true_peak_dbtp": -2.3,
+          "integrated_lufs": -16.0
+        },
+        "loop_seam": null,
+        "gap_detail": {
+          "gaps": 0,
+          "gap_times": [],
+          "min_rms_db": -24.92
+        },
+        "sum_diff_db": -118.07,
+        "click_detail": {
+          "clicks": 0,
+          "boundaries": [
+            {
+              "t": 4.8276,
+              "click": false,
+              "ratio": 0.12553815395785897,
+              "max_jump": 0.0236968994140625
+            },
+            {
+              "t": 6.8966,
+              "click": false,
+              "ratio": 0.2527186029161577,
+              "max_jump": 0.04770380258560181
+            }
+          ],
+          "reference_jump": 0.18876252889633174
+        },
+        "length_error_s": 0.0,
+        "true_peak_dbtp": -2.268,
+        "integrated_lufs": -16.0,
+        "ffmpeg_lufs_delta": 0.0,
+        "section_alignment": {
+          "sections": [
+            {
+              "onset": false,
+              "aligned": false,
+              "level_step_db": -1.41,
+              "onset_offset_s": -0.238,
+              "applied_start_s": 4.8276,
+              "intensity_change": 1,
+              "section_level_step_db": 3.61
+            },
+            {
+              "onset": true,
+              "aligned": true,
+              "level_step_db": 1.87,
+              "onset_offset_s": 0.213,
+              "applied_start_s": 6.8966,
+              "intensity_change": 2,
+              "section_level_step_db": 4.43
+            }
+          ],
+          "misaligned": 1
+        },
+        "full_scale_samples": 0,
+        "mp3_true_peak_dbtp": null,
+        "length_error_samples": 0
+      },
+      "failures": [
+        "ending",
+        "section_alignment"
+      ]
+    }
+  }
+}

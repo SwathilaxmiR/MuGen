@@ -18,6 +18,10 @@ RHYTHMS = {
               3: [(i * 0.5, 0.5) for i in range(8)]},
 }
 TIER = {0: 1, 1: 1, 2: 2, 3: 2, 4: 3}
+# GM programs whose notes die away even when held (piano, mallets, plucked): a "sustained" chord is
+# re-struck instead, every beat for fast-decaying ones, every two beats for the rest
+FAST_DECAY = set(range(8, 16)) | {45, 47, 105, 106, 107, 108}
+SLOW_DECAY = set(range(0, 8)) | {24, 25, 26, 27, 28, 46, 104}
 
 
 def voice(pcs: list[int], prev: list[int] | None, n_voices: int = 4) -> list[int]:
@@ -52,7 +56,15 @@ def _segment(ctx: Ctx, style: str, v: list[int], bar_start: float, bar_len: floa
     # sustained layer: covers the whole segment, ends exactly where the next one starts -> no gaps
     rhythmic = style in RHYTHMS and TIER[inten] > 1
     # (beds sit an octave below the hits: a MIDI note-off for a shared pitch would cut the bed short)
-    if not rhythmic and style != "arp":
+    program = ctx.preset.programs["harmony"]
+    if not rhythmic and style != "arp" and program in FAST_DECAY | SLOW_DECAY:
+        step = 1.0 if program in FAST_DECAY else 2.0
+        t = seg_start
+        while t < seg_end - 1e-9:
+            d = min(step, seg_end - t)
+            out += [Note(t, d, pitch, humanize_vel(ctx.rng, vel - (0 if t == seg_start else 8), 3)) for pitch in v]
+            t += step
+    elif not rhythmic and style != "arp":
         out += [Note(seg_start, seg_end - seg_start, pitch, humanize_vel(ctx.rng, vel, 3)) for pitch in v]
     else:  # quiet bed under rhythmic styles so there is never silence between hits
         bed_vel = int(vel * (0.6 if style == "arp" else 0.4))

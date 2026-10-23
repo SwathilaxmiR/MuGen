@@ -128,19 +128,40 @@ def _flux(mono: np.ndarray, sr: int, frame_s: float = 0.01) -> tuple[np.ndarray,
     return le, flux
 
 
+ONSET_RATIO = 2.0  # spectral-flux peak / median flux; final hits measured 2.6x-64x in the batch run
+
+
+def spectral_flux(x: np.ndarray, sr: int, hop_s: float = 0.01) -> tuple[np.ndarray, np.ndarray]:
+    """Onset detection function: summed positive log-magnitude differences per 10 ms hop."""
+    from scipy.signal import stft
+
+    mono = x.mean(axis=1) if x.ndim == 2 else x
+    hop = int(hop_s * sr)
+    _, t, Z = stft(mono, fs=sr, nperseg=2048, noverlap=2048 - hop, boundary=None, padded=False)
+    L = np.log1p(1000 * np.abs(Z))
+    d = np.concatenate([[0.0], np.maximum(0, np.diff(L, axis=1)).sum(axis=0)])
+    return t, d
+
+
+def onset_strength(times: np.ndarray, flux: np.ndarray, t0: float, before: float, after: float) -> tuple[float, float]:
+    """(peak flux / median flux, time of the peak) within [t0 - before, t0 + after]."""
+    med = float(np.median(flux)) or 1e-9
+    w = (times >= t0 - before) & (times <= t0 + after)
+    if not w.any():
+        return 0.0, t0
+    i = int(np.argmax(np.where(w, flux, -1)))
+    return float(flux[i] / med), float(times[i])
+
+
 def ending_report(x: np.ndarray, sr: int, hit_time_s: float | None) -> dict:
     tail = x[-int(0.05 * sr):]
     last_db = db(max(rms(tail[:, 0]), rms(tail[:, 1])))
     rep = {"last_50ms_db": round(last_db, 2), "silent_end": last_db < -60.0}
     if hit_time_s is not None:
-        mono = x.mean(axis=1)
-        le, flux = _flux(mono, sr)
-        k = int(hit_time_s / 0.01)
-        near = flux[max(0, k - 3): k + 6]
-        med = float(np.median(flux[flux > 0])) if np.any(flux > 0) else 0.0
-        rep["hit_onset_flux_db"] = round(float(near.max()) if len(near) else 0.0, 2)
-        rep["median_flux_db"] = round(med, 2)
-        rep["hit_onset"] = bool(len(near) and near.max() >= max(3 * med, 1.0))
+        times, flux = spectral_flux(x, sr)
+        ratio, _ = onset_strength(times, flux, hit_time_s, 0.05, 0.08)
+        rep["hit_onset_ratio"] = round(ratio, 2)
+        rep["hit_onset"] = ratio >= ONSET_RATIO
     return rep
 
 
@@ -150,19 +171,18 @@ def section_alignment_report(x: np.ndarray, sr: int, sections: list[dict]) -> di
     moves the right way, or a >= 1 dB level step between the 0.5 s before and the 0.5 s after the
     applied start in the direction of the intensity change."""
     mono = x.mean(axis=1)
-    le, flux = _flux(mono, sr)
-    med = float(np.median(flux[flux > 0])) if np.any(flux > 0) else 0.0
+    le, _ = _flux(mono, sr)
+    times, sflux = spectral_flux(x, sr)
     out = []
     for prev, cur in zip(sections, sections[1:]):
         t = cur["applied_start_s"]
         k = int(round(t / 0.01))
-        lo, hi = max(0, k - 50), min(len(le), k + 50)
-        onset_idx = lo + int(np.argmax(flux[lo:hi])) if hi > lo else k
+        ratio, onset_t = onset_strength(times, sflux, t, 0.5, 0.5)
         before = le[max(0, k - 50):k].mean() if k > 0 else le[0]
         after = le[k:k + 50].mean() if k < len(le) else le[-1]
         step = float(after - before)  # mean level 0.5 s after vs 0.5 s before the applied start
         d_int = cur["intensity"] - prev["intensity"]
-        onset = bool(flux[onset_idx] >= max(3 * med, 1.0)) and abs(onset_idx * 0.01 - t) <= 0.5
+        onset = ratio >= ONSET_RATIO
         # direction over longer windows that skip the pre-section fill: [t-2.5, t-0.5) vs [t, t+2)
         long_before = le[max(0, k - 250):max(1, k - 50)].mean()
         long_after = le[k:k + 200].mean() if k < len(le) else le[-1]
@@ -170,8 +190,8 @@ def section_alignment_report(x: np.ndarray, sr: int, sections: list[dict]) -> di
         direction_ok = d_int == 0 or (long_step > 0) == (d_int > 0) or abs(long_step) < 0.5
         step_ok = d_int != 0 and (step > 0) == (d_int > 0) and abs(step) >= 1.0
         aligned = d_int == 0 or (onset and direction_ok) or step_ok
-        out.append({"applied_start_s": round(t, 4), "onset_offset_s": round(onset_idx * 0.01 - t, 3),
-                    "onset": onset, "level_step_db": round(step, 2), "section_level_step_db": round(long_step, 2),
+        out.append({"applied_start_s": round(t, 4), "onset_offset_s": round(onset_t - t, 3),
+                    "onset_ratio": round(ratio, 2), "onset": onset, "level_step_db": round(step, 2), "section_level_step_db": round(long_step, 2),
                     "intensity_change": d_int,
                     "aligned": bool(aligned)})
     return {"sections": out, "misaligned": sum(not s["aligned"] for s in out)}
@@ -254,3 +274,58 @@ def run_gate(mix: np.ndarray, stems: dict[str, np.ndarray], sr: int, *, expected
     if seam and seam["click"]:
         f.append("loop_seam")
     return {"passed": not f, "failures": f, "metrics": m}
+
+
+# ---------------------------------------------------------------- stem cleanliness
+def stem_bleed(stems: dict[str, np.ndarray], sr: int, n_fft: int = 2048, max_seconds: float = 60.0) -> dict:
+    """For each stem: fraction of its STFT-magnitude energy explained by a non-negative least-squares fit
+    onto the other stems' magnitudes (dB; very negative = clean), plus pairwise normalised
+    cross-correlation of the waveforms. Separately rendered parts should share little; a band-split or
+    source-separated stem set scores much higher."""
+    from scipy.optimize import nnls
+    from scipy.signal import stft
+
+    names = list(stems)
+    n = min(len(next(iter(stems.values()))), int(max_seconds * sr))
+    mono = {k: v[:n].mean(axis=1) if v.ndim == 2 else v[:n] for k, v in stems.items()}
+    mags = {k: np.abs(stft(x, fs=sr, nperseg=n_fft, noverlap=n_fft // 2)[2]) for k, x in mono.items()}
+    out = {}
+    for k in names:
+        y = mags[k].ravel()
+        others = [mags[o].ravel() for o in names if o != k]
+        if not others or not np.any(y):
+            out[k] = {"explained_db": None}
+            continue
+        A = np.stack(others, axis=1)
+        # subsample bins for speed (deterministic stride)
+        stride = max(1, len(y) // 200_000)
+        coef, _ = nnls(A[::stride], y[::stride])
+        resid = y - A @ coef
+        explained = 1 - np.sum(resid ** 2) / np.sum(y ** 2)
+        out[k] = {"explained_db": round(db(np.sqrt(max(explained, 1e-12))), 2),
+                  "fit_coefficients": {o: round(float(c), 4) for o, c in zip([o for o in names if o != k], coef)}}
+    pairs = {}
+    for i, a in enumerate(names):
+        for b in names[i + 1:]:
+            xa, xb = mono[a], mono[b]
+            den = np.sqrt(np.sum(xa ** 2) * np.sum(xb ** 2))
+            pairs[f"{a}~{b}"] = round(float(np.sum(xa * xb) / den), 4) if den > 0 else 0.0
+    return {"per_stem": out, "pairwise_xcorr": pairs,
+            "max_explained_db": max((v["explained_db"] for v in out.values() if v["explained_db"] is not None),
+                                    default=None)}
+
+
+def spectral_overlap(stems: dict[str, np.ndarray], sr: int, n_fft: int = 4096, max_seconds: float = 60.0) -> dict:
+    """Band-split detector. For each stem: share of its long-term spectrum energy that lies in frequency
+    bins where at least one other stem is within 10 dB. EQ bands of one mix barely overlap (low share);
+    separately played parts share much of the spectrum (high share)."""
+    from scipy.signal import welch
+
+    n = min(len(next(iter(stems.values()))), int(max_seconds * sr))
+    psd = {k: welch(v[:n].mean(axis=1) if v.ndim == 2 else v[:n], fs=sr, nperseg=n_fft)[1] for k, v in stems.items()}
+    out = {}
+    for k, p in psd.items():
+        others = np.max([q for o, q in psd.items() if o != k], axis=0)
+        shared = others >= p * 0.1
+        out[k] = round(float(np.sum(p[shared]) / max(np.sum(p), 1e-30)), 4)
+    return {"per_stem": out, "mean_overlap": round(float(np.mean(list(out.values()))), 4)}
