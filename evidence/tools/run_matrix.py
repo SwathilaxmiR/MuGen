@@ -155,7 +155,7 @@ class Runner:
             checks.append((f"warning:{code}", code in {w["code"] for w in st["warnings"]}))
         if st["status"] == "succeeded":
             files = self.client.download_result(st, audio_dir)
-            if "narration_url" in req:
+            if meta.get("narration"):  # synthesized + uploaded by the runner (kept for the audio pack)
                 files["narration.wav"] = os.path.join(audio_dir, "narration.wav")
             qa = _local_qa({k: v for k, v in files.items() if k != "narration.wav"},
                            json.load(open(files["music_manifest.json"])))
