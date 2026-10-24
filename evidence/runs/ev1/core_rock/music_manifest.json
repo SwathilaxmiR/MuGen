@@ -1,0 +1,1051 @@
+{
+  "schema_version": "1.0",
+  "ai_generated": true,
+  "ai_label": "AI-generated instrumental music (rule-based symbolic composition rendered with sampled instruments)",
+  "job_id": "836adb4e-cf11-4ddd-bfa0-6410993ab1d4",
+  "parent_job_id": null,
+  "regenerated_stem": null,
+  "request": {
+    "prompt": "Driving rock with guitar riffs for a sports montage",
+    "duration_s": 45.0,
+    "sections": null,
+    "tempo_bpm": null,
+    "key": null,
+    "loopable": false,
+    "narration_url": null,
+    "seed": 109,
+    "output": {
+      "sample_rate": 48000,
+      "target_lufs": -16.0,
+      "formats": [
+        "wav",
+        "mp3"
+      ]
+    },
+    "callback_url": null
+  },
+  "seed": 109,
+  "stem_seeds": {
+    "drums": 1258976911,
+    "bass": 1460444481,
+    "harmony": 918395615,
+    "melody": 474826821
+  },
+  "style": "rock",
+  "tempo_bpm": 131.0,
+  "key": {
+    "tonic": "D",
+    "mode": "minor",
+    "name": "D minor"
+  },
+  "time_signature": "4/4",
+  "duration_s": 45.0,
+  "sample_rate": 48000,
+  "bit_depth": 24,
+  "length_samples": 2160000,
+  "sections": [
+    {
+      "requested_start_s": null,
+      "applied_start_s": 0.0,
+      "bar": 0,
+      "beat": 0,
+      "beat_index": 0,
+      "mood": "intro",
+      "intensity": 2,
+      "build": false,
+      "derived": true
+    },
+    {
+      "requested_start_s": null,
+      "applied_start_s": 12.824427,
+      "bar": 7,
+      "beat": 0,
+      "beat_index": 28,
+      "mood": "build",
+      "intensity": 3,
+      "build": true,
+      "derived": true
+    },
+    {
+      "requested_start_s": null,
+      "applied_start_s": 28.396947,
+      "bar": 15,
+      "beat": 2,
+      "beat_index": 62,
+      "mood": "peak",
+      "intensity": 4,
+      "build": false,
+      "derived": true
+    }
+  ],
+  "bars": [
+    {
+      "index": 0,
+      "t": 0.0
+    },
+    {
+      "index": 1,
+      "t": 1.832061
+    },
+    {
+      "index": 2,
+      "t": 3.664122
+    },
+    {
+      "index": 3,
+      "t": 5.496183
+    },
+    {
+      "index": 4,
+      "t": 7.328244
+    },
+    {
+      "index": 5,
+      "t": 9.160305
+    },
+    {
+      "index": 6,
+      "t": 10.992366
+    },
+    {
+      "index": 7,
+      "t": 12.824427
+    },
+    {
+      "index": 8,
+      "t": 14.656489
+    },
+    {
+      "index": 9,
+      "t": 16.48855
+    },
+    {
+      "index": 10,
+      "t": 18.320611
+    },
+    {
+      "index": 11,
+      "t": 20.152672
+    },
+    {
+      "index": 12,
+      "t": 21.984733
+    },
+    {
+      "index": 13,
+      "t": 23.816794
+    },
+    {
+      "index": 14,
+      "t": 25.648855
+    },
+    {
+      "index": 15,
+      "t": 27.480916
+    },
+    {
+      "index": 16,
+      "t": 29.312977
+    },
+    {
+      "index": 17,
+      "t": 31.145038
+    },
+    {
+      "index": 18,
+      "t": 32.977099
+    },
+    {
+      "index": 19,
+      "t": 34.80916
+    },
+    {
+      "index": 20,
+      "t": 36.641221
+    },
+    {
+      "index": 21,
+      "t": 38.473282
+    },
+    {
+      "index": 22,
+      "t": 40.305344
+    },
+    {
+      "index": 23,
+      "t": 42.137405
+    },
+    {
+      "index": 24,
+      "t": 43.969466
+    }
+  ],
+  "beats": [
+    {
+      "t": 0.0,
+      "bar": 0,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 0.458015,
+      "bar": 0,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 0.916031,
+      "bar": 0,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 1.374046,
+      "bar": 0,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 1.832061,
+      "bar": 1,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 2.290076,
+      "bar": 1,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 2.748092,
+      "bar": 1,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 3.206107,
+      "bar": 1,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 3.664122,
+      "bar": 2,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 4.122137,
+      "bar": 2,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 4.580153,
+      "bar": 2,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 5.038168,
+      "bar": 2,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 5.496183,
+      "bar": 3,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 5.954198,
+      "bar": 3,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 6.412214,
+      "bar": 3,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 6.870229,
+      "bar": 3,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 7.328244,
+      "bar": 4,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 7.78626,
+      "bar": 4,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 8.244275,
+      "bar": 4,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 8.70229,
+      "bar": 4,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 9.160305,
+      "bar": 5,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 9.618321,
+      "bar": 5,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 10.076336,
+      "bar": 5,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 10.534351,
+      "bar": 5,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 10.992366,
+      "bar": 6,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 11.450382,
+      "bar": 6,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 11.908397,
+      "bar": 6,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 12.366412,
+      "bar": 6,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 12.824427,
+      "bar": 7,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 13.282443,
+      "bar": 7,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 13.740458,
+      "bar": 7,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 14.198473,
+      "bar": 7,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 14.656489,
+      "bar": 8,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 15.114504,
+      "bar": 8,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 15.572519,
+      "bar": 8,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 16.030534,
+      "bar": 8,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 16.48855,
+      "bar": 9,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 16.946565,
+      "bar": 9,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 17.40458,
+      "bar": 9,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 17.862595,
+      "bar": 9,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 18.320611,
+      "bar": 10,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 18.778626,
+      "bar": 10,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 19.236641,
+      "bar": 10,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 19.694656,
+      "bar": 10,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 20.152672,
+      "bar": 11,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 20.610687,
+      "bar": 11,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 21.068702,
+      "bar": 11,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 21.526718,
+      "bar": 11,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 21.984733,
+      "bar": 12,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 22.442748,
+      "bar": 12,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 22.900763,
+      "bar": 12,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 23.358779,
+      "bar": 12,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 23.816794,
+      "bar": 13,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 24.274809,
+      "bar": 13,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 24.732824,
+      "bar": 13,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 25.19084,
+      "bar": 13,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 25.648855,
+      "bar": 14,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 26.10687,
+      "bar": 14,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 26.564885,
+      "bar": 14,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 27.022901,
+      "bar": 14,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 27.480916,
+      "bar": 15,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 27.938931,
+      "bar": 15,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 28.396947,
+      "bar": 15,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 28.854962,
+      "bar": 15,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 29.312977,
+      "bar": 16,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 29.770992,
+      "bar": 16,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 30.229008,
+      "bar": 16,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 30.687023,
+      "bar": 16,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 31.145038,
+      "bar": 17,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 31.603053,
+      "bar": 17,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 32.061069,
+      "bar": 17,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 32.519084,
+      "bar": 17,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 32.977099,
+      "bar": 18,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 33.435115,
+      "bar": 18,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 33.89313,
+      "bar": 18,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 34.351145,
+      "bar": 18,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 34.80916,
+      "bar": 19,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 35.267176,
+      "bar": 19,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 35.725191,
+      "bar": 19,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 36.183206,
+      "bar": 19,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 36.641221,
+      "bar": 20,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 37.099237,
+      "bar": 20,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 37.557252,
+      "bar": 20,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 38.015267,
+      "bar": 20,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 38.473282,
+      "bar": 21,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 38.931298,
+      "bar": 21,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 39.389313,
+      "bar": 21,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 39.847328,
+      "bar": 21,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 40.305344,
+      "bar": 22,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 40.763359,
+      "bar": 22,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 41.221374,
+      "bar": 22,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 41.679389,
+      "bar": 22,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 42.137405,
+      "bar": 23,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 42.59542,
+      "bar": 23,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 43.053435,
+      "bar": 23,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 43.51145,
+      "bar": 23,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 43.969466,
+      "bar": 24,
+      "beat": 0,
+      "downbeat": true
+    }
+  ],
+  "hit_time_s": 43.969466,
+  "loop": {
+    "enabled": false,
+    "bars": null,
+    "seamless_method": null
+  },
+  "stems": [
+    {
+      "name": "drums",
+      "file": "stems/drums.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 16,
+      "program_name": "Power Kit",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 1258976911,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "bass",
+      "file": "stems/bass.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 34,
+      "program_name": "Electric Bass (pick)",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 1460444481,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "harmony",
+      "file": "stems/harmony.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 29,
+      "program_name": "Overdriven Guitar",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 918395615,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "melody",
+      "file": "stems/melody.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 30,
+      "program_name": "Distortion Guitar",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 474826821,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    }
+  ],
+  "mix_formula": "mix = sum(stems[i].gain * stems[i]) (stems stored post master gain and limiter)",
+  "master_gain_db": 2.1653,
+  "limiter": {
+    "ceiling_dbtp": -1.5,
+    "lookahead_ms": 5.0,
+    "release_ms": 80.0,
+    "max_gain_reduction_db": -0.0,
+    "passes": 1
+  },
+  "loudness": {
+    "integrated_lufs": -16.0,
+    "true_peak_dbtp": -2.355,
+    "lra": 4.4,
+    "target_lufs": -16.0
+  },
+  "qa": {
+    "passed": true,
+    "failures": [],
+    "attempt": 1,
+    "length_error_s": 0.0,
+    "sum_diff_db": -115.21,
+    "integrated_lufs": -16.0,
+    "true_peak_dbtp": -2.355,
+    "ffmpeg_ebur128": {
+      "integrated_lufs": -16.0,
+      "lra": 4.4,
+      "true_peak_dbtp": -2.4
+    },
+    "mp3_true_peak_dbtp": -2.203,
+    "full_scale_samples": 0,
+    "clicks": 0,
+    "gaps": 0,
+    "min_rms_db": -26.28,
+    "ending": {
+      "last_50ms_db": -119.06,
+      "silent_end": true,
+      "hit_onset_ratio": 5.8,
+      "hit_onset": true
+    },
+    "section_alignment": [
+      {
+        "applied_start_s": 12.8244,
+        "onset_offset_s": -0.003,
+        "onset_ratio": 8.62,
+        "onset": true,
+        "level_step_db": 2.67,
+        "section_level_step_db": 2.92,
+        "intensity_change": 1,
+        "aligned": true
+      },
+      {
+        "applied_start_s": 28.3969,
+        "onset_offset_s": -0.456,
+        "onset_ratio": 7.53,
+        "onset": true,
+        "level_step_db": 3.78,
+        "section_level_step_db": 2.89,
+        "intensity_change": 1,
+        "aligned": true
+      }
+    ],
+    "loop_seam": null
+  },
+  "ducking": {
+    "applied": false,
+    "depth_db": null,
+    "segments": [],
+    "curve": [],
+    "requested": false
+  },
+  "providers": [
+    {
+      "role": "interpreter",
+      "name": "rules",
+      "version": "1",
+      "mode": "local"
+    },
+    {
+      "role": "renderer",
+      "name": "fluidsynth",
+      "version": "2.6.1",
+      "mode": "local subprocess"
+    }
+  ],
+  "components": [
+    {
+      "name": "FluidR3_GM SoundFont",
+      "version": "3.1 (Debian fluid-soundfont-gm 3.1-5.3)",
+      "licence": "MIT",
+      "licence_url": "https://metadata.ftp-master.debian.org/changelogs/main/f/fluid-soundfont/unstable_copyright",
+      "commercial_use": "Yes. MIT: 'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'. Rendered audio is our output, not a copy of the SoundFont.",
+      "role": "instrument samples (default renderer)"
+    },
+    {
+      "name": "FluidSynth",
+      "version": "2.3.x (Debian bookworm package)",
+      "licence": "LGPL-2.1-or-later",
+      "licence_url": "https://metadata.ftp-master.debian.org/changelogs/main/f/fluidsynth/stable_copyright",
+      "commercial_use": "Yes. Invoked as an unmodified separate program (subprocess); no linking. Output audio carries no licence obligation.",
+      "role": "MIDI to audio renderer"
+    },
+    {
+      "name": "FFmpeg (Debian build incl. libmp3lame)",
+      "version": "5.1.x (Debian bookworm package)",
+      "licence": "GPL-2.0-or-later (Debian builds with --enable-gpl, no --enable-nonfree)",
+      "licence_url": "https://salsa.debian.org/multimedia-team/ffmpeg/-/raw/debian/7%255.1.6-0+deb12u1/debian/rules",
+      "commercial_use": "Yes. Invoked as an unmodified separate program (subprocess); GPL obligations apply to redistribution of the binary (source offer from Debian), not to the audio it produces.",
+      "role": "mp3 encode, narration decode, independent loudness check"
+    },
+    {
+      "name": "musicengine (this repository)",
+      "version": "0.1.0",
+      "licence": "Proprietary (owned code)",
+      "licence_url": "./README.md",
+      "commercial_use": "Yes. Composition rules, presets and DSP written for this project; no trained music model, no copied songs.",
+      "role": "prompt interpretation, composition, numpy synth/FX, mixing, QA"
+    },
+    {
+      "name": "NumPy",
+      "version": "2.x",
+      "licence": "BSD-3-Clause",
+      "licence_url": "https://github.com/numpy/numpy/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "DSP"
+    },
+    {
+      "name": "SciPy",
+      "version": "1.x",
+      "licence": "BSD-3-Clause",
+      "licence_url": "https://github.com/scipy/scipy/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "filters, resampling for true-peak"
+    },
+    {
+      "name": "soundfile (+ bundled libsndfile)",
+      "version": "0.12+",
+      "licence": "BSD-3-Clause (libsndfile LGPL-2.1, dynamically loaded)",
+      "licence_url": "https://github.com/bastibe/python-soundfile/blob/master/LICENSE",
+      "commercial_use": "Yes.",
+      "role": "WAV read/write"
+    },
+    {
+      "name": "pyloudnorm",
+      "version": "0.1+",
+      "licence": "MIT",
+      "licence_url": "https://github.com/csteinmetz1/pyloudnorm/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "BS.1770 loudness"
+    },
+    {
+      "name": "pretty_midi (+ mido)",
+      "version": "0.2.x",
+      "licence": "MIT",
+      "licence_url": "https://github.com/craffel/pretty-midi/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "MIDI writing"
+    },
+    {
+      "name": "langdetect",
+      "version": "1.0.9",
+      "licence": "Apache-2.0 (LICENSE file; PyPI metadata field says MIT, classifier says Apache)",
+      "licence_url": "https://github.com/Mimino666/langdetect/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "prompt language detection"
+    },
+    {
+      "name": "FastAPI / Starlette / Uvicorn / Pydantic / pydantic-settings",
+      "version": "current",
+      "licence": "MIT / BSD-3-Clause / BSD-3-Clause / MIT / MIT",
+      "licence_url": "https://github.com/fastapi/fastapi/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "HTTP API"
+    },
+    {
+      "name": "psycopg / psycopg-pool",
+      "version": "3.x",
+      "licence": "LGPL-3.0-only",
+      "licence_url": "https://github.com/psycopg/psycopg/blob/master/LICENSE.txt",
+      "commercial_use": "Yes. Used unmodified as an installed library.",
+      "role": "PostgreSQL driver"
+    },
+    {
+      "name": "boto3 / httpx / structlog / PyYAML / python-multipart",
+      "version": "current",
+      "licence": "Apache-2.0 / BSD-3-Clause / MIT OR Apache-2.0 / MIT / Apache-2.0",
+      "licence_url": "https://github.com/boto/boto3/blob/develop/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "storage client, HTTP client, logging, config, uploads"
+    },
+    {
+      "name": "PostgreSQL",
+      "version": "16",
+      "licence": "PostgreSQL License",
+      "licence_url": "https://www.postgresql.org/about/licence/",
+      "commercial_use": "Yes (permissive).",
+      "role": "jobs, idempotency, queue"
+    },
+    {
+      "name": "MinIO server",
+      "version": "RELEASE.2025-04-22T22-12-26Z",
+      "licence": "AGPL-3.0",
+      "licence_url": "https://github.com/minio/minio/blob/master/LICENSE",
+      "commercial_use": "Used unmodified as a separate network service for the demo. For production, point S3_* at a non-AGPL S3 backend (AWS S3, R2, etc.); no code change needed.",
+      "role": "object storage (demo / compose only)"
+    }
+  ],
+  "timings_s": {
+    "interpret": 0.0173,
+    "plan": 0.0002,
+    "compose": 0.0056,
+    "render": 1.5244,
+    "mix": 0.7479,
+    "encode": 0.4167,
+    "qa": 0.9425,
+    "total": 3.8797,
+    "upload": 0.2079
+  },
+  "cost": {
+    "compute_seconds": 3.67,
+    "usd_estimate": 4.9e-05,
+    "cost_per_cpu_second_usd": 1.34e-05,
+    "api_fees_usd": 0.0
+  },
+  "warnings": []
+}

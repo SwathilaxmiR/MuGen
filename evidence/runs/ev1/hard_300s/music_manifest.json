@@ -1,0 +1,3263 @@
+{
+  "schema_version": "1.0",
+  "ai_generated": true,
+  "ai_label": "AI-generated instrumental music (rule-based symbolic composition rendered with sampled instruments)",
+  "job_id": "6b9438e8-2402-4517-8092-820e4811d57f",
+  "parent_job_id": null,
+  "regenerated_stem": null,
+  "request": {
+    "prompt": "Calm ambient meditation that slowly builds",
+    "duration_s": 300.0,
+    "sections": null,
+    "tempo_bpm": null,
+    "key": null,
+    "loopable": false,
+    "narration_url": null,
+    "seed": 703,
+    "output": {
+      "sample_rate": 48000,
+      "target_lufs": -16.0,
+      "formats": [
+        "wav",
+        "mp3"
+      ]
+    },
+    "callback_url": null
+  },
+  "seed": 703,
+  "stem_seeds": {
+    "drums": 201421116,
+    "bass": 216224339,
+    "harmony": 1582918446,
+    "melody": 822688702
+  },
+  "style": "ambient",
+  "tempo_bpm": 83.0,
+  "key": {
+    "tonic": "Bb",
+    "mode": "major",
+    "name": "Bb major"
+  },
+  "time_signature": "4/4",
+  "duration_s": 300.0,
+  "sample_rate": 48000,
+  "bit_depth": 24,
+  "length_samples": 14400000,
+  "sections": [
+    {
+      "requested_start_s": null,
+      "applied_start_s": 0.0,
+      "bar": 0,
+      "beat": 0,
+      "beat_index": 0,
+      "mood": "intro",
+      "intensity": 1,
+      "build": false,
+      "derived": true
+    },
+    {
+      "requested_start_s": null,
+      "applied_start_s": 104.096386,
+      "bar": 36,
+      "beat": 0,
+      "beat_index": 144,
+      "mood": "build",
+      "intensity": 2,
+      "build": true,
+      "derived": true
+    },
+    {
+      "requested_start_s": null,
+      "applied_start_s": 208.192771,
+      "bar": 72,
+      "beat": 0,
+      "beat_index": 288,
+      "mood": "peak",
+      "intensity": 4,
+      "build": false,
+      "derived": true
+    }
+  ],
+  "bars": [
+    {
+      "index": 0,
+      "t": 0.0
+    },
+    {
+      "index": 1,
+      "t": 2.891566
+    },
+    {
+      "index": 2,
+      "t": 5.783133
+    },
+    {
+      "index": 3,
+      "t": 8.674699
+    },
+    {
+      "index": 4,
+      "t": 11.566265
+    },
+    {
+      "index": 5,
+      "t": 14.457831
+    },
+    {
+      "index": 6,
+      "t": 17.349398
+    },
+    {
+      "index": 7,
+      "t": 20.240964
+    },
+    {
+      "index": 8,
+      "t": 23.13253
+    },
+    {
+      "index": 9,
+      "t": 26.024096
+    },
+    {
+      "index": 10,
+      "t": 28.915663
+    },
+    {
+      "index": 11,
+      "t": 31.807229
+    },
+    {
+      "index": 12,
+      "t": 34.698795
+    },
+    {
+      "index": 13,
+      "t": 37.590361
+    },
+    {
+      "index": 14,
+      "t": 40.481928
+    },
+    {
+      "index": 15,
+      "t": 43.373494
+    },
+    {
+      "index": 16,
+      "t": 46.26506
+    },
+    {
+      "index": 17,
+      "t": 49.156627
+    },
+    {
+      "index": 18,
+      "t": 52.048193
+    },
+    {
+      "index": 19,
+      "t": 54.939759
+    },
+    {
+      "index": 20,
+      "t": 57.831325
+    },
+    {
+      "index": 21,
+      "t": 60.722892
+    },
+    {
+      "index": 22,
+      "t": 63.614458
+    },
+    {
+      "index": 23,
+      "t": 66.506024
+    },
+    {
+      "index": 24,
+      "t": 69.39759
+    },
+    {
+      "index": 25,
+      "t": 72.289157
+    },
+    {
+      "index": 26,
+      "t": 75.180723
+    },
+    {
+      "index": 27,
+      "t": 78.072289
+    },
+    {
+      "index": 28,
+      "t": 80.963855
+    },
+    {
+      "index": 29,
+      "t": 83.855422
+    },
+    {
+      "index": 30,
+      "t": 86.746988
+    },
+    {
+      "index": 31,
+      "t": 89.638554
+    },
+    {
+      "index": 32,
+      "t": 92.53012
+    },
+    {
+      "index": 33,
+      "t": 95.421687
+    },
+    {
+      "index": 34,
+      "t": 98.313253
+    },
+    {
+      "index": 35,
+      "t": 101.204819
+    },
+    {
+      "index": 36,
+      "t": 104.096386
+    },
+    {
+      "index": 37,
+      "t": 106.987952
+    },
+    {
+      "index": 38,
+      "t": 109.879518
+    },
+    {
+      "index": 39,
+      "t": 112.771084
+    },
+    {
+      "index": 40,
+      "t": 115.662651
+    },
+    {
+      "index": 41,
+      "t": 118.554217
+    },
+    {
+      "index": 42,
+      "t": 121.445783
+    },
+    {
+      "index": 43,
+      "t": 124.337349
+    },
+    {
+      "index": 44,
+      "t": 127.228916
+    },
+    {
+      "index": 45,
+      "t": 130.120482
+    },
+    {
+      "index": 46,
+      "t": 133.012048
+    },
+    {
+      "index": 47,
+      "t": 135.903614
+    },
+    {
+      "index": 48,
+      "t": 138.795181
+    },
+    {
+      "index": 49,
+      "t": 141.686747
+    },
+    {
+      "index": 50,
+      "t": 144.578313
+    },
+    {
+      "index": 51,
+      "t": 147.46988
+    },
+    {
+      "index": 52,
+      "t": 150.361446
+    },
+    {
+      "index": 53,
+      "t": 153.253012
+    },
+    {
+      "index": 54,
+      "t": 156.144578
+    },
+    {
+      "index": 55,
+      "t": 159.036145
+    },
+    {
+      "index": 56,
+      "t": 161.927711
+    },
+    {
+      "index": 57,
+      "t": 164.819277
+    },
+    {
+      "index": 58,
+      "t": 167.710843
+    },
+    {
+      "index": 59,
+      "t": 170.60241
+    },
+    {
+      "index": 60,
+      "t": 173.493976
+    },
+    {
+      "index": 61,
+      "t": 176.385542
+    },
+    {
+      "index": 62,
+      "t": 179.277108
+    },
+    {
+      "index": 63,
+      "t": 182.168675
+    },
+    {
+      "index": 64,
+      "t": 185.060241
+    },
+    {
+      "index": 65,
+      "t": 187.951807
+    },
+    {
+      "index": 66,
+      "t": 190.843373
+    },
+    {
+      "index": 67,
+      "t": 193.73494
+    },
+    {
+      "index": 68,
+      "t": 196.626506
+    },
+    {
+      "index": 69,
+      "t": 199.518072
+    },
+    {
+      "index": 70,
+      "t": 202.409639
+    },
+    {
+      "index": 71,
+      "t": 205.301205
+    },
+    {
+      "index": 72,
+      "t": 208.192771
+    },
+    {
+      "index": 73,
+      "t": 211.084337
+    },
+    {
+      "index": 74,
+      "t": 213.975904
+    },
+    {
+      "index": 75,
+      "t": 216.86747
+    },
+    {
+      "index": 76,
+      "t": 219.759036
+    },
+    {
+      "index": 77,
+      "t": 222.650602
+    },
+    {
+      "index": 78,
+      "t": 225.542169
+    },
+    {
+      "index": 79,
+      "t": 228.433735
+    },
+    {
+      "index": 80,
+      "t": 231.325301
+    },
+    {
+      "index": 81,
+      "t": 234.216867
+    },
+    {
+      "index": 82,
+      "t": 237.108434
+    },
+    {
+      "index": 83,
+      "t": 240.0
+    },
+    {
+      "index": 84,
+      "t": 242.891566
+    },
+    {
+      "index": 85,
+      "t": 245.783133
+    },
+    {
+      "index": 86,
+      "t": 248.674699
+    },
+    {
+      "index": 87,
+      "t": 251.566265
+    },
+    {
+      "index": 88,
+      "t": 254.457831
+    },
+    {
+      "index": 89,
+      "t": 257.349398
+    },
+    {
+      "index": 90,
+      "t": 260.240964
+    },
+    {
+      "index": 91,
+      "t": 263.13253
+    },
+    {
+      "index": 92,
+      "t": 266.024096
+    },
+    {
+      "index": 93,
+      "t": 268.915663
+    },
+    {
+      "index": 94,
+      "t": 271.807229
+    },
+    {
+      "index": 95,
+      "t": 274.698795
+    },
+    {
+      "index": 96,
+      "t": 277.590361
+    },
+    {
+      "index": 97,
+      "t": 280.481928
+    },
+    {
+      "index": 98,
+      "t": 283.373494
+    },
+    {
+      "index": 99,
+      "t": 286.26506
+    },
+    {
+      "index": 100,
+      "t": 289.156627
+    },
+    {
+      "index": 101,
+      "t": 292.048193
+    },
+    {
+      "index": 102,
+      "t": 294.939759
+    },
+    {
+      "index": 103,
+      "t": 297.831325
+    }
+  ],
+  "beats": [
+    {
+      "t": 0.0,
+      "bar": 0,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 0.722892,
+      "bar": 0,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 1.445783,
+      "bar": 0,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 2.168675,
+      "bar": 0,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 2.891566,
+      "bar": 1,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 3.614458,
+      "bar": 1,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 4.337349,
+      "bar": 1,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 5.060241,
+      "bar": 1,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 5.783133,
+      "bar": 2,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 6.506024,
+      "bar": 2,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 7.228916,
+      "bar": 2,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 7.951807,
+      "bar": 2,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 8.674699,
+      "bar": 3,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 9.39759,
+      "bar": 3,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 10.120482,
+      "bar": 3,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 10.843373,
+      "bar": 3,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 11.566265,
+      "bar": 4,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 12.289157,
+      "bar": 4,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 13.012048,
+      "bar": 4,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 13.73494,
+      "bar": 4,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 14.457831,
+      "bar": 5,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 15.180723,
+      "bar": 5,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 15.903614,
+      "bar": 5,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 16.626506,
+      "bar": 5,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 17.349398,
+      "bar": 6,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 18.072289,
+      "bar": 6,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 18.795181,
+      "bar": 6,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 19.518072,
+      "bar": 6,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 20.240964,
+      "bar": 7,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 20.963855,
+      "bar": 7,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 21.686747,
+      "bar": 7,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 22.409639,
+      "bar": 7,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 23.13253,
+      "bar": 8,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 23.855422,
+      "bar": 8,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 24.578313,
+      "bar": 8,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 25.301205,
+      "bar": 8,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 26.024096,
+      "bar": 9,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 26.746988,
+      "bar": 9,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 27.46988,
+      "bar": 9,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 28.192771,
+      "bar": 9,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 28.915663,
+      "bar": 10,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 29.638554,
+      "bar": 10,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 30.361446,
+      "bar": 10,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 31.084337,
+      "bar": 10,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 31.807229,
+      "bar": 11,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 32.53012,
+      "bar": 11,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 33.253012,
+      "bar": 11,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 33.975904,
+      "bar": 11,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 34.698795,
+      "bar": 12,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 35.421687,
+      "bar": 12,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 36.144578,
+      "bar": 12,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 36.86747,
+      "bar": 12,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 37.590361,
+      "bar": 13,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 38.313253,
+      "bar": 13,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 39.036145,
+      "bar": 13,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 39.759036,
+      "bar": 13,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 40.481928,
+      "bar": 14,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 41.204819,
+      "bar": 14,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 41.927711,
+      "bar": 14,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 42.650602,
+      "bar": 14,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 43.373494,
+      "bar": 15,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 44.096386,
+      "bar": 15,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 44.819277,
+      "bar": 15,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 45.542169,
+      "bar": 15,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 46.26506,
+      "bar": 16,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 46.987952,
+      "bar": 16,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 47.710843,
+      "bar": 16,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 48.433735,
+      "bar": 16,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 49.156627,
+      "bar": 17,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 49.879518,
+      "bar": 17,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 50.60241,
+      "bar": 17,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 51.325301,
+      "bar": 17,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 52.048193,
+      "bar": 18,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 52.771084,
+      "bar": 18,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 53.493976,
+      "bar": 18,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 54.216867,
+      "bar": 18,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 54.939759,
+      "bar": 19,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 55.662651,
+      "bar": 19,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 56.385542,
+      "bar": 19,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 57.108434,
+      "bar": 19,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 57.831325,
+      "bar": 20,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 58.554217,
+      "bar": 20,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 59.277108,
+      "bar": 20,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 60.0,
+      "bar": 20,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 60.722892,
+      "bar": 21,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 61.445783,
+      "bar": 21,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 62.168675,
+      "bar": 21,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 62.891566,
+      "bar": 21,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 63.614458,
+      "bar": 22,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 64.337349,
+      "bar": 22,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 65.060241,
+      "bar": 22,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 65.783133,
+      "bar": 22,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 66.506024,
+      "bar": 23,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 67.228916,
+      "bar": 23,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 67.951807,
+      "bar": 23,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 68.674699,
+      "bar": 23,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 69.39759,
+      "bar": 24,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 70.120482,
+      "bar": 24,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 70.843373,
+      "bar": 24,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 71.566265,
+      "bar": 24,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 72.289157,
+      "bar": 25,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 73.012048,
+      "bar": 25,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 73.73494,
+      "bar": 25,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 74.457831,
+      "bar": 25,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 75.180723,
+      "bar": 26,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 75.903614,
+      "bar": 26,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 76.626506,
+      "bar": 26,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 77.349398,
+      "bar": 26,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 78.072289,
+      "bar": 27,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 78.795181,
+      "bar": 27,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 79.518072,
+      "bar": 27,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 80.240964,
+      "bar": 27,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 80.963855,
+      "bar": 28,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 81.686747,
+      "bar": 28,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 82.409639,
+      "bar": 28,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 83.13253,
+      "bar": 28,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 83.855422,
+      "bar": 29,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 84.578313,
+      "bar": 29,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 85.301205,
+      "bar": 29,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 86.024096,
+      "bar": 29,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 86.746988,
+      "bar": 30,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 87.46988,
+      "bar": 30,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 88.192771,
+      "bar": 30,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 88.915663,
+      "bar": 30,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 89.638554,
+      "bar": 31,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 90.361446,
+      "bar": 31,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 91.084337,
+      "bar": 31,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 91.807229,
+      "bar": 31,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 92.53012,
+      "bar": 32,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 93.253012,
+      "bar": 32,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 93.975904,
+      "bar": 32,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 94.698795,
+      "bar": 32,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 95.421687,
+      "bar": 33,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 96.144578,
+      "bar": 33,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 96.86747,
+      "bar": 33,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 97.590361,
+      "bar": 33,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 98.313253,
+      "bar": 34,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 99.036145,
+      "bar": 34,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 99.759036,
+      "bar": 34,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 100.481928,
+      "bar": 34,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 101.204819,
+      "bar": 35,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 101.927711,
+      "bar": 35,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 102.650602,
+      "bar": 35,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 103.373494,
+      "bar": 35,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 104.096386,
+      "bar": 36,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 104.819277,
+      "bar": 36,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 105.542169,
+      "bar": 36,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 106.26506,
+      "bar": 36,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 106.987952,
+      "bar": 37,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 107.710843,
+      "bar": 37,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 108.433735,
+      "bar": 37,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 109.156627,
+      "bar": 37,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 109.879518,
+      "bar": 38,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 110.60241,
+      "bar": 38,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 111.325301,
+      "bar": 38,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 112.048193,
+      "bar": 38,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 112.771084,
+      "bar": 39,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 113.493976,
+      "bar": 39,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 114.216867,
+      "bar": 39,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 114.939759,
+      "bar": 39,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 115.662651,
+      "bar": 40,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 116.385542,
+      "bar": 40,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 117.108434,
+      "bar": 40,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 117.831325,
+      "bar": 40,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 118.554217,
+      "bar": 41,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 119.277108,
+      "bar": 41,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 120.0,
+      "bar": 41,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 120.722892,
+      "bar": 41,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 121.445783,
+      "bar": 42,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 122.168675,
+      "bar": 42,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 122.891566,
+      "bar": 42,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 123.614458,
+      "bar": 42,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 124.337349,
+      "bar": 43,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 125.060241,
+      "bar": 43,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 125.783133,
+      "bar": 43,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 126.506024,
+      "bar": 43,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 127.228916,
+      "bar": 44,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 127.951807,
+      "bar": 44,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 128.674699,
+      "bar": 44,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 129.39759,
+      "bar": 44,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 130.120482,
+      "bar": 45,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 130.843373,
+      "bar": 45,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 131.566265,
+      "bar": 45,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 132.289157,
+      "bar": 45,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 133.012048,
+      "bar": 46,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 133.73494,
+      "bar": 46,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 134.457831,
+      "bar": 46,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 135.180723,
+      "bar": 46,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 135.903614,
+      "bar": 47,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 136.626506,
+      "bar": 47,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 137.349398,
+      "bar": 47,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 138.072289,
+      "bar": 47,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 138.795181,
+      "bar": 48,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 139.518072,
+      "bar": 48,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 140.240964,
+      "bar": 48,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 140.963855,
+      "bar": 48,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 141.686747,
+      "bar": 49,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 142.409639,
+      "bar": 49,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 143.13253,
+      "bar": 49,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 143.855422,
+      "bar": 49,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 144.578313,
+      "bar": 50,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 145.301205,
+      "bar": 50,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 146.024096,
+      "bar": 50,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 146.746988,
+      "bar": 50,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 147.46988,
+      "bar": 51,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 148.192771,
+      "bar": 51,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 148.915663,
+      "bar": 51,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 149.638554,
+      "bar": 51,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 150.361446,
+      "bar": 52,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 151.084337,
+      "bar": 52,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 151.807229,
+      "bar": 52,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 152.53012,
+      "bar": 52,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 153.253012,
+      "bar": 53,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 153.975904,
+      "bar": 53,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 154.698795,
+      "bar": 53,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 155.421687,
+      "bar": 53,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 156.144578,
+      "bar": 54,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 156.86747,
+      "bar": 54,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 157.590361,
+      "bar": 54,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 158.313253,
+      "bar": 54,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 159.036145,
+      "bar": 55,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 159.759036,
+      "bar": 55,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 160.481928,
+      "bar": 55,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 161.204819,
+      "bar": 55,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 161.927711,
+      "bar": 56,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 162.650602,
+      "bar": 56,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 163.373494,
+      "bar": 56,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 164.096386,
+      "bar": 56,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 164.819277,
+      "bar": 57,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 165.542169,
+      "bar": 57,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 166.26506,
+      "bar": 57,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 166.987952,
+      "bar": 57,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 167.710843,
+      "bar": 58,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 168.433735,
+      "bar": 58,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 169.156627,
+      "bar": 58,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 169.879518,
+      "bar": 58,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 170.60241,
+      "bar": 59,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 171.325301,
+      "bar": 59,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 172.048193,
+      "bar": 59,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 172.771084,
+      "bar": 59,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 173.493976,
+      "bar": 60,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 174.216867,
+      "bar": 60,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 174.939759,
+      "bar": 60,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 175.662651,
+      "bar": 60,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 176.385542,
+      "bar": 61,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 177.108434,
+      "bar": 61,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 177.831325,
+      "bar": 61,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 178.554217,
+      "bar": 61,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 179.277108,
+      "bar": 62,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 180.0,
+      "bar": 62,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 180.722892,
+      "bar": 62,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 181.445783,
+      "bar": 62,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 182.168675,
+      "bar": 63,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 182.891566,
+      "bar": 63,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 183.614458,
+      "bar": 63,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 184.337349,
+      "bar": 63,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 185.060241,
+      "bar": 64,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 185.783133,
+      "bar": 64,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 186.506024,
+      "bar": 64,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 187.228916,
+      "bar": 64,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 187.951807,
+      "bar": 65,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 188.674699,
+      "bar": 65,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 189.39759,
+      "bar": 65,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 190.120482,
+      "bar": 65,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 190.843373,
+      "bar": 66,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 191.566265,
+      "bar": 66,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 192.289157,
+      "bar": 66,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 193.012048,
+      "bar": 66,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 193.73494,
+      "bar": 67,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 194.457831,
+      "bar": 67,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 195.180723,
+      "bar": 67,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 195.903614,
+      "bar": 67,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 196.626506,
+      "bar": 68,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 197.349398,
+      "bar": 68,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 198.072289,
+      "bar": 68,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 198.795181,
+      "bar": 68,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 199.518072,
+      "bar": 69,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 200.240964,
+      "bar": 69,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 200.963855,
+      "bar": 69,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 201.686747,
+      "bar": 69,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 202.409639,
+      "bar": 70,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 203.13253,
+      "bar": 70,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 203.855422,
+      "bar": 70,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 204.578313,
+      "bar": 70,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 205.301205,
+      "bar": 71,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 206.024096,
+      "bar": 71,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 206.746988,
+      "bar": 71,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 207.46988,
+      "bar": 71,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 208.192771,
+      "bar": 72,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 208.915663,
+      "bar": 72,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 209.638554,
+      "bar": 72,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 210.361446,
+      "bar": 72,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 211.084337,
+      "bar": 73,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 211.807229,
+      "bar": 73,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 212.53012,
+      "bar": 73,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 213.253012,
+      "bar": 73,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 213.975904,
+      "bar": 74,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 214.698795,
+      "bar": 74,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 215.421687,
+      "bar": 74,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 216.144578,
+      "bar": 74,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 216.86747,
+      "bar": 75,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 217.590361,
+      "bar": 75,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 218.313253,
+      "bar": 75,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 219.036145,
+      "bar": 75,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 219.759036,
+      "bar": 76,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 220.481928,
+      "bar": 76,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 221.204819,
+      "bar": 76,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 221.927711,
+      "bar": 76,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 222.650602,
+      "bar": 77,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 223.373494,
+      "bar": 77,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 224.096386,
+      "bar": 77,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 224.819277,
+      "bar": 77,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 225.542169,
+      "bar": 78,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 226.26506,
+      "bar": 78,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 226.987952,
+      "bar": 78,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 227.710843,
+      "bar": 78,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 228.433735,
+      "bar": 79,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 229.156627,
+      "bar": 79,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 229.879518,
+      "bar": 79,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 230.60241,
+      "bar": 79,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 231.325301,
+      "bar": 80,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 232.048193,
+      "bar": 80,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 232.771084,
+      "bar": 80,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 233.493976,
+      "bar": 80,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 234.216867,
+      "bar": 81,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 234.939759,
+      "bar": 81,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 235.662651,
+      "bar": 81,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 236.385542,
+      "bar": 81,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 237.108434,
+      "bar": 82,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 237.831325,
+      "bar": 82,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 238.554217,
+      "bar": 82,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 239.277108,
+      "bar": 82,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 240.0,
+      "bar": 83,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 240.722892,
+      "bar": 83,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 241.445783,
+      "bar": 83,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 242.168675,
+      "bar": 83,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 242.891566,
+      "bar": 84,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 243.614458,
+      "bar": 84,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 244.337349,
+      "bar": 84,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 245.060241,
+      "bar": 84,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 245.783133,
+      "bar": 85,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 246.506024,
+      "bar": 85,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 247.228916,
+      "bar": 85,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 247.951807,
+      "bar": 85,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 248.674699,
+      "bar": 86,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 249.39759,
+      "bar": 86,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 250.120482,
+      "bar": 86,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 250.843373,
+      "bar": 86,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 251.566265,
+      "bar": 87,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 252.289157,
+      "bar": 87,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 253.012048,
+      "bar": 87,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 253.73494,
+      "bar": 87,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 254.457831,
+      "bar": 88,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 255.180723,
+      "bar": 88,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 255.903614,
+      "bar": 88,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 256.626506,
+      "bar": 88,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 257.349398,
+      "bar": 89,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 258.072289,
+      "bar": 89,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 258.795181,
+      "bar": 89,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 259.518072,
+      "bar": 89,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 260.240964,
+      "bar": 90,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 260.963855,
+      "bar": 90,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 261.686747,
+      "bar": 90,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 262.409639,
+      "bar": 90,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 263.13253,
+      "bar": 91,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 263.855422,
+      "bar": 91,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 264.578313,
+      "bar": 91,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 265.301205,
+      "bar": 91,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 266.024096,
+      "bar": 92,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 266.746988,
+      "bar": 92,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 267.46988,
+      "bar": 92,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 268.192771,
+      "bar": 92,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 268.915663,
+      "bar": 93,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 269.638554,
+      "bar": 93,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 270.361446,
+      "bar": 93,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 271.084337,
+      "bar": 93,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 271.807229,
+      "bar": 94,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 272.53012,
+      "bar": 94,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 273.253012,
+      "bar": 94,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 273.975904,
+      "bar": 94,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 274.698795,
+      "bar": 95,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 275.421687,
+      "bar": 95,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 276.144578,
+      "bar": 95,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 276.86747,
+      "bar": 95,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 277.590361,
+      "bar": 96,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 278.313253,
+      "bar": 96,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 279.036145,
+      "bar": 96,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 279.759036,
+      "bar": 96,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 280.481928,
+      "bar": 97,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 281.204819,
+      "bar": 97,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 281.927711,
+      "bar": 97,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 282.650602,
+      "bar": 97,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 283.373494,
+      "bar": 98,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 284.096386,
+      "bar": 98,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 284.819277,
+      "bar": 98,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 285.542169,
+      "bar": 98,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 286.26506,
+      "bar": 99,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 286.987952,
+      "bar": 99,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 287.710843,
+      "bar": 99,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 288.433735,
+      "bar": 99,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 289.156627,
+      "bar": 100,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 289.879518,
+      "bar": 100,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 290.60241,
+      "bar": 100,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 291.325301,
+      "bar": 100,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 292.048193,
+      "bar": 101,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 292.771084,
+      "bar": 101,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 293.493976,
+      "bar": 101,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 294.216867,
+      "bar": 101,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 294.939759,
+      "bar": 102,
+      "beat": 0,
+      "downbeat": true
+    },
+    {
+      "t": 295.662651,
+      "bar": 102,
+      "beat": 1,
+      "downbeat": false
+    },
+    {
+      "t": 296.385542,
+      "bar": 102,
+      "beat": 2,
+      "downbeat": false
+    },
+    {
+      "t": 297.108434,
+      "bar": 102,
+      "beat": 3,
+      "downbeat": false
+    },
+    {
+      "t": 297.831325,
+      "bar": 103,
+      "beat": 0,
+      "downbeat": true
+    }
+  ],
+  "hit_time_s": 297.831325,
+  "loop": {
+    "enabled": false,
+    "bars": null,
+    "seamless_method": null
+  },
+  "stems": [
+    {
+      "name": "drums",
+      "file": "stems/drums.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 0,
+      "program_name": "Standard Kit",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 201421116,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "bass",
+      "file": "stems/bass.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 89,
+      "program_name": "Pad 2 (warm)",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 216224339,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "harmony",
+      "file": "stems/harmony.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 88,
+      "program_name": "Pad 1 (new age)",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 1582918446,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    },
+    {
+      "name": "melody",
+      "file": "stems/melody.wav",
+      "gain": 1.0,
+      "production": "symbolic MIDI -> fluidsynth render + numpy FX",
+      "program": 10,
+      "program_name": "Music Box",
+      "soundfont": "FluidR3_GM.sf2",
+      "renderer": "fluidsynth",
+      "seed": 822688702,
+      "renderer_version": "2.6.1",
+      "fallback": false
+    }
+  ],
+  "mix_formula": "mix = sum(stems[i].gain * stems[i]) (stems stored post master gain and limiter)",
+  "master_gain_db": 4.3939,
+  "limiter": {
+    "ceiling_dbtp": -1.5,
+    "lookahead_ms": 5.0,
+    "release_ms": 80.0,
+    "max_gain_reduction_db": 4.742,
+    "passes": 1
+  },
+  "loudness": {
+    "integrated_lufs": -16.062,
+    "true_peak_dbtp": -1.597,
+    "lra": 7.1,
+    "target_lufs": -16.0
+  },
+  "qa": {
+    "passed": true,
+    "failures": [],
+    "attempt": 1,
+    "length_error_s": 0.0,
+    "sum_diff_db": -116.71,
+    "integrated_lufs": -16.062,
+    "true_peak_dbtp": -1.597,
+    "ffmpeg_ebur128": {
+      "integrated_lufs": -16.0,
+      "lra": 7.1,
+      "true_peak_dbtp": -1.6
+    },
+    "mp3_true_peak_dbtp": -1.32,
+    "full_scale_samples": 0,
+    "clicks": 0,
+    "gaps": 0,
+    "min_rms_db": -25.97,
+    "ending": {
+      "last_50ms_db": -140.97,
+      "silent_end": true,
+      "hit_onset_ratio": 30.29,
+      "hit_onset": true
+    },
+    "section_alignment": [
+      {
+        "applied_start_s": 104.0964,
+        "onset_offset_s": -0.005,
+        "onset_ratio": 25.09,
+        "onset": true,
+        "level_step_db": 2.39,
+        "section_level_step_db": 1.82,
+        "intensity_change": 1,
+        "aligned": true
+      },
+      {
+        "applied_start_s": 208.1928,
+        "onset_offset_s": 0.379,
+        "onset_ratio": 20.46,
+        "onset": true,
+        "level_step_db": 2.86,
+        "section_level_step_db": 3.07,
+        "intensity_change": 2,
+        "aligned": true
+      }
+    ],
+    "loop_seam": null
+  },
+  "ducking": {
+    "applied": false,
+    "depth_db": null,
+    "segments": [],
+    "curve": [],
+    "requested": false
+  },
+  "providers": [
+    {
+      "role": "interpreter",
+      "name": "rules",
+      "version": "1",
+      "mode": "local"
+    },
+    {
+      "role": "renderer",
+      "name": "fluidsynth",
+      "version": "2.6.1",
+      "mode": "local subprocess"
+    }
+  ],
+  "components": [
+    {
+      "name": "FluidR3_GM SoundFont",
+      "version": "3.1 (Debian fluid-soundfont-gm 3.1-5.3)",
+      "licence": "MIT",
+      "licence_url": "https://metadata.ftp-master.debian.org/changelogs/main/f/fluid-soundfont/unstable_copyright",
+      "commercial_use": "Yes. MIT: 'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'. Rendered audio is our output, not a copy of the SoundFont.",
+      "role": "instrument samples (default renderer)"
+    },
+    {
+      "name": "FluidSynth",
+      "version": "2.3.x (Debian bookworm package)",
+      "licence": "LGPL-2.1-or-later",
+      "licence_url": "https://metadata.ftp-master.debian.org/changelogs/main/f/fluidsynth/stable_copyright",
+      "commercial_use": "Yes. Invoked as an unmodified separate program (subprocess); no linking. Output audio carries no licence obligation.",
+      "role": "MIDI to audio renderer"
+    },
+    {
+      "name": "FFmpeg (Debian build incl. libmp3lame)",
+      "version": "5.1.x (Debian bookworm package)",
+      "licence": "GPL-2.0-or-later (Debian builds with --enable-gpl, no --enable-nonfree)",
+      "licence_url": "https://salsa.debian.org/multimedia-team/ffmpeg/-/raw/debian/7%255.1.6-0+deb12u1/debian/rules",
+      "commercial_use": "Yes. Invoked as an unmodified separate program (subprocess); GPL obligations apply to redistribution of the binary (source offer from Debian), not to the audio it produces.",
+      "role": "mp3 encode, narration decode, independent loudness check"
+    },
+    {
+      "name": "musicengine (this repository)",
+      "version": "0.1.0",
+      "licence": "Proprietary (owned code)",
+      "licence_url": "./README.md",
+      "commercial_use": "Yes. Composition rules, presets and DSP written for this project; no trained music model, no copied songs.",
+      "role": "prompt interpretation, composition, numpy synth/FX, mixing, QA"
+    },
+    {
+      "name": "NumPy",
+      "version": "2.x",
+      "licence": "BSD-3-Clause",
+      "licence_url": "https://github.com/numpy/numpy/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "DSP"
+    },
+    {
+      "name": "SciPy",
+      "version": "1.x",
+      "licence": "BSD-3-Clause",
+      "licence_url": "https://github.com/scipy/scipy/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "filters, resampling for true-peak"
+    },
+    {
+      "name": "soundfile (+ bundled libsndfile)",
+      "version": "0.12+",
+      "licence": "BSD-3-Clause (libsndfile LGPL-2.1, dynamically loaded)",
+      "licence_url": "https://github.com/bastibe/python-soundfile/blob/master/LICENSE",
+      "commercial_use": "Yes.",
+      "role": "WAV read/write"
+    },
+    {
+      "name": "pyloudnorm",
+      "version": "0.1+",
+      "licence": "MIT",
+      "licence_url": "https://github.com/csteinmetz1/pyloudnorm/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "BS.1770 loudness"
+    },
+    {
+      "name": "pretty_midi (+ mido)",
+      "version": "0.2.x",
+      "licence": "MIT",
+      "licence_url": "https://github.com/craffel/pretty-midi/blob/main/LICENSE.txt",
+      "commercial_use": "Yes (permissive).",
+      "role": "MIDI writing"
+    },
+    {
+      "name": "langdetect",
+      "version": "1.0.9",
+      "licence": "Apache-2.0 (LICENSE file; PyPI metadata field says MIT, classifier says Apache)",
+      "licence_url": "https://github.com/Mimino666/langdetect/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "prompt language detection"
+    },
+    {
+      "name": "FastAPI / Starlette / Uvicorn / Pydantic / pydantic-settings",
+      "version": "current",
+      "licence": "MIT / BSD-3-Clause / BSD-3-Clause / MIT / MIT",
+      "licence_url": "https://github.com/fastapi/fastapi/blob/master/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "HTTP API"
+    },
+    {
+      "name": "psycopg / psycopg-pool",
+      "version": "3.x",
+      "licence": "LGPL-3.0-only",
+      "licence_url": "https://github.com/psycopg/psycopg/blob/master/LICENSE.txt",
+      "commercial_use": "Yes. Used unmodified as an installed library.",
+      "role": "PostgreSQL driver"
+    },
+    {
+      "name": "boto3 / httpx / structlog / PyYAML / python-multipart",
+      "version": "current",
+      "licence": "Apache-2.0 / BSD-3-Clause / MIT OR Apache-2.0 / MIT / Apache-2.0",
+      "licence_url": "https://github.com/boto/boto3/blob/develop/LICENSE",
+      "commercial_use": "Yes (permissive).",
+      "role": "storage client, HTTP client, logging, config, uploads"
+    },
+    {
+      "name": "PostgreSQL",
+      "version": "16",
+      "licence": "PostgreSQL License",
+      "licence_url": "https://www.postgresql.org/about/licence/",
+      "commercial_use": "Yes (permissive).",
+      "role": "jobs, idempotency, queue"
+    },
+    {
+      "name": "MinIO server",
+      "version": "RELEASE.2025-04-22T22-12-26Z",
+      "licence": "AGPL-3.0",
+      "licence_url": "https://github.com/minio/minio/blob/master/LICENSE",
+      "commercial_use": "Used unmodified as a separate network service for the demo. For production, point S3_* at a non-AGPL S3 backend (AWS S3, R2, etc.); no code change needed.",
+      "role": "object storage (demo / compose only)"
+    }
+  ],
+  "timings_s": {
+    "interpret": 0.0166,
+    "plan": 0.0002,
+    "compose": 0.0084,
+    "render": 7.783,
+    "mix": 5.3216,
+    "encode": 2.7147,
+    "qa": 5.8902,
+    "total": 22.6693,
+    "upload": 0.4297
+  },
+  "cost": {
+    "compute_seconds": 22.252,
+    "usd_estimate": 0.000298,
+    "cost_per_cpu_second_usd": 1.34e-05,
+    "api_fees_usd": 0.0
+  },
+  "warnings": []
+}

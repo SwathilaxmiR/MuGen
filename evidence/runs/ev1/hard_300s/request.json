@@ -1,0 +1,13 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Calm ambient meditation that slowly builds",
+  "duration_s": 300,
+  "seed": 703
+}

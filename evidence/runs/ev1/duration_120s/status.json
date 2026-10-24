@@ -1,0 +1,94 @@
+{
+  "job_id": "f4079e95-46b2-4c66-8dcf-feb3ddfc6808",
+  "status": "failed",
+  "progress": 80,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:09:30.409109+05:30",
+  "started_at": "2026-10-24T12:09:30.446449+05:30",
+  "finished_at": "2026-10-24T12:09:47.899767+05:30",
+  "warnings": [],
+  "result": null,
+  "error": {
+    "code": "MIX_QA_FAILED",
+    "message": "Mix failed QA after retry: clicks",
+    "retryable": true,
+    "details": {
+      "metrics": {
+        "gaps": 0,
+        "clicks": 1,
+        "ending": {
+          "hit_onset": true,
+          "silent_end": true,
+          "last_50ms_db": -138.82,
+          "hit_onset_ratio": 5.49
+        },
+        "ffmpeg": {
+          "lra": 8.5,
+          "true_peak_dbtp": -2.1,
+          "integrated_lufs": -16.0
+        },
+        "loop_seam": null,
+        "gap_detail": {
+          "gaps": 0,
+          "gap_times": [],
+          "min_rms_db": -27.05
+        },
+        "sum_diff_db": -117.37,
+        "click_detail": {
+          "clicks": 1,
+          "boundaries": [
+            {
+              "t": 41.3793,
+              "click": false,
+              "ratio": 0.6366777995980553,
+              "max_jump": 0.05270862579345703
+            },
+            {
+              "t": 82.7586,
+              "click": true,
+              "ratio": 2.158272539596214,
+              "max_jump": 0.17867684364318848
+            }
+          ],
+          "reference_jump": 0.08278696984052658
+        },
+        "length_error_s": 0.0,
+        "true_peak_dbtp": -2.1,
+        "integrated_lufs": -16.005,
+        "ffmpeg_lufs_delta": 0.005,
+        "section_alignment": {
+          "sections": [
+            {
+              "onset": true,
+              "aligned": true,
+              "onset_ratio": 6.99,
+              "level_step_db": 6.73,
+              "onset_offset_s": 0.002,
+              "applied_start_s": 41.3793,
+              "intensity_change": 1,
+              "section_level_step_db": 5.25
+            },
+            {
+              "onset": true,
+              "aligned": true,
+              "onset_ratio": 7.88,
+              "level_step_db": 4.94,
+              "onset_offset_s": -0.167,
+              "applied_start_s": 82.7586,
+              "intensity_change": 2,
+              "section_level_step_db": 7.16
+            }
+          ],
+          "misaligned": 0
+        },
+        "full_scale_samples": 0,
+        "mp3_true_peak_dbtp": -2.081,
+        "length_error_samples": 0
+      },
+      "failures": [
+        "clicks"
+      ]
+    }
+  }
+}

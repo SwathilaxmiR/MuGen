@@ -1,0 +1,35 @@
+{
+  "job_id": "5b867ee3-9590-41ec-a07d-c31588606dab",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:12:01.801329+05:30",
+  "started_at": "2026-10-24T12:12:01.946052+05:30",
+  "finished_at": "2026-10-24T12:12:04.598990+05:30",
+  "warnings": [
+    {
+      "code": "VOCALS_NOT_SUPPORTED",
+      "details": {
+        "removed": [
+          "singer",
+          "lyrics"
+        ]
+      },
+      "message": "The engine produces instrumental music only; vocal requests were ignored."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/5b867ee3-9590-41ec-a07d-c31588606dab/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/5b867ee3-9590-41ec-a07d-c31588606dab/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/5b867ee3-9590-41ec-a07d-c31588606dab/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/5b867ee3-9590-41ec-a07d-c31588606dab/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/5b867ee3-9590-41ec-a07d-c31588606dab/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/5b867ee3-9590-41ec-a07d-c31588606dab/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/5b867ee3-9590-41ec-a07d-c31588606dab/music_manifest.json"
+  },
+  "error": null
+}

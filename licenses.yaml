@@ -1,93 +1,162 @@
 # Every component that ships in the service image or touches generated audio.
 # Evidence (licence text read and quoted) is in SOURCES.md. Feeds manifest.components[].
 components:
-  - name: FluidR3_GM SoundFont
-    version: "3.1 (Debian fluid-soundfont-gm 3.1-5.3)"
-    licence: MIT
-    licence_url: https://metadata.ftp-master.debian.org/changelogs/main/f/fluid-soundfont/unstable_copyright
-    commercial_use: "Yes. MIT: 'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'. Rendered audio is our output, not a copy of the SoundFont."
-    role: instrument samples (default renderer)
-  - name: FluidSynth
-    version: "2.3.x (Debian bookworm package)"
-    licence: LGPL-2.1-or-later
-    licence_url: https://metadata.ftp-master.debian.org/changelogs/main/f/fluidsynth/stable_copyright
-    commercial_use: "Yes. Invoked as an unmodified separate program (subprocess); no linking. Output audio carries no licence obligation."
-    role: MIDI to audio renderer
-  - name: FFmpeg (Debian build incl. libmp3lame)
-    version: "5.1.x (Debian bookworm package)"
-    licence: GPL-2.0-or-later (Debian builds with --enable-gpl, no --enable-nonfree)
-    licence_url: https://salsa.debian.org/multimedia-team/ffmpeg/-/raw/debian/7%255.1.6-0+deb12u1/debian/rules
-    commercial_use: "Yes. Invoked as an unmodified separate program (subprocess); GPL obligations apply to redistribution of the binary (source offer from Debian), not to the audio it produces."
-    role: mp3 encode, narration decode, independent loudness check
-  - name: musicengine (this repository)
-    version: "0.1.0"
-    licence: Proprietary (owned code)
-    licence_url: ./README.md
-    commercial_use: "Yes. Composition rules, presets and DSP written for this project; no trained music model, no copied songs."
-    role: prompt interpretation, composition, numpy synth/FX, mixing, QA
-  - name: NumPy
-    version: "2.x"
-    licence: BSD-3-Clause
-    licence_url: https://github.com/numpy/numpy/blob/main/LICENSE.txt
-    commercial_use: "Yes (permissive)."
-    role: DSP
-  - name: SciPy
-    version: "1.x"
-    licence: BSD-3-Clause
-    licence_url: https://github.com/scipy/scipy/blob/main/LICENSE.txt
-    commercial_use: "Yes (permissive)."
-    role: filters, resampling for true-peak
-  - name: soundfile (+ bundled libsndfile)
-    version: "0.12+"
-    licence: BSD-3-Clause (libsndfile LGPL-2.1, dynamically loaded)
-    licence_url: https://github.com/bastibe/python-soundfile/blob/master/LICENSE
-    commercial_use: "Yes."
-    role: WAV read/write
-  - name: pyloudnorm
-    version: "0.1+"
-    licence: MIT
-    licence_url: https://github.com/csteinmetz1/pyloudnorm/blob/master/LICENSE
-    commercial_use: "Yes (permissive)."
-    role: BS.1770 loudness
-  - name: pretty_midi (+ mido)
-    version: "0.2.x"
-    licence: MIT
-    licence_url: https://github.com/craffel/pretty-midi/blob/main/LICENSE.txt
-    commercial_use: "Yes (permissive)."
-    role: MIDI writing
-  - name: langdetect
-    version: "1.0.9"
-    licence: Apache-2.0 (LICENSE file; PyPI metadata field says MIT, classifier says Apache)
-    licence_url: https://github.com/Mimino666/langdetect/blob/master/LICENSE
-    commercial_use: "Yes (permissive)."
-    role: prompt language detection
-  - name: FastAPI / Starlette / Uvicorn / Pydantic / pydantic-settings
-    version: "current"
-    licence: MIT / BSD-3-Clause / BSD-3-Clause / MIT / MIT
-    licence_url: https://github.com/fastapi/fastapi/blob/master/LICENSE
-    commercial_use: "Yes (permissive)."
-    role: HTTP API
-  - name: psycopg / psycopg-pool
-    version: "3.x"
-    licence: LGPL-3.0-only
-    licence_url: https://github.com/psycopg/psycopg/blob/master/LICENSE.txt
-    commercial_use: "Yes. Used unmodified as an installed library."
-    role: PostgreSQL driver
-  - name: boto3 / httpx / structlog / PyYAML / python-multipart
-    version: "current"
-    licence: Apache-2.0 / BSD-3-Clause / MIT OR Apache-2.0 / MIT / Apache-2.0
-    licence_url: https://github.com/boto/boto3/blob/develop/LICENSE
-    commercial_use: "Yes (permissive)."
-    role: storage client, HTTP client, logging, config, uploads
-  - name: PostgreSQL
-    version: "16"
-    licence: PostgreSQL License
-    licence_url: https://www.postgresql.org/about/licence/
-    commercial_use: "Yes (permissive)."
-    role: jobs, idempotency, queue
-  - name: MinIO server
-    version: "RELEASE.2025-04-22T22-12-26Z"
-    licence: AGPL-3.0
-    licence_url: https://github.com/minio/minio/blob/master/LICENSE
-    commercial_use: "Used unmodified as a separate network service for the demo. For production, point S3_* at a non-AGPL S3 backend (AWS S3, R2, etc.); no code change needed."
-    role: object storage (demo / compose only)
+- name: FluidR3_GM SoundFont
+  version: 3.1 (Debian fluid-soundfont-gm 3.1-5.3)
+  licence: MIT
+  licence_url: https://metadata.ftp-master.debian.org/changelogs/main/f/fluid-soundfont/unstable_copyright
+  commercial_use: 'Yes. MIT: ''to use, copy, modify, merge, publish, distribute, sublicense, and/or sell''. Rendered
+    audio is our output, not a copy of the SoundFont.'
+  role: instrument samples (default renderer)
+  clause: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+    documentation files (the "Software"), to deal in the Software without restriction
+  clause_source: evidence/must_haves/mh4_licences/texts/fluidr3_debian_copyright.txt
+- name: FluidSynth
+  version: 2.3.x (Debian bookworm package)
+  licence: LGPL-2.1-or-later
+  licence_url: https://metadata.ftp-master.debian.org/changelogs/main/f/fluidsynth/stable_copyright
+  commercial_use: Yes. Invoked as an unmodified separate program (subprocess); no linking. Output audio carries
+    no licence obligation.
+  role: MIDI to audio renderer
+  clause: The act of running a program using the Library is not restricted, and output from such a program is covered
+    only if its contents constitute a work based on the Library
+  clause_source: evidence/must_haves/mh4_licences/texts/lgpl-2.1.txt
+- name: FFmpeg (Debian build incl. libmp3lame)
+  version: 5.1.x (Debian bookworm package)
+  licence: GPL-2.0-or-later (Debian builds with --enable-gpl, no --enable-nonfree)
+  licence_url: https://salsa.debian.org/multimedia-team/ffmpeg/-/raw/debian/7%255.1.6-0+deb12u1/debian/rules
+  commercial_use: Yes. Invoked as an unmodified separate program (subprocess); GPL obligations apply to redistribution
+    of the binary (source offer from Debian), not to the audio it produces.
+  role: mp3 encode, narration decode, independent loudness check
+  clause: The act of running the Program is not restricted, and the output from the Program is covered only if its
+    contents constitute a work based on the Program
+  clause_source: evidence/must_haves/mh4_licences/texts/gpl-2.0.txt
+- name: musicengine (this repository)
+  version: 0.1.0
+  licence: Proprietary (owned code)
+  licence_url: ./README.md
+  commercial_use: Yes. Composition rules, presets and DSP written for this project; no trained music model, no copied
+    songs.
+  role: prompt interpretation, composition, numpy synth/FX, mixing, QA
+  clause: Owned code written for this project.
+- name: NumPy
+  version: 2.x
+  licence: BSD-3-Clause
+  licence_url: https://github.com/numpy/numpy/blob/main/LICENSE.txt
+  commercial_use: Yes (permissive).
+  role: DSP
+  clause: Redistribution and use in source and binary forms, with or without modification, are permitted provided
+    that the following conditions are met
+  clause_source: pkg:numpy
+- name: SciPy
+  version: 1.x
+  licence: BSD-3-Clause
+  licence_url: https://github.com/scipy/scipy/blob/main/LICENSE.txt
+  commercial_use: Yes (permissive).
+  role: filters, resampling for true-peak
+  clause: Redistribution and use in source and binary forms, with or without modification, are permitted provided
+    that the following conditions are met
+  clause_source: pkg:scipy
+- name: soundfile (+ bundled libsndfile)
+  version: 0.12+
+  licence: BSD-3-Clause (libsndfile LGPL-2.1, dynamically loaded)
+  licence_url: https://github.com/bastibe/python-soundfile/blob/master/LICENSE
+  commercial_use: Yes.
+  role: WAV read/write
+  clause: Redistribution and use in source and binary forms, with or without modification, are permitted provided
+    that the following conditions are met
+  clause_source: pkg:soundfile
+- name: pyloudnorm
+  version: 0.1+
+  licence: MIT
+  licence_url: https://github.com/csteinmetz1/pyloudnorm/blob/master/LICENSE
+  commercial_use: Yes (permissive).
+  role: BS.1770 loudness
+  clause: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+    documentation files (the "Software"), to deal in the Software without restriction
+  clause_source: pkg:pyloudnorm
+- name: pretty_midi (+ mido)
+  version: 0.2.x
+  licence: MIT
+  licence_url: https://github.com/craffel/pretty-midi/blob/main/LICENSE.txt
+  commercial_use: Yes (permissive).
+  role: MIDI writing
+  clause: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+    documentation files (the "Software"), to deal in the Software without restriction
+  clause_source: pkg:pretty_midi
+- name: langdetect
+  version: 1.0.9
+  licence: Apache-2.0 (LICENSE file; PyPI metadata field says MIT, classifier says Apache)
+  licence_url: https://github.com/Mimino666/langdetect/blob/master/LICENSE
+  commercial_use: Yes (permissive).
+  role: prompt language detection
+  clause: each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+    irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform,
+    sublicense, and distribute the Work and such Derivative Works in Source or Object form
+  clause_source: pkg:langdetect
+- name: FastAPI / Starlette / Uvicorn / Pydantic / pydantic-settings
+  version: current
+  licence: MIT / BSD-3-Clause / BSD-3-Clause / MIT / MIT
+  licence_url: https://github.com/fastapi/fastapi/blob/master/LICENSE
+  commercial_use: Yes (permissive).
+  role: HTTP API
+  clause: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+    documentation files (the "Software"), to deal in the Software without restriction
+  clause_source: pkg:fastapi
+- name: psycopg / psycopg-pool
+  version: 3.x
+  licence: LGPL-3.0-only
+  licence_url: https://github.com/psycopg/psycopg/blob/master/LICENSE.txt
+  commercial_use: Yes. Used unmodified as an installed library.
+  role: PostgreSQL driver
+  clause: You may convey a covered work under sections 3 and 4 of this License without being bound by section 3
+    of the GNU GPL.
+  clause_source: pkg:psycopg
+- name: boto3 / httpx / structlog / PyYAML / python-multipart
+  version: current
+  licence: Apache-2.0 / BSD-3-Clause / MIT OR Apache-2.0 / MIT / Apache-2.0
+  licence_url: https://github.com/boto/boto3/blob/develop/LICENSE
+  commercial_use: Yes (permissive).
+  role: storage client, HTTP client, logging, config, uploads
+  clause: each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+    irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform,
+    sublicense, and distribute the Work and such Derivative Works in Source or Object form
+  clause_source: pkg:boto3
+- name: PostgreSQL
+  version: '16'
+  licence: PostgreSQL License
+  licence_url: https://www.postgresql.org/about/licence/
+  commercial_use: Yes (permissive).
+  role: jobs, idempotency, queue
+  clause: Permission to use, copy, modify, and distribute this software and its documentation for any purpose, without
+    fee, and without a written agreement is hereby granted
+  clause_source: evidence/must_haves/mh4_licences/texts/postgresql_licence.html
+- name: MinIO server
+  version: RELEASE.2025-04-22T22-12-26Z
+  licence: AGPL-3.0
+  licence_url: https://github.com/minio/minio/blob/master/LICENSE
+  commercial_use: Used unmodified as a separate network service for the demo. For production, point S3_* at a non-AGPL
+    S3 backend (AWS S3, R2, etc.); no code change needed.
+  role: object storage (demo / compose only)
+  clause: if you modify the Program, your modified version must prominently offer all users interacting with it
+    remotely through a computer network
+  clause_source: evidence/must_haves/mh4_licences/texts/minio_LICENSE.txt
+- name: Python
+  version: '3.12'
+  licence: PSF-2.0
+  licence_url: https://docs.python.org/3/license.html
+  commercial_use: Yes (permissive).
+  role: runtime
+  clause: PSF hereby grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce, analyze, test,
+    perform and/or display publicly, prepare derivative works, distribute, and otherwise use Python alone or in
+    any derivative version
+  clause_source: evidence/must_haves/mh4_licences/texts/python_license.html
+- name: React / React DOM (web UI)
+  version: '18.3'
+  licence: MIT
+  licence_url: https://github.com/facebook/react/blob/main/LICENSE
+  commercial_use: Yes (permissive). Front end only; not in the generation path.
+  role: web UI
+  clause: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+    documentation files (the "Software"), to deal in the Software without restriction
+  clause_source: web/node_modules/react/LICENSE

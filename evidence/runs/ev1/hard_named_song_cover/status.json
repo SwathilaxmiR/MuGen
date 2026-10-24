@@ -1,0 +1,34 @@
+{
+  "job_id": "42b69eef-f841-4185-bff6-5eb07fb86efb",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:11:58.415970+05:30",
+  "started_at": "2026-10-24T12:11:58.564749+05:30",
+  "finished_at": "2026-10-24T12:12:00.852185+05:30",
+  "warnings": [
+    {
+      "code": "NAMED_WORK_IGNORED",
+      "details": {
+        "removed": [
+          "cover of \"Bohemian Rhapsody\""
+        ]
+      },
+      "message": "References to specific songs, artists or works were removed; only generic mood and genre words were used."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/42b69eef-f841-4185-bff6-5eb07fb86efb/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/42b69eef-f841-4185-bff6-5eb07fb86efb/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/42b69eef-f841-4185-bff6-5eb07fb86efb/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/42b69eef-f841-4185-bff6-5eb07fb86efb/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/42b69eef-f841-4185-bff6-5eb07fb86efb/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/42b69eef-f841-4185-bff6-5eb07fb86efb/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/42b69eef-f841-4185-bff6-5eb07fb86efb/music_manifest.json"
+  },
+  "error": null
+}

@@ -1,0 +1,13 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Driving rock",
+  "duration_s": 20,
+  "seed": 601
+}

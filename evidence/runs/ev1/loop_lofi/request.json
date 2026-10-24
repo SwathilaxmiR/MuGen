@@ -1,0 +1,14 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Chill lo-fi beats",
+  "duration_s": 16,
+  "loopable": true,
+  "seed": 501
+}

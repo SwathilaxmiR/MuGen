@@ -1,0 +1,141 @@
+{
+  "run_id": "ev1",
+  "git_sha": "17ac16856ff03930d40ea03576b94c486893f307",
+  "api": "http://localhost:8000",
+  "local_control": true,
+  "started": "2026-10-24T06:37:57.807287+00:00",
+  "finished": "2026-10-24T06:44:00.020966+00:00",
+  "health": {
+    "status": "ok"
+  },
+  "special": {
+    "determinism": {
+      "jobs": [
+        "cb0c380d-bb0c-4756-a676-5f43a4897487",
+        "2018c3ee-5ba6-4df0-8460-a05dcb6d3c92"
+      ],
+      "files": [
+        "mix.wav",
+        "stems/bass.wav",
+        "stems/drums.wav",
+        "stems/melody.wav",
+        "stems/harmony.wav"
+      ],
+      "identical": {
+        "mix.wav": true,
+        "stems/bass.wav": true,
+        "stems/drums.wav": true,
+        "stems/melody.wav": true,
+        "stems/harmony.wav": true
+      }
+    },
+    "concurrency": {
+      "jobs": [
+        {
+          "job_id": "592aacd8-560b-4b8e-8685-3a0bc96cf6d9",
+          "http": 202,
+          "submitted_at_s": 0.004,
+          "status": "succeeded",
+          "started_at": "2026-10-24T12:12:27.111839+05:30",
+          "finished_at": "2026-10-24T12:12:30.756991+05:30"
+        },
+        {
+          "job_id": "c44b456d-98ee-42aa-9fd8-7a3ef9149589",
+          "http": 202,
+          "submitted_at_s": 0.005,
+          "status": "succeeded",
+          "started_at": "2026-10-24T12:12:27.207374+05:30",
+          "finished_at": "2026-10-24T12:12:31.147752+05:30"
+        },
+        {
+          "job_id": "be3e6e26-b105-48b7-837e-0309ffd974b1",
+          "http": 202,
+          "submitted_at_s": 0.005,
+          "status": "succeeded",
+          "started_at": "2026-10-24T12:12:27.222083+05:30",
+          "finished_at": "2026-10-24T12:12:31.164074+05:30"
+        },
+        {
+          "job_id": "407fcbcd-26d7-4ace-ab62-1acf9c52d8a4",
+          "http": 202,
+          "submitted_at_s": 0.005,
+          "status": "succeeded",
+          "started_at": "2026-10-24T12:12:27.312068+05:30",
+          "finished_at": "2026-10-24T12:12:31.154907+05:30"
+        }
+      ],
+      "distinct_job_ids": 4,
+      "all_succeeded": true
+    },
+    "same_key": {
+      "sequential": [
+        "6331d66b-f842-4fd6-9807-54986905c9b8",
+        "6331d66b-f842-4fd6-9807-54986905c9b8"
+      ],
+      "parallel": [
+        "4bb6f367-274e-4625-93de-7cf5260bef03",
+        "4bb6f367-274e-4625-93de-7cf5260bef03"
+      ],
+      "different_body_same_key_http": 409,
+      "different_body_error": "IDEMPOTENCY_KEY_REUSED",
+      "sequential_status": "succeeded",
+      "sequential_job_started_events": 1,
+      "parallel_status": "succeeded",
+      "parallel_job_started_events": 1,
+      "db_rows_for_prompt_last_hour": 2,
+      "s3_objects_under_prefix": 8
+    },
+    "speed": {
+      "cold": 5.63,
+      "warm": [
+        5.689,
+        5.563,
+        5.483,
+        5.764,
+        5.576
+      ]
+    },
+    "faults": {
+      "render_primary_fail": {
+        "case": "fault_render_primary_fail",
+        "http_status": 202,
+        "job_id": "0f80e1e5-0cc8-4d89-9a3e-6a62b1be936e",
+        "status": "succeeded",
+        "warnings": "",
+        "seconds": 1.939,
+        "generation_s": 1.904,
+        "checks_ok": true,
+        "failed_checks": ""
+      },
+      "render_timeout": {
+        "case": "fault_render_timeout",
+        "http_status": 202,
+        "job_id": "1c870f8e-eb98-431b-9686-8b0c9bd07d51",
+        "status": "succeeded",
+        "warnings": "",
+        "seconds": 2.072,
+        "generation_s": 1.974,
+        "checks_ok": true,
+        "failed_checks": ""
+      },
+      "no_fallback": {
+        "case": "fault_no_fallback",
+        "http_status": 202,
+        "job_id": "c152edab-ed56-412e-b950-0c582eed2418",
+        "status": "failed",
+        "warnings": "",
+        "seconds": 0.743,
+        "generation_s": 0.607,
+        "checks_ok": true,
+        "failed_checks": ""
+      },
+      "worker_kill": {
+        "job_id": "461460a1-a7ac-4404-8ba3-7f0d8e291e03",
+        "status_when_killed": "running",
+        "progress_when_killed": 5,
+        "final_status": "succeeded",
+        "attempts": 1
+      }
+    }
+  }
+}

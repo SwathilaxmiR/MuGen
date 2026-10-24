@@ -1,0 +1,14 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Calm corporate background",
+  "duration_s": 40,
+  "seed": 402,
+  "narration_url": "upload://34932708-c41b-4507-818f-e6f9a427f78b"
+}

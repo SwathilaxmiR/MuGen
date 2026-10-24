@@ -1,0 +1,7 @@
+{"t": 0.001, "status": "queued", "progress": 0}
+{"t": 0.407, "status": "running", "progress": 1}
+{"t": 0.811, "status": "running", "progress": 5}
+{"t": 1.624, "status": "running", "progress": 45}
+{"t": 2.027, "status": "running", "progress": 57}
+{"t": 3.654, "status": "running", "progress": 80}
+{"t": 4.869, "status": "succeeded", "progress": 100}

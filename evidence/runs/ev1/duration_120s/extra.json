@@ -1,0 +1,8 @@
+{
+  "checks": [
+    {
+      "name": "expected_status",
+      "ok": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "job_id": "c152edab-ed56-412e-b950-0c582eed2418",
+  "status": "failed",
+  "progress": 5,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:13:42.003928+05:30",
+  "started_at": "2026-10-24T12:13:42.140228+05:30",
+  "finished_at": "2026-10-24T12:13:42.746963+05:30",
+  "warnings": [],
+  "result": null,
+  "error": {
+    "code": "RENDER_FAILED",
+    "message": "All renderers failed for stem 'drums'.",
+    "retryable": true,
+    "details": {
+      "errors": [
+        "fluidsynth#1: RuntimeError: fault injected: render_primary_fail",
+        "fluidsynth#2: RuntimeError: fault injected: render_primary_fail"
+      ]
+    }
+  }
+}

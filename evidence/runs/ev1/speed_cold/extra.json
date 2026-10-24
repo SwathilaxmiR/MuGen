@@ -1,0 +1,142 @@
+{
+  "qa": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "length_error_s": 0.0,
+      "length_error_samples": 0,
+      "sum_diff_db": -116.2,
+      "integrated_lufs": -16.057,
+      "true_peak_dbtp": -1.6,
+      "ffmpeg": {
+        "integrated_lufs": -16.0,
+        "lra": 7.7,
+        "true_peak_dbtp": -1.6
+      },
+      "ffmpeg_lufs_delta": 0.057,
+      "mp3_true_peak_dbtp": -1.373,
+      "full_scale_samples": 0,
+      "clicks": 0,
+      "click_detail": {
+        "reference_jump": 0.39241719245910645,
+        "boundaries": [
+          {
+            "t": 17.1429,
+            "max_jump": 0.21144479513168335,
+            "ratio": 0.5388265325651294,
+            "click": false
+          },
+          {
+            "t": 37.5,
+            "max_jump": 0.14968836307525635,
+            "ratio": 0.3814521023842636,
+            "click": false
+          }
+        ],
+        "clicks": 0
+      },
+      "gaps": 0,
+      "gap_detail": {
+        "gaps": 0,
+        "gap_times": [],
+        "min_rms_db": -33.95
+      },
+      "ending": {
+        "last_50ms_db": -143.19,
+        "silent_end": true,
+        "hit_onset_ratio": 15.96,
+        "hit_onset": true
+      },
+      "section_alignment": {
+        "sections": [
+          {
+            "applied_start_s": 17.1429,
+            "onset_offset_s": -0.002,
+            "onset_ratio": 24.57,
+            "onset": true,
+            "level_step_db": 3.28,
+            "section_level_step_db": 5.68,
+            "intensity_change": 1,
+            "aligned": true
+          },
+          {
+            "applied_start_s": 37.5,
+            "onset_offset_s": 0.001,
+            "onset_ratio": 20.83,
+            "onset": true,
+            "level_step_db": 6.59,
+            "section_level_step_db": 4.31,
+            "intensity_change": 2,
+            "aligned": true
+          }
+        ],
+        "misaligned": 0
+      },
+      "loop_seam": null
+    },
+    "bleed": {
+      "per_stem": {
+        "bass": {
+          "explained_db": -9.64,
+          "fit_coefficients": {
+            "drums": 0.2225,
+            "melody": 0.0,
+            "harmony": 0.4276
+          }
+        },
+        "drums": {
+          "explained_db": -12.82,
+          "fit_coefficients": {
+            "bass": 0.1466,
+            "melody": 0.0735,
+            "harmony": 0.115
+          }
+        },
+        "melody": {
+          "explained_db": -18.09,
+          "fit_coefficients": {
+            "bass": 0.0,
+            "drums": 0.0218,
+            "harmony": 0.0794
+          }
+        },
+        "harmony": {
+          "explained_db": -10.1,
+          "fit_coefficients": {
+            "bass": 0.1466,
+            "drums": 0.0598,
+            "melody": 0.138
+          }
+        }
+      },
+      "pairwise_xcorr": {
+        "bass~drums": 0.0121,
+        "bass~melody": 0.0036,
+        "bass~harmony": 0.0218,
+        "drums~melody": 0.0001,
+        "drums~harmony": -0.0108,
+        "melody~harmony": -0.0005
+      },
+      "max_explained_db": -9.64
+    },
+    "spectral_overlap": {
+      "per_stem": {
+        "bass": 0.9064,
+        "drums": 0.9139,
+        "melody": 0.4264,
+        "harmony": 0.9308
+      },
+      "mean_overlap": 0.7944
+    }
+  },
+  "checks": [
+    {
+      "name": "expected_status",
+      "ok": true
+    },
+    {
+      "name": "qa_passed",
+      "ok": true
+    }
+  ]
+}

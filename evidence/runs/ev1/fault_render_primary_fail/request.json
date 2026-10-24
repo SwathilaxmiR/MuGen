@@ -1,0 +1,13 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Calm piano",
+  "duration_s": 10,
+  "seed": 901
+}

@@ -1,0 +1,24 @@
+{
+  "job_id": "836adb4e-cf11-4ddd-bfa0-6410993ab1d4",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:08:57.509181+05:30",
+  "started_at": "2026-10-24T12:08:57.634764+05:30",
+  "finished_at": "2026-10-24T12:09:02.076494+05:30",
+  "warnings": [],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/836adb4e-cf11-4ddd-bfa0-6410993ab1d4/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/836adb4e-cf11-4ddd-bfa0-6410993ab1d4/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/836adb4e-cf11-4ddd-bfa0-6410993ab1d4/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/836adb4e-cf11-4ddd-bfa0-6410993ab1d4/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/836adb4e-cf11-4ddd-bfa0-6410993ab1d4/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/836adb4e-cf11-4ddd-bfa0-6410993ab1d4/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/836adb4e-cf11-4ddd-bfa0-6410993ab1d4/music_manifest.json"
+  },
+  "error": null
+}

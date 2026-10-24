@@ -1,0 +1,27 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Smooth jazz lounge",
+  "duration_s": 45,
+  "seed": 305,
+  "sections": [
+    {
+      "start_s": 0,
+      "mood": "calm"
+    },
+    {
+      "start_s": 15,
+      "mood": "build"
+    },
+    {
+      "start_s": 31,
+      "mood": "uplifting peak"
+    }
+  ]
+}

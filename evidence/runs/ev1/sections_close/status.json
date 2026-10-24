@@ -1,0 +1,51 @@
+{
+  "job_id": "ad4a9157-f58c-4a52-8ce3-be779404b583",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:10:13.384056+05:30",
+  "started_at": "2026-10-24T12:10:13.668423+05:30",
+  "finished_at": "2026-10-24T12:10:17.075086+05:30",
+  "warnings": [
+    {
+      "code": "SECTION_SNAPPED",
+      "details": {
+        "delta_s": -0.10989,
+        "applied_s": 9.89011,
+        "requested_s": 10.0
+      },
+      "message": "Section 'build' moved -0.110s to the beat at 9.890s."
+    },
+    {
+      "code": "SECTION_SNAPPED",
+      "details": {
+        "delta_s": -0.450549,
+        "applied_s": 10.549451,
+        "requested_s": 11.0
+      },
+      "message": "Section 'peak' moved -0.451s to the bar line at 10.549s."
+    },
+    {
+      "code": "SECTIONS_MERGED_MIN_GAP",
+      "details": {
+        "kept_start_s": 9.89011,
+        "dropped_start_s": 10.549451
+      },
+      "message": "Sections 'build' and 'peak' are 0.66s apart (< 1.5s); merged at 9.890s."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/ad4a9157-f58c-4a52-8ce3-be779404b583/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/ad4a9157-f58c-4a52-8ce3-be779404b583/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/ad4a9157-f58c-4a52-8ce3-be779404b583/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/ad4a9157-f58c-4a52-8ce3-be779404b583/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/ad4a9157-f58c-4a52-8ce3-be779404b583/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/ad4a9157-f58c-4a52-8ce3-be779404b583/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/ad4a9157-f58c-4a52-8ce3-be779404b583/music_manifest.json"
+  },
+  "error": null
+}

@@ -1,0 +1,155 @@
+{
+  "qa": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "length_error_s": 0.0,
+      "length_error_samples": 0,
+      "sum_diff_db": -115.24,
+      "integrated_lufs": -16.002,
+      "true_peak_dbtp": -1.6,
+      "ffmpeg": {
+        "integrated_lufs": -16.0,
+        "lra": 2.9,
+        "true_peak_dbtp": -1.6
+      },
+      "ffmpeg_lufs_delta": 0.002,
+      "mp3_true_peak_dbtp": -1.479,
+      "full_scale_samples": 0,
+      "clicks": 0,
+      "click_detail": {
+        "reference_jump": 0.28884926438331604,
+        "boundaries": [
+          {
+            "t": 7.3846,
+            "max_jump": 0.44404280185699463,
+            "ratio": 1.5372820934995692,
+            "click": false
+          }
+        ],
+        "clicks": 0
+      },
+      "gaps": 0,
+      "gap_detail": {
+        "gaps": 0,
+        "gap_times": [],
+        "min_rms_db": -25.34
+      },
+      "ending": {
+        "last_50ms_db": -138.96,
+        "silent_end": true,
+        "hit_onset_ratio": 7.24,
+        "hit_onset": true
+      },
+      "section_alignment": {
+        "sections": [
+          {
+            "applied_start_s": 7.3846,
+            "onset_offset_s": -0.003,
+            "onset_ratio": 11.86,
+            "onset": true,
+            "level_step_db": 3.86,
+            "section_level_step_db": 4.1,
+            "intensity_change": 1,
+            "aligned": true
+          }
+        ],
+        "misaligned": 0
+      },
+      "loop_seam": null
+    },
+    "bleed": {
+      "per_stem": {
+        "bass": {
+          "explained_db": -7.81,
+          "fit_coefficients": {
+            "drums": 0.2029,
+            "melody": 0.0,
+            "harmony": 0.4776
+          }
+        },
+        "drums": {
+          "explained_db": -10.68,
+          "fit_coefficients": {
+            "bass": 0.2622,
+            "melody": 0.1002,
+            "harmony": 0.1319
+          }
+        },
+        "melody": {
+          "explained_db": -8.54,
+          "fit_coefficients": {
+            "bass": 0.0,
+            "drums": 0.0176,
+            "harmony": 0.2894
+          }
+        },
+        "harmony": {
+          "explained_db": -6.27,
+          "fit_coefficients": {
+            "bass": 0.1866,
+            "drums": 0.0387,
+            "melody": 0.4191
+          }
+        }
+      },
+      "pairwise_xcorr": {
+        "bass~drums": 0.0102,
+        "bass~melody": -0.004,
+        "bass~harmony": 0.0136,
+        "drums~melody": -0.0033,
+        "drums~harmony": 0.0036,
+        "melody~harmony": 0.0232
+      },
+      "max_explained_db": -6.27
+    },
+    "spectral_overlap": {
+      "per_stem": {
+        "bass": 0.9914,
+        "drums": 0.6706,
+        "melody": 0.8958,
+        "harmony": 0.7274
+      },
+      "mean_overlap": 0.8213
+    }
+  },
+  "regen": {
+    "job_id": "20a4bb98-cc90-4162-a5d4-abcb90405648",
+    "stem": "drums",
+    "parent": {
+      "stems/bass.wav": "b59690fe4c091e4d94ff69bbf01ad001f5072bd96f4c1660d998c632414ebe5f",
+      "stems/drums.wav": "f57144f1455984144170e80d7571261936b8252d309ecd3ee5ce791969a7c64e",
+      "stems/melody.wav": "b148e6709c9457474d01f52289a5be76367508c408798f6c938942677b59ac0c",
+      "stems/harmony.wav": "627dd6fff97564a748418b769e13caaa030f1748e9b498de409fb4bfe634bc42"
+    },
+    "child": {
+      "stems/bass.wav": "b59690fe4c091e4d94ff69bbf01ad001f5072bd96f4c1660d998c632414ebe5f",
+      "stems/drums.wav": "02ac02492f2b524be9a461184a6b2f4bff004a78027ee1efeda954b170cec386",
+      "stems/melody.wav": "b148e6709c9457474d01f52289a5be76367508c408798f6c938942677b59ac0c",
+      "stems/harmony.wav": "627dd6fff97564a748418b769e13caaa030f1748e9b498de409fb4bfe634bc42"
+    },
+    "child_qa_passed": true
+  },
+  "checks": [
+    {
+      "name": "expected_status",
+      "ok": true
+    },
+    {
+      "name": "qa_passed",
+      "ok": true
+    },
+    {
+      "name": "regen_others_identical",
+      "ok": true
+    },
+    {
+      "name": "regen_stem_changed",
+      "ok": true
+    },
+    {
+      "name": "regen_qa_passed",
+      "ok": true
+    }
+  ]
+}

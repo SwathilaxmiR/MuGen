@@ -1,0 +1,14 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Calm ambient",
+  "duration_s": 15,
+  "seed": 403,
+  "narration_url": "upload://c048763d-1363-4ab9-b622-d255cf67805f"
+}

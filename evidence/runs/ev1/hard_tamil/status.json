@@ -1,0 +1,37 @@
+{
+  "job_id": "ddf73322-abcc-475d-91f7-3cd6ec958d4f",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:12:14.517190+05:30",
+  "started_at": "2026-10-24T12:12:14.528763+05:30",
+  "finished_at": "2026-10-24T12:12:16.877250+05:30",
+  "warnings": [
+    {
+      "code": "PROMPT_TRANSLATED",
+      "details": {
+        "method": "lexicon",
+        "english": "calm இசை",
+        "matched": [
+          "அமைதியான"
+        ],
+        "language": "ta"
+      },
+      "message": "Prompt read as 'ta' and mapped with the built-in lexicon."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/ddf73322-abcc-475d-91f7-3cd6ec958d4f/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/ddf73322-abcc-475d-91f7-3cd6ec958d4f/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/ddf73322-abcc-475d-91f7-3cd6ec958d4f/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/ddf73322-abcc-475d-91f7-3cd6ec958d4f/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/ddf73322-abcc-475d-91f7-3cd6ec958d4f/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/ddf73322-abcc-475d-91f7-3cd6ec958d4f/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/ddf73322-abcc-475d-91f7-3cd6ec958d4f/music_manifest.json"
+  },
+  "error": null
+}

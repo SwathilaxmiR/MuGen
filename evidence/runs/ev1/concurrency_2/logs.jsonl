@@ -1,0 +1,4 @@
+{"progress": 57, "stage": "rendered harmony", "event": "progress", "job_id": "be3e6e26-b105-48b7-837e-0309ffd974b1", "correlation_id": "evidence-concurrency-2", "level": "info", "timestamp": "2026-10-24T06:42:29.625628Z"}
+{"progress": 80, "stage": "mixed", "event": "progress", "job_id": "be3e6e26-b105-48b7-837e-0309ffd974b1", "correlation_id": "evidence-concurrency-2", "level": "info", "timestamp": "2026-10-24T06:42:30.552827Z"}
+{"total_s": 3.2859, "warnings": [], "event": "job_succeeded", "job_id": "be3e6e26-b105-48b7-837e-0309ffd974b1", "correlation_id": "evidence-concurrency-2", "level": "info", "timestamp": "2026-10-24T06:42:31.164519Z"}
+{"method": "GET", "path": "/api/v1/jobs/be3e6e26-b105-48b7-837e-0309ffd974b1", "status": 200, "ms": 1.7, "event": "request", "correlation_id": "ccc1d10c-dcaa-4968-b927-29270b23c1b3", "level": "info", "timestamp": "2026-10-24T06:42:31.424001Z", "job_id": null}

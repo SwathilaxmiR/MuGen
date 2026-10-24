@@ -1,0 +1,13 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Calm cinematic piano that builds to an uplifting peak",
+  "duration_s": 120,
+  "seed": 200
+}

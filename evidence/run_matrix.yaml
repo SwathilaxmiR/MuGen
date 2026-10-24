@@ -1,0 +1,117 @@
+# Every case the evidence run executes. Fixed seeds -> deterministic. Executed by evidence/tools/run_matrix.py.
+# meta keys: expect_warnings, expect_status, narration {duration_s, phrases}, regenerate <stem>
+defaults:
+  output: {sample_rate: 48000, target_lufs: -16, formats: ["wav", "mp3"]}
+
+core_prompts:            # MH, 3_Levels row 6: 12 prompts at 45 s
+  duration_s: 45
+  seed: 100
+  prompts:
+    cinematic: "Epic cinematic orchestral score that builds to a heroic climax"
+    lofi: "Chill lo-fi beats for studying late at night"
+    corporate: "Upbeat corporate background for a tech product explainer"
+    electronic: "Energetic EDM festival track with a big drop"
+    acoustic: "Warm acoustic guitar folk for a travel vlog"
+    tense: "Tense suspense thriller underscore, dark and ominous"
+    playful: "Playful quirky cartoon music for kids"
+    ambient: "Calm ambient meditation pad, peaceful and serene"
+    epic: "Massive trailer battle music, epic and powerful"
+    rock: "Driving rock with guitar riffs for a sports montage"
+    jazz: "Smooth jazz lounge with saxophone"
+    upbeat: "Happy cheerful summer celebration"
+
+durations:               # 3_Levels row 7
+  prompt: "Calm cinematic piano that builds to an uplifting peak"
+  seed: 200
+  values: [10, 30, 60, 120, 180]
+
+cases:
+  # ---- section plans (3_Levels row 8)
+  sections_normal:
+    request: {prompt: "Energetic electronic track that builds", duration_s: 40, seed: 301,
+              sections: [{start_s: 0, mood: "calm intro"}, {start_s: 12.3, mood: "build"}, {start_s: 26.7, mood: "peak drop"}]}
+  sections_close:
+    request: {prompt: "Cinematic score", duration_s: 30, seed: 302,
+              sections: [{start_s: 0, mood: "calm"}, {start_s: 10, mood: "build"}, {start_s: 11, mood: "peak"}]}
+    meta: {expect_warnings: [SECTIONS_MERGED_MIN_GAP]}
+  sections_after_end:
+    request: {prompt: "Corporate inspiring", duration_s: 20, seed: 303,
+              sections: [{start_s: 0, mood: "calm"}, {start_s: 8, mood: "uplifting"}, {start_s: 25, mood: "peak"}]}
+    meta: {expect_warnings: [SECTION_AFTER_END_DROPPED]}
+  sections_beats:
+    request: {prompt: "Driving rock", duration_s: 30, seed: 304, tempo_bpm: 120,
+              sections: [{start_s: 0, mood: "intro"}, {start_s: 9.0, mood: "build"}, {start_s: 19.4, mood: "peak"}]}
+  sections_jazz:
+    request: {prompt: "Smooth jazz lounge", duration_s: 45, seed: 305,
+              sections: [{start_s: 0, mood: "calm"}, {start_s: 15, mood: "build"}, {start_s: 31, mood: "uplifting peak"}]}
+  # ---- narration (3_Levels row 10, hard case 5)
+  narration_gaps:
+    request: {prompt: "Warm acoustic guitar for a documentary", duration_s: 30, seed: 401}
+    meta: {narration: {duration_s: 30, phrases: [[1, 4], [4.4, 7.5], [8.0, 12], [15, 20], [22, 27]]}}
+  narration_long_silences:
+    request: {prompt: "Calm corporate background", duration_s: 40, seed: 402}
+    meta: {narration: {duration_s: 40, phrases: [[1, 5], [18, 22], [34, 38]]}}
+  narration_no_speech:
+    request: {prompt: "Calm ambient", duration_s: 15, seed: 403}
+    meta: {narration: {duration_s: 15, phrases: []}, expect_warnings: [NARRATION_NO_SPEECH]}
+  # ---- loops (3_Levels row 12)
+  loop_lofi:
+    request: {prompt: "Chill lo-fi beats", duration_s: 16, loopable: true, seed: 501}
+    meta: {expect_warnings: [LOOP_IGNORES_ENDING]}
+  loop_electronic_fixed_tempo:
+    request: {prompt: "Electronic groove", duration_s: 15, loopable: true, tempo_bpm: 125, seed: 502}
+    meta: {expect_warnings: [TEMPO_ADJUSTED_FOR_LOOP]}
+  loop_corporate_30s:
+    request: {prompt: "Upbeat corporate", duration_s: 30, loopable: true, seed: 503}
+  # ---- regenerate (3_Levels row 11)
+  regen_drums:
+    request: {prompt: "Driving rock", duration_s: 20, seed: 601}
+    meta: {regenerate: drums}
+  regen_melody:
+    request: {prompt: "Smooth jazz lounge", duration_s: 20, seed: 602}
+    meta: {regenerate: melody}
+  # ---- hard cases (6_Hard_cases)
+  hard_5s: {request: {prompt: "Playful cartoon sting", duration_s: 5, seed: 701}}
+  hard_6s: {request: {prompt: "Tense dark hit", duration_s: 6, seed: 702}}
+  hard_300s: {request: {prompt: "Calm ambient meditation that slowly builds", duration_s: 300, seed: 703}}
+  hard_vague:
+    request: {prompt: "music", duration_s: 15, seed: 704}
+    meta: {expect_warnings: [VAGUE_PROMPT_DEFAULTS]}
+  hard_contradictory:
+    request: {prompt: "calm but aggressive", duration_s: 15, seed: 705}
+    meta: {expect_warnings: [CONTRADICTORY_PROMPT]}
+  hard_named_song:
+    request: {prompt: "Make it sound like Interstellar by Hans Zimmer, epic organ swell", duration_s: 20, seed: 706}
+    meta: {expect_warnings: [NAMED_WORK_IGNORED]}
+  hard_named_song_cover:
+    request: {prompt: "a cover of \"Bohemian Rhapsody\" but calm piano", duration_s: 15, seed: 707}
+    meta: {expect_warnings: [NAMED_WORK_IGNORED]}
+  hard_vocals:
+    request: {prompt: "Upbeat pop song with a female singer and catchy lyrics", duration_s: 15, seed: 708}
+    meta: {expect_warnings: [VOCALS_NOT_SUPPORTED]}
+  hard_vocals_choir:
+    request: {prompt: "Epic trailer with a huge choir singing", duration_s: 15, seed: 709}
+    meta: {expect_warnings: [VOCALS_NOT_SUPPORTED]}
+  hard_spanish:
+    request: {prompt: "música tranquila y relajante para meditar", duration_s: 15, seed: 710}
+    meta: {expect_warnings: [PROMPT_TRANSLATED]}
+  hard_hindi:
+    request: {prompt: "शांत और रहस्यमय फिल्म संगीत", duration_s: 15, seed: 711}
+    meta: {expect_warnings: [PROMPT_TRANSLATED]}
+  hard_tamil:
+    request: {prompt: "அமைதியான இசை", duration_s: 15, seed: 712}
+    meta: {expect_warnings: [PROMPT_TRANSLATED]}
+  hard_unknown_language:
+    request: {prompt: "Спокойная музыка для видео", duration_s: 10, seed: 713}
+    meta: {expect_warnings: [PROMPT_LANGUAGE_FALLBACK]}
+
+# Special runs (custom logic in run_matrix.py)
+special:
+  determinism: {prompt: "Upbeat corporate background", duration_s: 20, seed: 801}
+  concurrency: {jobs: 4, duration_s: 20, seed: 810}
+  same_key: {prompt: "Happy upbeat vlog", duration_s: 10, seed: 820}
+  speed: {prompt: "Upbeat corporate background", duration_s: 60, seed: 830, warm_runs: 5}
+  local_only:                                 # need control of the worker processes
+    fault_inject: [render_primary_fail, render_timeout]
+    fault_no_fallback: true                   # RENDERER_FALLBACK="" -> RENDER_FAILED
+    worker_kill: {duration_s: 120, seed: 840}
