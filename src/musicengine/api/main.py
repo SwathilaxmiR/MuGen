@@ -22,6 +22,20 @@ Create a job with `POST /api/v1/music/jobs` (202 + `status_url`), poll `GET /api
 All errors are JSON: `{"error": {"code", "message", "retryable", "details"}}`."""
 
 
+def git_sha() -> str:
+    """Build-time GIT_SHA (Dockerfile ARG), else the checkout's HEAD, else "unknown"."""
+    if os.environ.get("GIT_SHA"):
+        return os.environ["GIT_SHA"]
+    try:
+        import subprocess
+
+        out = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, timeout=2,
+                             cwd=os.path.dirname(__file__))
+        return out.stdout.strip() or "unknown"
+    except Exception:  # noqa: BLE001
+        return "unknown"
+
+
 def readiness() -> tuple[bool, dict]:
     s = get_settings()
     checks: dict[str, str] = {}
@@ -67,8 +81,10 @@ def create_app() -> FastAPI:
     app = FastAPI(title="IncuBrix Music Engine", version="1.0.0", description=DESCRIPTION, lifespan=lifespan)
     middleware.install(app)
 
+    sha = git_sha()
+
     def health():
-        return {"status": "ok"}
+        return {"status": "ok", "version": app.version, "git_sha": sha}
 
     def ready():
         ok, checks = readiness()

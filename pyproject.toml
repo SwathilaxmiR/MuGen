@@ -26,6 +26,7 @@ dependencies = [
 [project.optional-dependencies]
 test = ["pytest>=8.0"]
 llm = ["anthropic>=0.70"]
+evidence = ["openpyxl>=3.1", "matplotlib>=3.8", "pip-licenses>=5.0", "detect-secrets>=1.5"]
 
 [build-system]
 requires = ["setuptools>=69"]

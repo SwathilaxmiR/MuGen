@@ -5,7 +5,8 @@ from musicengine.api.main import app
 
 def test_health_needs_no_keys():
     c = TestClient(app)
-    assert c.get("/health").json() == {"status": "ok"}
+    h = c.get("/health").json()
+    assert h["status"] == "ok" and h["version"] and h["git_sha"]
     assert c.get("/api/v1/health").status_code == 200
 
 

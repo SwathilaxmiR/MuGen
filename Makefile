@@ -1,7 +1,7 @@
 .PHONY: up down test test-local batch openapi logs
 
 up:
-	docker compose up -d --build --wait api worker
+	GIT_SHA=$$(git rev-parse HEAD) docker compose up -d --build --wait api worker
 
 down:
 	docker compose down

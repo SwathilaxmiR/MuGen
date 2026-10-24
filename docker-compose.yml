@@ -1,5 +1,7 @@
 x-app: &app
-  build: .
+  build:
+    context: .
+    args: {GIT_SHA: "${GIT_SHA:-unknown}"}
   image: musicengine:local
   env_file:
     - {path: .env, required: false}

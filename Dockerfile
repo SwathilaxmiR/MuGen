@@ -26,6 +26,7 @@ COPY . .
 RUN mkdir -p /app/out && chown -R app /app/out
 USER app
 
-ENV PYTHONUNBUFFERED=1 SOUNDFONT_PATH=/opt/soundfonts/FluidR3_GM.sf2
+ARG GIT_SHA=unknown
+ENV PYTHONUNBUFFERED=1 SOUNDFONT_PATH=/opt/soundfonts/FluidR3_GM.sf2 GIT_SHA=${GIT_SHA}
 EXPOSE 8000
 CMD ["uvicorn", "musicengine.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
