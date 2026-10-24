@@ -128,8 +128,9 @@ def details(fi, b, secrets_ok, secrets_file):
             f"Laptop: {hw['machine']} ({hw['cpu']}, {hw['cores']} cores, {hw['ram_gb']} GB RAM, {hw['os']}); GPU: none",
             "All measured runs on this machine; services run natively (no Docker)", ["evidence/metrics/hardware.json"])
     verdict("D_PAID", "1_Your_Details", "B16", "HUMAN",
-            f"Runtime: none, $0 ({costs['paid_services_runtime']}). Development: AI coding assistant subscription (your cost)",
-            "Confirm the development-tool cost yourself", ["evidence/metrics/costs.json"])
+            "None, $0: no paid API, cloud service or GPU was used to produce or measure any output",
+            "Confirm, and add any development-tool subscription cost you want to declare (AI coding assistant)",
+            ["evidence/metrics/costs.json"])
     verdict("D_AI_TOOLS", "1_Your_Details", "B17", "HUMAN",
             "Claude Code (Anthropic, Claude Opus 5.5) wrote code, tests and docs from my plan; details in AI_USE.md",
             "Confirm wording (AI_USE.md)", ["AI_USE.md"])

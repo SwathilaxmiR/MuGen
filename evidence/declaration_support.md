@@ -8,7 +8,7 @@
 | Default path and outputs licensed for commercial use | evidence/must_haves/mh4_licences/ (agpl_scan.txt, clause_check.csv); MinIO is compose/demo-only |
 | No outputs edited by hand | 58 runs in the latest evidence run each have files.json (SHA-256 of every delivered file, as downloaded) next to the manifest and job id produced by the service; the audio pack is zipped from those downloads unchanged |
 | No real person's voice/face/content used | the engine has no vocal programs and uses no recordings except the MIT SoundFont; narration in tests is synthetic noise ("speech-like" bursts) |
-| No API keys or secrets in repo/logs/screenshots/form | evidence/security/secret_scan.txt: verdict PASS; presigned URL signatures are stripped from every committed JSON |
+| No API keys or secrets in repo/logs/screenshots/form | evidence/security/secret_scan.txt: verdict FAIL; presigned URL signatures are stripped from every committed JSON |
 | Demo and links stay up until results | not provable in advance; needs your hosting + uptime monitor |
 
-Commit: 2978b42663690746cda397e61723d59efdc6c3cc
+Commit: 28bda2d802da3cfdafcdc172d99b7fc129577dbe

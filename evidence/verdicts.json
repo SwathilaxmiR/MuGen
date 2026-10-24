@@ -869,9 +869,9 @@
       "evidence/baseline.json",
       "evidence/integration"
     ],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:28:09+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
@@ -890,9 +890,9 @@
     "evidence": [
       "evidence/verdicts.json"
     ],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:28:09+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
@@ -911,9 +911,9 @@
     "evidence": [
       "evidence/baseline.json"
     ],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:28:09+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
@@ -930,9 +930,9 @@
     "value": "",
     "note": "Token goes in the form only (form_inputs.yaml is git-ignored)",
     "evidence": [],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:28:09+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
@@ -951,9 +951,9 @@
     "evidence": [
       "evidence/metrics/speed.csv"
     ],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:28:09+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
@@ -970,9 +970,9 @@
     "value": "",
     "note": "Set repo_url in form_inputs.yaml (private repo, reviewer invited)",
     "evidence": [],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:28:09+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
@@ -991,9 +991,9 @@
     "evidence": [
       "REPORT.md"
     ],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:28:09+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
@@ -1012,9 +1012,9 @@
     "evidence": [
       "evidence/metrics/hardware.json"
     ],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:28:09+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
@@ -1028,14 +1028,14 @@
     "sheet": "1_Your_Details",
     "cell": "B16",
     "verdict": "HUMAN",
-    "value": "Runtime: none, $0 (none (no paid API, cloud or GPU used to produce or measure outputs)). Development: AI coding assistant subscription (your cost)",
-    "note": "Confirm the development-tool cost yourself",
+    "value": "None, $0: no paid API, cloud service or GPU was used to produce or measure any output",
+    "note": "Confirm, and add any development-tool subscription cost you want to declare (AI coding assistant)",
     "evidence": [
       "evidence/metrics/costs.json"
     ],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:28:09+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
@@ -1054,9 +1054,9 @@
     "evidence": [
       "AI_USE.md"
     ],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:28:09+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
@@ -1069,15 +1069,15 @@
     "key": "SECRETS",
     "sheet": "7_Declaration",
     "cell": "support",
-    "verdict": "PASS",
+    "verdict": "FAIL",
     "value": "secret scan",
     "note": "supports declaration item 'No API keys or secrets...'",
     "evidence": [
       "evidence/security/secret_scan.txt"
     ],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:28:09+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
@@ -1090,15 +1090,15 @@
     "key": "CONSISTENCY",
     "sheet": "meta",
     "cell": "consistency",
-    "verdict": "FAIL",
-    "value": "19/19 quoted numbers match their sources; 1 missing paths",
-    "note": "; REPORT.md: evidence/INDEX.md",
+    "verdict": "PASS",
+    "value": "19/19 quoted numbers match their sources; 0 missing paths",
+    "note": "",
     "evidence": [
       "evidence/consistency.txt"
     ],
-    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "git_sha": "28bda2d802da3cfdafcdc172d99b7fc129577dbe",
     "run_id": "ev3",
-    "timestamp": "2026-10-24T07:24:14+00:00",
+    "timestamp": "2026-10-24T07:28:44+00:00",
     "tools": {
       "python": "3.12.13",
       "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",

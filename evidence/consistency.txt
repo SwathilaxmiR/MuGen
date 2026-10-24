@@ -18,4 +18,4 @@ OK  REPORT §1 CLAP A vs B (B): doc [0.454] vs source 0.454
 OK  REPORT test count: doc [355.0, 355.0] vs source 355.0
 OK  README test count: doc [355.0] vs source 355.0
 
-missing paths quoted in docs: ['REPORT.md: evidence/INDEX.md']
+missing paths quoted in docs: none
