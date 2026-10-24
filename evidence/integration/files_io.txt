@@ -1,0 +1,5 @@
+upload input (POST /api/v1/uploads -> upload://...): 3 narration jobs, all with mix_ducked: True
+URL input (http:// narration_url): {"job_id": "69fd46bc-5722-4f50-84dd-11d0f9be94ab", "status": "succeeded", "ducked": true}
+SSRF guard: metadata IP refused -> warning NARRATION_FETCH_FAILED: ['NARRATION_FETCH_FAILED']
+outputs in S3, objects under jobs/<id>/: ['jobs/8d10986e-42dd-4eae-8d84-a21eb819a31d/master.npz', 'jobs/8d10986e-42dd-4eae-8d84-a21eb819a31d/mix.mp3', 'jobs/8d10986e-42dd-4eae-8d84-a21eb819a31d/mix.wav', 'jobs/8d10986e-42dd-4eae-8d84-a21eb819a31d/music_manifest.json', 'jobs/8d10986e-42dd-4eae-8d84-a21eb819a31d/plan.json', 'jobs/8d10986e-42dd-4eae-8d84-a21eb819a31d/stems/bass.wav', 'jobs/8d10986e-42dd-4eae-8d84-a21eb819a31d/stems/drums.wav', 'jobs/8d10986e-42dd-4eae-8d84-a21eb819a31d/stems/harmony.wav', 'jobs/8d10986e-42dd-4eae-8d84-a21eb819a31d/stems/melody.wav']
+returned as presigned links on host(s): ['http://localhost:9000']

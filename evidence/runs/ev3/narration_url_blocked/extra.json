@@ -1,0 +1,112 @@
+{
+  "qa": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "length_error_s": 0.0,
+      "length_error_samples": 0,
+      "sum_diff_db": -116.76,
+      "integrated_lufs": -16.113,
+      "true_peak_dbtp": -1.6,
+      "ffmpeg": {
+        "integrated_lufs": -16.1,
+        "lra": 4.7,
+        "true_peak_dbtp": -1.6
+      },
+      "ffmpeg_lufs_delta": 0.013,
+      "mp3_true_peak_dbtp": -1.563,
+      "full_scale_samples": 0,
+      "clicks": 0,
+      "click_detail": {
+        "reference_jump": 0.19743570685386658,
+        "boundaries": [],
+        "clicks": 0
+      },
+      "gaps": 0,
+      "gap_detail": {
+        "gaps": 0,
+        "gap_times": [],
+        "min_rms_db": -22.85
+      },
+      "ending": {
+        "last_50ms_db": -142.94,
+        "silent_end": true,
+        "hit_onset_ratio": 41.86,
+        "hit_onset": true
+      },
+      "section_alignment": {
+        "sections": [],
+        "misaligned": 0
+      },
+      "loop_seam": null
+    },
+    "bleed": {
+      "per_stem": {
+        "bass": {
+          "explained_db": -17.95,
+          "fit_coefficients": {
+            "drums": 0.1893,
+            "melody": 0.0,
+            "harmony": 0.1169
+          }
+        },
+        "drums": {
+          "explained_db": -18.65,
+          "fit_coefficients": {
+            "bass": 0.0142,
+            "melody": 0.0142,
+            "harmony": 0.027
+          }
+        },
+        "melody": {
+          "explained_db": -10.51,
+          "fit_coefficients": {
+            "bass": 0.0,
+            "drums": 0.0129,
+            "harmony": 0.0899
+          }
+        },
+        "harmony": {
+          "explained_db": -9.63,
+          "fit_coefficients": {
+            "bass": 0.1024,
+            "drums": 0.2927,
+            "melody": 0.969
+          }
+        }
+      },
+      "pairwise_xcorr": {
+        "bass~drums": -0.0057,
+        "bass~melody": -0.0005,
+        "bass~harmony": -0.0067,
+        "drums~melody": -0.0011,
+        "drums~harmony": -0.0008,
+        "melody~harmony": 0.1645
+      },
+      "max_explained_db": -9.63
+    },
+    "spectral_overlap": {
+      "per_stem": {
+        "bass": 0.2332,
+        "drums": 0.5001,
+        "melody": 0.9127,
+        "harmony": 0.3115
+      },
+      "mean_overlap": 0.4894
+    }
+  },
+  "checks": [
+    {
+      "name": "expected_status",
+      "ok": true
+    },
+    {
+      "name": "warning:NARRATION_FETCH_FAILED",
+      "ok": true
+    },
+    {
+      "name": "qa_passed",
+      "ok": true
+    }
+  ]
+}

@@ -37,7 +37,7 @@ make test                                  # unit + integration + e2e inside com
 make batch                                 # every tests/inputs/*.json -> out/summary.csv, out/metrics.csv
 ```
 
-> **Verification status:** the machine that built this repo had no Docker. The whole suite (`pytest tests`: 352 passed, 0 skipped) and the batch runner (48/48 cases) were run on the host instead, against native PostgreSQL 16, MinIO, FluidSynth 2.6.1 and FFmpeg 9 (see `scripts/dev_services.sh`). `Dockerfile`, `docker-compose.yml` and `make test` have **not** been run yet. Run `make up && make test` once on a Docker host before relying on them.
+> **Verification status:** the machine that built this repo had no Docker. The whole suite (`pytest tests`: 355 passed, 0 skipped) and the batch runner (48/48 cases) were run on the host instead, against native PostgreSQL 16, MinIO, FluidSynth 2.6.1 and FFmpeg 9 (see `scripts/dev_services.sh`). `Dockerfile`, `docker-compose.yml` and `make test` have **not** been run yet. Run `make up && make test` once on a Docker host before relying on them.
 
 ## Web UI
 

@@ -1,0 +1,13 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Upbeat pop song with a female singer and catchy lyrics",
+  "duration_s": 15,
+  "seed": 708
+}

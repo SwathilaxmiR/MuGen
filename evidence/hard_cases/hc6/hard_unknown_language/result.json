@@ -1,0 +1,27 @@
+{
+  "job_id": "d63ae2c2-b9ce-42cc-b085-691c5e69ae3e",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 10.0,
+  "style": "corporate",
+  "tempo_bpm": 107.0,
+  "hit_time_s": 8.971963,
+  "sections": [
+    [
+      "intro",
+      0.0
+    ],
+    [
+      "main",
+      3.364486
+    ]
+  ],
+  "stems": [
+    "Standard Kit",
+    "Electric Bass (finger)",
+    "Acoustic Grand Piano",
+    "Electric Guitar (clean)"
+  ],
+  "timings_total_s": 1.4232,
+  "manifest": "evidence/runs/ev3/hard_unknown_language/music_manifest.json"
+}

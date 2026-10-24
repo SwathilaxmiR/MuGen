@@ -1,0 +1,28 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Driving rock",
+  "duration_s": 30,
+  "seed": 304,
+  "tempo_bpm": 120,
+  "sections": [
+    {
+      "start_s": 0,
+      "mood": "intro"
+    },
+    {
+      "start_s": 9.0,
+      "mood": "build"
+    },
+    {
+      "start_s": 19.4,
+      "mood": "peak"
+    }
+  ]
+}

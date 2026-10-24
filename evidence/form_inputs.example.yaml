@@ -1,0 +1,17 @@
+# Copy to evidence/form_inputs.yaml (git-ignored: personal details + the demo token never go into the repo).
+name: ""            # also names the output file Assessment1_<Name>.xlsx
+email: ""
+phone: ""
+college_degree: ""
+graduation_year: ""
+demo_url: ""        # e.g. https://music.example.com  (its /health must report the submission commit)
+demo_token: ""      # written into the form only
+repo_url: ""        # private repo, reviewer invited
+video_url: ""
+hours: ""
+video_timestamps:   # fill after recording evidence/demo/demo_script.md, e.g. VIDEO@clean_run: "00:42"
+  VIDEO@clean_run: ""
+  VIDEO@regen: ""
+  VIDEO@failure: ""
+  VIDEO@tests: ""
+  VIDEO@design: ""

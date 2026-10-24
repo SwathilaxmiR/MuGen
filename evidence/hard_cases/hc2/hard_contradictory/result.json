@@ -1,0 +1,27 @@
+{
+  "job_id": "29696e01-40b6-46f8-b0f1-8f474ffff411",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 15.0,
+  "style": "tense",
+  "tempo_bpm": 86.0,
+  "hit_time_s": 13.953488,
+  "sections": [
+    [
+      "intro",
+      0.0
+    ],
+    [
+      "main",
+      5.581395
+    ]
+  ],
+  "stems": [
+    "Orchestra Kit",
+    "Contrabass",
+    "Tremolo Strings",
+    "Pizzicato Strings"
+  ],
+  "timings_total_s": 1.7272,
+  "manifest": "evidence/runs/ev3/hard_contradictory/music_manifest.json"
+}

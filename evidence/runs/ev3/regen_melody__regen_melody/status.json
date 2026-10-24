@@ -1,0 +1,33 @@
+{
+  "job_id": "fb77efe7-ffa4-4411-a8a9-32355642660d",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "regenerate",
+  "parent_job_id": "8dc508d6-596a-404e-bb9a-ee7bf85709f1",
+  "created_at": "2026-10-24T12:40:19.448026+05:30",
+  "started_at": "2026-10-24T12:40:19.729960+05:30",
+  "finished_at": "2026-10-24T12:40:22.034675+05:30",
+  "warnings": [
+    {
+      "code": "REGEN_STEM_TRIMMED",
+      "details": {
+        "stem": "melody",
+        "trim_db": -2.5
+      },
+      "message": "New melody stem lowered 2.5 dB to keep the true peak under -1 dBTP."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/fb77efe7-ffa4-4411-a8a9-32355642660d/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/fb77efe7-ffa4-4411-a8a9-32355642660d/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/fb77efe7-ffa4-4411-a8a9-32355642660d/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/fb77efe7-ffa4-4411-a8a9-32355642660d/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/fb77efe7-ffa4-4411-a8a9-32355642660d/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/fb77efe7-ffa4-4411-a8a9-32355642660d/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/fb77efe7-ffa4-4411-a8a9-32355642660d/music_manifest.json"
+  },
+  "error": null
+}

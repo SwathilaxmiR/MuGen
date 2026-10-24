@@ -1,0 +1,233 @@
+case,stem,program,program_name,vocal_program
+core_acoustic,drums,0,Standard Kit,False
+core_acoustic,bass,32,Acoustic Bass,False
+core_acoustic,harmony,25,Acoustic Guitar (steel),False
+core_acoustic,melody,73,Flute,False
+core_ambient,drums,0,Standard Kit,False
+core_ambient,bass,89,Pad 2 (warm),False
+core_ambient,harmony,88,Pad 1 (new age),False
+core_ambient,melody,10,Music Box,False
+core_cinematic,drums,48,Orchestra Kit,False
+core_cinematic,bass,43,Contrabass,False
+core_cinematic,harmony,48,String Ensemble 1,False
+core_cinematic,melody,60,French Horn,False
+core_corporate,drums,0,Standard Kit,False
+core_corporate,bass,33,Electric Bass (finger),False
+core_corporate,harmony,0,Acoustic Grand Piano,False
+core_corporate,melody,27,Electric Guitar (clean),False
+core_electronic,drums,25,TR-808 Kit,False
+core_electronic,bass,38,Synth Bass 1,False
+core_electronic,harmony,89,Pad 2 (warm),False
+core_electronic,melody,81,Lead 2 (sawtooth),False
+core_epic,drums,48,Orchestra Kit,False
+core_epic,bass,43,Contrabass,False
+core_epic,harmony,61,Brass Section,False
+core_epic,melody,48,String Ensemble 1,False
+core_jazz,drums,32,Jazz Kit,False
+core_jazz,bass,32,Acoustic Bass,False
+core_jazz,harmony,4,Electric Piano 1,False
+core_jazz,melody,65,Alto Sax,False
+core_lofi,drums,8,Room Kit,False
+core_lofi,bass,33,Electric Bass (finger),False
+core_lofi,harmony,4,Electric Piano 1,False
+core_lofi,melody,11,Vibraphone,False
+core_playful,drums,0,Standard Kit,False
+core_playful,bass,70,Bassoon,False
+core_playful,harmony,45,Pizzicato Strings,False
+core_playful,melody,13,Xylophone,False
+core_rock,drums,16,Power Kit,False
+core_rock,bass,34,Electric Bass (pick),False
+core_rock,harmony,29,Overdriven Guitar,False
+core_rock,melody,30,Distortion Guitar,False
+core_tense,drums,48,Orchestra Kit,False
+core_tense,bass,43,Contrabass,False
+core_tense,harmony,44,Tremolo Strings,False
+core_tense,melody,45,Pizzicato Strings,False
+core_upbeat,drums,0,Standard Kit,False
+core_upbeat,bass,33,Electric Bass (finger),False
+core_upbeat,harmony,0,Acoustic Grand Piano,False
+core_upbeat,melody,56,Trumpet,False
+determinism_a,drums,0,Standard Kit,False
+determinism_a,bass,33,Electric Bass (finger),False
+determinism_a,harmony,0,Acoustic Grand Piano,False
+determinism_a,melody,27,Electric Guitar (clean),False
+determinism_b,drums,0,Standard Kit,False
+determinism_b,bass,33,Electric Bass (finger),False
+determinism_b,harmony,0,Acoustic Grand Piano,False
+determinism_b,melody,27,Electric Guitar (clean),False
+duration_010s,drums,48,Orchestra Kit,False
+duration_010s,bass,43,Contrabass,False
+duration_010s,harmony,48,String Ensemble 1,False
+duration_010s,melody,60,French Horn,False
+duration_030s,drums,48,Orchestra Kit,False
+duration_030s,bass,43,Contrabass,False
+duration_030s,harmony,48,String Ensemble 1,False
+duration_030s,melody,60,French Horn,False
+duration_060s,drums,48,Orchestra Kit,False
+duration_060s,bass,43,Contrabass,False
+duration_060s,harmony,48,String Ensemble 1,False
+duration_060s,melody,60,French Horn,False
+duration_120s,drums,48,Orchestra Kit,False
+duration_120s,bass,43,Contrabass,False
+duration_120s,harmony,48,String Ensemble 1,False
+duration_120s,melody,60,French Horn,False
+duration_180s,drums,48,Orchestra Kit,False
+duration_180s,bass,43,Contrabass,False
+duration_180s,harmony,48,String Ensemble 1,False
+duration_180s,melody,60,French Horn,False
+fault_render_primary_fail,drums,0,Standard Kit,False
+fault_render_primary_fail,bass,89,Pad 2 (warm),False
+fault_render_primary_fail,harmony,88,Pad 1 (new age),False
+fault_render_primary_fail,melody,10,Music Box,False
+fault_render_timeout,drums,0,Standard Kit,False
+fault_render_timeout,bass,89,Pad 2 (warm),False
+fault_render_timeout,harmony,88,Pad 1 (new age),False
+fault_render_timeout,melody,10,Music Box,False
+hard_300s,drums,0,Standard Kit,False
+hard_300s,bass,89,Pad 2 (warm),False
+hard_300s,harmony,88,Pad 1 (new age),False
+hard_300s,melody,10,Music Box,False
+hard_5s,drums,0,Standard Kit,False
+hard_5s,bass,70,Bassoon,False
+hard_5s,harmony,45,Pizzicato Strings,False
+hard_5s,melody,13,Xylophone,False
+hard_6s,drums,48,Orchestra Kit,False
+hard_6s,bass,43,Contrabass,False
+hard_6s,harmony,44,Tremolo Strings,False
+hard_6s,melody,45,Pizzicato Strings,False
+hard_contradictory,drums,48,Orchestra Kit,False
+hard_contradictory,bass,43,Contrabass,False
+hard_contradictory,harmony,44,Tremolo Strings,False
+hard_contradictory,melody,45,Pizzicato Strings,False
+hard_hindi,drums,48,Orchestra Kit,False
+hard_hindi,bass,43,Contrabass,False
+hard_hindi,harmony,48,String Ensemble 1,False
+hard_hindi,melody,60,French Horn,False
+hard_named_song,drums,48,Orchestra Kit,False
+hard_named_song,bass,43,Contrabass,False
+hard_named_song,harmony,61,Brass Section,False
+hard_named_song,melody,48,String Ensemble 1,False
+hard_named_song_cover,drums,0,Standard Kit,False
+hard_named_song_cover,bass,89,Pad 2 (warm),False
+hard_named_song_cover,harmony,88,Pad 1 (new age),False
+hard_named_song_cover,melody,10,Music Box,False
+hard_spanish,drums,0,Standard Kit,False
+hard_spanish,bass,89,Pad 2 (warm),False
+hard_spanish,harmony,88,Pad 1 (new age),False
+hard_spanish,melody,10,Music Box,False
+hard_tamil,drums,0,Standard Kit,False
+hard_tamil,bass,89,Pad 2 (warm),False
+hard_tamil,harmony,88,Pad 1 (new age),False
+hard_tamil,melody,10,Music Box,False
+hard_unknown_language,drums,0,Standard Kit,False
+hard_unknown_language,bass,33,Electric Bass (finger),False
+hard_unknown_language,harmony,0,Acoustic Grand Piano,False
+hard_unknown_language,melody,27,Electric Guitar (clean),False
+hard_vague,drums,0,Standard Kit,False
+hard_vague,bass,33,Electric Bass (finger),False
+hard_vague,harmony,0,Acoustic Grand Piano,False
+hard_vague,melody,27,Electric Guitar (clean),False
+hard_vocals,drums,0,Standard Kit,False
+hard_vocals,bass,33,Electric Bass (finger),False
+hard_vocals,harmony,0,Acoustic Grand Piano,False
+hard_vocals,melody,56,Trumpet,False
+hard_vocals_choir,drums,48,Orchestra Kit,False
+hard_vocals_choir,bass,43,Contrabass,False
+hard_vocals_choir,harmony,61,Brass Section,False
+hard_vocals_choir,melody,48,String Ensemble 1,False
+io_callback,drums,0,Standard Kit,False
+io_callback,bass,33,Electric Bass (finger),False
+io_callback,harmony,0,Acoustic Grand Piano,False
+io_callback,melody,27,Electric Guitar (clean),False
+io_narration_http_url,drums,0,Standard Kit,False
+io_narration_http_url,bass,89,Pad 2 (warm),False
+io_narration_http_url,harmony,88,Pad 1 (new age),False
+io_narration_http_url,melody,10,Music Box,False
+loop_corporate_30s,drums,0,Standard Kit,False
+loop_corporate_30s,bass,33,Electric Bass (finger),False
+loop_corporate_30s,harmony,0,Acoustic Grand Piano,False
+loop_corporate_30s,melody,27,Electric Guitar (clean),False
+loop_electronic_fixed_tempo,drums,25,TR-808 Kit,False
+loop_electronic_fixed_tempo,bass,38,Synth Bass 1,False
+loop_electronic_fixed_tempo,harmony,89,Pad 2 (warm),False
+loop_electronic_fixed_tempo,melody,81,Lead 2 (sawtooth),False
+loop_lofi,drums,8,Room Kit,False
+loop_lofi,bass,33,Electric Bass (finger),False
+loop_lofi,harmony,4,Electric Piano 1,False
+loop_lofi,melody,11,Vibraphone,False
+narration_gaps,drums,0,Standard Kit,False
+narration_gaps,bass,32,Acoustic Bass,False
+narration_gaps,harmony,25,Acoustic Guitar (steel),False
+narration_gaps,melody,73,Flute,False
+narration_long_silences,drums,0,Standard Kit,False
+narration_long_silences,bass,33,Electric Bass (finger),False
+narration_long_silences,harmony,0,Acoustic Grand Piano,False
+narration_long_silences,melody,27,Electric Guitar (clean),False
+narration_no_speech,drums,0,Standard Kit,False
+narration_no_speech,bass,89,Pad 2 (warm),False
+narration_no_speech,harmony,88,Pad 1 (new age),False
+narration_no_speech,melody,10,Music Box,False
+narration_url_blocked,drums,0,Standard Kit,False
+narration_url_blocked,bass,89,Pad 2 (warm),False
+narration_url_blocked,harmony,88,Pad 1 (new age),False
+narration_url_blocked,melody,10,Music Box,False
+regen_drums,drums,16,Power Kit,False
+regen_drums,bass,34,Electric Bass (pick),False
+regen_drums,harmony,29,Overdriven Guitar,False
+regen_drums,melody,30,Distortion Guitar,False
+regen_drums__regen_drums,drums,16,Power Kit,False
+regen_drums__regen_drums,bass,34,Electric Bass (pick),False
+regen_drums__regen_drums,harmony,29,Overdriven Guitar,False
+regen_drums__regen_drums,melody,30,Distortion Guitar,False
+regen_melody,drums,32,Jazz Kit,False
+regen_melody,bass,32,Acoustic Bass,False
+regen_melody,harmony,4,Electric Piano 1,False
+regen_melody,melody,65,Alto Sax,False
+regen_melody__regen_melody,drums,32,Jazz Kit,False
+regen_melody__regen_melody,bass,32,Acoustic Bass,False
+regen_melody__regen_melody,harmony,4,Electric Piano 1,False
+regen_melody__regen_melody,melody,65,Alto Sax,False
+sections_after_end,drums,0,Standard Kit,False
+sections_after_end,bass,33,Electric Bass (finger),False
+sections_after_end,harmony,0,Acoustic Grand Piano,False
+sections_after_end,melody,27,Electric Guitar (clean),False
+sections_beats,drums,16,Power Kit,False
+sections_beats,bass,34,Electric Bass (pick),False
+sections_beats,harmony,29,Overdriven Guitar,False
+sections_beats,melody,30,Distortion Guitar,False
+sections_close,drums,48,Orchestra Kit,False
+sections_close,bass,43,Contrabass,False
+sections_close,harmony,48,String Ensemble 1,False
+sections_close,melody,60,French Horn,False
+sections_jazz,drums,32,Jazz Kit,False
+sections_jazz,bass,32,Acoustic Bass,False
+sections_jazz,harmony,4,Electric Piano 1,False
+sections_jazz,melody,65,Alto Sax,False
+sections_normal,drums,25,TR-808 Kit,False
+sections_normal,bass,38,Synth Bass 1,False
+sections_normal,harmony,89,Pad 2 (warm),False
+sections_normal,melody,81,Lead 2 (sawtooth),False
+speed_cold,drums,0,Standard Kit,False
+speed_cold,bass,33,Electric Bass (finger),False
+speed_cold,harmony,0,Acoustic Grand Piano,False
+speed_cold,melody,27,Electric Guitar (clean),False
+speed_warm_0,drums,0,Standard Kit,False
+speed_warm_0,bass,33,Electric Bass (finger),False
+speed_warm_0,harmony,0,Acoustic Grand Piano,False
+speed_warm_0,melody,27,Electric Guitar (clean),False
+speed_warm_1,drums,0,Standard Kit,False
+speed_warm_1,bass,33,Electric Bass (finger),False
+speed_warm_1,harmony,0,Acoustic Grand Piano,False
+speed_warm_1,melody,27,Electric Guitar (clean),False
+speed_warm_2,drums,0,Standard Kit,False
+speed_warm_2,bass,33,Electric Bass (finger),False
+speed_warm_2,harmony,0,Acoustic Grand Piano,False
+speed_warm_2,melody,27,Electric Guitar (clean),False
+speed_warm_3,drums,0,Standard Kit,False
+speed_warm_3,bass,33,Electric Bass (finger),False
+speed_warm_3,harmony,0,Acoustic Grand Piano,False
+speed_warm_3,melody,27,Electric Guitar (clean),False
+speed_warm_4,drums,0,Standard Kit,False
+speed_warm_4,bass,33,Electric Bass (finger),False
+speed_warm_4,harmony,0,Acoustic Grand Piano,False
+speed_warm_4,melody,27,Electric Guitar (clean),False

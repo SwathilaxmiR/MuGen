@@ -1,0 +1,17 @@
+{
+  "formula_per_job": "cost = compute_seconds (CPU user+sys of the job process and its fluidsynth/ffmpeg children) x COST_PER_CPU_SECOND",
+  "cost_per_cpu_second_usd": 1.34e-05,
+  "cost_per_cpu_second_note": "COST_PER_CPU_SECOND default (= $0.048 per vCPU-hour); an assumption, set it to your server's price",
+  "measured_compute_seconds_per_60s": 4.596,
+  "usd_per_minute_of_music": 6.2e-05,
+  "formula_server": "usd_per_music_minute = server_usd_per_hour / music_minutes_per_hour (load test)",
+  "assumed_server_usd_per_hour": 0.1,
+  "throughput": {
+    "concurrency": "4",
+    "music_minutes_per_hour": 1875.8,
+    "usd_per_music_minute_at_assumed_price": 5.3e-05
+  },
+  "api_fees_usd": 0.0,
+  "paid_services_runtime": "none (no paid API, cloud or GPU used to produce or measure outputs)",
+  "hardware": "Mac17,3"
+}

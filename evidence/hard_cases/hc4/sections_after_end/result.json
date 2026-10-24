@@ -1,0 +1,27 @@
+{
+  "job_id": "01aaf560-d736-47c8-addf-1cca14488bc5",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 20.0,
+  "style": "corporate",
+  "tempo_bpm": 109.0,
+  "hit_time_s": 17.614679,
+  "sections": [
+    [
+      "calm",
+      0.0
+    ],
+    [
+      "uplifting",
+      8.256881
+    ]
+  ],
+  "stems": [
+    "Standard Kit",
+    "Electric Bass (finger)",
+    "Acoustic Grand Piano",
+    "Electric Guitar (clean)"
+  ],
+  "timings_total_s": 2.0276,
+  "manifest": "evidence/runs/ev3/sections_after_end/music_manifest.json"
+}

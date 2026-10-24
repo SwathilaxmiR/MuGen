@@ -1,0 +1,14 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Upbeat corporate",
+  "duration_s": 6,
+  "seed": 951,
+  "callback_url": "http://127.0.0.1:54370/hook"
+}

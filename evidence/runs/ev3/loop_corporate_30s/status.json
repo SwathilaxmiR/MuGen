@@ -1,0 +1,29 @@
+{
+  "job_id": "e0f03758-218b-4a91-be57-075f0cbd896c",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:40:04.393289+05:30",
+  "started_at": "2026-10-24T12:40:04.522261+05:30",
+  "finished_at": "2026-10-24T12:40:08.641468+05:30",
+  "warnings": [
+    {
+      "code": "LOOP_IGNORES_ENDING",
+      "message": "Loop mode has no final hit; the file ends on a bar line and wraps seamlessly."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/e0f03758-218b-4a91-be57-075f0cbd896c/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/e0f03758-218b-4a91-be57-075f0cbd896c/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/e0f03758-218b-4a91-be57-075f0cbd896c/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/e0f03758-218b-4a91-be57-075f0cbd896c/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/e0f03758-218b-4a91-be57-075f0cbd896c/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/e0f03758-218b-4a91-be57-075f0cbd896c/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/e0f03758-218b-4a91-be57-075f0cbd896c/music_manifest.json"
+  },
+  "error": null
+}

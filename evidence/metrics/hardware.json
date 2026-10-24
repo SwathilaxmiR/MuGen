@@ -1,0 +1,12 @@
+{
+  "cpu": "Apple M5",
+  "cores": 10,
+  "ram_gb": 16.0,
+  "os": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "Mac17,3",
+  "gpu": "none used (CPU only)",
+  "docker": "not installed (services run natively)",
+  "python": "3.12.13",
+  "fluidsynth": "FluidSynth runtime version 2.6.1",
+  "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers"
+}

@@ -1,0 +1,13 @@
+Scan of src/ for hard-coded URLs, paths, keys and model names (pattern (https?://[^\s"\']+|/opt/[^\s"\']+|/tmp/[^\s"\']*|/usr/[^\s"\']+|minioadmin|sk-[A-Za-z0-9]{8,}|AKIA[0-9A-Z]{12,}|claude-[a-z0-9-]+|laion/|facebook/)):
+
+src/musicengine/config.py:12: http://localhost:9000  [the config module: defaults for every env setting]
+src/musicengine/config.py:13: http://localhost:9000  [the config module: defaults for every env setting]
+src/musicengine/config.py:15: minioadmin  [the config module: defaults for every env setting]
+src/musicengine/config.py:16: minioadmin  [the config module: defaults for every env setting]
+src/musicengine/config.py:34: /opt/soundfonts/FluidR3_GM.sf2  [the config module: defaults for every env setting]
+src/musicengine/config.py:39: claude-opus-5-5  [the config module: defaults for every env setting]
+src/musicengine/schemas.py:59: https://,  [URL-scheme validation]
+src/musicengine/schemas.py:83: https://,  [URL-scheme validation]
+
+unexplained: none
+All settings: src/musicengine/config.py (pydantic-settings, env vars / .env).

@@ -1,0 +1,3 @@
+SECTION_SNAPPED: Section 'build' moved -0.110s to the beat at 9.890s.
+SECTION_SNAPPED: Section 'peak' moved -0.451s to the bar line at 10.549s.
+SECTIONS_MERGED_MIN_GAP: Sections 'build' and 'peak' are 0.66s apart (< 1.5s); merged at 9.890s.

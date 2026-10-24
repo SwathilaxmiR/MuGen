@@ -42,7 +42,7 @@ def mh1():
         x, sr = read(audio_files(c)["mix.wav"])
         hit = m["hit_time_s"]
         rep = qa.ending_report(x, sr, None if m["loop"]["enabled"] else hit)
-        on_bar = None
+        on_bar = beat_ok = None
         if hit is not None:
             on_bar = any(abs(b["t"] - hit) < 1e-4 for b in m["bars"])
             beat_ok = any(abs(b["t"] - hit) < 1e-4 for b in m["beats"])
@@ -51,7 +51,11 @@ def mh1():
                          "ending_on_beat_warning": any(w["code"] == "ENDING_ON_BEAT_NOT_BAR" for w in m["warnings"]),
                          "last_50ms_dbfs": rep["last_50ms_db"], "silent_end": rep["silent_end"],
                          "hit_onset_ratio": rep.get("hit_onset_ratio"), "hit_onset": rep.get("hit_onset"),
-                         "ok": rep["silent_end"] and (m["loop"]["enabled"] or (rep["hit_onset"] and (on_bar or beat_ok)))})
+                         # loops end on purpose by ending exactly on a bar line (D = N bars) and wrapping; they are
+                         # not silent at the end by design (seam checked in 3_Levels row 12)
+                         "loop_whole_bars": (abs(m["loop"]["bars"] * 240 / m["tempo_bpm"] - D) * sr < 1) if m["loop"]["enabled"] else None,
+                         "ok": (abs(m["loop"]["bars"] * 240 / m["tempo_bpm"] - D) * sr < 1) if m["loop"]["enabled"]
+                         else (rep["silent_end"] and rep["hit_onset"] and (on_bar or beat_ok))})
     write_csv(os.path.join(d, "lengths.csv"), rows)
     write_csv(os.path.join(d, "endings.csv"), end_rows)
     # plots + last 3 s clips for 10 non-loop outputs
@@ -81,7 +85,7 @@ def mh1():
            f"- Max |length error|: **{worst} samples** (limit 0.05 s = 2400 samples at 48 kHz).\n"
            f"- Endings: {sum(r['ok'] for r in end_rows)}/{len(end_rows)} pass (last 50 ms < -60 dBFS; non-loop: onset at "
            f"the hit (spectral flux >= 2x median) and the hit on a manifest bar line, or on a beat with "
-           f"ENDING_ON_BEAT_NOT_BAR).\n- Unit tests `tests/unit/test_timegrid.py`: {'pass' if t_ok else 'FAIL'}.\n"
+           f"ENDING_ON_BEAT_NOT_BAR; loops: exactly N whole bars, seam checked in 3_Levels row 12).\n- Unit tests `tests/unit/test_timegrid.py`: {'pass' if t_ok else 'FAIL'}.\n"
            f"- Listening (10 clips in `last3s/`): **HUMAN**, record in `evidence/listening/log.csv`.\n")
     open(os.path.join(d, "report.md"), "w").write(rep)
     v = "PASS" if len_ok and end_ok and t_ok else "FAIL"

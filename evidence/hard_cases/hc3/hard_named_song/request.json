@@ -1,0 +1,13 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Make it sound like Interstellar by Hans Zimmer, epic organ swell",
+  "duration_s": 20,
+  "seed": 706
+}

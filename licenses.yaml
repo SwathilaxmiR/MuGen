@@ -90,9 +90,8 @@ components:
   licence_url: https://github.com/Mimino666/langdetect/blob/master/LICENSE
   commercial_use: Yes (permissive).
   role: prompt language detection
-  clause: each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free,
-    irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform,
-    sublicense, and distribute the Work and such Derivative Works in Source or Object form
+  clause: Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in
+    compliance with the License.
   clause_source: pkg:langdetect
 - name: FastAPI / Starlette / Uvicorn / Pydantic / pydantic-settings
   version: current

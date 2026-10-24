@@ -1,0 +1,8 @@
+{
+  "model": "laion/clap-htsat-unfused",
+  "licence": "Apache-2.0",
+  "transformers": "4.46.3",
+  "torch": "2.5.1",
+  "device": "cpu",
+  "n": 12
+}

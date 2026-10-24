@@ -68,7 +68,7 @@ def approaches():
 
 def main():
     cl = clap()
-    bl = bleed()
+    bleed()
     ap = approaches()
     blind = os.path.join(D, "blind_test", "responses.csv")
     have_blind = os.path.exists(blind)
@@ -102,7 +102,6 @@ def main():
     verdict("METRIC_PROMPT_MATCH", "5_Metrics", "C10", v, val,
             f"{cl['n']} core prompts at 45 s, laion/clap-htsat-unfused (Apache-2.0), CPU",
             [rel(os.path.join(D, "clap.csv")), rel(os.path.join(D, "control_clap.csv"))])
-    del bl
 
 
 if __name__ == "__main__":

@@ -1,0 +1,158 @@
+{
+  "run_id": "ev3",
+  "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+  "api": "http://localhost:8000",
+  "local_control": true,
+  "started": "2026-10-24T07:07:15.217818+00:00",
+  "finished": "2026-10-24T07:13:28.387448+00:00",
+  "health": {
+    "status": "ok",
+    "version": "1.0.0",
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc"
+  },
+  "special": {
+    "determinism": {
+      "jobs": [
+        "bfa24764-2bac-4643-890b-8ee09017c796",
+        "2f1897d8-4d7f-48c8-ae92-18cc90cebf14"
+      ],
+      "files": [
+        "mix.wav",
+        "stems/bass.wav",
+        "stems/drums.wav",
+        "stems/melody.wav",
+        "stems/harmony.wav"
+      ],
+      "identical": {
+        "mix.wav": true,
+        "stems/bass.wav": true,
+        "stems/drums.wav": true,
+        "stems/melody.wav": true,
+        "stems/harmony.wav": true
+      }
+    },
+    "concurrency": {
+      "jobs": [
+        {
+          "job_id": "daa58519-6910-4231-b217-a4f30f205977",
+          "http": 202,
+          "submitted_at_s": 0.004,
+          "status": "succeeded",
+          "started_at": "2026-10-24T12:41:38.667218+05:30",
+          "finished_at": "2026-10-24T12:41:41.557382+05:30"
+        },
+        {
+          "job_id": "5bb4d3e4-7930-4828-9444-8599db20fca8",
+          "http": 202,
+          "submitted_at_s": 0.006,
+          "status": "succeeded",
+          "started_at": "2026-10-24T12:41:41.654668+05:30",
+          "finished_at": "2026-10-24T12:41:44.490282+05:30"
+        },
+        {
+          "job_id": "e3735e23-37b5-4394-a7a0-5a38ae31988b",
+          "http": 202,
+          "submitted_at_s": 0.006,
+          "status": "succeeded",
+          "started_at": "2026-10-24T12:41:41.638267+05:30",
+          "finished_at": "2026-10-24T12:41:44.489183+05:30"
+        },
+        {
+          "job_id": "fa31f39c-b0b7-4e14-a73b-d33ba8df0b79",
+          "http": 202,
+          "submitted_at_s": 0.006,
+          "status": "succeeded",
+          "started_at": "2026-10-24T12:41:38.683437+05:30",
+          "finished_at": "2026-10-24T12:41:41.532122+05:30"
+        }
+      ],
+      "distinct_job_ids": 4,
+      "all_succeeded": true
+    },
+    "same_key": {
+      "sequential": [
+        "91f06f16-43b9-46de-901f-5b6aaebf2a87",
+        "91f06f16-43b9-46de-901f-5b6aaebf2a87"
+      ],
+      "parallel": [
+        "26f08956-57e3-4eff-9f77-9d509d1d7772",
+        "26f08956-57e3-4eff-9f77-9d509d1d7772"
+      ],
+      "different_body_same_key_http": 409,
+      "different_body_error": "IDEMPOTENCY_KEY_REUSED",
+      "sequential_status": "succeeded",
+      "sequential_job_started_events": 1,
+      "parallel_status": "succeeded",
+      "parallel_job_started_events": 1,
+      "db_rows_for_prompt_last_hour": 4,
+      "s3_objects_under_prefix": 8
+    },
+    "speed": {
+      "cold": 5.429,
+      "warm": [
+        5.466,
+        5.392,
+        5.403,
+        5.394,
+        5.409
+      ]
+    },
+    "faults": {
+      "render_primary_fail": {
+        "case": "fault_render_primary_fail",
+        "http_status": 202,
+        "job_id": "998af4b4-c372-4c11-a095-e57688b9fd45",
+        "status": "succeeded",
+        "warnings": "PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED",
+        "seconds": 1.467,
+        "generation_s": 1.374,
+        "checks_ok": true,
+        "failed_checks": ""
+      },
+      "render_timeout": {
+        "case": "fault_render_timeout",
+        "http_status": 202,
+        "job_id": "7b8cedb4-1942-443c-8fc5-f9035f06f1a6",
+        "status": "succeeded",
+        "warnings": "PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED",
+        "seconds": 1.483,
+        "generation_s": 1.405,
+        "checks_ok": true,
+        "failed_checks": ""
+      },
+      "no_fallback": {
+        "case": "fault_no_fallback",
+        "http_status": 202,
+        "job_id": "47691d83-b16e-482c-882c-b806648c2d19",
+        "status": "failed",
+        "warnings": "",
+        "seconds": 0.654,
+        "generation_s": 0.573,
+        "checks_ok": true,
+        "failed_checks": ""
+      },
+      "worker_kill": {
+        "job_id": "d938c2c4-a0bf-4831-8ae4-3af97f0b4808",
+        "status_when_killed": "running",
+        "progress_when_killed": 5,
+        "final_status": "succeeded",
+        "attempts": 2
+      }
+    },
+    "io": {
+      "narration_http_url": {
+        "job_id": "69fd46bc-5722-4f50-84dd-11d0f9be94ab",
+        "status": "succeeded",
+        "ducked": true
+      },
+      "callback": {
+        "job_id": "a8900873-f105-4492-a726-54f7581086d1",
+        "received_job_id": "a8900873-f105-4492-a726-54f7581086d1",
+        "status": "succeeded",
+        "signature_header": "sha256=5d40d4cff8c2d...",
+        "signature_valid": true,
+        "wrong_secret_rejected": true
+      }
+    }
+  }
+}

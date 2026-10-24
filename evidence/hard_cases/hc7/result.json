@@ -1,0 +1,58 @@
+{
+  "concurrency": {
+    "jobs": [
+      {
+        "job_id": "daa58519-6910-4231-b217-a4f30f205977",
+        "http": 202,
+        "submitted_at_s": 0.004,
+        "status": "succeeded",
+        "started_at": "2026-10-24T12:41:38.667218+05:30",
+        "finished_at": "2026-10-24T12:41:41.557382+05:30"
+      },
+      {
+        "job_id": "5bb4d3e4-7930-4828-9444-8599db20fca8",
+        "http": 202,
+        "submitted_at_s": 0.006,
+        "status": "succeeded",
+        "started_at": "2026-10-24T12:41:41.654668+05:30",
+        "finished_at": "2026-10-24T12:41:44.490282+05:30"
+      },
+      {
+        "job_id": "e3735e23-37b5-4394-a7a0-5a38ae31988b",
+        "http": 202,
+        "submitted_at_s": 0.006,
+        "status": "succeeded",
+        "started_at": "2026-10-24T12:41:41.638267+05:30",
+        "finished_at": "2026-10-24T12:41:44.489183+05:30"
+      },
+      {
+        "job_id": "fa31f39c-b0b7-4e14-a73b-d33ba8df0b79",
+        "http": 202,
+        "submitted_at_s": 0.006,
+        "status": "succeeded",
+        "started_at": "2026-10-24T12:41:38.683437+05:30",
+        "finished_at": "2026-10-24T12:41:41.532122+05:30"
+      }
+    ],
+    "distinct_job_ids": 4,
+    "all_succeeded": true
+  },
+  "same_key": {
+    "sequential": [
+      "91f06f16-43b9-46de-901f-5b6aaebf2a87",
+      "91f06f16-43b9-46de-901f-5b6aaebf2a87"
+    ],
+    "parallel": [
+      "26f08956-57e3-4eff-9f77-9d509d1d7772",
+      "26f08956-57e3-4eff-9f77-9d509d1d7772"
+    ],
+    "different_body_same_key_http": 409,
+    "different_body_error": "IDEMPOTENCY_KEY_REUSED",
+    "sequential_status": "succeeded",
+    "sequential_job_started_events": 1,
+    "parallel_status": "succeeded",
+    "parallel_job_started_events": 1,
+    "db_rows_for_prompt_last_hour": 4,
+    "s3_objects_under_prefix": 8
+  }
+}

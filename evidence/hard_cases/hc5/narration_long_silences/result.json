@@ -1,0 +1,31 @@
+{
+  "job_id": "3f2f2ddc-af59-4e2c-8faa-e5572dd6b79c",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 40.0,
+  "style": "corporate",
+  "tempo_bpm": 106.0,
+  "hit_time_s": 38.490566,
+  "sections": [
+    [
+      "intro",
+      0.0
+    ],
+    [
+      "build",
+      11.320755
+    ],
+    [
+      "peak",
+      24.90566
+    ]
+  ],
+  "stems": [
+    "Standard Kit",
+    "Electric Bass (finger)",
+    "Acoustic Grand Piano",
+    "Electric Guitar (clean)"
+  ],
+  "timings_total_s": 4.2521,
+  "manifest": "evidence/runs/ev3/narration_long_silences/music_manifest.json"
+}

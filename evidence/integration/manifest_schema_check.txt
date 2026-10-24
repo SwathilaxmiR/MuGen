@@ -1,0 +1,6 @@
+58 manifests validated against musicengine.manifest.Manifest (pydantic, extra='forbid'); failures: none
+
+example providers: [{"role": "interpreter", "name": "rules", "version": "1", "mode": "local"}, {"role": "renderer", "name": "fluidsynth", "version": "2.6.1", "mode": "local subprocess"}]
+example cost: {"compute_seconds": 3.855, "usd_estimate": 5.2e-05, "cost_per_cpu_second_usd": 1.34e-05, "api_fees_usd": 0.0}
+example timings: {"interpret": 0.0164, "plan": 0.0002, "compose": 0.0043, "render": 1.6966, "mix": 0.7631, "encode": 0.4134, "qa": 0.933, "total": 4.1244, "upload": 0.2166}
+components (licence/rights): 17 entries, first: {"name": "FluidR3_GM SoundFont", "version": "3.1 (Debian fluid-soundfont-gm 3.1-5.3)", "licence": "MIT", "licence_url": "https://metadata.ftp-master.debian.org/changelogs/main/f/fluid-soundfont/unstable_copyright", "commercial_use": "Yes. MIT: 'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'. Rendered audio is our output, not a copy of the SoundFont.", "role": "instrument samples (default renderer)"}

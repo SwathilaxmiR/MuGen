@@ -1,0 +1,42 @@
+{
+  "render_primary_fail": {
+    "case": "fault_render_primary_fail",
+    "http_status": 202,
+    "job_id": "998af4b4-c372-4c11-a095-e57688b9fd45",
+    "status": "succeeded",
+    "warnings": "PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED",
+    "seconds": 1.467,
+    "generation_s": 1.374,
+    "checks_ok": true,
+    "failed_checks": ""
+  },
+  "render_timeout": {
+    "case": "fault_render_timeout",
+    "http_status": 202,
+    "job_id": "7b8cedb4-1942-443c-8fc5-f9035f06f1a6",
+    "status": "succeeded",
+    "warnings": "PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED PROVIDER_FALLBACK_USED",
+    "seconds": 1.483,
+    "generation_s": 1.405,
+    "checks_ok": true,
+    "failed_checks": ""
+  },
+  "no_fallback": {
+    "case": "fault_no_fallback",
+    "http_status": 202,
+    "job_id": "47691d83-b16e-482c-882c-b806648c2d19",
+    "status": "failed",
+    "warnings": "",
+    "seconds": 0.654,
+    "generation_s": 0.573,
+    "checks_ok": true,
+    "failed_checks": ""
+  },
+  "worker_kill": {
+    "job_id": "d938c2c4-a0bf-4831-8ae4-3af97f0b4808",
+    "status_when_killed": "running",
+    "progress_when_killed": 5,
+    "final_status": "succeeded",
+    "attempts": 2
+  }
+}

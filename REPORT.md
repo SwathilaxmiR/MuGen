@@ -35,7 +35,7 @@ The pipeline:
 7. The QA gate.
 8. Optional ducking.
 
-Development followed tasks T0–T16, each with its own commit and tests. **352 tests pass**, with none skipped: unit, integration against real Postgres and S3, and e2e against a running API and worker with the real renderer.
+Development followed tasks T0–T16, each with its own commit and tests. **355 tests pass**, with none skipped: unit, integration against real Postgres and S3, and e2e against a running API and worker with the real renderer.
 
 ## 3. Must-haves: measured
 
@@ -53,6 +53,12 @@ Batch run 3 covered 48 cases (`tests/inputs/*.json`): 12 style prompts, a durati
 | Instrumental | no vocals | No voice programs can be loaded; vocal prompts warned and stripped |
 
 The ±0.5 LU and −1.5 dBTP internal targets are tighter than the brief (±1 LU, −1 dBTP) to leave headroom for mp3.
+
+## 3b. Submission evidence run (`ev3`)
+
+The form is filled only from `evidence/verdicts.json`. That file is produced by verifier scripts that read the delivered WAV, mp3 and manifest files, and use ffmpeg `ebur128` as the independent meter. The run covered 57 cases: 12 core prompts, a duration matrix, section plans, narrations, loops, regenerations, every hard case, fault injection, a killed worker, concurrency, idempotency, a signed callback and URL input.
+
+All 57 passed their checks. Claim → file index: [evidence/INDEX.md](evidence/INDEX.md). Cell-by-cell reasoning: [FORM_REPORT.md](FORM_REPORT.md).
 
 ## 4. Prompt match (independent model)
 
@@ -152,4 +158,4 @@ Load tests used 8 concurrent 60 s jobs per setting ([eval/results/loadtest.jsonl
 | Load / cost / RAM | `eval/results/loadtest*.jsonl` |
 | Approach B | `eval/results/approach_comparison.md`, `eval/results/approach_metrics.json` |
 | Licences | `SOURCES.md`, `licenses.yaml`, `eval/README.md` |
-| Test suite | `tests/` (352 tests) |
+| Test suite | `tests/` (355 tests) |

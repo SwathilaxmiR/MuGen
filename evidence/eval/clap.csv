@@ -1,0 +1,13 @@
+case,prompt,clap_matched,clap_mismatched_mean,rank_of_own_prompt,n_prompts
+core_acoustic,Warm acoustic guitar folk for a travel vlog,0.4692,0.3742,2,12
+core_ambient,"Calm ambient meditation pad, peaceful and serene",0.401,0.3937,7,12
+core_cinematic,Epic cinematic orchestral score that builds to a heroic climax,0.6942,0.3721,1,12
+core_corporate,Upbeat corporate background for a tech product explainer,0.5113,0.3701,2,12
+core_electronic,Energetic EDM festival track with a big drop,0.2418,0.2876,7,12
+core_epic,"Massive trailer battle music, epic and powerful",0.3831,0.3666,5,12
+core_jazz,Smooth jazz lounge with saxophone,0.6393,0.2949,1,12
+core_lofi,Chill lo-fi beats for studying late at night,0.4407,0.2575,3,12
+core_playful,Playful quirky cartoon music for kids,0.5111,0.3052,2,12
+core_rock,Driving rock with guitar riffs for a sports montage,0.7369,0.2882,1,12
+core_tense,"Tense suspense thriller underscore, dark and ominous",0.3644,0.3984,5,12
+core_upbeat,Happy cheerful summer celebration,0.2674,0.3524,8,12

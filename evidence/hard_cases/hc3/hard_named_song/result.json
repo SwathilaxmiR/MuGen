@@ -1,0 +1,27 @@
+{
+  "job_id": "01b2cd1d-a4bd-4748-a737-84958ee9c5da",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 20.0,
+  "style": "epic",
+  "tempo_bpm": 93.0,
+  "hit_time_s": 18.064516,
+  "sections": [
+    [
+      "intro",
+      0.0
+    ],
+    [
+      "main",
+      7.096774
+    ]
+  ],
+  "stems": [
+    "Orchestra Kit",
+    "Contrabass",
+    "Brass Section",
+    "String Ensemble 1"
+  ],
+  "timings_total_s": 2.0779,
+  "manifest": "evidence/runs/ev3/hard_named_song/music_manifest.json"
+}

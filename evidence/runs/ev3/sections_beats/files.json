@@ -1,0 +1,30 @@
+{
+  "mix.wav": {
+    "sha256": "e1d2f90076a1543475bcc12428ba807f264fa09a20b85e28d436c3c987fbc7bc",
+    "bytes": 8640044
+  },
+  "music_manifest.json": {
+    "sha256": "ed084dfd22d5ef2b8e88536062f5aca15c3a5d7bfdba9fb71f486ec3b7a1369d",
+    "bytes": 17498
+  },
+  "stems/bass.wav": {
+    "sha256": "a70042f9472b42203f82f9e8f075d563154d13069b5c882f69dc29dcc4f87565",
+    "bytes": 8640044
+  },
+  "stems/drums.wav": {
+    "sha256": "e0d2321a8a2c5746a32b66fb55e6c90cbcc1e247e3a2ecaf7aa256c838a5a0e8",
+    "bytes": 8640044
+  },
+  "stems/melody.wav": {
+    "sha256": "74bef2638e762668caaaecb9c99f379c1eb79609d5d52b30a18bcafd1aad7217",
+    "bytes": 8640044
+  },
+  "stems/harmony.wav": {
+    "sha256": "979086295eacad1a5621615ad372d2f98aca307812dd03738473a73901db6acc",
+    "bytes": 8640044
+  },
+  "mix.mp3": {
+    "sha256": "bd1614e9ab17938c58b6c3c0438b527d675c73ebd4f27e9b84311c9d18f44b06",
+    "bytes": 1201964
+  }
+}

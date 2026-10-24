@@ -1,0 +1,15 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Electronic groove",
+  "duration_s": 15,
+  "loopable": true,
+  "tempo_bpm": 125,
+  "seed": 502
+}

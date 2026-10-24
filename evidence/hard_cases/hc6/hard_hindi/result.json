@@ -1,0 +1,27 @@
+{
+  "job_id": "ffa0ceaf-0b5a-4f98-8f6a-e9adaa64ad13",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 15.0,
+  "style": "cinematic",
+  "tempo_bpm": 87.0,
+  "hit_time_s": 13.793103,
+  "sections": [
+    [
+      "intro",
+      0.0
+    ],
+    [
+      "main",
+      5.517241
+    ]
+  ],
+  "stems": [
+    "Orchestra Kit",
+    "Contrabass",
+    "String Ensemble 1",
+    "French Horn"
+  ],
+  "timings_total_s": 1.614,
+  "manifest": "evidence/runs/ev3/hard_hindi/music_manifest.json"
+}

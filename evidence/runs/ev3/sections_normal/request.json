@@ -1,0 +1,27 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Energetic electronic track that builds",
+  "duration_s": 40,
+  "seed": 301,
+  "sections": [
+    {
+      "start_s": 0,
+      "mood": "calm intro"
+    },
+    {
+      "start_s": 12.3,
+      "mood": "build"
+    },
+    {
+      "start_s": 26.7,
+      "mood": "peak drop"
+    }
+  ]
+}

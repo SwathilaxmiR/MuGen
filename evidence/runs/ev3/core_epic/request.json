@@ -1,0 +1,13 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Massive trailer battle music, epic and powerful",
+  "duration_s": 45,
+  "seed": 108
+}

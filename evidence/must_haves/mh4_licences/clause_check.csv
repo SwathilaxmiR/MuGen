@@ -1,0 +1,18 @@
+component,licence,result,checked_against
+FluidR3_GM SoundFont,MIT,MATCH,evidence/must_haves/mh4_licences/texts/fluidr3_debian_copyright.txt
+FluidSynth,LGPL-2.1-or-later,MATCH,evidence/must_haves/mh4_licences/texts/lgpl-2.1.txt
+FFmpeg (Debian build incl. libmp3lame),"GPL-2.0-or-later (Debian builds with --enable-gpl, no --enable-nonfree)",MATCH,evidence/must_haves/mh4_licences/texts/gpl-2.0.txt
+musicengine (this repository),Proprietary (owned code),NOT_VERIFIED_LOCALLY,
+NumPy,BSD-3-Clause,MATCH,.venv/lib/python3.12/site-packages/numpy-2.5.4.dist-info/licenses/LICENSE.txt
+SciPy,BSD-3-Clause,MATCH,.venv/lib/python3.12/site-packages/scipy-1.18.1.dist-info/LICENSE.txt
+soundfile (+ bundled libsndfile),"BSD-3-Clause (libsndfile LGPL-2.1, dynamically loaded)",MATCH,.venv/lib/python3.12/site-packages/soundfile-0.14.0.dist-info/LICENSE
+pyloudnorm,MIT,MATCH,.venv/lib/python3.12/site-packages/pyloudnorm-0.2.0.dist-info/licenses/LICENSE
+pretty_midi (+ mido),MIT,MATCH,.venv/lib/python3.12/site-packages/pretty_midi-0.2.11.post0.dist-info/licenses/LICENSE.txt
+langdetect,"Apache-2.0 (LICENSE file; PyPI metadata field says MIT, classifier says Apache)",MATCH,.venv/lib/python3.12/site-packages/langdetect-1.0.9.dist-info/licenses/LICENSE
+FastAPI / Starlette / Uvicorn / Pydantic / pydantic-settings,MIT / BSD-3-Clause / BSD-3-Clause / MIT / MIT,MATCH,.venv/lib/python3.12/site-packages/fastapi-0.161.1.dist-info/licenses/LICENSE
+psycopg / psycopg-pool,LGPL-3.0-only,MATCH,.venv/lib/python3.12/site-packages/psycopg-3.3.6.dist-info/licenses/LICENSE.txt
+boto3 / httpx / structlog / PyYAML / python-multipart,Apache-2.0 / BSD-3-Clause / MIT OR Apache-2.0 / MIT / Apache-2.0,MATCH,.venv/lib/python3.12/site-packages/boto3-1.43.118.dist-info/LICENSE
+PostgreSQL,PostgreSQL License,MATCH,evidence/must_haves/mh4_licences/texts/postgresql_licence.html
+MinIO server,AGPL-3.0,MATCH,evidence/must_haves/mh4_licences/texts/minio_LICENSE.txt
+Python,PSF-2.0,MATCH,evidence/must_haves/mh4_licences/texts/python_license.html
+React / React DOM (web UI),MIT,MATCH,web/node_modules/react/LICENSE

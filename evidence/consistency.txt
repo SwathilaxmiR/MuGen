@@ -1,0 +1,21 @@
+OK  REPORT §3 sum-diff worst (run3): doc [-110.8] vs source -110.79
+OK  REPORT §3 sum-diff best (run3): doc [120.6] vs source 120.56
+OK  REPORT §3 LUFS within (run3): doc [0.28] vs source 0.283
+OK  REPORT §3 ffmpeg agrees within (run3): doc [0.08] vs source 0.083
+OK  REPORT §3 TP worst (run3): doc [-1.6] vs source -1.597
+OK  REPORT §3 mp3 TP worst (run3): doc [-1.4] vs source -1.402
+OK  REPORT §7 music-min/h c1: doc [685.0] vs source 685.4
+OK  REPORT §7 music-min/h c2: doc [997.0] vs source 996.7
+OK  REPORT §7 music-min/h c4: doc [1029.0] vs source 1028.9
+OK  REPORT §7 cold s/60s: doc [5.76] vs source 5.76
+OK  REPORT §7 warm s/60s: doc [5.81] vs source 5.81
+OK  REPORT §4 CLAP matched: doc [0.347] vs source 0.347
+OK  REPORT §4 CLAP control: doc [0.265] vs source 0.265
+OK  REPORT §5 spectral overlap: doc [0.71] vs source 0.71
+OK  REPORT §5 band-split control: doc [0.25] vs source 0.25
+OK  REPORT §1 CLAP A vs B (A): doc [0.508] vs source 0.508
+OK  REPORT §1 CLAP A vs B (B): doc [0.454] vs source 0.454
+OK  REPORT test count: doc [355.0, 355.0] vs source 355.0
+OK  README test count: doc [355.0] vs source 355.0
+
+missing paths quoted in docs: ['REPORT.md: evidence/INDEX.md']

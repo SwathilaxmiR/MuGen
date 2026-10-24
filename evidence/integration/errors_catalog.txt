@@ -1,0 +1,28 @@
+Live probes:
+  POST /api/v1/music/jobs -> 422 VALIDATION_ERROR shape_ok=True
+  POST /api/v1/music/jobs -> 422 VALIDATION_ERROR shape_ok=True
+  GET /api/v1/jobs/00000000-0000-4000-8000-000000000000 -> 404 JOB_NOT_FOUND shape_ok=True
+  GET /api/v1/no-such-route -> 404 NOT_FOUND shape_ok=True
+  DELETE /api/v1/music/jobs -> 405 METHOD_NOT_ALLOWED shape_ok=True
+  POST /api/v1/music/jobs/00000000-0000-4000-8000-000000000000/regenerate -> 404 JOB_NOT_FOUND shape_ok=True
+  GET /api/v1/jobs/00000000-0000-4000-8000-000000000000/manifest -> 404 JOB_NOT_FOUND shape_ok=True
+
+error codes in code (16): ['IDEMPOTENCY_KEY_REUSED', 'INTERNAL_ERROR', 'JOB_NOT_FOUND', 'JOB_TIMEOUT', 'METHOD_NOT_ALLOWED', 'MIX_QA_FAILED', 'NOT_FOUND', 'PARENT_JOB_NOT_READY', 'PAYLOAD_TOO_LARGE', 'QUEUE_FULL', 'RATE_LIMITED', 'RENDER_FAILED', 'STEM_NOT_FOUND', 'STORAGE_ERROR', 'UNAUTHORIZED', 'VALIDATION_ERROR']
+warning codes in code (19)
+in code but not in README: none
+in README but not in code: none
+all UPPER_SNAKE: True
+warnings in code but not in README: none
+
+Every error code incl. 401/429/503/409/413 is exercised in tests/integration/test_api.py:
+$ /Users/Dell/Documents/swe-incu/.venv/bin/pytest -q tests/integration/test_api.py
+........................                                                 [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /Users/Dell/Documents/swe-incu/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+24 passed, 1 warning in 0.46s
+
+exit=0

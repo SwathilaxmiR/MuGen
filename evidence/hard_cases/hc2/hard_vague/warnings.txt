@@ -1,0 +1,1 @@
+VAGUE_PROMPT_DEFAULTS: Prompt had no recognisable mood or genre words; used the neutral 'corporate' preset at moderate energy.

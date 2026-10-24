@@ -1,0 +1,7 @@
+{"event": "job_claimed", "job_id": "e3735e23-37b5-4394-a7a0-5a38ae31988b", "worker_id": "MacBook-Air-2.local:92761:1", "correlation_id": "evidence-concurrency-2", "level": "info", "timestamp": "2026-10-24T07:11:41.638997Z"}
+{"kind": "generate", "attempt": 1, "event": "job_started", "correlation_id": "evidence-concurrency-2", "job_id": "e3735e23-37b5-4394-a7a0-5a38ae31988b", "level": "info", "timestamp": "2026-10-24T07:11:42.229316Z"}
+{"progress": 5, "stage": "interpreted", "event": "progress", "correlation_id": "evidence-concurrency-2", "job_id": "e3735e23-37b5-4394-a7a0-5a38ae31988b", "level": "info", "timestamp": "2026-10-24T07:11:42.247235Z"}
+{"progress": 45, "stage": "rendered bass", "event": "progress", "correlation_id": "evidence-concurrency-2", "job_id": "e3735e23-37b5-4394-a7a0-5a38ae31988b", "level": "info", "timestamp": "2026-10-24T07:11:42.949914Z"}
+{"progress": 70, "stage": "rendered melody", "event": "progress", "correlation_id": "evidence-concurrency-2", "job_id": "e3735e23-37b5-4394-a7a0-5a38ae31988b", "level": "info", "timestamp": "2026-10-24T07:11:43.502934Z"}
+{"total_s": 2.2537, "warnings": [], "event": "job_succeeded", "correlation_id": "evidence-concurrency-2", "job_id": "e3735e23-37b5-4394-a7a0-5a38ae31988b", "level": "info", "timestamp": "2026-10-24T07:11:44.489564Z"}
+{"method": "GET", "path": "/api/v1/jobs/e3735e23-37b5-4394-a7a0-5a38ae31988b", "status": 200, "ms": 2.4, "event": "request", "correlation_id": "677e4637-3be3-4f2a-9bea-46727ecf6ef2", "level": "info", "timestamp": "2026-10-24T07:11:44.902168Z", "job_id": null}

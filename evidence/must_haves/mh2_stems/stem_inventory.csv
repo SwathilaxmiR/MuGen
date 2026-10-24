@@ -1,0 +1,209 @@
+case,stem,program,program_name,renderer,production,seed
+core_acoustic,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,170895957
+core_acoustic,bass,32,Acoustic Bass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1095689300
+core_acoustic,harmony,25,Acoustic Guitar (steel),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,541320672
+core_acoustic,melody,73,Flute,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1928694370
+core_ambient,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,8868794
+core_ambient,bass,89,Pad 2 (warm),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,28979562
+core_ambient,harmony,88,Pad 1 (new age),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1030655717
+core_ambient,melody,10,Music Box,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1290604738
+core_cinematic,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1063861770
+core_cinematic,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1778524610
+core_cinematic,harmony,48,String Ensemble 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,416009023
+core_cinematic,melody,60,French Horn,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1264401597
+core_corporate,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1140976432
+core_corporate,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1744551413
+core_corporate,harmony,0,Acoustic Grand Piano,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1784373458
+core_corporate,melody,27,Electric Guitar (clean),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,2015456987
+core_electronic,drums,25,TR-808 Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1530125338
+core_electronic,bass,38,Synth Bass 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1910008101
+core_electronic,harmony,89,Pad 2 (warm),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1985771802
+core_electronic,melody,81,Lead 2 (sawtooth),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1870387521
+core_epic,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,830890222
+core_epic,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,396363467
+core_epic,harmony,61,Brass Section,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,171216931
+core_epic,melody,48,String Ensemble 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1631454715
+core_jazz,drums,32,Jazz Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,246120603
+core_jazz,bass,32,Acoustic Bass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1311534185
+core_jazz,harmony,4,Electric Piano 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,748237822
+core_jazz,melody,65,Alto Sax,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1067040459
+core_lofi,drums,8,Room Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,896634018
+core_lofi,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,2111736289
+core_lofi,harmony,4,Electric Piano 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,600685984
+core_lofi,melody,11,Vibraphone,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1523724437
+core_playful,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,428536724
+core_playful,bass,70,Bassoon,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1262020151
+core_playful,harmony,45,Pizzicato Strings,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1624132558
+core_playful,melody,13,Xylophone,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,666070855
+core_rock,drums,16,Power Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1258976911
+core_rock,bass,34,Electric Bass (pick),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1460444481
+core_rock,harmony,29,Overdriven Guitar,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,918395615
+core_rock,melody,30,Distortion Guitar,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,474826821
+core_tense,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,243013726
+core_tense,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,547095931
+core_tense,harmony,44,Tremolo Strings,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,598622456
+core_tense,melody,45,Pizzicato Strings,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,754327537
+core_upbeat,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,226698400
+core_upbeat,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,50945879
+core_upbeat,harmony,0,Acoustic Grand Piano,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1837547850
+core_upbeat,melody,56,Trumpet,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1833883759
+determinism_a,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,67527238
+determinism_a,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,566527722
+determinism_a,harmony,0,Acoustic Grand Piano,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1744369271
+determinism_a,melody,27,Electric Guitar (clean),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1371869078
+determinism_b,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,67527238
+determinism_b,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,566527722
+determinism_b,harmony,0,Acoustic Grand Piano,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1744369271
+determinism_b,melody,27,Electric Guitar (clean),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1371869078
+duration_010s,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,570832608
+duration_010s,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,290823053
+duration_010s,harmony,48,String Ensemble 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1579831592
+duration_010s,melody,60,French Horn,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,976113170
+duration_030s,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,570832608
+duration_030s,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,290823053
+duration_030s,harmony,48,String Ensemble 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1579831592
+duration_030s,melody,60,French Horn,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,976113170
+duration_060s,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,570832608
+duration_060s,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,290823053
+duration_060s,harmony,48,String Ensemble 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1579831592
+duration_060s,melody,60,French Horn,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,976113170
+duration_120s,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,570832608
+duration_120s,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,290823053
+duration_120s,harmony,48,String Ensemble 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1579831592
+duration_120s,melody,60,French Horn,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,976113170
+duration_180s,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,570832608
+duration_180s,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,290823053
+duration_180s,harmony,48,String Ensemble 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1579831592
+duration_180s,melody,60,French Horn,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,976113170
+fault_render_primary_fail,drums,0,Standard Kit,numpy,symbolic MIDI -> numpy render + numpy FX,460871382
+fault_render_primary_fail,bass,89,Pad 2 (warm),numpy,symbolic MIDI -> numpy render + numpy FX,800625750
+fault_render_primary_fail,harmony,88,Pad 1 (new age),numpy,symbolic MIDI -> numpy render + numpy FX,908370992
+fault_render_primary_fail,melody,10,Music Box,numpy,symbolic MIDI -> numpy render + numpy FX,114199750
+fault_render_timeout,drums,0,Standard Kit,numpy,symbolic MIDI -> numpy render + numpy FX,460871382
+fault_render_timeout,bass,89,Pad 2 (warm),numpy,symbolic MIDI -> numpy render + numpy FX,800625750
+fault_render_timeout,harmony,88,Pad 1 (new age),numpy,symbolic MIDI -> numpy render + numpy FX,908370992
+fault_render_timeout,melody,10,Music Box,numpy,symbolic MIDI -> numpy render + numpy FX,114199750
+hard_300s,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,201421116
+hard_300s,bass,89,Pad 2 (warm),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,216224339
+hard_300s,harmony,88,Pad 1 (new age),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1582918446
+hard_300s,melody,10,Music Box,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,822688702
+hard_5s,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1080306878
+hard_5s,bass,70,Bassoon,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1284591980
+hard_5s,harmony,45,Pizzicato Strings,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,8193353
+hard_5s,melody,13,Xylophone,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,593814326
+hard_6s,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1715287971
+hard_6s,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1960144036
+hard_6s,harmony,44,Tremolo Strings,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,403898065
+hard_6s,melody,45,Pizzicato Strings,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,2013218536
+hard_contradictory,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,132723183
+hard_contradictory,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,273146086
+hard_contradictory,harmony,44,Tremolo Strings,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1012779728
+hard_contradictory,melody,45,Pizzicato Strings,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1587536140
+hard_hindi,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1621688709
+hard_hindi,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1068486921
+hard_hindi,harmony,48,String Ensemble 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1921056538
+hard_hindi,melody,60,French Horn,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1696141210
+hard_named_song,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,818139469
+hard_named_song,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1510878496
+hard_named_song,harmony,61,Brass Section,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,667449161
+hard_named_song,melody,48,String Ensemble 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,858567885
+hard_named_song_cover,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,278798570
+hard_named_song_cover,bass,89,Pad 2 (warm),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,978078935
+hard_named_song_cover,harmony,88,Pad 1 (new age),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,17646362
+hard_named_song_cover,melody,10,Music Box,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,258271911
+hard_spanish,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,71806304
+hard_spanish,bass,89,Pad 2 (warm),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1304864195
+hard_spanish,harmony,88,Pad 1 (new age),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1585668329
+hard_spanish,melody,10,Music Box,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1618177948
+hard_tamil,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,261620285
+hard_tamil,bass,89,Pad 2 (warm),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1762352048
+hard_tamil,harmony,88,Pad 1 (new age),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,84590936
+hard_tamil,melody,10,Music Box,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1225005080
+hard_unknown_language,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1136094648
+hard_unknown_language,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1883906392
+hard_unknown_language,harmony,0,Acoustic Grand Piano,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1865930086
+hard_unknown_language,melody,27,Electric Guitar (clean),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1434311945
+hard_vague,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,770584117
+hard_vague,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,2099396862
+hard_vague,harmony,0,Acoustic Grand Piano,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,22633507
+hard_vague,melody,27,Electric Guitar (clean),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1489335129
+hard_vocals,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,662022488
+hard_vocals,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1236767107
+hard_vocals,harmony,0,Acoustic Grand Piano,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1107914235
+hard_vocals,melody,56,Trumpet,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,657465191
+hard_vocals_choir,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,128342490
+hard_vocals_choir,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,295636543
+hard_vocals_choir,harmony,61,Brass Section,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1155592840
+hard_vocals_choir,melody,48,String Ensemble 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,2073136690
+io_callback,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1830142403
+io_callback,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,340486731
+io_callback,harmony,0,Acoustic Grand Piano,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,768799558
+io_callback,melody,27,Electric Guitar (clean),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,798034570
+io_narration_http_url,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,756576924
+io_narration_http_url,bass,89,Pad 2 (warm),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,711890754
+io_narration_http_url,harmony,88,Pad 1 (new age),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1466642985
+io_narration_http_url,melody,10,Music Box,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,22607232
+loop_corporate_30s,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,416210033
+loop_corporate_30s,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,2014415245
+loop_corporate_30s,harmony,0,Acoustic Grand Piano,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1124674512
+loop_corporate_30s,melody,27,Electric Guitar (clean),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,749375943
+loop_electronic_fixed_tempo,drums,25,TR-808 Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,592200317
+loop_electronic_fixed_tempo,bass,38,Synth Bass 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1067047907
+loop_electronic_fixed_tempo,harmony,89,Pad 2 (warm),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,277831082
+loop_electronic_fixed_tempo,melody,81,Lead 2 (sawtooth),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,979430802
+loop_lofi,drums,8,Room Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1121549712
+loop_lofi,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,643262540
+loop_lofi,harmony,4,Electric Piano 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1622554175
+loop_lofi,melody,11,Vibraphone,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,2096524823
+narration_gaps,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,685785650
+narration_gaps,bass,32,Acoustic Bass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,980546344
+narration_gaps,harmony,25,Acoustic Guitar (steel),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1081696138
+narration_gaps,melody,73,Flute,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1151874562
+narration_long_silences,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1676041580
+narration_long_silences,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,792766104
+narration_long_silences,harmony,0,Acoustic Grand Piano,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1511352335
+narration_long_silences,melody,27,Electric Guitar (clean),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1459789590
+narration_no_speech,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,348201734
+narration_no_speech,bass,89,Pad 2 (warm),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1244695347
+narration_no_speech,harmony,88,Pad 1 (new age),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1817638457
+narration_no_speech,melody,10,Music Box,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,798600536
+narration_url_blocked,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,653111426
+narration_url_blocked,bass,89,Pad 2 (warm),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,2126640673
+narration_url_blocked,harmony,88,Pad 1 (new age),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1869505544
+narration_url_blocked,melody,10,Music Box,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,458712612
+regen_drums,drums,16,Power Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,2033046129
+regen_drums,bass,34,Electric Bass (pick),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,552241916
+regen_drums,harmony,29,Overdriven Guitar,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1448108333
+regen_drums,melody,30,Distortion Guitar,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1990113255
+regen_drums__regen_drums,drums,16,Power Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,310066107
+regen_drums__regen_drums,bass,34,Electric Bass (pick),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,552241916
+regen_drums__regen_drums,harmony,29,Overdriven Guitar,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1448108333
+regen_drums__regen_drums,melody,30,Distortion Guitar,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1990113255
+regen_melody,drums,32,Jazz Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,44079593
+regen_melody,bass,32,Acoustic Bass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,348333914
+regen_melody,harmony,4,Electric Piano 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1098592585
+regen_melody,melody,65,Alto Sax,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1185674226
+regen_melody__regen_melody,drums,32,Jazz Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,44079593
+regen_melody__regen_melody,bass,32,Acoustic Bass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,348333914
+regen_melody__regen_melody,harmony,4,Electric Piano 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1098592585
+regen_melody__regen_melody,melody,65,Alto Sax,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,885233202
+sections_after_end,drums,0,Standard Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,139288671
+sections_after_end,bass,33,Electric Bass (finger),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,637984445
+sections_after_end,harmony,0,Acoustic Grand Piano,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,746578228
+sections_after_end,melody,27,Electric Guitar (clean),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1354950068
+sections_beats,drums,16,Power Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,309366669
+sections_beats,bass,34,Electric Bass (pick),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,2019595496
+sections_beats,harmony,29,Overdriven Guitar,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1542048334
+sections_beats,melody,30,Distortion Guitar,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,799065460
+sections_close,drums,48,Orchestra Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1919446995
+sections_close,bass,43,Contrabass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1860515102
+sections_close,harmony,48,String Ensemble 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,187750792
+sections_close,melody,60,French Horn,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,435138395
+sections_jazz,drums,32,Jazz Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1631904598
+sections_jazz,bass,32,Acoustic Bass,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1853870896
+sections_jazz,harmony,4,Electric Piano 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,271132301
+sections_jazz,melody,65,Alto Sax,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,1009596254
+sections_normal,drums,25,TR-808 Kit,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,948301590
+sections_normal,bass,38,Synth Bass 1,fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,72317979
+sections_normal,harmony,89,Pad 2 (warm),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,645458890
+sections_normal,melody,81,Lead 2 (sawtooth),fluidsynth,symbolic MIDI -> fluidsynth render + numpy FX,798547492

@@ -1,0 +1,14 @@
+openapi: 3.1.0
+committed openapi.yaml == exported from app: True
+committed openapi.yaml == running service GET /openapi.json: True
+
+paths:
+  /api/v1/jobs/{job_id}
+  /api/v1/jobs/{job_id}/manifest
+  /api/v1/music/jobs
+  /api/v1/music/jobs/{job_id}/regenerate
+  /api/v1/uploads
+  /health
+  /ready
+
+outside /api/v1/: ['/health', '/ready'] (health/ready at root by design; also served under /api/v1/)

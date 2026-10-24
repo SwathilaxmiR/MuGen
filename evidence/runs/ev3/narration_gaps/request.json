@@ -1,0 +1,14 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Warm acoustic guitar for a documentary",
+  "duration_s": 30,
+  "seed": 401,
+  "narration_url": "upload://1c9ead12-4012-4899-9ee6-b983d7729d02"
+}

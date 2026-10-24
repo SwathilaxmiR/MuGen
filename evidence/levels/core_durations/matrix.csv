@@ -1,0 +1,9 @@
+case,requested_s,delivered_s,status,qa_passed,seconds_to_generate
+duration_010s,10.0,10.0,succeeded,True,1.842
+duration_030s,30.0,30.0,succeeded,True,3.261
+duration_060s,60.0,60.0,succeeded,True,5.329
+duration_120s,120.0,120.0,succeeded,True,9.565
+duration_180s,180.0,180.0,succeeded,True,13.752
+hard_300s,300.0,300.0,succeeded,True,22.932
+hard_5s,5.0,5.0,succeeded,True,1.479
+hard_6s,6.0,6.0,succeeded,True,1.554

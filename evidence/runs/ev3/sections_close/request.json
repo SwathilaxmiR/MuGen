@@ -1,0 +1,27 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Cinematic score",
+  "duration_s": 30,
+  "seed": 302,
+  "sections": [
+    {
+      "start_s": 0,
+      "mood": "calm"
+    },
+    {
+      "start_s": 10,
+      "mood": "build"
+    },
+    {
+      "start_s": 11,
+      "mood": "peak"
+    }
+  ]
+}

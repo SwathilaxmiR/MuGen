@@ -1,0 +1,27 @@
+{
+  "job_id": "592897de-3e27-4d2e-93fd-9dde1790d682",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 15.0,
+  "style": "corporate",
+  "tempo_bpm": 107.0,
+  "hit_time_s": 13.457944,
+  "sections": [
+    [
+      "intro",
+      0.0
+    ],
+    [
+      "main",
+      5.607477
+    ]
+  ],
+  "stems": [
+    "Standard Kit",
+    "Electric Bass (finger)",
+    "Acoustic Grand Piano",
+    "Electric Guitar (clean)"
+  ],
+  "timings_total_s": 1.7377,
+  "manifest": "evidence/runs/ev3/hard_vague/music_manifest.json"
+}

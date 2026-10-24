@@ -1,0 +1,38 @@
+{
+  "job_id": "ad94af4b-96ae-4c59-ab7c-13a5caa08c23",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:40:00.632868+05:30",
+  "started_at": "2026-10-24T12:40:00.793219+05:30",
+  "finished_at": "2026-10-24T12:40:03.703760+05:30",
+  "warnings": [
+    {
+      "code": "LOOP_IGNORES_ENDING",
+      "message": "Loop mode has no final hit; the file ends on a bar line and wraps seamlessly."
+    },
+    {
+      "code": "TEMPO_ADJUSTED_FOR_LOOP",
+      "details": {
+        "applied_bpm": 128.0,
+        "requested_bpm": 125.0,
+        "within_8_percent": true
+      },
+      "message": "125 bpm cannot fill 15s with whole bars; using 128.000 bpm (8 bars)."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/ad94af4b-96ae-4c59-ab7c-13a5caa08c23/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/ad94af4b-96ae-4c59-ab7c-13a5caa08c23/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/ad94af4b-96ae-4c59-ab7c-13a5caa08c23/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/ad94af4b-96ae-4c59-ab7c-13a5caa08c23/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/ad94af4b-96ae-4c59-ab7c-13a5caa08c23/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/ad94af4b-96ae-4c59-ab7c-13a5caa08c23/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/ad94af4b-96ae-4c59-ab7c-13a5caa08c23/music_manifest.json"
+  },
+  "error": null
+}

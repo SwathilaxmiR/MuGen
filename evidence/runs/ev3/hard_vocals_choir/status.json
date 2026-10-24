@@ -1,0 +1,35 @@
+{
+  "job_id": "a79e8be1-c8cd-4c20-bccc-b9685c855e0d",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:41:13.195338+05:30",
+  "started_at": "2026-10-24T12:41:13.206776+05:30",
+  "finished_at": "2026-10-24T12:41:15.422345+05:30",
+  "warnings": [
+    {
+      "code": "VOCALS_NOT_SUPPORTED",
+      "details": {
+        "removed": [
+          "choir",
+          "singing"
+        ]
+      },
+      "message": "The engine produces instrumental music only; vocal requests were ignored."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/a79e8be1-c8cd-4c20-bccc-b9685c855e0d/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/a79e8be1-c8cd-4c20-bccc-b9685c855e0d/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/a79e8be1-c8cd-4c20-bccc-b9685c855e0d/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/a79e8be1-c8cd-4c20-bccc-b9685c855e0d/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/a79e8be1-c8cd-4c20-bccc-b9685c855e0d/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/a79e8be1-c8cd-4c20-bccc-b9685c855e0d/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/a79e8be1-c8cd-4c20-bccc-b9685c855e0d/music_manifest.json"
+  },
+  "error": null
+}

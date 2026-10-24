@@ -1,0 +1,29 @@
+{
+  "job_id": "592897de-3e27-4d2e-93fd-9dde1790d682",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:40:57.076324+05:30",
+  "started_at": "2026-10-24T12:40:57.351303+05:30",
+  "finished_at": "2026-10-24T12:40:59.824044+05:30",
+  "warnings": [
+    {
+      "code": "VAGUE_PROMPT_DEFAULTS",
+      "message": "Prompt had no recognisable mood or genre words; used the neutral 'corporate' preset at moderate energy."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/592897de-3e27-4d2e-93fd-9dde1790d682/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/592897de-3e27-4d2e-93fd-9dde1790d682/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/592897de-3e27-4d2e-93fd-9dde1790d682/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/592897de-3e27-4d2e-93fd-9dde1790d682/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/592897de-3e27-4d2e-93fd-9dde1790d682/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/592897de-3e27-4d2e-93fd-9dde1790d682/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/592897de-3e27-4d2e-93fd-9dde1790d682/music_manifest.json"
+  },
+  "error": null
+}

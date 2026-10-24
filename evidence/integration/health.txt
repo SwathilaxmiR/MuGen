@@ -1,0 +1,2 @@
+GET /health -> 200 {"status":"ok","version":"1.0.0","git_sha":"2978b42663690746cda397e61723d59efdc6c3cc"}
+GET /ready -> 200 {"status":"ready","checks":{"database":"ok","s3_bucket":"ok","soundfont":"ok","fluidsynth":"ok","ffmpeg":"ok"}}

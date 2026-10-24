@@ -1,0 +1,133 @@
+audio_case,other_prompt,clap
+core_acoustic,"Calm ambient meditation pad, peaceful and serene",0.2307
+core_acoustic,Epic cinematic orchestral score that builds to a heroic climax,0.3647
+core_acoustic,Upbeat corporate background for a tech product explainer,0.4552
+core_acoustic,Energetic EDM festival track with a big drop,0.2855
+core_acoustic,"Massive trailer battle music, epic and powerful",0.25
+core_acoustic,Smooth jazz lounge with saxophone,0.4609
+core_acoustic,Chill lo-fi beats for studying late at night,0.4364
+core_acoustic,Playful quirky cartoon music for kids,0.4543
+core_acoustic,Driving rock with guitar riffs for a sports montage,0.659
+core_acoustic,"Tense suspense thriller underscore, dark and ominous",0.2638
+core_acoustic,Happy cheerful summer celebration,0.2555
+core_ambient,Warm acoustic guitar folk for a travel vlog,0.434
+core_ambient,Epic cinematic orchestral score that builds to a heroic climax,0.4222
+core_ambient,Upbeat corporate background for a tech product explainer,0.5336
+core_ambient,Energetic EDM festival track with a big drop,0.3317
+core_ambient,"Massive trailer battle music, epic and powerful",0.2529
+core_ambient,Smooth jazz lounge with saxophone,0.3564
+core_ambient,Chill lo-fi beats for studying late at night,0.5306
+core_ambient,Playful quirky cartoon music for kids,0.4229
+core_ambient,Driving rock with guitar riffs for a sports montage,0.4259
+core_ambient,"Tense suspense thriller underscore, dark and ominous",0.3284
+core_ambient,Happy cheerful summer celebration,0.2921
+core_cinematic,Warm acoustic guitar folk for a travel vlog,0.347
+core_cinematic,"Calm ambient meditation pad, peaceful and serene",0.3553
+core_cinematic,Upbeat corporate background for a tech product explainer,0.4636
+core_cinematic,Energetic EDM festival track with a big drop,0.3615
+core_cinematic,"Massive trailer battle music, epic and powerful",0.3749
+core_cinematic,Smooth jazz lounge with saxophone,0.3341
+core_cinematic,Chill lo-fi beats for studying late at night,0.3741
+core_cinematic,Playful quirky cartoon music for kids,0.4196
+core_cinematic,Driving rock with guitar riffs for a sports montage,0.3516
+core_cinematic,"Tense suspense thriller underscore, dark and ominous",0.3902
+core_cinematic,Happy cheerful summer celebration,0.3213
+core_corporate,Warm acoustic guitar folk for a travel vlog,0.3769
+core_corporate,"Calm ambient meditation pad, peaceful and serene",0.2004
+core_corporate,Epic cinematic orchestral score that builds to a heroic climax,0.383
+core_corporate,Energetic EDM festival track with a big drop,0.3084
+core_corporate,"Massive trailer battle music, epic and powerful",0.2438
+core_corporate,Smooth jazz lounge with saxophone,0.5077
+core_corporate,Chill lo-fi beats for studying late at night,0.4339
+core_corporate,Playful quirky cartoon music for kids,0.5006
+core_corporate,Driving rock with guitar riffs for a sports montage,0.6289
+core_corporate,"Tense suspense thriller underscore, dark and ominous",0.2369
+core_corporate,Happy cheerful summer celebration,0.2509
+core_electronic,Warm acoustic guitar folk for a travel vlog,0.1476
+core_electronic,"Calm ambient meditation pad, peaceful and serene",0.093
+core_electronic,Epic cinematic orchestral score that builds to a heroic climax,0.3087
+core_electronic,Upbeat corporate background for a tech product explainer,0.5597
+core_electronic,"Massive trailer battle music, epic and powerful",0.1132
+core_electronic,Smooth jazz lounge with saxophone,0.3411
+core_electronic,Chill lo-fi beats for studying late at night,0.457
+core_electronic,Playful quirky cartoon music for kids,0.4145
+core_electronic,Driving rock with guitar riffs for a sports montage,0.4318
+core_electronic,"Tense suspense thriller underscore, dark and ominous",0.143
+core_electronic,Happy cheerful summer celebration,0.1536
+core_epic,Warm acoustic guitar folk for a travel vlog,0.2409
+core_epic,"Calm ambient meditation pad, peaceful and serene",0.2345
+core_epic,Epic cinematic orchestral score that builds to a heroic climax,0.6532
+core_epic,Upbeat corporate background for a tech product explainer,0.3975
+core_epic,Energetic EDM festival track with a big drop,0.3674
+core_epic,Smooth jazz lounge with saxophone,0.3118
+core_epic,Chill lo-fi beats for studying late at night,0.3116
+core_epic,Playful quirky cartoon music for kids,0.427
+core_epic,Driving rock with guitar riffs for a sports montage,0.4461
+core_epic,"Tense suspense thriller underscore, dark and ominous",0.3544
+core_epic,Happy cheerful summer celebration,0.2883
+core_jazz,Warm acoustic guitar folk for a travel vlog,0.3319
+core_jazz,"Calm ambient meditation pad, peaceful and serene",0.1479
+core_jazz,Epic cinematic orchestral score that builds to a heroic climax,0.2905
+core_jazz,Upbeat corporate background for a tech product explainer,0.3976
+core_jazz,Energetic EDM festival track with a big drop,0.2012
+core_jazz,"Massive trailer battle music, epic and powerful",0.13
+core_jazz,Chill lo-fi beats for studying late at night,0.3967
+core_jazz,Playful quirky cartoon music for kids,0.4447
+core_jazz,Driving rock with guitar riffs for a sports montage,0.553
+core_jazz,"Tense suspense thriller underscore, dark and ominous",0.1775
+core_jazz,Happy cheerful summer celebration,0.1732
+core_lofi,Warm acoustic guitar folk for a travel vlog,0.2623
+core_lofi,"Calm ambient meditation pad, peaceful and serene",0.1397
+core_lofi,Epic cinematic orchestral score that builds to a heroic climax,0.1683
+core_lofi,Upbeat corporate background for a tech product explainer,0.3795
+core_lofi,Energetic EDM festival track with a big drop,0.1497
+core_lofi,"Massive trailer battle music, epic and powerful",0.0726
+core_lofi,Smooth jazz lounge with saxophone,0.5596
+core_lofi,Playful quirky cartoon music for kids,0.3561
+core_lofi,Driving rock with guitar riffs for a sports montage,0.5144
+core_lofi,"Tense suspense thriller underscore, dark and ominous",0.1157
+core_lofi,Happy cheerful summer celebration,0.1141
+core_playful,Warm acoustic guitar folk for a travel vlog,0.2946
+core_playful,"Calm ambient meditation pad, peaceful and serene",0.1582
+core_playful,Epic cinematic orchestral score that builds to a heroic climax,0.3269
+core_playful,Upbeat corporate background for a tech product explainer,0.5362
+core_playful,Energetic EDM festival track with a big drop,0.2464
+core_playful,"Massive trailer battle music, epic and powerful",0.1318
+core_playful,Smooth jazz lounge with saxophone,0.4532
+core_playful,Chill lo-fi beats for studying late at night,0.4433
+core_playful,Driving rock with guitar riffs for a sports montage,0.4212
+core_playful,"Tense suspense thriller underscore, dark and ominous",0.192
+core_playful,Happy cheerful summer celebration,0.1537
+core_rock,Warm acoustic guitar folk for a travel vlog,0.2966
+core_rock,"Calm ambient meditation pad, peaceful and serene",0.0351
+core_rock,Epic cinematic orchestral score that builds to a heroic climax,0.334
+core_rock,Upbeat corporate background for a tech product explainer,0.3202
+core_rock,Energetic EDM festival track with a big drop,0.3265
+core_rock,"Massive trailer battle music, epic and powerful",0.2779
+core_rock,Smooth jazz lounge with saxophone,0.4696
+core_rock,Chill lo-fi beats for studying late at night,0.247
+core_rock,Playful quirky cartoon music for kids,0.4009
+core_rock,"Tense suspense thriller underscore, dark and ominous",0.2379
+core_rock,Happy cheerful summer celebration,0.2246
+core_tense,Warm acoustic guitar folk for a travel vlog,0.3638
+core_tense,"Calm ambient meditation pad, peaceful and serene",0.3193
+core_tense,Epic cinematic orchestral score that builds to a heroic climax,0.6686
+core_tense,Upbeat corporate background for a tech product explainer,0.4906
+core_tense,Energetic EDM festival track with a big drop,0.3375
+core_tense,"Massive trailer battle music, epic and powerful",0.3445
+core_tense,Smooth jazz lounge with saxophone,0.3609
+core_tense,Chill lo-fi beats for studying late at night,0.3904
+core_tense,Playful quirky cartoon music for kids,0.46
+core_tense,Driving rock with guitar riffs for a sports montage,0.3585
+core_tense,Happy cheerful summer celebration,0.2878
+core_upbeat,Warm acoustic guitar folk for a travel vlog,0.3389
+core_upbeat,"Calm ambient meditation pad, peaceful and serene",0.1461
+core_upbeat,Epic cinematic orchestral score that builds to a heroic climax,0.3435
+core_upbeat,Upbeat corporate background for a tech product explainer,0.4723
+core_upbeat,Energetic EDM festival track with a big drop,0.2555
+core_upbeat,"Massive trailer battle music, epic and powerful",0.1734
+core_upbeat,Smooth jazz lounge with saxophone,0.5282
+core_upbeat,Chill lo-fi beats for studying late at night,0.418
+core_upbeat,Playful quirky cartoon music for kids,0.5301
+core_upbeat,Driving rock with guitar riffs for a sports montage,0.4615
+core_upbeat,"Tense suspense thriller underscore, dark and ominous",0.2093

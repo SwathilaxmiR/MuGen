@@ -183,7 +183,7 @@ def one_piece():
 def ducking_check():
     d = out_dir("levels", "adv_ducking")
     rows = []
-    for c in cases("narration_"):
+    for c in cases("narration_") + cases("io_narration"):
         m = c["manifest"]
         f = audio_files(c)
         segs = [(s["start_s"], s["end_s"]) for s in m["ducking"]["segments"]]

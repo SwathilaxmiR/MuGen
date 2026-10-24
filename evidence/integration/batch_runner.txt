@@ -1,0 +1,31 @@
+$ /Users/Dell/Documents/swe-incu/.venv/bin/python -m musicengine.cli batch --api http://localhost:8000 --input /var/folders/pb/fv514wjd57l7lxt3fwcbnmw40000gn/T/batch_in_ci6aeyhh --out /Users/Dell/Documents/swe-incu/out/evidence_batch --run-id evidence-batch
+hard_short_5s                    succeeded  checks=ok  
+hard_vocals                      succeeded  checks=ok  
+
+2/2 cases passed all checks -> /Users/Dell/Documents/swe-incu/out/evidence_batch/summary.csv, /Users/Dell/Documents/swe-incu/out/evidence_batch/metrics.csv
+
+exit=0
+
+output tree (one folder):
+  hard_short_5s/checks.json
+  hard_short_5s/mix.wav
+  hard_short_5s/music_manifest.json
+  hard_short_5s/qa.json
+  hard_short_5s/request.json
+  hard_short_5s/status.json
+  hard_short_5s/stems/bass.wav
+  hard_short_5s/stems/drums.wav
+  hard_short_5s/stems/harmony.wav
+  hard_short_5s/stems/melody.wav
+  hard_vocals/checks.json
+  hard_vocals/mix.wav
+  hard_vocals/music_manifest.json
+  hard_vocals/qa.json
+  hard_vocals/request.json
+  hard_vocals/status.json
+  hard_vocals/stems/bass.wav
+  hard_vocals/stems/drums.wav
+  hard_vocals/stems/harmony.wav
+  hard_vocals/stems/melody.wav
+  metrics.csv
+  summary.csv

@@ -1,0 +1,3 @@
+approach,n_prompts,clap_mean,seconds_per_60s_music,usd_per_music_minute_at_assumed_machine_price,max_length_error_s,stem_sum_diff_db,max_abs_xcorr,licence
+A: symbolic + FluidSynth (this engine),5,0.508,4.9,0.000135,0.0,-116.5,0.02,owned + MIT SoundFont
+B: MusicGen-small + Demucs,5,0.454,340.8,0.009467,0.06,-34.0,0.227,MusicGen weights CC-BY-NC-4.0 (non-commercial)

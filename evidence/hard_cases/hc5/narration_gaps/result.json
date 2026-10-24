@@ -1,0 +1,31 @@
+{
+  "job_id": "7ea46a3e-f78f-4cd5-9285-2841d49ee27d",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 30.0,
+  "style": "acoustic",
+  "tempo_bpm": 102.0,
+  "hit_time_s": 28.235294,
+  "sections": [
+    [
+      "intro",
+      0.0
+    ],
+    [
+      "build",
+      8.235294
+    ],
+    [
+      "peak",
+      18.823529
+    ]
+  ],
+  "stems": [
+    "Standard Kit",
+    "Acoustic Bass",
+    "Acoustic Guitar (steel)",
+    "Flute"
+  ],
+  "timings_total_s": 3.2912,
+  "manifest": "evidence/runs/ev3/narration_gaps/music_manifest.json"
+}

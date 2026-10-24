@@ -1,0 +1,38 @@
+{
+  "job_id": "949eaacb-d350-4759-b46e-526c74e57ebe",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:41:16.139907+05:30",
+  "started_at": "2026-10-24T12:41:16.512845+05:30",
+  "finished_at": "2026-10-24T12:41:18.881671+05:30",
+  "warnings": [
+    {
+      "code": "PROMPT_TRANSLATED",
+      "details": {
+        "method": "lexicon",
+        "english": "música calm y relaxing para meditar",
+        "matched": [
+          "tranquila",
+          "relajante"
+        ],
+        "language": "es"
+      },
+      "message": "Prompt read as 'es' and mapped with the built-in lexicon."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/949eaacb-d350-4759-b46e-526c74e57ebe/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/949eaacb-d350-4759-b46e-526c74e57ebe/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/949eaacb-d350-4759-b46e-526c74e57ebe/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/949eaacb-d350-4759-b46e-526c74e57ebe/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/949eaacb-d350-4759-b46e-526c74e57ebe/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/949eaacb-d350-4759-b46e-526c74e57ebe/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/949eaacb-d350-4759-b46e-526c74e57ebe/music_manifest.json"
+  },
+  "error": null
+}

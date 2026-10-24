@@ -1,0 +1,25 @@
+{
+  "correlation_id": "evidence-io_callback",
+  "created_at": "2026-10-24T12:43:22.097191+05:30",
+  "error": null,
+  "finished_at": "2026-10-24T12:43:23.653009+05:30",
+  "job_id": "a8900873-f105-4492-a726-54f7581086d1",
+  "kind": "generate",
+  "parent_job_id": null,
+  "progress": 100,
+  "result": {
+    "manifest": "http://localhost:9000/music/jobs/a8900873-f105-4492-a726-54f7581086d1/music_manifest.json",
+    "mix_ducked": null,
+    "mix_mp3": "http://localhost:9000/music/jobs/a8900873-f105-4492-a726-54f7581086d1/mix.mp3",
+    "mix_wav": "http://localhost:9000/music/jobs/a8900873-f105-4492-a726-54f7581086d1/mix.wav",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/a8900873-f105-4492-a726-54f7581086d1/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/a8900873-f105-4492-a726-54f7581086d1/stems/drums.wav",
+      "harmony": "http://localhost:9000/music/jobs/a8900873-f105-4492-a726-54f7581086d1/stems/harmony.wav",
+      "melody": "http://localhost:9000/music/jobs/a8900873-f105-4492-a726-54f7581086d1/stems/melody.wav"
+    }
+  },
+  "started_at": "2026-10-24T12:43:22.155774+05:30",
+  "status": "succeeded",
+  "warnings": []
+}

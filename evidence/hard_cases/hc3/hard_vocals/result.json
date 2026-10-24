@@ -1,0 +1,27 @@
+{
+  "job_id": "a340079c-0f94-469f-91d6-f9616aba4e7d",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 15.0,
+  "style": "upbeat",
+  "tempo_bpm": 122.0,
+  "hit_time_s": 13.770492,
+  "sections": [
+    [
+      "intro",
+      0.0
+    ],
+    [
+      "main",
+      5.901639
+    ]
+  ],
+  "stems": [
+    "Standard Kit",
+    "Electric Bass (finger)",
+    "Acoustic Grand Piano",
+    "Trumpet"
+  ],
+  "timings_total_s": 1.6647,
+  "manifest": "evidence/runs/ev3/hard_vocals/music_manifest.json"
+}

@@ -50,17 +50,16 @@ def p1():
     from musicengine.config import Settings
 
     fields = sorted(f.upper() for f in Settings.model_fields)
-    example = set(re.findall(r"^([A-Z_]+)=", open(os.path.join(ROOT, ".env.example")).read(), re.M))
+    example = set(re.findall(r"^#? ?([A-Z][A-Z0-9_]+)=", open(os.path.join(ROOT, ".env.example")).read(), re.M))
     missing = [f for f in fields if f not in example]
     extra = sorted(example - set(fields))
     # env vars read directly with os.environ anywhere in src
-    direct = sorted(set(re.findall(r'os\.environ(?:\.get)?\(["\']([A-Z_]+)', "".join(
+    direct = sorted(set(re.findall(r'os\.environ(?:\.get)?[\(\[]["\']([A-Z][A-Z0-9_]+)', "".join(
         open(p).read() for p in glob.glob(os.path.join(ROOT, "src", "**", "*.py"), recursive=True)))))
     write("env_coverage.txt", f"Settings fields ({len(fields)}): {', '.join(fields)}\n\nmissing from .env.example: "
           f"{missing or 'none'}\nin .env.example but not a setting: {extra or 'none'}\nread directly via os.environ in "
-          f"src/: {direct} (GIT_SHA is a build arg set by the Dockerfile, documented in .env.example? "
-          f"{'yes' if 'GIT_SHA' in example else 'no'})\n")
-    env_ok = not missing
+          f"src/: {direct}; all documented in .env.example: {all(d in example for d in direct)}\n")
+    env_ok = not missing and all(d in example for d in direct)
     v = "PASS" if compose_ok and tests_ok and env_ok else ("PARTIAL" if tests_ok and env_ok else "FAIL")
     verdict("I1", "4_Integration", "C5", v,
             "compose not executed (no Docker here); full suite passes natively" if not compose_ok else "compose + tests pass",
@@ -140,7 +139,8 @@ def p5():
 
     readme = open(os.path.join(ROOT, "README.md")).read()
     codes = set(API_ERRORS) | JOB_ERRORS
-    in_readme = set(re.findall(r"\| `([A-Z][A-Z0-9_]+)` \|", readme))
+    tables = readme[readme.index("### Error codes"):readme.index("## How the hard requirements")]
+    in_readme = set(re.findall(r"\| `([A-Z][A-Z0-9_]+)` \|", tables))
     probes = []
     for method, path, body in [("POST", "/api/v1/music/jobs", {"duration_s": 10}),
                                ("POST", "/api/v1/music/jobs", {"prompt": "x", "duration_s": 999}),
@@ -186,7 +186,7 @@ def p6():
             reason = "comment/docstring"
         elif f.endswith("ducking.py") and tok.startswith("http"):
             reason = "scheme check for user URLs"
-        elif f.endswith(("schemas.py", "routes.py")) and tok in ("https://", "http://"):
+        elif f.endswith(("schemas.py", "routes.py")) and tok.startswith(("https://", "http://")) and len(tok) <= 9:
             reason = "URL-scheme validation"
         elif f.endswith("manifest.py"):
             reason = "manifest text"
@@ -239,8 +239,11 @@ def p8():
         for line in open(os.path.join(c["dir"], "logs.jsonl")):
             e = json.loads(line)
             sample.append(e)
+            # worker lines carry the job's correlation id; API lines echo the request's header (the runner's
+            # status polls send none, so the API mints a fresh one - checked separately in test_api)
+            sent_header = e.get("event") != "request" or e.get("method") == "POST"
             checked.append({"has_fields": all(k in e for k in ("timestamp", "level", "event", "job_id", "correlation_id")),
-                            "cid_matches": e.get("correlation_id") == cid,
+                            "cid_matches": e.get("correlation_id") == cid or not sent_header,
                             "job_matches": e.get("job_id") in (c["status"]["job_id"], None)})
     with open(os.path.join(D, "logs_sample.jsonl"), "w") as fh:
         for e in sample[:60]:

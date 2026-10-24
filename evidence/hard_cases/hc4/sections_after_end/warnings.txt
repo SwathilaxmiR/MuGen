@@ -1,0 +1,2 @@
+SECTION_AFTER_END_DROPPED: Section 'peak' at 25s starts at or after the music ends (final hit 17.61s); dropped.
+SECTION_SNAPPED: Section 'uplifting' moved +0.257s to the beat at 8.257s.

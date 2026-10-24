@@ -1,0 +1,6 @@
+case,applied,segments,curve_points_in_manifest,mean_depth_db,min_depth_db,max_depth_db,gaps_ge_1s,max_residual_in_gaps_db,direction_reversals,expected_reversals,no_oscillation
+narration_gaps,True,3,194,12.0,12.0,12.0,2,0.0,5,5,True
+narration_long_silences,True,3,194,12.0,12.0,12.0,2,0.0,5,5,True
+narration_no_speech,False,0,2,,,,,,,,
+narration_url_blocked,False,0,0,,,,,,,,
+io_narration_http_url,True,2,130,12.0,12.0,12.0,1,0.0,3,3,True

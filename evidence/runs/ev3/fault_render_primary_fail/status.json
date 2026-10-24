@@ -1,0 +1,61 @@
+{
+  "job_id": "998af4b4-c372-4c11-a095-e57688b9fd45",
+  "status": "succeeded",
+  "progress": 100,
+  "kind": "generate",
+  "parent_job_id": null,
+  "created_at": "2026-10-24T12:42:40.704780+05:30",
+  "started_at": "2026-10-24T12:42:40.797872+05:30",
+  "finished_at": "2026-10-24T12:42:42.171404+05:30",
+  "warnings": [
+    {
+      "code": "PROVIDER_FALLBACK_USED",
+      "details": {
+        "stem": "drums",
+        "primary": "fluidsynth",
+        "fallback": "numpy"
+      },
+      "message": "Renderer 'fluidsynth' failed for stem 'drums' (fluidsynth#2: RuntimeError: fault injected: render_primary_fail); rendered with 'numpy'."
+    },
+    {
+      "code": "PROVIDER_FALLBACK_USED",
+      "details": {
+        "stem": "bass",
+        "primary": "fluidsynth",
+        "fallback": "numpy"
+      },
+      "message": "Renderer 'fluidsynth' failed for stem 'bass' (fluidsynth#2: RuntimeError: fault injected: render_primary_fail); rendered with 'numpy'."
+    },
+    {
+      "code": "PROVIDER_FALLBACK_USED",
+      "details": {
+        "stem": "harmony",
+        "primary": "fluidsynth",
+        "fallback": "numpy"
+      },
+      "message": "Renderer 'fluidsynth' failed for stem 'harmony' (fluidsynth#2: RuntimeError: fault injected: render_primary_fail); rendered with 'numpy'."
+    },
+    {
+      "code": "PROVIDER_FALLBACK_USED",
+      "details": {
+        "stem": "melody",
+        "primary": "fluidsynth",
+        "fallback": "numpy"
+      },
+      "message": "Renderer 'fluidsynth' failed for stem 'melody' (fluidsynth#2: RuntimeError: fault injected: render_primary_fail); rendered with 'numpy'."
+    }
+  ],
+  "result": {
+    "mix_wav": "http://localhost:9000/music/jobs/998af4b4-c372-4c11-a095-e57688b9fd45/mix.wav",
+    "mix_mp3": "http://localhost:9000/music/jobs/998af4b4-c372-4c11-a095-e57688b9fd45/mix.mp3",
+    "stems": {
+      "bass": "http://localhost:9000/music/jobs/998af4b4-c372-4c11-a095-e57688b9fd45/stems/bass.wav",
+      "drums": "http://localhost:9000/music/jobs/998af4b4-c372-4c11-a095-e57688b9fd45/stems/drums.wav",
+      "melody": "http://localhost:9000/music/jobs/998af4b4-c372-4c11-a095-e57688b9fd45/stems/melody.wav",
+      "harmony": "http://localhost:9000/music/jobs/998af4b4-c372-4c11-a095-e57688b9fd45/stems/harmony.wav"
+    },
+    "mix_ducked": null,
+    "manifest": "http://localhost:9000/music/jobs/998af4b4-c372-4c11-a095-e57688b9fd45/music_manifest.json"
+  },
+  "error": null
+}

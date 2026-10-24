@@ -1,0 +1,3 @@
+case,status,checks_passed,failed_checks,http_status,error,warnings,job_id,style,duration_s,prompt
+hard_short_5s,succeeded,True,,202,,,8cc3e1c5-cb73-42fc-a8c6-a6ce2339432c,playful,5,playful quirky cartoon sting
+hard_vocals,succeeded,True,,202,,VOCALS_NOT_SUPPORTED,93cf8867-fa01-4aa4-a6a0-f167b08cf9b2,upbeat,15,upbeat pop song with a female singer and catchy lyrics

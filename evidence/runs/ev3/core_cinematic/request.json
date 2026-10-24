@@ -1,0 +1,13 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Epic cinematic orchestral score that builds to a heroic climax",
+  "duration_s": 45,
+  "seed": 100
+}

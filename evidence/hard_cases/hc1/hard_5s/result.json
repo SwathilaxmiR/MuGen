@@ -1,0 +1,23 @@
+{
+  "job_id": "33ec6374-855a-4d13-876a-9bd20d843e11",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 5.0,
+  "style": "playful",
+  "tempo_bpm": 119.0,
+  "hit_time_s": 4.033613,
+  "sections": [
+    [
+      "main",
+      0.0
+    ]
+  ],
+  "stems": [
+    "Standard Kit",
+    "Bassoon",
+    "Pizzicato Strings",
+    "Xylophone"
+  ],
+  "timings_total_s": 0.9259,
+  "manifest": "evidence/runs/ev3/hard_5s/music_manifest.json"
+}

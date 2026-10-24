@@ -1,0 +1,3 @@
+case,prompt,status,VOCALS_NOT_SUPPORTED,programs
+hard_vocals,Upbeat pop song with a female singer and catchy lyrics,succeeded,True,drums=Standard Kit bass=Electric Bass (finger) harmony=Acoustic Grand Piano melody=Trumpet
+hard_vocals_choir,Epic trailer with a huge choir singing,succeeded,True,drums=Orchestra Kit bass=Contrabass harmony=Brass Section melody=String Ensemble 1

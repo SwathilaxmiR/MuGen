@@ -1,0 +1,2 @@
+NOT_RUN: `docker` is not installed on the machine that produced this evidence (`which docker` -> not found). `make up` / `make test` have never been executed.
+Equivalent native run: scripts/dev_services.sh (postgres + minio) + uvicorn + worker; see make_test_output.txt.

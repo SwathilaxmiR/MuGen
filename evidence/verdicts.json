@@ -1,0 +1,1110 @@
+{
+  "MH1": {
+    "key": "MH1",
+    "sheet": "2_Must_haves",
+    "cell": "C6",
+    "verdict": "PASS",
+    "value": "max |error| 0 samples over 294 files; endings 58/58",
+    "note": "Every mix and stem is exactly round(D*sr) samples; final hit on a bar line, decays to < -60 dBFS. Listening of 10 endings pending (human).",
+    "evidence": [
+      "evidence/must_haves/mh1_length/report.md",
+      "tests/unit/test_timegrid.py",
+      "evidence/must_haves/mh1_length/lengths.csv"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:15:42+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    },
+    "data": {
+      "worst_samples": 0,
+      "files": 294
+    }
+  },
+  "METRIC_LENGTH": {
+    "key": "METRIC_LENGTH",
+    "sheet": "5_Metrics",
+    "cell": "C7",
+    "verdict": "PASS",
+    "value": "max |\u0394| = 0 samples (0.000000 s) across 294 files (mix, ducked mix and stems)",
+    "note": "58 runs, durations 5-300 s",
+    "evidence": [
+      "evidence/must_haves/mh1_length/lengths.csv"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:15:42+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "MH2": {
+    "key": "MH2",
+    "sheet": "2_Must_haves",
+    "cell": "C7",
+    "verdict": "PASS",
+    "value": "4 stems per run; sum-vs-mix worst -114.9 dB over 52 runs",
+    "note": "mix = \u03a3 gain\u00b7stem with manifest gains 1.0; worst difference -114.9 dB (24-bit rounding). Stems are separate renders (max xcorr 0.165).",
+    "evidence": [
+      "evidence/must_haves/mh2_stems/sum_diff.csv",
+      "evidence/must_haves/mh2_stems/stem_inventory.csv",
+      "evidence/must_haves/mh2_stems/source_check.md"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:14:12+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "METRIC_STEMS": {
+    "key": "METRIC_STEMS",
+    "sheet": "5_Metrics",
+    "cell": "C9",
+    "verdict": "PASS",
+    "value": "sum-vs-mix worst -114.9 dB; max |xcorr| between stems 0.165; shared-content index (mean dB) drums -13.2, bass -10.8, harmony -10.2, melody -13.6",
+    "note": "52 runs. The shared-content index measures shared key/rhythm, not leakage (see eval/bleed.md).",
+    "evidence": [
+      "evidence/metrics/stem_quality.csv"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:14:12+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "MH3": {
+    "key": "MH3",
+    "sheet": "2_Must_haves",
+    "cell": "C8",
+    "verdict": "PASS",
+    "value": "0 vocal GM programs in 232 stems; 2 vocal prompts stayed instrumental",
+    "note": "GM voice/choir programs 52-54, 85, 91 cannot be loaded (preset validation). Listening check of all outputs is HUMAN.",
+    "evidence": [
+      "evidence/must_haves/mh3_instrumental/programs_used.csv",
+      "evidence/must_haves/mh3_instrumental/vocal_prompt_cases.csv",
+      "tests/unit/test_interpreter.py"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:14:12+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "MH4": {
+    "key": "MH4",
+    "sheet": "2_Must_haves",
+    "cell": "C9",
+    "verdict": "PASS",
+    "value": "17 components with licence URL + quoted clause; no AGPL/NC in the generation path",
+    "note": "MinIO (AGPL-3.0) is the compose/demo object store only; swap via S3_* env. FFmpeg (GPL) and FluidSynth (LGPL) run as unmodified subprocesses. Named-work prompts are stripped (NAMED_WORK_IGNORED).",
+    "evidence": [
+      "SOURCES.md",
+      "licenses.yaml",
+      "evidence/must_haves/mh4_licences/agpl_scan.txt"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:15:42+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "MH5": {
+    "key": "MH5",
+    "sheet": "2_Must_haves",
+    "cell": "C10",
+    "verdict": "PASS",
+    "value": "58 mixes: 48 kHz 24-bit WAV; ffmpeg LUFS -16.5..-16.0 (target -16); TP worst -1.1 dBTP; 0 clicks/gaps/clipped",
+    "note": "Independent ffmpeg ebur128 and our meter agree within 0.08 LU; decoded mp3 TP worst -1.08 dBTP. Listening at section changes (84 clips) is HUMAN.",
+    "evidence": [
+      "evidence/must_haves/mh5_audio/loudness_table.csv",
+      "evidence/must_haves/mh5_audio/truepeak_table.csv",
+      "evidence/must_haves/mh5_audio/click_gap_report.csv"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:14:59+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "METRIC_LOUDNESS": {
+    "key": "METRIC_LOUDNESS",
+    "sheet": "5_Metrics",
+    "cell": "C8",
+    "verdict": "PASS",
+    "value": "LUFS -16.5..-16.0 (target -16, ffmpeg ebur128) and max true peak -1.1 dBTP over 58 mixes",
+    "note": "meters agree within 0.08 LU",
+    "evidence": [
+      "evidence/metrics/loudness_table.csv"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:14:59+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "L_CORE_PROMPTS": {
+    "key": "L_CORE_PROMPTS",
+    "sheet": "3_Levels",
+    "cell": "C6",
+    "verdict": "PENDING_HUMAN",
+    "value": "12 prompts -> 12 distinct presets, all QA PASS",
+    "note": "automated part passes; needs human 'matches' ratings on >= 10 prompts in listening/log.csv",
+    "evidence": [
+      "evidence/levels/core_prompts/preset_distinct.csv",
+      "evidence/levels/core_prompts"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:15:50+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "L_DURATIONS": {
+    "key": "L_DURATIONS",
+    "sheet": "3_Levels",
+    "cell": "C7",
+    "verdict": "PASS",
+    "value": "5, 6, 10, 30, 60, 120, 180, 300 s all QA PASS",
+    "note": "plus 5, 6 and 300 s hard cases",
+    "evidence": [
+      "evidence/levels/core_durations/matrix.csv"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:15:50+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "L_SECTIONS": {
+    "key": "L_SECTIONS",
+    "sheet": "3_Levels",
+    "cell": "C8",
+    "verdict": "PASS",
+    "value": "72/72 section changes aligned in 48/48 runs",
+    "note": "every applied start is a manifest beat; 8 user-requested starts all within 0.5 s (max |snap| 0.257 s)",
+    "evidence": [
+      "evidence/levels/adv_sections/alignment.csv",
+      "evidence/levels/adv_sections/plots"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:15:53+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "L_ONE_PIECE": {
+    "key": "L_ONE_PIECE",
+    "sheet": "3_Levels",
+    "cell": "C9",
+    "verdict": "PASS",
+    "value": "one tempo + key per manifest; drum onsets vs manifest downbeats: worst median 18.8 ms over 47 runs (limit 20 ms)",
+    "note": "All four stems are rendered from one plan (one tempo map). Onsets measured with 10 ms-hop spectral flux, so ~10 ms is the measurement resolution.",
+    "evidence": [
+      "evidence/levels/adv_one_piece/grid_check.csv"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:15:58+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "L_DUCKING": {
+    "key": "L_DUCKING",
+    "sheet": "3_Levels",
+    "cell": "C10",
+    "verdict": "PASS",
+    "value": "3 narrations with speech pass (mean depth 12.0 dB, 12.0 dB, 12.0 dB); 2 no-speech case(s) flat",
+    "note": "Rule needs >= 3 narrations with speech",
+    "evidence": [
+      "evidence/levels/adv_ducking/depth.csv",
+      "evidence/levels/adv_ducking/curve_narration_gaps.png"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:10+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "L_REGEN": {
+    "key": "L_REGEN",
+    "sheet": "3_Levels",
+    "cell": "C11",
+    "verdict": "PASS",
+    "value": "2 regenerations (drums, melody): other stems SHA-256 identical, new mixes pass QA",
+    "note": "",
+    "evidence": [
+      "evidence/levels/adv_regen/hash_compare.txt"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:15:58+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "L_LOOP": {
+    "key": "L_LOOP",
+    "sheet": "3_Levels",
+    "cell": "C12",
+    "verdict": "PASS",
+    "value": "3/3 loops: no click at the joint, grid phase error <= 0.0000 ms",
+    "note": "Loop = N whole bars exactly; rendered twice, second pass kept, so tails wrap.",
+    "evidence": [
+      "evidence/levels/adv_loop/seam.csv",
+      "evidence/levels/adv_loop/seam_plot.png"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:00+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "HC1": {
+    "key": "HC1",
+    "sheet": "6_Hard_cases",
+    "cell": "C5",
+    "verdict": "PASS",
+    "value": "Yes",
+    "note": "5-6 s: one section, 1-2 bars with the final hit on a bar line (hit 4.033613 s in a 5 s track), exact length. 300 s: same path, default intro/build/peak arc, generated in 22.3853 s.",
+    "evidence": [
+      "evidence/hard_cases/hc1"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:19+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    },
+    "data": {
+      "cell_D": true
+    }
+  },
+  "HC2": {
+    "key": "HC2",
+    "sheet": "6_Hard_cases",
+    "cell": "C6",
+    "verdict": "PASS",
+    "value": "Yes",
+    "note": "Vague ('music'): neutral corporate preset at moderate energy, VAGUE_PROMPT_DEFAULTS. Contradictory ('calm but aggressive'): mid energy, minor mode, slow-to-mid tempo, percussive 'tense' preset, CONTRADICTORY_PROMPT stating the resolution.",
+    "evidence": [
+      "evidence/hard_cases/hc2"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:19+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "HC3": {
+    "key": "HC3",
+    "sheet": "6_Hard_cases",
+    "cell": "C7",
+    "verdict": "PASS",
+    "value": "Yes",
+    "note": "Song/artist references ('like Interstellar by Hans Zimmer', quoted titles, 'cover of') are removed before planning and only generic mood words are used (NAMED_WORK_IGNORED); vocal requests are stripped and the output stays instrumental with no voice programs (VOCALS_NOT_SUPPORTED). No song data is used.",
+    "evidence": [
+      "evidence/hard_cases/hc3"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:20+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "HC4": {
+    "key": "HC4",
+    "sheet": "6_Hard_cases",
+    "cell": "C8",
+    "verdict": "PASS",
+    "value": "Yes",
+    "note": "After snapping to the beat, sections < 1.5 s apart are merged (earlier start, higher intensity, SECTIONS_MERGED_MIN_GAP); a section starting at or after one beat before the final hit is dropped (SECTION_AFTER_END_DROPPED).",
+    "evidence": [
+      "evidence/hard_cases/hc4"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:20+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "HC5": {
+    "key": "HC5",
+    "sheet": "6_Hard_cases",
+    "cell": "C9",
+    "verdict": "PASS",
+    "value": "Yes",
+    "note": "Speech is detected with an energy VAD; in silences of 1 s or more the music returns to full level (500 ms release, curve in the manifest); gaps < 0.6 s are bridged so it does not pump. With no speech at all mix_ducked.wav equals the mix and NARRATION_NO_SPEECH is returned.",
+    "evidence": [
+      "evidence/hard_cases/hc5",
+      "evidence/levels/adv_ducking/depth.csv"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:20+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "HC6": {
+    "key": "HC6",
+    "sheet": "6_Hard_cases",
+    "cell": "C10",
+    "verdict": "PASS",
+    "value": "Yes",
+    "note": "Language is detected (script ranges + langdetect: {'hard_spanish': 'es', 'hard_hindi': 'hi', 'hard_tamil': 'ta', 'hard_unknown_language': 'ru'}); es/fr/de/pt/hi/ta/ja/zh mood and genre words are mapped with a built-in lexicon (PROMPT_TRANSLATED); an unknown language falls back to neutral defaults (PROMPT_LANGUAGE_FALLBACK).",
+    "evidence": [
+      "evidence/hard_cases/hc6"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:20+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "HC7": {
+    "key": "HC7",
+    "sheet": "6_Hard_cases",
+    "cell": "C11",
+    "verdict": "PASS",
+    "value": "Yes",
+    "note": "4 jobs sent at the same moment are claimed independently (FOR UPDATE SKIP LOCKED) and all complete; the same request with the same Idempotency-Key (twice in a row and twice in parallel) returns the same job_id and the work runs once; a different body with that key gets 409 IDEMPOTENCY_KEY_REUSED.",
+    "evidence": [
+      "evidence/hard_cases/hc7"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:20+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "HC8": {
+    "key": "HC8",
+    "sheet": "6_Hard_cases",
+    "cell": "C12",
+    "verdict": "PASS",
+    "value": "Yes",
+    "note": "Renderer error or timeout: the stem is retried once, then rendered by the built-in numpy synth (PROVIDER_FALLBACK_USED, job succeeds); if every renderer fails the job fails RENDER_FAILED (retryable). A worker killed mid-job: heartbeat goes stale, the job is re-queued and completes (attempts 2).",
+    "evidence": [
+      "evidence/hard_cases/hc8"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:20+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "I2": {
+    "key": "I2",
+    "sheet": "4_Integration",
+    "cell": "C6",
+    "verdict": "PASS",
+    "value": "OpenAPI 3.1.0; committed file == running service: True",
+    "note": "All routes under /api/v1/ except /health and /ready (also aliased under /api/v1).",
+    "evidence": [
+      "openapi.yaml",
+      "evidence/integration/openapi_diff.txt"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:20+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "I3": {
+    "key": "I3",
+    "sheet": "4_Integration",
+    "cell": "C7",
+    "verdict": "PASS",
+    "value": "202 + job_id; statuses ['failed', 'queued', 'running', 'succeeded']; progress 0-100; signed callback verified",
+    "note": "Every request is a job (even 5 s ones).",
+    "evidence": [
+      "evidence/integration/jobs_flow.txt",
+      "evidence/runs/ev3/io_callback"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:20+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "I4": {
+    "key": "I4",
+    "sheet": "4_Integration",
+    "cell": "C8",
+    "verdict": "PASS",
+    "value": "same key+body (sequential and parallel) -> same job_id, worked once; different body -> 409",
+    "note": "Idempotency-Key accepted on every POST (jobs, regenerate). DB/S3 counts in idempotency.txt.",
+    "evidence": [
+      "evidence/integration/idempotency.txt"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:21+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "I5": {
+    "key": "I5",
+    "sheet": "4_Integration",
+    "cell": "C9",
+    "verdict": "PASS",
+    "value": "16 error + 19 warning codes, all in README; JSON shape on every probe",
+    "note": "",
+    "evidence": [
+      "evidence/integration/errors_catalog.txt",
+      "README.md"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:20:51+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "I6": {
+    "key": "I6",
+    "sheet": "4_Integration",
+    "cell": "C10",
+    "verdict": "PASS",
+    "value": "8 literal hits, 0 unexplained; every setting via env (config.py)",
+    "note": "",
+    "evidence": [
+      "evidence/integration/config_scan.txt",
+      "src/musicengine/config.py",
+      ".env.example"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:20:51+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "I7": {
+    "key": "I7",
+    "sheet": "4_Integration",
+    "cell": "C11",
+    "verdict": "PASS",
+    "value": "narration by upload:// and by http(s) URL both work; outputs in S3 (MinIO) as presigned links",
+    "note": "URL fetch is SSRF-guarded; the local-URL test ran with ALLOW_PRIVATE_URLS=true.",
+    "evidence": [
+      "evidence/integration/files_io.txt"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:21+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "I8": {
+    "key": "I8",
+    "sheet": "4_Integration",
+    "cell": "C12",
+    "verdict": "PASS",
+    "value": "90 JSON log lines: timestamp, level, event, job_id, correlation_id == request header; /health 200, /ready 200",
+    "note": "",
+    "evidence": [
+      "evidence/integration/logs_sample.jsonl",
+      "evidence/integration/health.txt"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:20:51+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "I9": {
+    "key": "I9",
+    "sheet": "4_Integration",
+    "cell": "C13",
+    "verdict": "PASS",
+    "value": "58 manifests validate; providers+versions, settings, seed, timings, cost, warnings, licences present",
+    "note": "",
+    "evidence": [
+      "evidence/integration/manifest_schema_check.txt",
+      "src/musicengine/manifest.py"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:22+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "I10": {
+    "key": "I10",
+    "sheet": "4_Integration",
+    "cell": "C14",
+    "verdict": "PASS",
+    "value": "python -m musicengine.cli batch --api URL --input <folder> --out <folder>: all results in one folder",
+    "note": "Also used for every evidence and test-pack run.",
+    "evidence": [
+      "evidence/integration/batch_runner.txt",
+      "src/musicengine/cli.py"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:16:26+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "I1": {
+    "key": "I1",
+    "sheet": "4_Integration",
+    "cell": "C5",
+    "verdict": "PARTIAL",
+    "value": "compose not executed (no Docker here); full suite passes natively",
+    "note": "Every setting is in .env.example. One test command, no API keys.",
+    "evidence": [
+      "evidence/integration/compose_up.txt",
+      "evidence/integration/make_test_output.txt",
+      ".env.example"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:04+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "METRIC_SPEED": {
+    "key": "METRIC_SPEED",
+    "sheet": "5_Metrics",
+    "cell": "C5",
+    "verdict": "PASS",
+    "value": "cold 5.4 s / warm 5.4 s per 60 s of music (median of 5 warm runs)",
+    "note": "Mac17,3 (Apple M5, 10 cores, 16.0 GB RAM), CPU only, FluidSynth renderer; cold = first job after a worker restart; WORKER_CONCURRENCY=2; no cold start beyond process spawn because no model is loaded",
+    "evidence": [
+      "evidence/metrics/speed.csv",
+      "evidence/metrics/hardware.json"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:22:30+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "METRIC_COST": {
+    "key": "METRIC_COST",
+    "sheet": "5_Metrics",
+    "cell": "C6",
+    "verdict": "PASS",
+    "value": "$0.000062 per minute of music (compute only; API fees $0)",
+    "note": "median 4.596 CPU-s per 60 s job x $1.34e-05/CPU-s (assumed $0.048 per vCPU-hour); by throughput: $5.3e-05/min at an assumed $0.1/h machine",
+    "evidence": [
+      "evidence/metrics/costs.json"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:22:31+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "L_PRODUCTION": {
+    "key": "L_PRODUCTION",
+    "sheet": "3_Levels",
+    "cell": "C15",
+    "verdict": "PASS",
+    "value": "60 s of music in 5.4 s warm / 5.4 s cold; $0.000062/min compute; best 1876 music-min/h at WORKER_CONCURRENCY=4",
+    "note": "load test 8 x 60 s at concurrency 1/2/4 on Mac17,3: p50 latency c1 20.67 s, c2 13.68 s, c4 11.13 s; peak RSS per job 662.7 MB, 664.1 MB, 664.7 MB",
+    "evidence": [
+      "evidence/metrics/speed.csv",
+      "evidence/metrics/load.csv",
+      "evidence/metrics/costs.json"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:22:31+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "L_MEASURED_QUALITY": {
+    "key": "L_MEASURED_QUALITY",
+    "sheet": "3_Levels",
+    "cell": "C13",
+    "verdict": "PENDING_HUMAN",
+    "value": "CLAP (laion/clap-htsat-unfused) matched 0.472 vs mismatched 0.338 over 12 prompts; bleed/xcorr per stem in bleed.csv; blind test: NOT RUN",
+    "note": "Blind A/B test with >= 5 listeners is a human task (eval/listening_test.md); until it is done this stays empty.",
+    "evidence": [
+      "evidence/eval/clap.csv",
+      "evidence/eval/bleed.csv",
+      "eval/listening_test.md"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:22:45+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "L_TWO_APPROACHES": {
+    "key": "L_TWO_APPROACHES",
+    "sheet": "3_Levels",
+    "cell": "C14",
+    "verdict": "PASS",
+    "value": "A vs B on 5 prompts: CLAP 0.508 vs 0.454; 4.9 vs 340.8 s per 60 s; $0.000135 vs $0.009467/min; recommend A",
+    "note": "Small sample (n=5, one seed); B on CPU. Cost uses one assumed machine price for both.",
+    "evidence": [
+      "evidence/eval/approach_comparison.md",
+      "evidence/eval/approach_comparison.csv",
+      "REPORT.md"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:22:45+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "METRIC_PROMPT_MATCH": {
+    "key": "METRIC_PROMPT_MATCH",
+    "sheet": "5_Metrics",
+    "cell": "C10",
+    "verdict": "PARTIAL",
+    "value": "CLAP 0.472 \u00b1 0.150 (mismatched control 0.338, matched higher in 9/12); listening test: not run yet",
+    "note": "12 core prompts at 45 s, laion/clap-htsat-unfused (Apache-2.0), CPU",
+    "evidence": [
+      "evidence/eval/clap.csv",
+      "evidence/eval/control_clap.csv"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:22:45+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "MH6": {
+    "key": "MH6",
+    "sheet": "2_Must_haves",
+    "cell": "C11",
+    "verdict": "FAIL",
+    "value": "integration 9/10 PASS; demo not deployed",
+    "note": "No public demo is deployed yet, and docker compose has not been run (Integration 1 is Partial).",
+    "evidence": [
+      "evidence/baseline.json",
+      "evidence/integration"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:09+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "L_ALL_MUST_HAVES": {
+    "key": "L_ALL_MUST_HAVES",
+    "sheet": "3_Levels",
+    "cell": "C5",
+    "verdict": "FAIL",
+    "value": "must-haves: {'MH1': 'PASS', 'MH2': 'PASS', 'MH3': 'PASS', 'MH4': 'PASS', 'MH5': 'PASS', 'MH6': 'FAIL'}",
+    "note": "Needs every must-have PASS and the human listening checks logged.",
+    "evidence": [
+      "evidence/verdicts.json"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:09+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "D_DEMO_URL": {
+    "key": "D_DEMO_URL",
+    "sheet": "1_Your_Details",
+    "cell": "B9",
+    "verdict": "HUMAN",
+    "value": "",
+    "note": "Deploy, then set demo_url in evidence/form_inputs.yaml",
+    "evidence": [
+      "evidence/baseline.json"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:09+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "D_TOKEN": {
+    "key": "D_TOKEN",
+    "sheet": "1_Your_Details",
+    "cell": "B10",
+    "verdict": "HUMAN",
+    "value": "",
+    "note": "Token goes in the form only (form_inputs.yaml is git-ignored)",
+    "evidence": [],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:09+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "D_COLD_START": {
+    "key": "D_COLD_START",
+    "sheet": "1_Your_Details",
+    "cell": "B11",
+    "verdict": "HUMAN",
+    "value": "none (always-on); first job after a worker restart: cold 5.4 s / warm 5.4 s per 60 s of music (median of 5 warm runs)",
+    "note": "Fill once the demo is deployed and always-on",
+    "evidence": [
+      "evidence/metrics/speed.csv"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:09+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "D_REPO": {
+    "key": "D_REPO",
+    "sheet": "1_Your_Details",
+    "cell": "B12",
+    "verdict": "HUMAN",
+    "value": "",
+    "note": "Set repo_url in form_inputs.yaml (private repo, reviewer invited)",
+    "evidence": [],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:09+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "D_REPORT": {
+    "key": "D_REPORT",
+    "sheet": "1_Your_Details",
+    "cell": "B14",
+    "verdict": "HUMAN",
+    "value": "REPORT.md",
+    "note": "",
+    "evidence": [
+      "REPORT.md"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:09+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "D_COMPUTE": {
+    "key": "D_COMPUTE",
+    "sheet": "1_Your_Details",
+    "cell": "B15",
+    "verdict": "PASS",
+    "value": "Laptop: Mac17,3 (Apple M5, 10 cores, 16.0 GB RAM, macOS-26.5.2-arm64-arm-64bit); GPU: none",
+    "note": "All measured runs on this machine; services run natively (no Docker)",
+    "evidence": [
+      "evidence/metrics/hardware.json"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:09+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "D_PAID": {
+    "key": "D_PAID",
+    "sheet": "1_Your_Details",
+    "cell": "B16",
+    "verdict": "HUMAN",
+    "value": "Runtime: none, $0 (none (no paid API, cloud or GPU used to produce or measure outputs)). Development: AI coding assistant subscription (your cost)",
+    "note": "Confirm the development-tool cost yourself",
+    "evidence": [
+      "evidence/metrics/costs.json"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:09+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "D_AI_TOOLS": {
+    "key": "D_AI_TOOLS",
+    "sheet": "1_Your_Details",
+    "cell": "B17",
+    "verdict": "HUMAN",
+    "value": "Claude Code (Anthropic, Claude Opus 5.5) wrote code, tests and docs from my plan; details in AI_USE.md",
+    "note": "Confirm wording (AI_USE.md)",
+    "evidence": [
+      "AI_USE.md"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:09+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "SECRETS": {
+    "key": "SECRETS",
+    "sheet": "7_Declaration",
+    "cell": "support",
+    "verdict": "PASS",
+    "value": "secret scan",
+    "note": "supports declaration item 'No API keys or secrets...'",
+    "evidence": [
+      "evidence/security/secret_scan.txt"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:28:09+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  },
+  "CONSISTENCY": {
+    "key": "CONSISTENCY",
+    "sheet": "meta",
+    "cell": "consistency",
+    "verdict": "FAIL",
+    "value": "19/19 quoted numbers match their sources; 1 missing paths",
+    "note": "; REPORT.md: evidence/INDEX.md",
+    "evidence": [
+      "evidence/consistency.txt"
+    ],
+    "git_sha": "2978b42663690746cda397e61723d59efdc6c3cc",
+    "run_id": "ev3",
+    "timestamp": "2026-10-24T07:24:14+00:00",
+    "tools": {
+      "python": "3.12.13",
+      "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "numpy": "2.5.4",
+      "soundfile": "0.14.0",
+      "platform": "macOS-26.5.2-arm64-arm-64bit"
+    }
+  }
+}

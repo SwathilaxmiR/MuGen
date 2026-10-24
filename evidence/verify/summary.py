@@ -48,11 +48,18 @@ def secret_scan():
              "evidence/must_haves/mh4_licences/texts/": "licence text"}
     for f in findings:
         f["classified"] = next((v for k, v in known.items() if f["file"].startswith(k)), "REVIEW")
+        if f["type"] == "Hex High Entropy String" and f["file"].startswith(("evidence/runs/", "evidence/hard_cases/")):
+            f["classified"] = "SHA-256 file hash / git commit id (evidence integrity data, not a secret)"
+        elif f["type"] == "Basic Auth Credentials" and f["file"] in ("README.md", "deploy/docker-compose.deploy.yml"):
+            f["classified"] = ("documented local-dev DATABASE_URL music:music (postgres is not exposed; change it for a "
+                               "real deployment)")
     # extra: presigned signatures / access keys / provider keys anywhere in tracked files
     tracked = subprocess.run(["git", "ls-files"], capture_output=True, text=True, cwd=ROOT).stdout.split()
     pat = re.compile(r"X-Amz-Signature=|X-Amz-Credential=|sk-ant-[A-Za-z0-9]|AKIA[0-9A-Z]{16}|BEGIN (RSA|OPENSSH) PRIVATE KEY")
     extra = []
     for f in tracked:
+        if f == "evidence/verify/summary.py":  # holds the pattern itself
+            continue
         full = os.path.join(ROOT, f)
         if not os.path.isfile(full) or os.path.getsize(full) > 5_000_000:
             continue
@@ -63,8 +70,12 @@ def secret_scan():
         except Exception:  # noqa: BLE001
             pass
     review = [f for f in findings if f["classified"] == "REVIEW"]
+    from collections import Counter
+
+    summary = Counter(f["classified"] for f in findings)
     txt = (f"detect-secrets {subprocess.run([os.path.join(ROOT, '.venv', 'bin', 'detect-secrets'), '--version'], capture_output=True, text=True).stdout.strip()} "
-           f"scan of git-tracked files at {git_sha()}\n\nfindings: {len(findings)}\n"
+           f"scan of git-tracked files at {git_sha()}\n\nfindings: {len(findings)}\nby class:\n"
+           + "\n".join(f"  {n:4d}  {k}" for k, n in summary.most_common()) + "\n\nall findings:\n"
            + "\n".join(f"  {f['file']}:{f['line']} {f['type']}  -> {f['classified']}" for f in findings)
            + f"\n\nregex scan (presigned signatures, AWS keys, Anthropic keys, private keys): {extra or 'none'}\n"
            f"needs review: {len(review)}\n(gitleaks/trufflehog not installed here; detect-secrets used instead)\n")

@@ -1,0 +1,1 @@
+tests/unit/test_sections.py::test_merge_min_gap_keeps_earlier_start_and_higher_intensity, test_section_after_end_dropped

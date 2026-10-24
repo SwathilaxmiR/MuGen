@@ -1,0 +1,13 @@
+POST /api/v1/music/jobs -> HTTP 202 for all 57 submissions: True
+statuses observed in polling transcripts: ['failed', 'queued', 'running', 'succeeded']
+progress range observed: 0..100
+example status (succeeded) has links: ['manifest', 'mix_ducked', 'mix_mp3', 'mix_wav', 'stems']
+callback received: True; signature valid: True; wrong secret rejected: True
+{
+  "job_id": "a8900873-f105-4492-a726-54f7581086d1",
+  "received_job_id": "a8900873-f105-4492-a726-54f7581086d1",
+  "status": "succeeded",
+  "signature_header": "sha256=5d40d4cff8c2d...",
+  "signature_valid": true,
+  "wrong_secret_rejected": true
+}

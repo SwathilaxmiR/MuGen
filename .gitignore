@@ -11,3 +11,6 @@ eval/.cache/
 eval/.venv/
 web/node_modules/
 web/dist/
+evidence/form_inputs.yaml
+Assessment1_*.xlsx
+audio-pack.zip

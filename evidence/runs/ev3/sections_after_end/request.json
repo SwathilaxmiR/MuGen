@@ -1,0 +1,27 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Corporate inspiring",
+  "duration_s": 20,
+  "seed": 303,
+  "sections": [
+    {
+      "start_s": 0,
+      "mood": "calm"
+    },
+    {
+      "start_s": 8,
+      "mood": "uplifting"
+    },
+    {
+      "start_s": 25,
+      "mood": "peak"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+tests/unit/test_renderer.py::test_primary_failure_falls_back_with_warning, test_timeout_retries_then_falls_back, test_all_renderers_fail_is_render_failed; tests/integration/test_worker.py::test_killed_worker_job_is_requeued_and_completes

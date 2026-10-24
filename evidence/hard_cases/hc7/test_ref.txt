@@ -1,0 +1,1 @@
+tests/integration/test_api.py::test_idempotency_parallel_identical_requests_make_one_job; tests/integration/test_worker.py::test_two_jobs_claimed_independently; tests/e2e/test_e2e.py::test_concurrent_jobs

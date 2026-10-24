@@ -1,0 +1,31 @@
+{
+  "job_id": "461e1355-c86e-4948-8b74-ef373abe2bf3",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 300.0,
+  "style": "ambient",
+  "tempo_bpm": 83.0,
+  "hit_time_s": 297.831325,
+  "sections": [
+    [
+      "intro",
+      0.0
+    ],
+    [
+      "build",
+      104.096386
+    ],
+    [
+      "peak",
+      208.192771
+    ]
+  ],
+  "stems": [
+    "Standard Kit",
+    "Pad 2 (warm)",
+    "Pad 1 (new age)",
+    "Music Box"
+  ],
+  "timings_total_s": 22.3853,
+  "manifest": "evidence/runs/ev3/hard_300s/music_manifest.json"
+}

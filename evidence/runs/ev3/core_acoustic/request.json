@@ -1,0 +1,13 @@
+{
+  "output": {
+    "sample_rate": 48000,
+    "target_lufs": -16,
+    "formats": [
+      "wav",
+      "mp3"
+    ]
+  },
+  "prompt": "Warm acoustic guitar folk for a travel vlog",
+  "duration_s": 45,
+  "seed": 104
+}

@@ -1,0 +1,27 @@
+{
+  "job_id": "a79e8be1-c8cd-4c20-bccc-b9685c855e0d",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 15.0,
+  "style": "epic",
+  "tempo_bpm": 93.0,
+  "hit_time_s": 12.903226,
+  "sections": [
+    [
+      "intro",
+      0.0
+    ],
+    [
+      "main",
+      5.16129
+    ]
+  ],
+  "stems": [
+    "Orchestra Kit",
+    "Contrabass",
+    "Brass Section",
+    "String Ensemble 1"
+  ],
+  "timings_total_s": 1.6726,
+  "manifest": "evidence/runs/ev3/hard_vocals_choir/music_manifest.json"
+}

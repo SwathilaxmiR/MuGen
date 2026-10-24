@@ -1,0 +1,1 @@
+PROMPT_TRANSLATED: Prompt read as 'ta' and mapped with the built-in lexicon.

@@ -1,0 +1,1 @@
+PROMPT_LANGUAGE_FALLBACK: Prompt language 'ru' was not understood; used neutral defaults (corporate).

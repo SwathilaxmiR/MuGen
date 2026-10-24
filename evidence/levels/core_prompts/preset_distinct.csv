@@ -1,0 +1,13 @@
+case,prompt,preset,tempo_bpm,key,instrumentation,qa_passed,warnings
+core_acoustic,Warm acoustic guitar folk for a travel vlog,acoustic,101.0,G major,drums=Standard Kit; bass=Acoustic Bass; harmony=Acoustic Guitar (steel); melody=Flute,True,
+core_ambient,"Calm ambient meditation pad, peaceful and serene",ambient,84.0,C major,drums=Standard Kit; bass=Pad 2 (warm); harmony=Pad 1 (new age); melody=Music Box,True,
+core_cinematic,Epic cinematic orchestral score that builds to a heroic climax,cinematic,90.0,F# minor,drums=Orchestra Kit; bass=Contrabass; harmony=String Ensemble 1; melody=French Horn,True,
+core_corporate,Upbeat corporate background for a tech product explainer,corporate,112.0,F major,drums=Standard Kit; bass=Electric Bass (finger); harmony=Acoustic Grand Piano; melody=Electric Guitar (clean),True,
+core_electronic,Energetic EDM festival track with a big drop,electronic,125.0,D minor,drums=TR-808 Kit; bass=Synth Bass 1; harmony=Pad 2 (warm); melody=Lead 2 (sawtooth),True,
+core_epic,"Massive trailer battle music, epic and powerful",epic,94.0,A minor,drums=Orchestra Kit; bass=Contrabass; harmony=Brass Section; melody=String Ensemble 1,True,
+core_jazz,Smooth jazz lounge with saxophone,jazz,100.0,G major,drums=Jazz Kit; bass=Acoustic Bass; harmony=Electric Piano 1; melody=Alto Sax,True,
+core_lofi,Chill lo-fi beats for studying late at night,lofi,83.0,Eb major,drums=Room Kit; bass=Electric Bass (finger); harmony=Electric Piano 1; melody=Vibraphone,True,
+core_playful,Playful quirky cartoon music for kids,playful,118.0,F major,drums=Standard Kit; bass=Bassoon; harmony=Pizzicato Strings; melody=Xylophone,True,
+core_rock,Driving rock with guitar riffs for a sports montage,rock,131.0,D minor,drums=Power Kit; bass=Electric Bass (pick); harmony=Overdriven Guitar; melody=Distortion Guitar,True,
+core_tense,"Tense suspense thriller underscore, dark and ominous",tense,90.0,B minor,drums=Orchestra Kit; bass=Contrabass; harmony=Tremolo Strings; melody=Pizzicato Strings,True,
+core_upbeat,Happy cheerful summer celebration,upbeat,120.0,F major,drums=Standard Kit; bass=Electric Bass (finger); harmony=Acoustic Grand Piano; melody=Trumpet,True,

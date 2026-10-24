@@ -1,0 +1,1 @@
+tests/unit/test_interpreter.py::test_named_song_stripped, test_vocals_stripped_and_warned; tests/unit/test_composer.py::test_forbidden_programs_never_used

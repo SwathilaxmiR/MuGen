@@ -1,0 +1,27 @@
+{
+  "job_id": "1716ac30-82ed-4a86-a7ac-acf9efd502cb",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 15.0,
+  "style": "ambient",
+  "tempo_bpm": 85.0,
+  "hit_time_s": 14.117647,
+  "sections": [
+    [
+      "intro",
+      0.0
+    ],
+    [
+      "main",
+      5.647059
+    ]
+  ],
+  "stems": [
+    "Standard Kit",
+    "Pad 2 (warm)",
+    "Pad 1 (new age)",
+    "Music Box"
+  ],
+  "timings_total_s": 1.9025,
+  "manifest": "evidence/runs/ev3/narration_no_speech/music_manifest.json"
+}

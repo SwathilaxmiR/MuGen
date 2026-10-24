@@ -1,0 +1,27 @@
+{
+  "job_id": "b2e4f1c4-f907-45bc-995a-488f47a80990",
+  "status": "succeeded",
+  "error": null,
+  "duration_s": 30.0,
+  "style": "cinematic",
+  "tempo_bpm": 91.0,
+  "hit_time_s": 29.010989,
+  "sections": [
+    [
+      "calm",
+      0.0
+    ],
+    [
+      "build+peak",
+      9.89011
+    ]
+  ],
+  "stems": [
+    "Orchestra Kit",
+    "Contrabass",
+    "String Ensemble 1",
+    "French Horn"
+  ],
+  "timings_total_s": 2.7681,
+  "manifest": "evidence/runs/ev3/sections_close/music_manifest.json"
+}
