@@ -170,3 +170,29 @@ def test_signed_callback_with_retry(conn):
 
 def test_callback_to_private_ip_blocked_by_default():
     assert callbacks.send("http://127.0.0.1:9/x", {"job_id": "x"}) is False
+
+
+def test_children_exit_when_supervisor_is_killed(conn):
+    """SIGKILL only the supervisor (not its process group): worker and job processes must exit on their own."""
+    jid = new_job(conn, request={**REQ, "duration_s": 120})
+    w = subprocess.Popen([sys.executable, "-m", "musicengine.worker.loop"],
+                         env={**os.environ, "WORKER_CONCURRENCY": "2", "POLL_INTERVAL_S": "0.2"},
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+    try:
+        t0 = time.time()
+        while db.get_job(conn, jid)["status"] != "running" and time.time() - t0 < 60:
+            time.sleep(0.2)
+        children = subprocess.run(["pgrep", "-g", str(w.pid)], capture_output=True, text=True).stdout.split()
+        assert len(children) >= 3  # supervisor + workers (+ job)
+        os.kill(w.pid, signal.SIGKILL)
+        w.wait(5)
+        t0 = time.time()
+        alive = children
+        while time.time() - t0 < 15:
+            alive = subprocess.run(["pgrep", "-g", str(w.pid)], capture_output=True, text=True).stdout.split()
+            if not alive:
+                break
+            time.sleep(0.3)
+        assert not alive, f"orphaned worker processes still running: {alive}"
+    finally:
+        stop(w)

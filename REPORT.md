@@ -130,6 +130,8 @@ Load tests used 8 concurrent 60 s jobs per setting ([eval/results/loadtest.jsonl
 | Batch run 1 | The RMS-flux onset detector missed the final hit after a loud peak section (`d010`) | Spectral-flux onset function; threshold 2× median (all hits measured 2.6–64×) | same |
 | Load test | A 300 s job peaked at **5.1 GB** RSS | float32 audio path, in-place mastering, chunked spectral flux, stems streamed in the QA gate: **2.2 GB**; 60 s jobs 1.66 → 0.66 GB | loadtest files |
 | Mastering design | The plan's p95 click threshold flagged intentional crash cymbals at section downbeats | Reference raised to p99 of 40 ms-window maxima; a synthetic 0.3 FS step is still caught (`test_click_detector_finds_a_real_discontinuity`) | `qa.click_report` |
+| Evidence run ev1 | A 120 s cinematic track (seed 200) failed `MIX_QA_FAILED`: a drum fill landing on the peak crash scored 2.16 against the 2.0 click ratio, with the tonal stems smooth (a false positive) | Ratio raised to 3.0 (owner's choice); regression test `test_regression_drum_fill_on_crash_is_not_a_click` | `evidence/runs/ev1/duration_120s/` |
+| Evidence run ev1 | A SIGKILLed worker supervisor left its worker processes running outside Docker; they kept claiming jobs | Worker and job processes exit when their parent dies; `test_children_exit_when_supervisor_is_killed` | `src/musicengine/worker/loop.py` |
 | CLAP evaluation | `larger_clap_music` text embeddings collapsed | Switched to `clap-htsat-unfused` after a sanity check | eval/README.md |
 
 ## 8. Not done or not verified (honest list)

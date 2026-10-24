@@ -29,9 +29,16 @@ def _ctype(name: str) -> str:
     return CONTENT_TYPES.get(os.path.splitext(name)[1], "application/octet-stream")
 
 
-def execute_job(job_id: str) -> None:
+def _orphaned(parent_pid: int) -> bool:
+    """True when the process that started us is gone (we were re-parented). Outside Docker a SIGKILLed
+    supervisor does not take its children with it, so every child checks this itself."""
+    return os.getppid() != parent_pid
+
+
+def execute_job(job_id: str, parent_pid: int | None = None) -> None:
     """Child process: run one job end to end and write its terminal state (or leave it for the parent)."""
     s = get_settings()
+    parent_pid = parent_pid or os.getppid()
     configure(s.log_level)
     with db.conn_ctx() as conn:
         job = db.get_job(conn, job_id)
@@ -41,6 +48,9 @@ def execute_job(job_id: str) -> None:
         last = [0.0]
 
         def progress(p: int, msg: str):
+            if _orphaned(parent_pid):  # our worker died: stop, the stale-heartbeat sweep re-queues the job
+                log.error("job_orphaned_exit", progress=p)
+                os._exit(3)
             now = time.monotonic()
             if now - last[0] > 0.5 or p >= 95:
                 db.set_progress(conn, job_id, min(p, 95))
@@ -130,7 +140,7 @@ def run_with_timeout(job: dict, worker_id: str, storage: Storage) -> None:
     s = get_settings()
     job_id = str(job["id"])
     ctx = mp.get_context("spawn")
-    p = ctx.Process(target=execute_job, args=(job_id,), name=f"job-{job_id[:8]}")
+    p = ctx.Process(target=execute_job, args=(job_id, os.getpid()), name=f"job-{job_id[:8]}")
     p.start()
     deadline = time.monotonic() + s.job_timeout_s
     with db.conn_ctx() as conn:
@@ -149,8 +159,9 @@ def run_with_timeout(job: dict, worker_id: str, storage: Storage) -> None:
     notify(job_id, storage)
 
 
-def worker_process(index: int) -> None:
+def worker_process(index: int, parent_pid: int | None = None) -> None:
     s = get_settings()
+    parent_pid = parent_pid or os.getppid()
     configure(s.log_level)
     worker_id = f"{socket.gethostname()}:{os.getpid()}:{index}"
     structlog.contextvars.bind_contextvars(worker_id=worker_id)
@@ -160,6 +171,9 @@ def worker_process(index: int) -> None:
     log.info("worker_started", concurrency_index=index)
     last_sweep = 0.0
     while not stop["flag"]:
+        if _orphaned(parent_pid):
+            log.error("worker_orphaned_exit")
+            return
         try:
             with db.conn_ctx() as conn:
                 if time.monotonic() - last_sweep > 10:
@@ -190,7 +204,7 @@ def main() -> None:
         db.migrate(conn)
     n = max(1, s.worker_concurrency)
     ctx = mp.get_context("spawn")
-    procs = [ctx.Process(target=worker_process, args=(i,), name=f"worker-{i}") for i in range(n)]
+    procs = [ctx.Process(target=worker_process, args=(i, os.getpid()), name=f"worker-{i}") for i in range(n)]
     for p in procs:
         p.start()
 

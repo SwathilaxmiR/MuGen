@@ -25,9 +25,9 @@ CASES = [  # (prompt, duration, target LUFS) : all 12 presets, D 5..180 s
 ]
 
 
-def run_case(tmp_path, prompt, D, lufs, renderer=RENDERER, **kw):
+def run_case(tmp_path, prompt, D, lufs, renderer=RENDERER, seed=21, **kw):
     s = Settings(renderer=renderer)
-    req = MusicRequest(prompt=prompt, duration_s=D, seed=21,
+    req = MusicRequest(prompt=prompt, duration_s=D, seed=seed,
                        output={"target_lufs": lufs, "formats": ["wav", "mp3"]}, **kw)
     plan = make_plan(req, interpret(prompt)[0])
     res, paths, infos, report = produce_audio(plan, str(tmp_path), True, [], Timer(), s)
@@ -84,3 +84,13 @@ def test_sum_diff_after_24bit_roundtrip(tmp_path):
     mix, _ = mixdown.read_wav(paths["mix_wav"])
     stems = [mixdown.read_wav(p)[0] for p in paths["stems"].values()]
     assert qa.sum_diff_db(stems, mix) < -100
+
+
+@pytest.mark.fluidsynth
+def test_regression_drum_fill_on_crash_is_not_a_click(tmp_path):
+    """Evidence run ev1: this exact request failed MIX_QA_FAILED (click ratio 2.16 from a drum fill on the
+    peak-section crash, tonal stems smooth). It must pass the gate now."""
+    plan, res, paths, report = run_case(tmp_path, "Calm cinematic piano that builds to an uplifting peak", 120, -16,
+                                        seed=200)
+    assert report["passed"], report["failures"]
+    assert max(b["ratio"] for b in report["metrics"]["click_detail"]["boundaries"]) < qa.CLICK_RATIO

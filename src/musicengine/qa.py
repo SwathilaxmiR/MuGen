@@ -87,11 +87,15 @@ def _window_max_jumps(mono: np.ndarray, win: int) -> np.ndarray:
     return d[: n * win].reshape(n, win).max(axis=1)
 
 
-def click_report(x: np.ndarray, sr: int, times_s: list[float], ratio: float = 2.0, pct: float = 99.0) -> dict:
+CLICK_RATIO = 3.0
+
+
+def click_report(x: np.ndarray, sr: int, times_s: list[float], ratio: float = CLICK_RATIO, pct: float = 99.0) -> dict:
     """Max sample-to-sample jump within +-20 ms of each boundary vs `ratio` x the `pct` percentile of the
     track's 40 ms-window maxima. The reference is the track's own loud transients (drum hits), because
-    section downbeats carry an intentional crash; p95 flagged those in testing, p99 does not, and a real
-    discontinuity (e.g. a 0.3 FS step) is still >10x the reference (see test_qa)."""
+    section downbeats carry an intentional crash. History: p95 flagged those crashes; with p99 and ratio 2.0 a
+    drum fill landing on the crash still scored 2.16 (120 s cinematic, seed 200), so the ratio is 3.0. A real
+    discontinuity (a 0.3 FS step) still scores > 10x (test_click_detector_finds_a_real_discontinuity)."""
     mono = x.mean(axis=1) if x.ndim == 2 else x
     win = int(0.04 * sr)
     ref = float(np.percentile(_window_max_jumps(mono, win), pct))
