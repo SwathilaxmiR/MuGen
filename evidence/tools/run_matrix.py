@@ -294,7 +294,8 @@ class Runner:
         for fault in lo["fault_inject"]:
             self.stop_workers()
             self.start_worker(FAULT_INJECT=fault)
-            row = self.run_case(f"fault_{fault}", {"prompt": "Calm piano", "duration_s": 10, "seed": 901})
+            row = self.run_case(f"fault_{fault}", {"prompt": "Calm piano", "duration_s": 10, "seed": 901},
+                                {"expect_warnings": ["PROVIDER_FALLBACK_USED"]}, key=f"{self.run_id}-{fault}")
             res[fault] = row
         self.stop_workers()
         self.start_worker(FAULT_INJECT="render_primary_fail", RENDERER_FALLBACK="")
@@ -333,6 +334,68 @@ class Runner:
         self.start_worker()
         self.special["faults"] = res
 
+    def run_io(self):
+        """Callback signature (Integration 3) and narration by http:// URL (Integration 7). The worker is restarted
+        with ALLOW_PRIVATE_URLS=true so it may reach this machine's test servers; the SSRF guard itself is shown by
+        the narration_url_blocked case."""
+        import http.server
+        import socketserver
+
+        from musicengine.worker import callbacks
+
+        if not self.a.local_control:
+            self.special["io"] = "NOT_RUN (needs --local-control)"
+            return
+        secret = "evidence-callback-secret"
+        got = []
+
+        class H(http.server.SimpleHTTPRequestHandler):
+            def do_POST(self):
+                body = self.rfile.read(int(self.headers["Content-Length"]))
+                got.append({"body": body.decode(), "signature": self.headers.get("X-IncuBrix-Signature"),
+                            "correlation": self.headers.get("X-Correlation-Id")})
+                self.send_response(204)
+                self.end_headers()
+
+            def log_message(self, *a):
+                pass
+
+        nar_dir = os.path.join(self.audio, "url_input_files")
+        os.makedirs(nar_dir, exist_ok=True)
+        synth_narration(os.path.join(nar_dir, "narration.wav"), [[1, 4], [6, 9]], 12)
+        handler = lambda *a, **k: H(*a, directory=nar_dir, **k)  # noqa: E731
+        srv = socketserver.ThreadingTCPServer(("127.0.0.1", 0), handler)
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        port = srv.server_address[1]
+        self.stop_workers()
+        self.start_worker(ALLOW_PRIVATE_URLS="true", CALLBACK_SECRET=secret)
+        try:
+            row = self.run_case("io_narration_http_url", {"prompt": "Calm documentary piano", "duration_s": 12, "seed": 950,
+                                                          "narration_url": f"http://127.0.0.1:{port}/narration.wav"})
+            row2 = self.run_case("io_callback", {"prompt": "Upbeat corporate", "duration_s": 6, "seed": 951,
+                                                 "callback_url": f"http://127.0.0.1:{port}/hook"})
+            t0 = time.time()
+            while not got and time.time() - t0 < 20:
+                time.sleep(0.2)
+        finally:
+            srv.shutdown()
+            self.stop_workers()
+            self.start_worker()
+        cb = got[0] if got else None
+        res = {"narration_http_url": {"job_id": row.get("job_id"), "status": row.get("status"),
+                                      "ducked": os.path.exists(os.path.join(self.audio, "io_narration_http_url", "mix_ducked.wav"))},
+               "callback": None}
+        if cb:
+            payload = json.loads(cb["body"])
+            res["callback"] = {"job_id": row2.get("job_id"), "received_job_id": payload["job_id"],
+                               "status": payload["status"], "signature_header": cb["signature"][:20] + "...",
+                               "signature_valid": callbacks.verify(cb["body"].encode(), cb["signature"], secret),
+                               "wrong_secret_rejected": not callbacks.verify(cb["body"].encode(), cb["signature"], "x")}
+            d = os.path.join(self.ev, "io_callback")
+            open(os.path.join(d, "callback_received.json"), "w").write(json.dumps(scrub(payload), indent=2))
+        self.special["io"] = res
+        print("io", res, flush=True)
+
     def finish(self):
         cols = ["case", "job_id", "status", "seconds", "generation_s", "http_status", "checks_ok", "failed_checks",
                 "warnings", "error"]
@@ -363,7 +426,7 @@ def main():
     a = ap.parse_args()
     r = Runner(a)
     r.started = datetime.now(timezone.utc).isoformat()
-    groups = (a.only or "standard,determinism,concurrency,same_key,speed,faults").split(",")
+    groups = (a.only or "standard,determinism,concurrency,same_key,speed,faults,io").split(",")
     if a.local_control:
         r.stop_workers()
         r.start_worker()

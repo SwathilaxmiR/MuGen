@@ -101,6 +101,9 @@ cases:
   hard_tamil:
     request: {prompt: "அமைதியான இசை", duration_s: 15, seed: 712}
     meta: {expect_warnings: [PROMPT_TRANSLATED]}
+  narration_url_blocked:      # SSRF guard: link-local metadata address is refused, the job still succeeds
+    request: {prompt: "Calm ambient", duration_s: 8, seed: 404, narration_url: "http://169.254.169.254/latest/meta-data/"}
+    meta: {expect_warnings: [NARRATION_FETCH_FAILED]}
   hard_unknown_language:
     request: {prompt: "Спокойная музыка для видео", duration_s: 10, seed: 713}
     meta: {expect_warnings: [PROMPT_LANGUAGE_FALLBACK]}
